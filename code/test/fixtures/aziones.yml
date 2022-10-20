@@ -1,0 +1,37 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  isin: MyString
+  settore: MyString
+  paese: MyString
+  marketcap: 1.5
+  prezzo: 1.5
+  volume: 1.5
+  pe: 1.5
+  ps: 1.5
+  pb: 1.5
+  divyield: 1.5
+  roe: 1.5
+  roa: 1.5
+  debteq: 1.5
+  opmargin: 1.5
+  ebitda: 1.5
+
+two:
+  nome: MyString
+  isin: MyString
+  settore: MyString
+  paese: MyString
+  marketcap: 1.5
+  prezzo: 1.5
+  volume: 1.5
+  pe: 1.5
+  ps: 1.5
+  pb: 1.5
+  divyield: 1.5
+  roe: 1.5
+  roa: 1.5
+  debteq: 1.5
+  opmargin: 1.5
+  ebitda: 1.5
