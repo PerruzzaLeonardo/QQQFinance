@@ -1,0 +1,2 @@
+class Azione < ApplicationRecord
+end

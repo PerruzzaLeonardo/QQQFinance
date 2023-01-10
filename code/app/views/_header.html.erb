@@ -1,0 +1,29 @@
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
+        <div class="container-fluid">
+            <a class="navbar-brand ms-2" href="../.." > QQQFinance</a>          
+            <form class="d-flex ms-md-auto" method="POST" action="">
+                <input class="form-control me-2" type="search" name="ricerca" placeholder="Search" aria-label="Search">
+            </form>
+            
+            <ul class="navbar-nav ms-md-auto " >
+            <% if Current.user %>
+                <li class='nav-link m-2'><i class="bi bi-person-circle"></i></li>
+                <li class='nav-item m-2'><a href='../myprofile' class='link-light'> <%= @Current.user.nome %> </a></li>
+            <% else %> 
+                <li class='nav-link m-2'><a href='../login' class='link-light'>Accedi</a></li>
+                <li class='nav-link m-2'><a href='../signup' class='link-light'>Registrati</a></li>
+            <% end %> 
+            </ul>  
+        </div>
+    </nav>
+    <nav class="navbar navbar-dark bg-primary ">     
+        <div class="row ps-3">
+            <a class='link-light col-3 ps-3 nav-link' href="..">Home</a>
+            <a class='link-light col-3 ps-3 nav-link' href="../wallet">Wallet</a>
+            <a class='link-light col-3 ps-3 nav-link' href="../screener" >Screener</a>
+            <a class='link-light col-3 ps-4 nav-link' disabled href="../news" >Notizie</a>
+        </div> 
+    </nav>
+
+

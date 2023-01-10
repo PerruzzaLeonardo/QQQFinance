@@ -1,0 +1,41 @@
+
+<div class="container">
+<%=render "/header"%>
+ <h1>IL MIO PROFILO</h1>
+ <input type="button" class="btn btn-secondary btn-sm" value="Modifica Profilo">
+ <div class="row">
+  <div class="col-7">
+   
+   
+   <h2>Nome:<h2> <div class="field form-group"> <% Current.user.nome %> </div>
+   <h2>Cognome:<h2> <div class="field form-group"> <% Current.user.cognome %> </div>
+   <h2>Email:<h2> <div class="field form-group"> <% Current.user.email %> </div>
+  </div>
+
+  <div class="col-5">
+  IMMAGINE qui
+  <h2>USERNAME</h2>  <div class="field form-group"> <% Current.user.username %> </div>
+  </div>
+ </div>
+
+ <div class="row">
+   <p>Vuoi rendere pubblico il tuo wallet?
+   <label class="switch">
+    <input type="checkbox">
+    <span class="slider round"></span>
+   </label></p>
+   <br>
+   <br>
+
+   <%
+  if (Current.user.commento) #se non è vuoto
+   @commento=Current.user.commento
+  else
+   @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
+  end %>
+
+    <textarea rows=8 cols=50 placeholder="<% @commento %>" readonly></textarea>
+
+   <p>Find me in app/views/profilo/index.html.erb</p>
+
+</div>

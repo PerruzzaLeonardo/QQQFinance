@@ -1,0 +1,51 @@
+<div class="container">
+<%=render "/header"%>
+ <div class="row">
+   <div class="col-12">
+     <h1>Valore totale wallet:</h1>
+     <div class="text-center"><h2 style="color:green" id="valore">2599 $</h2></div>
+   </div>
+ </div>
+ <hr>
+
+ <form method='POST'>
+
+ <div class="row">
+  <div class="col-4">
+   <h2>aggiungi posizione:</h2>
+  </div>
+  <div class="col-4">
+   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  </div>
+  <div class="col-2">
+   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+  </div>
+  <div class="col-2">
+   <button type="submit" class="btn btn-primary">Aggiungi</button>
+ </div> 
+ </form>
+ </div>
+
+ <hr>
+ <% i=0 %>
+ <% for posizione in @posizioni %> <!--posizioni è una variabile contenente tutti i dati dei titoli detenuti + quantità posseduta-->
+ <div class="row">
+   <h1>Azioni detenute:</h1>
+   <div class=" table-responsive">
+     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+       <tr>
+       <th>Nome</th>
+       <th>ISIN</th>
+       <th>Paese</th>
+       <th>Settore</th>
+       <th>Quantità</th>
+       <th>ValorePosizione</th>
+       <tr></tr>
+       </tr>
+       <tr><td><%=posizione.nome%></td><td><%=posizione.isin%></td><td><%=posizione.paese%></td><td><%=posizione.settore%></td><td><%=@quantita[i]%></td><td><%=posizione.prezzo * @quantita[i]%></td><td class='bottonecentrato'><button class='btn btn-sm btn-warning'>rimuovi</button></td></tr>
+       <% i+=1 %>
+     </table>
+    </div>
+  </div>
+  <%end%>
+</div>
