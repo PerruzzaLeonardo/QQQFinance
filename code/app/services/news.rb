@@ -1,5 +1,5 @@
-require 'news-api'
-class Newsapi
+require 'http'
+class news
     def self.get_news
         begin
             newsapi=News.new("432875b764b04a5cb743fe26e813a01e")
