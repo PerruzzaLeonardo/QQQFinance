@@ -1,3 +1,6 @@
+<head>
+</head>
+<body>
 <div class="container">
 <%=render "/header"%>
  <h1>NOTIZIE</h1>
@@ -5,123 +8,134 @@
  <div class="row">
   <div class="col-3">
    <div class="card" style="width: 18rem;">
-    <%= image_tag "newsprova.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <%= image_tag @notizia0.urlimg,class:"card-img-top",alt:"Card image cap" %>
+    <div class="card-body">
+     <h5 class="card-title"><%=@notizia0.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia0.autore %></h6>
+     <p class="card-text"><%=@notizia0.descrizione%></p>
+     <a href="<%=@notizia0.url %>" class="btn btn-primary">Leggi l'articolo</a>
+    </div>
+   </div>
+   <br>
+   <br>
+   <div class="card" style="width: 18rem;">
+    <%= image_tag @notizia1.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
      <h5 class="card-title"><%=@notizia1.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia1.autore %></h6>
      <p class="card-text"><%=@notizia1.descrizione%></p>
-     <a href="#" class="btn btn-primary">notizia.url</a>
+     <a href="<%=@notizia1.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
    <br>
    <br>
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia2.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
      <h5 class="card-title"><%=@notizia2.titolo %></h5>
-     <p class="card-text"><%=@notizia2.descrizione%></p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
-    </div>
-   </div>
-   <br>
-   <br>
-   <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
-    <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia2.autore %></h6>
+     <p class="card-text"><%=@notizia2.descrizione %></p>
+     <a href="<%=@notizia2.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
   </div>
   <div class="col-3">
    <div class="card" style="width: 18rem;">
-    <!--<img class="card-img-top" src="" alt="Card image cap"> -->
+    <%= image_tag @notizia3.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia3.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia3.autore %></h6>
+     <p class="card-text"><%=@notizia3.descrizione %></p>
+     <a href="<%=@notizia3.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
    <br>
    <br>
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia4.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia4.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia4.autore %></h6>
+     <p class="card-text"><%=@notizia4.descrizione %></p>
+     <a href="<%=@notizia4.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
    <br>
    <br>
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia5.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
-    </div>
-   </div>
-  </div>
-  <div class="col-3">
-   <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
-    <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
-    </div>
-   </div>
-   <br>
-   <br>
-   <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
-    <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
-    </div>
-   </div>
-   <br>
-   <br>
-   <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
-    <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia5.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia5.autore %></h6>
+     <p class="card-text"><%=@notizia5.descrizione %></p>
+     <a href="<%=@notizia5.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
   </div>
   <div class="col-3">
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia6.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia6.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia6.autore %></h6>
+     <p class="card-text"><%=@notizia6.descrizione %></p>
+     <a href='<%=@notizia6.url %>' class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
    <br>
    <br>
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia7.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia7.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia7.autore %></h6>
+     <p class="card-text"><%=@notizia7.descrizione %></p>
+     <a href="<%=@notizia7.url %>" class="btn btn-primary">Leggi l'articolo</a>
     </div>
    </div>
    <br>
    <br>
    <div class="card" style="width: 18rem;">
-  <!--<img class="card-img-top" src="..." alt="Card image cap"> -->
+    <%= image_tag @notizia8.urlimg,class:"card-img-top",alt:"Card image cap" %>
     <div class="card-body">
-     <h5 class="card-title">Titolo notizia</h5>
-     <p class="card-text">descrizione notizia</p>
-     <a href="#" class="btn btn-primary">Link alla notizia</a>
+     <h5 class="card-title"><%=@notizia8.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia8.autore %></h6>
+     <p class="card-text"><%=@notizia8.descrizione %></p>
+     <a href="<%=@notizia8.url %>" class="btn btn-primary">Leggi l'articolo</a>
+    </div>
+   </div>
+  </div>
+  <div class="col-3">
+   <div class="card" style="width: 18rem;">
+    <%= image_tag @notizia9.urlimg,class:"card-img-top",alt:"Card image cap" %>
+    <div class="card-body">
+     <h5 class="card-title"><%=@notizia9.titolo %></h5>
+     <h6 class="card-subtitle mb-2 text-muted">by <%=@notizia9.autore %></h6>
+     <p class="card-text"><%=@notizia9.descrizione%></p>
+     <a href="<%=@notizia9.url %>" class="btn btn-primary">Leggi l'articolo</a>
+    </div>
+   </div>
+   <br>
+   <br>
+   <div class="card" style="width: 18rem;">
+    <%= image_tag "dataroma.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <div class="card-body">
+     <h5 class="card-title">Dataroma</h5>
+     <p class="card-text">Al seguente sito è possibile consultare tutti i movimenti e i portafogli aggiornati di tutti i Superinvestor globali</p>
+     <a href="https://www.dataroma.com/m/home.php" class="btn btn-primary">Vai al sito</a>
+    </div>
+   </div>
+   <br>
+   <br>
+   <div class="card" style="width: 18rem;">
+    <%= image_tag "crypto.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <div class="card-body">
+     <h5 class="card-title">Cryptovalute</h5>
+     <p class="card-text">Per tutto ciò che concerne il mondo delle cryptovalute, rimandiamo al seguente sito</p>
+     <a href="https://coinmarketcap.com/it/" class="btn btn-primary">Vai al sito</a>
     </div>
    </div>
   </div>
  </div>
 </div>
+</body>

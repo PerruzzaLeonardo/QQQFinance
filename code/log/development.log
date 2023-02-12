@@ -19555,3 +19555,90 @@ Processing by AzioneController#show as HTML
 Completed 200 OK in 31ms (Views: 21.1ms | ActiveRecord: 0.3ms | Allocations: 5882)
 
 
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (0.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (0.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "Monetary policy: Definition, types and tools"], ["descrizione", "Monetary policy refers to the actions taken by a central bank to manage the money supply and interest rates in an economy."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/monetary-policy-definition-types-and-tools"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvMzZlMjI4MzMtMGZkOS00MDhiLWJkZGEtYzBiYWRkOTAxYTk4LmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.892110"], ["updated_at", "2023-02-12 16:44:33.892110"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Understanding crypto bag holders and their mindset"], ["descrizione", "The freedom to stick to what makes the most sense financially sprouted various classes of investors, each distinguished by their intent behind crypto investments."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/understanding-crypto-bag-holders-and-their-mindset"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvZjA0ZmEyY2EtYmY1OC00NDJkLWJjMTUtMjM1NmIyMmM1N2Y0LmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.901528"], ["updated_at", "2023-02-12 16:44:33.901528"]]
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Bitcoin price eyes $22K rebound with BTC market structure ‘not yet broken’"], ["descrizione", "Crypto sentiment is “hysterical” with Bitcoin under $22,000, but no major trend lines have been lost yet, one analyst argues."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/bitcoin-price-eyes-22k-rebound-with-btc-market-structure-not-yet-broken"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvZjRlZDhmOTItNjAwMi00NmE3LWE4MjAtYWRiMmYzMWVjOTI1LmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.910461"], ["updated_at", "2023-02-12 16:44:33.910461"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "Consumer Federation of California reattempts to regulate crypto companies"], ["descrizione", "Assemblymember Timothy Grayson introduced the Digital Financial Assets Law to protect Californians from financial hardship and foster responsible innovation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/consumer-federation-of-california-reattempts-to-regulate-crypto-companies"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvZjgzYmQyNzAtNWI2Ny00YjRmLWFjODEtM2QxNjRjYjY5Mjk3LmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.919687"], ["updated_at", "2023-02-12 16:44:33.919687"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Green Biscuits for Australia"], ["descrizione", "Whether you like coffee or tea, the morning cuppa with a biscuit of choice is part of Australia’s culture. Perhaps just as intrinsic as beer*. Or maybe not. Anyway, the main manufacturer of biscuits in Australia, Arnott’s, has made a major move towar [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/02/12/green-biscuits-for-australia/"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-02-12 16:44:33.928975"], ["updated_at", "2023-02-12 16:44:33.928975"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Canadian University Dubai backtracks on accepting crypto via Binance Pay"], ["descrizione", "Before hitting a technical roadblock, CUD was seemingly interested in collecting tuition and course fees in cryptocurrencies from both domestic and international students."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/canadian-university-dubai-backtracks-on-accepting-crypto-via-binance-pay"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvOWNmYWNjNGYtMGNkMS00OTQyLTk2ZDMtYTFjMzc2OTRkOTM2LmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.938094"], ["updated_at", "2023-02-12 16:44:33.938094"]]
+  [1m[36mTRANSACTION (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "Brazil’s oldest bank allows residents to pay their taxes using crypto"], ["descrizione", "The move will allow Brazilian taxpayers to easily settle their tax liabilities while expanding “access” to the digital asset ecosystem."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/brazil-s-oldest-bank-allows-residents-to-pay-off-tax-bill-with-crypto"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDIvOGYxYTkyNWUtY2MyNi00NmU1LWIzMmYtNDRjNjI2OTBhOTZmLmpwZw==.jpg"], ["created_at", "2023-02-12 16:44:33.951130"], ["updated_at", "2023-02-12 16:44:33.951130"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Solar Oven — Simple & Crucial"], ["descrizione", "Last year, in the the spring, I met Steen Carlsen. He has travelled extensively in Asia and East Africa, including Zambia, which is why I came to hear of him. Steen has a background in electronics and electrical engineering and we have had many inter [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/02/11/solar-oven-simple-crucial/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-02-12 16:44:33.960978"], ["updated_at", "2023-02-12 16:44:33.960978"]]
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Michigan Scores The $3.5 Billion Ford Battery Factory Virginia Didn’t Want"], ["descrizione", "Ford may announce as early as next week that it will build a new $3.5 battery factory in Michigan where CATL will manufacture LFP batteries,"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/02/11/michigan-scores-the-3-5-billion-ford-battery-factory-virginia-didnt-want/"], ["urlimg", "fotonews3.jpg"], ["created_at", "2023-02-12 16:44:33.970412"], ["updated_at", "2023-02-12 16:44:33.970412"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (0.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "West coast pipeline resumes pumping gas after shutdown - Fox Business"], ["descrizione", "West coast pipeline resumes pumping gas after shutdown  Fox BusinessPipelines resumes operations after fuel leak that prompted Nevada state of emergency  CNNLas Vegas residents panic buy fuel after pipeline break  CBS Evening NewsGas pipelines back t [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiWmh0dHBzOi8vd3d3LmZveGJ1c2luZXNzLmNvbS9tYXJrZXRzL3dlc3QtY29hc3QtcGlwZWxpbmUtcmVzdW1lcy1wdW1waW5nLWdhcy1hZnRlci1zaHV0ZG93btIBXmh0dHBzOi8vd3d3LmZveGJ1c2luZXNzLmNvbS9tYXJrZXRzL3dlc3QtY29hc3QtcGlwZWxpbmUtcmVzdW1lcy1wdW1waW5nLWdhcy1hZnRlci1zaHV0ZG93bi5hbXA?oc=5"], ["urlimg", "fotonews4.jpg"], ["created_at", "2023-02-12 16:44:33.980755"], ["updated_at", "2023-02-12 16:44:33.980755"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-02-12 17:44:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 8.1ms | Allocations: 1187)
+  Rendered index/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1774)
+  Rendered layout layouts/application.html.erb (Duration: 327.9ms | Allocations: 49521)
+Completed 200 OK in 390ms (Views: 338.8ms | ActiveRecord: 0.0ms | Allocations: 55057)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-02-12 17:44:56 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (1.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered news/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4571)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 6793)
+Completed 200 OK in 54ms (Views: 19.0ms | ActiveRecord: 2.8ms | Allocations: 31306)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-02-12 17:45:31 +0100
+Processing by WalletsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1131)
+
+
+  
+NoMethodError (undefined method `username' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:6:in `index'

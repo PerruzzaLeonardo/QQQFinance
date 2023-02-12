@@ -27,8 +27,6 @@
  </div>
 
  <hr>
- <% i=0 %>
- <% for posizione in @posizioni %> <!--posizioni è una variabile contenente tutti i dati dei titoli detenuti + quantità posseduta-->
  <div class="row">
    <h1>Azioni detenute:</h1>
    <div class=" table-responsive">
@@ -42,8 +40,11 @@
        <th>ValorePosizione</th>
        <tr></tr>
        </tr>
-       <tr><td><%=posizione.nome%></td><td><%=posizione.isin%></td><td><%=posizione.paese%></td><td><%=posizione.settore%></td><td><%=@quantita[i]%></td><td><%=posizione.prezzo * @quantita[i]%></td><td class='bottonecentrato'><button class='btn btn-sm btn-warning'>rimuovi</button></td></tr>
+       <% i=0 %>
+       <% while i<azioni.lenght() %>
+       <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%></td><td class='bottonecentrato'><button class='btn btn-sm btn-warning'>rimuovi</button></td></tr>
        <% i+=1 %>
+       <%end %>
      </table>
     </div>
   </div>
