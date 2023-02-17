@@ -1,4 +1,7 @@
 class SignupController < ApplicationController
+  #prova per devise
+  before_action :authenticate_user!
+
    
         def index
         end 
