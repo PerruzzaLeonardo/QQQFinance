@@ -3,17 +3,21 @@ class WalletsController < ApplicationController
 
   # GET /wallets or /wallets.json
   def index
-    @curr_user=Current.user.username
-    @posizioni = Wallet.where("user=?",params[:curr_user])
-    @azioni = [] #nuova variabile contenente le info dell'azione estratta
-    @quanita = [] #variabile indica la quantita di azione i-esima in "posizioni" che l'utente detiene
-    i=0
-    @posizioni.each do |posizione|
-      #in azione dovrei avere tuple username,azione,quantita. vedere come è fatta la variabile ed estrarre nelle due righe sotto
-      #solo 'azione' nella prima e solo 'quantita' nella seconda (controlla se giusto come fatto)
-      @azioni[i]=Azione.where(:isin => posizione.isin)
-      @quantita[i]=posizione.quantità
-      i+=1
+    if Current.user==nil
+      redirect_to '/login',notice: 'Per accedere alla pagina del Wallet, è prima necessario autenticarsi col proprio account' 
+    else
+      @curr_user=Current.user.username
+      @posizioni = Wallet.where("user=?",params[:curr_user])
+      @azioni = [] #nuova variabile contenente le info dell'azione estratta
+      @quanita = [] #variabile indica la quantita di azione i-esima in "posizioni" che l'utente detiene
+      i=0
+      @posizioni.each do |posizione|
+        #in azione dovrei avere tuple username,azione,quantita. vedere come è fatta la variabile ed estrarre nelle due righe sotto
+        #solo 'azione' nella prima e solo 'quantita' nella seconda (controlla se giusto come fatto)
+        @azioni[i]=Azione.where(:isin => posizione.isin)
+        @quantita[i]=posizione.quantità
+        i+=1
+      end
     end
   end 
 
@@ -28,6 +32,11 @@ class WalletsController < ApplicationController
 
   # GET /wallets/1/edit
   def edit
+  end
+
+  def destroy
+    @wallet=Wallet.find(params[:id])
+    @wallet.destroy
   end
 
   # POST /wallets or /wallets.json

@@ -8,6 +8,13 @@
 <body>
 <p class="fs-1 fw-bold px-5 mt-5" style="letter-spacing: 3px;">QQQFinance</p>
 
+<% flash.each do |type, msg| %>
+  <div class="alert alert-danger" role="alert">
+  <h4 class="alert-heading">Impossibile accedere al wallet!</h4>
+    <p><%= msg %>   Se non possiedi già un account,<a href="../users/sign_in" class="alert-link">Registrati</a>.</p>
+  </div>
+<% end %>
+
 <%= form_with do |form| %>
 
 <br>
