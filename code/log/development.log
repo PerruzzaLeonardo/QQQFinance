@@ -20771,3 +20771,963 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 65ms (Views: 34.7ms | ActiveRecord: 0.5ms | Allocations: 8657)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-26 12:11:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 9.6ms | Allocations: 1168)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1753)
+  Rendered layout layouts/application.html.erb (Duration: 304.3ms | Allocations: 38301)
+Completed 200 OK in 364ms (Views: 319.9ms | ActiveRecord: 0.0ms | Allocations: 43871)
+
+
+Started GET "/mailers" for 127.0.0.1 at 2023-02-26 12:11:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/mailers"):
+  
+Started GET "/rails/mailers" for 127.0.0.1 at 2023-02-26 12:11:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/rails/mailers"):
+  
+Started GET "/" for 127.0.0.1 at 2023-02-27 11:17:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.2ms | Allocations: 1167)
+  Rendered index/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 116.6ms | Allocations: 38013)
+Completed 200 OK in 174ms (Views: 128.6ms | ActiveRecord: 0.0ms | Allocations: 43597)
+
+
+Started GET "/contact" for 127.0.0.1 at 2023-02-27 11:17:51 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/contact"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-27 11:17:53 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 40.9ms | Allocations: 4437)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 6791)
+Completed 200 OK in 96ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 15062)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2023-02-27 11:18:13 +0100
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"prova", "email"=>"olo@gmail.it", "message"=>"riprova"}, "commit"=>"Send Message"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 3083)
+
+
+  
+NameError (uninitialized constant MailForm::ActionMailer
+Did you mean?  ActionCable
+               ActionMailbox):
+  
+app/controllers/contacts_controller.rb:9:in `create'
+  Rendering /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb
+  Rendered /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb (Duration: 10.2ms | Allocations: 2617)
+MailForm::Notifier#contact: processed outbound mail in 63.1ms
+Delivered mail 63fc910bb9fae_162ad483155@davide-VirtualBox.mail (15.0ms)
+Date: Mon, 27 Feb 2023 12:16:27 +0100
+From: aaa <prova@email.com>
+To: qqqfinanceassi@gmail.com
+Message-ID: <63fc910bb9fae_162ad483155@davide-VirtualBox.mail>
+Subject: Segnalazione utente
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h4 style="text-decoration:underline">Segnalazione utente</h4>
+
+
+  <p><b>Name:</b>
+  aaa</p>
+
+  <p><b>Email:</b>
+  prova@email.com</p>
+
+  <p><b>Message:</b>
+  mail di prova</p>
+
+
+  Rendering /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb
+  Rendered /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb (Duration: 2.7ms | Allocations: 2617)
+MailForm::Notifier#contact: processed outbound mail in 53.0ms
+Delivered mail 63fc914b59c73_169cd48430ce@davide-VirtualBox.mail (590.2ms)
+Date: Mon, 27 Feb 2023 12:17:31 +0100
+From: aaa <prova@email.com>
+To: qqqfinanceassi@gmail.com
+Message-ID: <63fc914b59c73_169cd48430ce@davide-VirtualBox.mail>
+Subject: Segnalazione utente
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h4 style="text-decoration:underline">Segnalazione utente</h4>
+
+
+  <p><b>Name:</b>
+  aaa</p>
+
+  <p><b>Email:</b>
+  prova@email.com</p>
+
+  <p><b>Message:</b>
+  mail di prova</p>
+
+
+  Rendering /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb
+  Rendered /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb (Duration: 10.9ms | Allocations: 2617)
+MailForm::Notifier#contact: processed outbound mail in 58.4ms
+Delivered mail 63fc94c1377a1_1746d483069c@davide-VirtualBox.mail (1294.7ms)
+Date: Mon, 27 Feb 2023 12:32:17 +0100
+From: aaa <prova@email.com>
+To: qqqfinanceassi@gmail.com
+Message-ID: <63fc94c1377a1_1746d483069c@davide-VirtualBox.mail>
+Subject: Segnalazione utente
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h4 style="text-decoration:underline">Segnalazione utente</h4>
+
+
+  <p><b>Name:</b>
+  aaa</p>
+
+  <p><b>Email:</b>
+  prova@email.com</p>
+
+  <p><b>Message:</b>
+  mail di prova</p>
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Started GET "/" for 127.0.0.1 at 2023-02-27 18:17:50 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 5.3ms | Allocations: 1167)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 336.0ms | Allocations: 38389)
+Completed 200 OK in 428ms (Views: 356.3ms | ActiveRecord: 0.0ms | Allocations: 43973)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-27 18:17:56 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 45.9ms | Allocations: 4280)
+  Rendered layout layouts/application.html.erb (Duration: 47.8ms | Allocations: 6619)
+Completed 200 OK in 76ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 14482)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2023-02-27 18:18:23 +0100
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"prova", "email"=>"test@prova.it", "message"=>"mex di prova"}, "commit"=>"Send Message"}
+  Rendering /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb
+  Rendered /home/davide/.rvm/gems/ruby-3.0.0/gems/mail_form-1.10.0/lib/mail_form/views/mail_form/contact.erb (Duration: 1.8ms | Allocations: 656)
+MailForm::Notifier#contact: processed outbound mail in 14.2ms
+Delivered mail 63fce5e0b702_9103b74379f2@davide-VirtualBox.mail (1659.7ms)
+Date: Mon, 27 Feb 2023 18:18:24 +0100
+From: prova <test@prova.it>
+To: qqqfinanceassi@gmail.com
+Message-ID: <63fce5e0b702_9103b74379f2@davide-VirtualBox.mail>
+Subject: Segnalazione utente
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h4 style="text-decoration:underline">Segnalazione utente</h4>
+
+
+  <p><b>Name:</b>
+  prova</p>
+
+  <p><b>Email:</b>
+  test@prova.it</p>
+
+  <p><b>Message:</b>
+  mex di prova</p>
+
+
+Redirected to http://localhost:3000/contacts/sent
+Completed 302 Found in 1749ms (ActiveRecord: 0.0ms | Allocations: 34348)
+
+
+Started GET "/contacts/sent" for 127.0.0.1 at 2023-02-27 18:18:25 +0100
+Processing by ContactsController#sent as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/sent.html.erb within layouts/application
+  Rendered contacts/sent.html.erb within layouts/application (Duration: 1.8ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2668)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3935)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 09:59:18 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 12.1ms | Allocations: 1167)
+  Rendered index/index.html.erb within layouts/application (Duration: 20.7ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 1025.8ms | Allocations: 38088)
+Completed 200 OK in 1091ms (Views: 1044.3ms | ActiveRecord: 0.0ms | Allocations: 43672)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 09:59:29 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 30.8ms | Allocations: 4367)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 6706)
+Completed 200 OK in 70ms (Views: 45.8ms | ActiveRecord: 0.0ms | Allocations: 14547)
+
+
+Started GET "/images/img-01.png" for 127.0.0.1 at 2023-02-28 09:59:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/img-01.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-02-28 10:01:17 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 266)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 570)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3149)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 4359)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-02-28 10:01:20 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered news/index.html.erb within layouts/application (Duration: 49.2ms | Allocations: 4668)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 6889)
+Completed 200 OK in 149ms (Views: 66.5ms | ActiveRecord: 1.5ms | Allocations: 31138)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:07:56 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1459)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4000)
+Completed 200 OK in 27ms (Views: 26.4ms | Allocations: 5110)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:10:02 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1439)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3988)
+Completed 200 OK in 28ms (Views: 27.0ms | Allocations: 5193)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:11:30 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1834)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 4378)
+Completed 200 OK in 20ms (Views: 19.4ms | Allocations: 5576)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:12:38 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 266)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1834)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4377)
+Completed 200 OK in 16ms (Views: 15.2ms | Allocations: 5572)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:16:22 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1832)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4372)
+Completed 200 OK in 19ms (Views: 18.4ms | Allocations: 5578)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:17:11 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1834)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4374)
+Completed 200 OK in 22ms (Views: 21.5ms | Allocations: 5568)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:18:42 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.2ms | Allocations: 266)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2886)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 2958)
+Completed 500 Internal Server Error in 15ms (Allocations: 4139)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for #<Contact:0x00007f173c02f3a0 @errors=#<ActiveModel::Errors []>>
+Did you mean?  name):
+    24:     <div class="row field mb-6">
+    25:         <div class="col-4"></div>
+    26:         <div class="col-2"><%= form.label :nome %> </div>
+    27:         <div class="col-2"><%= form.text_field :nome %> </div>
+    28:         <div class="col-4"></div>
+    29:     </div>
+    30: 
+  
+app/views/contacts/new.html.erb:27
+app/views/contacts/new.html.erb:8
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:19:09 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4409)
+Completed 200 OK in 23ms (Views: 22.0ms | Allocations: 5609)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:19:20 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1847)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4406)
+Completed 200 OK in 32ms (Views: 31.5ms | Allocations: 5603)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:22:00 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4381)
+Completed 200 OK in 16ms (Views: 15.4ms | Allocations: 5585)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2023-02-28 10:22:04 +0100
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"", "email"=>"", "message"=>""}, "commit"=>"Invia"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 4283)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6597)
+Completed 422 Unprocessable Entity in 32ms (Views: 31.1ms | Allocations: 7379)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:23:03 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4381)
+Completed 200 OK in 19ms (Views: 18.3ms | Allocations: 5572)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2023-02-28 10:23:07 +0100
+Processing by ContactsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "contact"=>{"name"=>"", "email"=>"", "message"=>""}, "commit"=>"Invia"}
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4142)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 6456)
+Completed 422 Unprocessable Entity in 21ms (Views: 20.3ms | Allocations: 7082)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:23:10 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3301)
+Completed 200 OK in 12ms (Views: 11.3ms | Allocations: 3774)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:23:31 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1671)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4211)
+Completed 200 OK in 31ms (Views: 29.7ms | Allocations: 5420)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:23:53 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4381)
+Completed 200 OK in 27ms (Views: 25.8ms | Allocations: 5589)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:25:03 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 4381)
+Completed 200 OK in 10ms (Views: 9.2ms | Allocations: 5585)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:25:17 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 4381)
+Completed 200 OK in 17ms (Views: 16.2ms | Allocations: 5585)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:25:42 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3301)
+Completed 200 OK in 16ms (Views: 14.9ms | Allocations: 3781)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:25:50 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4380)
+Completed 200 OK in 19ms (Views: 18.1ms | Allocations: 5567)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:26:10 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1844)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4384)
+Completed 200 OK in 24ms (Views: 22.9ms | Allocations: 5588)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:26:36 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1843)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4383)
+Completed 200 OK in 27ms (Views: 25.3ms | Allocations: 5589)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:26:48 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1845)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4385)
+Completed 200 OK in 21ms (Views: 19.7ms | Allocations: 5577)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:31:27 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4391)
+Completed 200 OK in 27ms (Views: 26.1ms | Allocations: 5595)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:31:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:34:43 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1860)
+  Rendered layout layouts/application.html.erb (Duration: 319.6ms | Allocations: 12279)
+Completed 200 OK in 339ms (Views: 337.4ms | Allocations: 13486)
+
+
+Started GET "/sfondocontatti.jpg" for 127.0.0.1 at 2023-02-28 10:34:43 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontatti.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:35:01 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 4401)
+Completed 200 OK in 32ms (Views: 31.1ms | Allocations: 5599)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:35:14 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1845)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4400)
+Completed 200 OK in 23ms (Views: 22.4ms | Allocations: 5598)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:35:36 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4394)
+Completed 200 OK in 13ms (Views: 12.5ms | Allocations: 5596)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:35:50 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4397)
+Completed 200 OK in 24ms (Views: 23.1ms | Allocations: 5597)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:36:44 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 8523)
+Completed 200 OK in 82ms (Views: 81.3ms | Allocations: 9730)
+
+
+Started GET "/images/sfondocontatti.jpg" for 127.0.0.1 at 2023-02-28 10:36:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/sfondocontatti.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:37:03 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4421)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 5618)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:40:40 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4400)
+Completed 200 OK in 27ms (Views: 25.5ms | Allocations: 5603)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:41:15 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 4389)
+Completed 200 OK in 21ms (Views: 20.6ms | Allocations: 5595)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:41:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:41:47 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 9.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4390)
+Completed 200 OK in 24ms (Views: 22.9ms | Allocations: 5598)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:41:47 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:41:54 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3305)
+Completed 200 OK in 21ms (Views: 18.9ms | Allocations: 3795)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:41:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:42:15 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.8ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4416)
+Completed 200 OK in 27ms (Views: 26.2ms | Allocations: 5612)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:42:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:42:17 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3305)
+Completed 200 OK in 15ms (Views: 13.4ms | Allocations: 3781)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:42:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:42:25 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 4409)
+Completed 200 OK in 16ms (Views: 15.5ms | Allocations: 5611)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:42:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:42:34 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.5ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4403)
+Completed 200 OK in 23ms (Views: 21.9ms | Allocations: 5608)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:42:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:42:46 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.4ms | Allocations: 265)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4391)
+Completed 200 OK in 24ms (Views: 23.1ms | Allocations: 5592)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:42:46 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:43:01 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 11.9ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1853)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 4416)
+Completed 200 OK in 32ms (Views: 30.5ms | Allocations: 5622)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:43:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:43:18 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1449)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4012)
+Completed 200 OK in 34ms (Views: 33.6ms | Allocations: 5221)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:43:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:44:16 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5051)
+Completed 200 OK in 17ms (Views: 15.8ms | Allocations: 6257)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:46:06 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1840)
+  Rendered layout layouts/application.html.erb (Duration: 57.3ms | Allocations: 7311)
+Completed 200 OK in 69ms (Views: 67.7ms | Allocations: 8503)
+
+
+Started GET "/app/assets/images/sfondocontact.jpg" for 127.0.0.1 at 2023-02-28 10:46:06 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/sfondocontact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:46:14 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1839)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4395)
+Completed 200 OK in 25ms (Views: 24.0ms | Allocations: 5598)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:52:07 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.5ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1860)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 4416)
+Completed 200 OK in 23ms (Views: 22.1ms | Allocations: 5621)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:54:01 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.9ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 4405)
+Completed 200 OK in 29ms (Views: 28.5ms | Allocations: 5605)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:54:05 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 3298)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 3772)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:54:36 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 5.6ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 4405)
+Completed 200 OK in 32ms (Views: 31.3ms | Allocations: 5598)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:54:44 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 269)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1873)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 4429)
+Completed 200 OK in 38ms (Views: 37.2ms | Allocations: 5630)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:55:38 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 4405)
+Completed 200 OK in 23ms (Views: 21.4ms | Allocations: 5609)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:55:51 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 4406)
+Completed 200 OK in 46ms (Views: 45.0ms | Allocations: 5612)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 10:55:52 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 10)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2619)
+Completed 200 OK in 13ms (Views: 12.0ms | Allocations: 3644)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:55:56 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3300)
+Completed 200 OK in 13ms (Views: 11.9ms | Allocations: 3780)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:56:14 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1863)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 4417)
+Completed 200 OK in 22ms (Views: 20.9ms | Allocations: 5615)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:56:27 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 4404)
+Completed 200 OK in 25ms (Views: 24.4ms | Allocations: 5598)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:56:41 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.4ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1862)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 4405)
+Completed 200 OK in 33ms (Views: 32.0ms | Allocations: 5609)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-28 10:56:43 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 10)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 257)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2619)
+Completed 200 OK in 9ms (Views: 8.1ms | Allocations: 3643)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:56:46 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 9)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1028)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3320)
+Completed 200 OK in 19ms (Views: 18.0ms | Allocations: 3807)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:57:19 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1864)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4407)
+Completed 200 OK in 20ms (Views: 18.9ms | Allocations: 5611)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:57:47 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1864)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 4408)
+Completed 200 OK in 32ms (Views: 28.1ms | Allocations: 5600)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-02-28 10:58:25 +0100
+Processing by ContactsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 5.6ms | Allocations: 264)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1865)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4408)
+Completed 200 OK in 30ms (Views: 28.7ms | Allocations: 5596)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-02-28 10:58:34 +0100
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+  Rendered login/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3868)
+Completed 200 OK in 10ms (Views: 9.7ms | Allocations: 4905)
+
+

@@ -23,5 +23,9 @@ Rails.application.routes.draw do
 
   get 'screener'=>'screener#index'  
   
-    post 'signup' => 'signup#create'
+  post 'signup' => 'signup#create'
+
+  resources :contacts, only: [:new, :create ]
+  get '/contacts', to: 'contacts#new', as: 'contact'
+  get 'contacts/sent'
 end

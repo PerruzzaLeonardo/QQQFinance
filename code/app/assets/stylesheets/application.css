@@ -88,3 +88,7 @@
  .visibile{
   visibility:visible;
  }
+
+ .contatti{
+  background: url(/app/assets/images/sfondocontact.jpg) no-repeat center;
+ }
