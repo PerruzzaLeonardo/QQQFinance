@@ -1,0 +1,64 @@
+<body class="contatti">
+<%=render "/header"%>
+<br>
+<div class="container px-8 py-6 rounded-md shadow bg-white">
+    <h1 class="text-4xl text-center">Contattaci</h1>
+    <hr>
+    <p class="text-center">Compila il form sottostante per segnalare comportamenti scorretti o per contattare gli sviluppatori</p>
+
+    <%= form_for @contact do |form| %>
+
+    <% if @contact.errors.any? %>
+        <div id="error_explanation" class="bg-rose-200 pt-3 pb-1 mb-4 px-4 rounded-md">
+            <div class="font-bold text-rose-700 text-sm pb-4"><%= pluralize(@contact.errors.count, "error") %> prohibited this page from being saved:</div>
+
+            <ul class="pb-0 mb-0">
+                <% @contact.errors.each do |error| %>
+                    <li class="text-rose-600 pl-4 text-sm"><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+<br>
+    <div class="row field mb-6">
+        <div class="col-4"></div>
+        <div class="col-2">Motivo della comunicazione:</div>
+        <div class="col-3"><select class="form-select" placeholder="prova" aria-label="Default select example">
+         <option selected disabled> Seleziona:</option>
+         <option>Segnalazione utente</option>
+         <option>Segnalazione bug</option>
+         <option>Feedback e suggerimenti</option>
+         <option>Altro</option>
+         </select>
+        </div>
+        <div class="col-4"></div>
+    </div>
+<br>
+    <div class="row field mb-6">
+        <div class="col-4"></div>
+        <div class="col-2"><%= form.label :name %>:</div>
+        <div class="col-2"><%= form.text_field :name %> </div>
+        <div class="col-4"></div>
+    </div>
+<br>
+    <div class="row field mb-6">
+        <div class="col-4"></div>
+        <div class="col-2"><%= form.label :email %>:</div>
+        <div class="col-2"><%= form.text_field :email %> </div>
+        <div class="col-4"></div>
+    </div>
+<br>
+    <div class="row field">
+        <div class="col-4"></div>
+        <div class="col-2"><%= form.label :message %>: </div>
+        <div class="col-2"><%= form.text_area :message %> </div>
+        <div class="col-4"></div>
+    </div>
+<br>
+    <div style="text-align:center;">
+        <%= form.submit "Invia" %>
+    </div>
+    <% end %>
+    <br>
+</div>
+</body>

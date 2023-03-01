@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
+  }
+  devise_scope :user do
+    post "/users/sign_up" => "users/registrations#create"
+    post "/users/sign_in" => "users/sessions#create"
+  end
   resources :wallets
   resources :users
   resources :azione
@@ -17,11 +24,12 @@ Rails.application.routes.draw do
 
   root 'index#index'
 
-  get 'signup'=>'signup#index'
 
-  get 'login'=>'login#index'
+
+ 
 
   get 'screener'=>'screener#index'  
-  
-    post 'signup' => 'signup#create'
+
+
+    
 end
