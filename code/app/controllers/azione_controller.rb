@@ -13,7 +13,7 @@ class AzioneController < ApplicationController
     end
 
     def create
-        @azione = Azuibe.new(azione_params)
+        @azione = Azione.new(azione_params)
     
         respond_to do |format|
           if @azione.save
