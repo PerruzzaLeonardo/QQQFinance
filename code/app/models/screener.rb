@@ -1,0 +1,3 @@
+class Screner < ApplicationRecord
+end
+
