@@ -81,5 +81,15 @@
       </form>
     </div>
   </p>
+  <h1>Azioni</h1>
+  <ul>
+    <% @variabili.each do |variabile| %>
+      <li>
+        <%= variabile.nome %>
+        <%= variabile.isin %>
+      </li>
+    <% end %>
+  </ul>
+
 </body>
 </html>
