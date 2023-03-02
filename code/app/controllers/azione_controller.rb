@@ -4,7 +4,6 @@ class AzioneController < ApplicationController
     end
 
     def show
-      @curr_user=User.find(params[:id])
       @azione =Azione.find(params[:id])
     end
 

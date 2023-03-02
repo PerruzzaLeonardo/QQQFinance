@@ -8,10 +8,12 @@
             
             <ul class="navbar-nav ms-md-auto nav-link m-2 " >
             <% if current_user %>
-                <li class='ms-2 link-light bi bi-person-circle'><a href='../myprofile' class='link-light'><%= current_user.nome %> </a></li>
-                <li class='ms-2'><a href='#' class='link-light'>Logout</a></li> 
+                <li class='ms-2 link-light'><i class="bi bi-person-circle"></i>
+                    <a href='../myprofile' class='link-light ps-2'><%= current_user.nome %> </a>
+                </li>
+                <li class='ms-2'><a href='' class='link-light'>Logout</a></li> 
             <% else %> 
-                <li class='nav-link m-2'><a href='users/sign_in' class='link-light'>Accedi</a></li>
+                <li class='nav-link m-2'><a href='/users/sign_in' class='link-light'>Accedi</a></li>
                 <li class='nav-link m-2'><a href='/users/sign_up' class='link-light'>Registrati</a></li>
             <% end %> 
             </ul>  
