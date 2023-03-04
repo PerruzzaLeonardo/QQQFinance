@@ -20,7 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
             @user=User.new(sign_up_params)
             respond_to do |format|
               if @user.save
-                format.html { redirect_to '/login', notice: "user was successfully created." }
+                format.html { redirect_to '/users/sign_in', notice: "user was successfully created." }
                 
                
               else
@@ -35,14 +35,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
           private 
           def sign_up_params
             
-            params.require(resource_name).permit([:nome,:cognome,:email,:password]) #da completare
+            params.require(resource_name).permit([:nome,:cognome,:username,:email,:password]) #da completare
            
        
         end 
       
          # protected
           def configure_permitted_parameters
-            devise_parameter_sanitizer.permit(:sign_up, keys: [:cognome,:nome])
+            devise_parameter_sanitizer.permit(:sign_up, keys: [:cognome,:nome,:username])
           end
        
  
