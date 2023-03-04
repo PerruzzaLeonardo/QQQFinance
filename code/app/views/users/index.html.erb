@@ -1,15 +1,35 @@
-<p style="color: green"><%= notice %></p>
-<%=render "/header"%>
 
-<h1>Users</h1>
+<div class="container-fluid">
+  <%=render "/header"%>
+  <div class="row pt-2">
+    <div class="col-5">
+      <h1>IL MIO PROFILO</h1>
+    </div>
+    <div class="col-7">
+      <%= link_to "Modifica profilo",edit_user_path(current_user) %>
+    </div>
+  </div>  
+  <%= render @user %>
+  
 
-<div id="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
-  <% end %>
+  <div class="row">
+    <p>Vuoi rendere pubblico il tuo wallet?
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label></p>
+    <br>
+    <br>
+
+    <%
+    if (current_user.commento) #se non è vuoto
+      @commento=current_user.commento
+    else
+      @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
+    end %>
+
+      <textarea rows=8 cols=50 placeholder="<%= @commento %>" readonly></textarea>
+
+    <p>Find me in app/views/profilo/index.html.erb</p>
+
 </div>
-
-<%= link_to "New user", new_user_path %>

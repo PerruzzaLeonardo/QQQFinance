@@ -9,7 +9,7 @@
             <ul class="navbar-nav ms-md-auto nav-link m-2 " >
             <% if current_user %>
                 <li class='ms-2 link-light'><i class="bi bi-person-circle"></i>
-                    <a href='../myprofile' class='link-light ps-2'><%= current_user.nome %> </a>
+                    <a href='/users' class='link-light ps-2'><%= current_user.nome %> </a>
                 </li>
                 <li class='ms-2'><a href='' class='link-light'>Logout</a></li> 
             <% else %> 
@@ -22,7 +22,11 @@
     <nav class="navbar navbar-dark bg-primary ">     
         <div class="row ps-3">
             <a class='link-light col-3 ps-3 nav-link' href="..">Home</a>
-            <a class='link-light col-3 ps-3 nav-link' href="../wallet">Wallet</a>
+            <% if current_user %>
+                <a class='link-light col-3 ps-3 nav-link' href="../wallet">Wallet</a>
+            <% else %> 
+                <a class='link-light col-3 ps-3 nav-link disabled' href="../wallet">Wallet</a>
+            <% end %> 
             <a class='link-light col-3 ps-3 nav-link' href="../screener" >Screener</a>
             <a class='link-light col-3 ps-4 nav-link' disabled href="../news" >Notizie</a>
         </div> 

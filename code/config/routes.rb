@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :news
   
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  get 'myprofile'=>'profilo#index' #il mio profilo è gestito da funzione index in profilo_controller.rb
+  #get 'myprofile'=>'profilo#index' #il mio profilo è gestito da funzione index in profilo_controller.rb
   get 'profilo/:id'=>'profilo#altro' #la visualizzazione di altri profili è gestita da show in profilo_controller.rb
 
   get 'news'=>'news#index'
