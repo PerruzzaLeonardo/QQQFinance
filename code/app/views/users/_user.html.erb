@@ -1,32 +1,18 @@
-<div id="<%= dom_id user %>">
-  <p>
-    <strong>Nome:</strong>
-    <%= user.nome %>
-  </p>
 
-  <p>
-    <strong>Cognome:</strong>
-    <%= user.cognome %>
-  </p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-7">
+      <div class="field form-group"> <h2>Nome: <%= @user.nome %> </div>
+      <div class="field form-group"> <h2>Cognome: <%= @user.cognome %> </div>
+      <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
+    </div>
 
-  <p>
-    <strong>Email:</strong>
-    <%= user.email %>
-  </p>
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2> <%= @user.username %> </div>
+    </div>
+  </div>
 
-  <p>
-    <strong>Username:</strong>
-    <%= user.username %>
-  </p>
-
-  <p>
-    <strong>Pubblico:</strong>
-    <%= user.pubblico %>
-  </p>
-
-  <p>
-    <strong>Commento:</strong>
-    <%= user.commento %>
-  </p>
+  <div class="row">
 
 </div>

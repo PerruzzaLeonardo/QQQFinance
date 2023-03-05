@@ -22,16 +22,23 @@
 <br>
 		<div class="row">
 		<div class="col px-5 fs-2 fw-bold">
-		Nome<br><br>
-		Cognome<br><br>
-		Mail<br><br>
-		Password<br><br>
+	
 		</div>
 		<br>
 		<div class="col">
+		<%=form.label :nome%>
 		<%= form.text_field :nome %>
+		<br>
+		<%=form.label :cognome%>
 		<%= form.text_field :cognome %>
+		<br>
+		<%=form.label :username%>
+		<%= form.text_field :username%>
+		<br>
+		<%=form.label :email%>
 		<%= form.text_field :email %>
+		<br>
+		<%=form.label :password%>
     <%= form.password_field :password%>
 	
 		

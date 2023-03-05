@@ -10,38 +10,57 @@
       </ul>
     </div>
   <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
 
-  <div>
-    <%= form.label :nome, style: "display: block" %>
-    <%= form.text_field :nome %>
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
   </div>
 
-  <div>
-    <%= form.label :cognome, style: "display: block" %>
-    <%= form.text_field :cognome %>
+  <div class=" m-2 form-check form-switch ">
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico">
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
   </div>
-
-  <div>
-    <%= form.label :email, style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div>
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username %>
-  </div>
-
-  <div>
-    <%= form.label :pubblico, style: "display: block" %>
-    <%= form.text_field :pubblico %>
-  </div>
-
-  <div>
+  
+  <div class="row m-2">
     <%= form.label :commento, style: "display: block" %>
-    <%= form.text_field :commento %>
-  </div>
-
-  <div>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
     <%= form.submit %>
   </div>
 <% end %>
