@@ -27387,3 +27387,1940 @@ Processing by ScreenerController#index as HTML
 Completed 200 OK in 362ms (Views: 282.8ms | ActiveRecord: 7.7ms | Allocations: 5905)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-02 15:16:06 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 17.0ms | Allocations: 441)
+  Rendered index/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 1112)
+  Rendered layout layouts/application.html.erb (Duration: 605.8ms | Allocations: 51342)
+Completed 200 OK in 681ms (Views: 626.8ms | ActiveRecord: 0.0ms | Allocations: 56938)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-02 15:16:55 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 85)
+  Rendered news/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 4687)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 6922)
+Completed 200 OK in 81ms (Views: 21.5ms | ActiveRecord: 1.1ms | Allocations: 31431)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-02 15:17:01 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 3942)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 6276)
+Completed 200 OK in 60ms (Views: 30.6ms | ActiveRecord: 0.4ms | Allocations: 25839)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-02 15:17:08 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3680)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 5192)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:03:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.3ms | Allocations: 441)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1112)
+  Rendered layout layouts/application.html.erb (Duration: 387.0ms | Allocations: 38214)
+Completed 200 OK in 463ms (Views: 409.8ms | ActiveRecord: 0.0ms | Allocations: 43812)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-04 15:04:00 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 85)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 34.4ms | Allocations: 23048)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 25412)
+Completed 200 OK in 85ms (Views: 73.4ms | ActiveRecord: 0.5ms | Allocations: 27325)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-04 15:04:22 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 80)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 654)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2939)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms | Allocations: 3429)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-04 15:04:28 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 35.9ms | Allocations: 4102)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 6445)
+Completed 200 OK in 84ms (Views: 57.1ms | ActiveRecord: 0.3ms | Allocations: 25282)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-04 15:05:08 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Account", "cognome"=>"Di Prova", "email"=>"maildiprova@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "maildiprova@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Account"], ["cognome", "Di Prova"], ["username", nil], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-04 14:05:09.290720"], ["updated_at", "2023-03-04 14:05:09.290720"], ["email", "maildiprova@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (31.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 623ms (ActiveRecord: 33.0ms | Allocations: 8511)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:05:09 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-04 15:05:09 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 706)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2994)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms | Allocations: 3664)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:05:13 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1141)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3483)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 5109)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:05:52 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"maildiprova@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "maildiprova@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/5
+Completed 303 See Other in 570ms (ActiveRecord: 0.2ms | Allocations: 5558)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2023-03-04 15:05:53 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 1.3ms | Allocations: 305)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1294)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3627)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 5932)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:06:08 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.2ms | Allocations: 792)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 854)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3139)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms | Allocations: 3621)
+
+
+Started GET "/myprofile" for 127.0.0.1 at 2023-03-04 15:06:11 +0100
+Processing by ProfiloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profilo/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 737)
+  Rendered profilo/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1790)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4012)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.1ms | Allocations: 5074)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:06:25 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.3ms | Allocations: 732)
+  Rendered news/index.html.erb within layouts/application (Duration: 24.0ms | Allocations: 5407)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 7630)
+Completed 200 OK in 65ms (Views: 26.6ms | ActiveRecord: 1.1ms | Allocations: 29114)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:07:54 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 7.1ms | Allocations: 4660)
+  Rendered news/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 8052)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 21860)
+Completed 200 OK in 96ms (Views: 52.3ms | ActiveRecord: 1.6ms | Allocations: 30765)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:07:55 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 726)
+  Rendered news/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 4036)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6212)
+Completed 200 OK in 42ms (Views: 19.5ms | ActiveRecord: 0.8ms | Allocations: 11125)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:08:11 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 185)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2575)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3414)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:08:15 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.2ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3055)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4399)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-04 15:08:17 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 766)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3108)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 4350)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-04 15:08:39 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"test", "cognome"=>"account", "email"=>"test@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1558)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 3877)
+Completed 422 Unprocessable Entity in 552ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 7465)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-04 15:08:47 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"test", "cognome"=>"account", "email"=>"test@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "test"], ["cognome", "account"], ["username", nil], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-04 14:08:48.305585"], ["updated_at", "2023-03-04 14:08:48.305585"], ["email", "test@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (67.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 549ms (ActiveRecord: 67.9ms | Allocations: 3195)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:08:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-04 15:08:48 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 706)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2994)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms | Allocations: 3647)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:08:53 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 584)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2848)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3564)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:09:07 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"test@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "test@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/6
+Completed 303 See Other in 565ms (ActiveRecord: 0.2ms | Allocations: 2103)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2023-03-04 15:09:07 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 35)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 526)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2861)
+Completed 200 OK in 16ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 4882)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-04 15:09:13 +0100
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.2ms | Allocations: 728)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:7
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered users/_user.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered users/index.html.erb within layouts/application (Duration: 37.8ms | Allocations: 2445)
+  Rendered layout layouts/application.html.erb (Duration: 39.7ms | Allocations: 4737)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.2ms | Allocations: 5338)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:09:20 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 727)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 3074)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.1ms | Allocations: 3549)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:09:24 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1090)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:09:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:09:31 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 7.9ms | Allocations: 726)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 3089)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.1ms | Allocations: 3600)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:09:34 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:09:34 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:09:39 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 726)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3089)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 3589)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-04 15:09:40 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 6.6ms | Allocations: 733)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 6339)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 8702)
+Completed 200 OK in 36ms (Views: 29.2ms | ActiveRecord: 5.1ms | Allocations: 10186)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:09:42 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.3ms | Allocations: 726)
+  Rendered news/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4056)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 6239)
+Completed 200 OK in 35ms (Views: 14.3ms | ActiveRecord: 0.7ms | Allocations: 11163)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:09:44 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:09:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:09:49 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 726)
+  Rendered news/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 4038)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 6227)
+Completed 200 OK in 26ms (Views: 14.6ms | ActiveRecord: 0.6ms | Allocations: 11147)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:10:52 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:10:52 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:11:20 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.1ms | Allocations: 990)
+  Rendered news/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 5608)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 8047)
+Completed 200 OK in 59ms (Views: 34.5ms | ActiveRecord: 0.7ms | Allocations: 13650)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:11:24 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 5.0ms | Allocations: 731)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1036)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3406)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.1ms | Allocations: 4454)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:11:36 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.2ms | Allocations: 727)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 789)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3076)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.1ms | Allocations: 3593)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:11:59 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 164)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 2461)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 2842)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:12:04 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:12:04 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:12:13 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 2464)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms | Allocations: 2967)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:12:44 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 368)
+
+
+Started GET "/login" for 127.0.0.1 at 2023-03-04 15:12:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/login"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:15:07 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 163)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2464)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 2959)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:17:16 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 100)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 14119)
+Completed 200 OK in 41ms (Views: 40.7ms | Allocations: 15139)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:17:18 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users_sign_in
+Completed 302 Found in 1ms (Allocations: 544)
+
+
+Started GET "/users_sign_in" for 127.0.0.1 at 2023-03-04 15:17:18 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users_sign_in"):
+  
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:17:30 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 1ms (Allocations: 549)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:17:30 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1085)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 15006)
+Completed 200 OK in 48ms (Views: 43.6ms | ActiveRecord: 0.2ms | Allocations: 19838)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:18:14 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 384)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:18:14 +0100
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 16ms (ActiveRecord: 0.2ms | Allocations: 1800)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:18:14 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 12.8ms | Allocations: 734)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.7ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3162)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.1ms | Allocations: 4162)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:18:17 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:18:17 +0100
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1349)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:18:17 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.7ms | Allocations: 726)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3079)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.1ms | Allocations: 3568)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:18:20 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 360)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:18:20 +0100
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1366)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:18:20 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.9ms | Allocations: 726)
+  Rendered index/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3080)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.1ms | Allocations: 3576)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:18:25 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 360)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 15:18:25 +0100
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1363)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:18:25 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 7.5ms | Allocations: 726)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 788)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3073)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.1ms | Allocations: 3563)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:19:13 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 16.8ms | Allocations: 4897)
+  Rendered index/index.html.erb within layouts/application (Duration: 19.7ms | Allocations: 4963)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 18909)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 2.6ms | Allocations: 19924)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:19:15 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms | Allocations: 1988)
+
+
+  
+NoMethodError (undefined method `username' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:9:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:19:58 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.9ms | Allocations: 9032)
+
+
+  
+NameError (undefined local variable or method `user' for #<WalletsController:0x00000000034a30>
+Did you mean?  super):
+  
+app/controllers/wallets_controller.rb:9:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:20:07 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.8ms | Allocations: 8954)
+
+
+  
+NoMethodError (undefined method `username' for User:Class):
+  
+app/controllers/wallets_controller.rb:9:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:21:26 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:14:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered wallets/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1318)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1391)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.7ms | Allocations: 8337)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+<%=render "/header"%>
+ <div class="row">
+   <div class="col-12">
+     <h1>Valore totale wallet:</h1>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+   </div>
+ </div>
+ <hr>
+
+ <form method='POST'>
+
+ <div class="row">
+  <div class="col-4">
+   <h2>aggiungi posizione:</h2>
+  </div>
+  <div class="col-4">
+   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  </div>
+  <div class="col-2">
+   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+  </div>
+  <div class="col-2">
+   <button type="submit" class="btn btn-primary">Aggiungi</button>
+ </div> 
+ </form>
+ </div>
+
+ <hr>
+ <div class="row">
+   <h1>Azioni detenute:</h1>
+   <div class=" table-responsive">
+     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+       <tr>
+       <th>Nome</th>
+       <th>ISIN</th>
+       <th>Paese</th>
+       <th>Settore</th>
+       <th>Quantità</th>
+       <th>ValorePosizione</th>
+       <tr></tr>
+       </tr>
+       <% i=0,tot=0%>
+       <% while i<azioni.lenght() %>
+       <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+       <% i+=1 
+       tot=tot+(azioni[i].prezzo * @quantita[i])%>
+       <%end %>
+     </table>
+    </div>
+  </div>
+  <%end%>
+</div>
+):
+1:    <div class="container">
+2:    <%=render "/header"%>
+3:     <div class="row">
+4:       <div class="col-12">
+5:         <h1>Valore totale wallet:</h1>
+6:         <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+7:       </div>
+8:     </div>
+9:     <hr>
+10:    
+11:     <form method='POST'>
+12:    
+13:     <div class="row">
+14:      <div class="col-4">
+15:       <h2>aggiungi posizione:</h2>
+16:      </div>
+17:      <div class="col-4">
+18:       <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+19:      </div>
+20:      <div class="col-2">
+21:       <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+22:      </div>
+23:      <div class="col-2">
+24:       <button type="submit" class="btn btn-primary">Aggiungi</button>
+25:     </div> 
+26:     </form>
+27:     </div>
+28:    
+29:     <hr>
+30:     <div class="row">
+31:       <h1>Azioni detenute:</h1>
+32:       <div class=" table-responsive">
+33:         <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+34:           <tr>
+35:           <th>Nome</th>
+36:           <th>ISIN</th>
+37:           <th>Paese</th>
+38:           <th>Settore</th>
+39:           <th>Quantità</th>
+40:           <th>ValorePosizione</th>
+41:           <tr></tr>
+42:           </tr>
+43:           <% i=0,tot=0%>
+44:           <% while i<azioni.lenght() %>
+45:           <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+46:           <% i+=1 
+47:           tot=tot+(azioni[i].prezzo * @quantita[i])%>
+48:           <%end %>
+49:         </table>
+50:        </div>
+51:      </div>
+52:      <%end%>
+53:    </div>
+  
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:55: syntax error, unexpected `end', expecting end-of-input
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:23:48 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:14:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1414)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 3825)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+<%=render "/header"%>
+ <div class="row">
+   <div class="col-12">
+     <h1>Valore totale wallet:</h1>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+   </div>
+ </div>
+ <hr>
+
+ <form method='POST'>
+
+ <div class="row">
+  <div class="col-4">
+   <h2>aggiungi posizione:</h2>
+  </div>
+  <div class="col-4">
+   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  </div>
+  <div class="col-2">
+   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+  </div>
+  <div class="col-2">
+   <button type="submit" class="btn btn-primary">Aggiungi</button>
+ </div> 
+ </form>
+ </div>
+
+ <hr>
+ <div class="row">
+   <h1>Azioni detenute:</h1>
+   <div class=" table-responsive">
+     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+       <tr>
+       <th>Nome</th>
+       <th>ISIN</th>
+       <th>Paese</th>
+       <th>Settore</th>
+       <th>Quantità</th>
+       <th>ValorePosizione</th>
+       <tr></tr>
+       </tr>
+       <% i=0,tot=0%>
+       <% while i<azioni.lenght() %>
+       <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+       <% i+=1 
+       tot=tot+(azioni[i].prezzo * @quantita[i])%>
+       <%end %>
+     </table>
+    </div>
+  </div>
+  <%end%>
+</div>
+<%end%>
+):
+1:    <div class="container">
+2:    <%=render "/header"%>
+3:     <div class="row">
+4:       <div class="col-12">
+5:         <h1>Valore totale wallet:</h1>
+6:         <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+7:       </div>
+8:     </div>
+9:     <hr>
+10:    
+11:     <form method='POST'>
+12:    
+13:     <div class="row">
+14:      <div class="col-4">
+15:       <h2>aggiungi posizione:</h2>
+16:      </div>
+17:      <div class="col-4">
+18:       <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+19:      </div>
+20:      <div class="col-2">
+21:       <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+22:      </div>
+23:      <div class="col-2">
+24:       <button type="submit" class="btn btn-primary">Aggiungi</button>
+25:     </div> 
+26:     </form>
+27:     </div>
+28:    
+29:     <hr>
+30:     <div class="row">
+31:       <h1>Azioni detenute:</h1>
+32:       <div class=" table-responsive">
+33:         <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+34:           <tr>
+35:           <th>Nome</th>
+36:           <th>ISIN</th>
+37:           <th>Paese</th>
+38:           <th>Settore</th>
+39:           <th>Quantità</th>
+40:           <th>ValorePosizione</th>
+41:           <tr></tr>
+42:           </tr>
+43:           <% i=0,tot=0%>
+44:           <% while i<azioni.lenght() %>
+45:           <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+46:           <% i+=1 
+47:           tot=tot+(azioni[i].prezzo * @quantita[i])%>
+48:           <%end %>
+49:         </table>
+50:        </div>
+51:      </div>
+52:      <%end%>
+53:    </div>
+54:    <%end%>
+  
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:24:02 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:14:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 1442)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 3852)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+<%=render "/header"%>
+ <div class="row">
+   <div class="col-12">
+     <h1>Valore totale wallet:</h1>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+   </div>
+ </div>
+ <hr>
+
+ <form method='POST'>
+
+ <div class="row">
+  <div class="col-4">
+   <h2>aggiungi posizione:</h2>
+  </div>
+  <div class="col-4">
+   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  </div>
+  <div class="col-2">
+   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+  </div>
+  <div class="col-2">
+   <button type="submit" class="btn btn-primary">Aggiungi</button>
+ </div> 
+ </form>
+ </div>
+
+ <hr>
+ <div class="row">
+   <h1>Azioni detenute:</h1>
+   <div class=" table-responsive">
+     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+       <tr>
+       <th>Nome</th>
+       <th>ISIN</th>
+       <th>Paese</th>
+       <th>Settore</th>
+       <th>Quantità</th>
+       <th>ValorePosizione</th>
+       <tr></tr>
+       </tr>
+       <% i=0,tot=0%>
+       <% while i<azioni.lenght() %>
+       <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+       <% i+=1 
+       tot=tot+(azioni[i].prezzo * @quantita[i])%>
+       <%end %>
+     </table>
+    </div>
+  </div>
+  <%end%>
+</div>
+<%end%>
+<%end%>
+<%end%>
+<%end%>
+<%end%>
+):
+1:    <div class="container">
+2:    <%=render "/header"%>
+3:     <div class="row">
+4:       <div class="col-12">
+5:         <h1>Valore totale wallet:</h1>
+6:         <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+7:       </div>
+8:     </div>
+9:     <hr>
+10:    
+11:     <form method='POST'>
+12:    
+13:     <div class="row">
+14:      <div class="col-4">
+15:       <h2>aggiungi posizione:</h2>
+16:      </div>
+17:      <div class="col-4">
+18:       <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+19:      </div>
+20:      <div class="col-2">
+21:       <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+22:      </div>
+23:      <div class="col-2">
+24:       <button type="submit" class="btn btn-primary">Aggiungi</button>
+25:     </div> 
+26:     </form>
+27:     </div>
+28:    
+29:     <hr>
+30:     <div class="row">
+31:       <h1>Azioni detenute:</h1>
+32:       <div class=" table-responsive">
+33:         <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+34:           <tr>
+35:           <th>Nome</th>
+36:           <th>ISIN</th>
+37:           <th>Paese</th>
+38:           <th>Settore</th>
+39:           <th>Quantità</th>
+40:           <th>ValorePosizione</th>
+41:           <tr></tr>
+42:           </tr>
+43:           <% i=0,tot=0%>
+44:           <% while i<azioni.lenght() %>
+45:           <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+46:           <% i+=1 
+47:           tot=tot+(azioni[i].prezzo * @quantita[i])%>
+48:           <%end %>
+49:         </table>
+50:        </div>
+51:      </div>
+52:      <%end%>
+53:    </div>
+54:    <%end%>
+55:    <%end%>
+56:    <%end%>
+57:    <%end%>
+58:    <%end%>
+  
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting end-of-input
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:24:27 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:14:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 282)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 5409)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5481)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.2ms | Allocations: 7892)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tot' for #<ActionView::Base:0x000000000440c0>
+Did you mean?  not):
+    3:  <div class="row">
+    4:    <div class="col-12">
+    5:      <h1>Valore totale wallet:</h1>
+    6:      <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+    7:    </div>
+    8:  </div>
+    9:  <hr>
+  
+app/views/wallets/index.html.erb:6
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:26:41 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 4682)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4754)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.8ms | Allocations: 11514)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `tot' for #<ActionView::Base:0x0000000004b2f8>
+Did you mean?  @tot
+               not):
+    3:  <div class="row">
+    4:    <div class="col-12">
+    5:      <h1>Valore totale wallet:</h1>
+    6:      <div class="text-center"><h2 style="color:green" id="valore"> <%tot%> $</h2></div>
+    7:    </div>
+    8:  </div>
+    9:  <hr>
+  
+app/views/wallets/index.html.erb:6
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:26:57 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5366)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5438)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.3ms | Allocations: 7850)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `azioni' for #<ActionView::Base:0x0000000004b618>
+Did you mean?  @azioni):
+    41:        <tr></tr>
+    42:        </tr>
+    43:        <% i=0,tot=0%>
+    44:        <% while i<azioni.lenght() %>
+    45:        <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    46:        <% i+=1 
+    47:        tot=tot+(azioni[i].prezzo * @quantita[i])%>
+  
+app/views/wallets/index.html.erb:44
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:27:15 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2826)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2898)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.3ms | Allocations: 5309)
+
+
+  
+ActionView::Template::Error (undefined method `lenght' for []:Array
+Did you mean?  length):
+    41:        <tr></tr>
+    42:        </tr>
+    43:        <% i=0,tot=0%>
+    44:        <% while i<@azioni.lenght() %>
+    45:        <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    46:        <% i+=1 
+    47:        tot=tot+(azioni[i].prezzo * @quantita[i])%>
+  
+app/views/wallets/index.html.erb:44
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:27:29 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2843)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2915)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms | Allocations: 5326)
+
+
+  
+ActionView::Template::Error (undefined method `<' for [0, 0]:Array
+Did you mean?  <<):
+    41:        <tr></tr>
+    42:        </tr>
+    43:        <% i=0,tot=0%>
+    44:        <% while i<@azioni.length() %>
+    45:        <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    46:        <% i+=1 
+    47:        tot=tot+(azioni[i].prezzo * @quantita[i])%>
+  
+app/views/wallets/index.html.erb:44
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:28:24 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered wallets/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 1399)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.3ms | Allocations: 3811)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="container">
+<%=render "/header"%>
+ <div class="row">
+   <div class="col-12">
+     <h1>Valore totale wallet:</h1>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%@tot%> $</h2></div>
+   </div>
+ </div>
+ <hr>
+
+ <form method='POST'>
+
+ <div class="row">
+  <div class="col-4">
+   <h2>aggiungi posizione:</h2>
+  </div>
+  <div class="col-4">
+   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  </div>
+  <div class="col-2">
+   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+  </div>
+  <div class="col-2">
+   <button type="submit" class="btn btn-primary">Aggiungi</button>
+ </div> 
+ </form>
+ </div>
+
+ <hr>
+ <div class="row">
+   <h1>Azioni detenute:</h1>
+   <div class=" table-responsive">
+     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+       <tr>
+       <th>Nome</th>
+       <th>ISIN</th>
+       <th>Paese</th>
+       <th>Settore</th>
+       <th>Quantità</th>
+       <th>ValorePosizione</th>
+       <tr></tr>
+       </tr>
+       <% i=0%>
+       <%= while i<@azioni.length() %>
+       <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+       <% i+=1 %>
+       <%end %>
+     </table>
+    </div>
+  </div>
+</div>
+
+):
+1:    <div class="container">
+2:    <%=render "/header"%>
+3:     <div class="row">
+4:       <div class="col-12">
+5:         <h1>Valore totale wallet:</h1>
+6:         <div class="text-center"><h2 style="color:green" id="valore"> <%@tot%> $</h2></div>
+7:       </div>
+8:     </div>
+9:     <hr>
+10:    
+11:     <form method='POST'>
+12:    
+13:     <div class="row">
+14:      <div class="col-4">
+15:       <h2>aggiungi posizione:</h2>
+16:      </div>
+17:      <div class="col-4">
+18:       <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+19:      </div>
+20:      <div class="col-2">
+21:       <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+22:      </div>
+23:      <div class="col-2">
+24:       <button type="submit" class="btn btn-primary">Aggiungi</button>
+25:     </div> 
+26:     </form>
+27:     </div>
+28:    
+29:     <hr>
+30:     <div class="row">
+31:       <h1>Azioni detenute:</h1>
+32:       <div class=" table-responsive">
+33:         <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+34:           <tr>
+35:           <th>Nome</th>
+36:           <th>ISIN</th>
+37:           <th>Paese</th>
+38:           <th>Settore</th>
+39:           <th>Quantità</th>
+40:           <th>ValorePosizione</th>
+41:           <tr></tr>
+42:           </tr>
+43:           <% i=0%>
+44:           <%= while i<@azioni.length() %>
+45:           <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+46:           <% i+=1 %>
+47:           <%end %>
+48:         </table>
+49:        </div>
+50:      </div>
+51:    </div>
+  
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:44: syntax error, unexpected ')', expecting `do' for condition or ';' or '\n'
+app/views/wallets/index.html.erb:47: syntax error, unexpected `end', expecting ')'
+app/views/wallets/index.html.erb:54: syntax error, unexpected `end', expecting ')'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:29:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 787)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 14931)
+Completed 200 OK in 55ms (Views: 48.4ms | ActiveRecord: 0.2ms | Allocations: 17374)
+
+
+Started POST "/wallet" for 127.0.0.1 at 2023-03-04 15:29:41 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/wallet"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-04 15:38:00 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 6.9ms | Allocations: 902)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1207)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3569)
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.4ms | Allocations: 4686)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:38:02 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.5ms | Allocations: 732)
+  Rendered news/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 5310)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 7547)
+Completed 200 OK in 61ms (Views: 22.1ms | ActiveRecord: 1.9ms | Allocations: 16422)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:38:47 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.8ms | Allocations: 990)
+  Rendered news/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 5588)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 8013)
+Completed 200 OK in 79ms (Views: 43.8ms | ActiveRecord: 1.0ms | Allocations: 13640)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:38:48 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 480)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2834)
+Completed 200 OK in 32ms (Views: 21.3ms | ActiveRecord: 0.2ms | Allocations: 5094)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:38:50 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 76)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 2353)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 4027)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:39:08 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3351)
+Completed 200 OK in 31ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 5784)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:39:22 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 794)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3361)
+Completed 200 OK in 44ms (Views: 23.0ms | ActiveRecord: 0.3ms | Allocations: 5801)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:39:25 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.6ms | Allocations: 730)
+  Rendered news/index.html.erb within layouts/application (Duration: 16.0ms | Allocations: 5274)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 7502)
+Completed 200 OK in 76ms (Views: 18.9ms | ActiveRecord: 1.3ms | Allocations: 12957)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:39:36 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 990)
+  Rendered news/index.html.erb within layouts/application (Duration: 17.8ms | Allocations: 5591)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 8016)
+Completed 200 OK in 85ms (Views: 49.4ms | ActiveRecord: 1.1ms | Allocations: 13639)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:39:46 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 479)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2833)
+Completed 200 OK in 23ms (Views: 11.0ms | ActiveRecord: 0.3ms | Allocations: 5083)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:41:43 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 17.7ms | Allocations: 280)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 793)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 3350)
+Completed 200 OK in 48ms (Views: 38.6ms | ActiveRecord: 0.2ms | Allocations: 5784)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:41:45 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.1ms | Allocations: 730)
+  Rendered news/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 5282)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 7504)
+Completed 200 OK in 61ms (Views: 28.9ms | ActiveRecord: 0.8ms | Allocations: 12959)
+
+
+Started GET "/sfondocontact.jpg" for 127.0.0.1 at 2023-03-04 15:41:45 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondocontact.jpg"):
+  
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:42:58 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 5.7ms | Allocations: 991)
+  Rendered news/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 5617)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 8056)
+Completed 200 OK in 75ms (Views: 45.0ms | ActiveRecord: 1.1ms | Allocations: 13699)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-04 15:44:16 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 6.8ms | Allocations: 990)
+  Rendered news/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 5594)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 8026)
+Completed 200 OK in 63ms (Views: 41.6ms | ActiveRecord: 0.8ms | Allocations: 13657)
+
+
+Started GET "/app/assets/images/sfondocontact.jpg" for 127.0.0.1 at 2023-03-04 15:44:16 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/app/assets/images/sfondocontact.jpg"):
+  
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 15:48:04 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 482)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2852)
+Completed 200 OK in 23ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 5128)
+
+
+Started GET "/myprofile" for 127.0.0.1 at 2023-03-04 16:06:30 +0100
+Processing by ProfiloController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profilo/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.0ms | Allocations: 903)
+  Rendered profilo/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1928)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 4150)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.3ms | Allocations: 5217)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-04 16:07:46 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 98)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 424)
+  Rendered layout layouts/application.html.erb (Duration: 99.5ms | Allocations: 11426)
+Completed 200 OK in 108ms (Views: 106.9ms | ActiveRecord: 0.0ms | Allocations: 12352)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-04 16:07:49 +0100
+Processing by WalletsController#index as HTML
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 409)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 16:07:49 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1084)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3434)
+Completed 200 OK in 24ms (Views: 23.0ms | ActiveRecord: 0.0ms | Allocations: 5119)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 16:07:57 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 584)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2853)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 3575)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-04 16:08:12 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"testaccount@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "testaccount@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.2ms | Allocations: 1126)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-04 16:08:12 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2848)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 3601)
+
+

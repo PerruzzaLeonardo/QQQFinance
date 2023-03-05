@@ -20,7 +20,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
             @user=User.new(sign_up_params)
             respond_to do |format|
               if @user.save
-                format.html { redirect_to '/login', notice: "user was successfully created." }
+                format.html { redirect_to '/login'}
                 
                
               else
