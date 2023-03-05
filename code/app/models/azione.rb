@@ -33,19 +33,24 @@ class Azione < ApplicationRecord
             
             res=JSON.parse(response.read_body)
 
-            prezzo=res["financialData"]["currentPrice"]["raw"] #prezzo è di tipo float quando lo inserisco
-=begin     
+            @prezzo=res["financialData"]["currentPrice"]["raw"] #prezzo è di tipo float quando lo inserisco
+=begin
             #controllo vecchio prezzo per capire se dover mandare la mail
-            prec=Azione.where(isin:isin[n].to_s).first.prezzo #ERRORE: PREC RISULTA NIL ANCHE SE NEL DB PREZZO È UN INTERO
-            puts isin[n]
-            puts prec
-            
+            prec=Azione.where(isin:isin[n]).first.prezzo #ERRORE: PREC RISULTA NIL ANCHE SE NEL DB PREZZO È UN INTERO
+            @ticker=isin[n]
+
             if prezzo>prec*1.05 or prezzo<prec*0.95 #se prezzo è salito piu di 5% o sceso di piu di 5%, invia notifica
-                oscillazione_prezzo(isin[n])
-            else
-                puts "oscillazione non rilevante"
+                @variazione = ((prezzo - prec) / prec) * 100
+                portafogli=Wallet.where(azione:isin[n])
+                x=0
+                while x<portafogli.length
+                    @utente=User.where(username:portafogli[x].user)
+                    price_mailer.oscillazione_prezzo(@utente,@ticker,@prezzo,@variazione).deliver_later
+                    
+                    x=x+1
+                end
             end
-=end        
+=end
             
             nome=res["quoteType"]["shortName"]
             settore=res["summaryProfile"]["sector"]
@@ -67,7 +72,7 @@ class Azione < ApplicationRecord
             opmargin=res["financialData"]["operatingMargins"]["raw"]*100
             ebitda=res["financialData"]["ebitdaMargins"]["raw"]*100
             
-            azioni[n].update(nome:nome,settore:settore,paese:paese,marketcap:marketcap,prezzo:prezzo,volume:volume,pe:pe,ps:ps,pb:pb,divyield:divyield,roe:roe,roa:roa,debteq:debteq,opmargin:opmargin,ebitda:ebitda)
+            azioni[n].update(nome:nome,settore:settore,paese:paese,marketcap:marketcap,prezzo:@prezzo,volume:volume,pe:pe,ps:ps,pb:pb,divyield:divyield,roe:roe,roa:roa,debteq:debteq,opmargin:opmargin,ebitda:ebitda)
         end
 
 =begin    PRIMO INSERIMENTO IN DB

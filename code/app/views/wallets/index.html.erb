@@ -7,7 +7,7 @@
  <div class="row">
    <div class="col-12">
      <h1>Valore totale wallet:</h1>
-     <div class="text-center"><h2 style="color:green" id="valore"> <%@tot%> $</h2></div>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%=@tot%> $</h2></div>
    </div>
  </div>
  <hr>
@@ -51,6 +51,10 @@
        <%end %>
      </table>
     </div>
+    <% if @tot==0%>
+    <p class="text-center">Il tuo wallet è vuoto.<br>Aggiungine alcune utilizzando l'apposito tool che trovi qui sopra o nella pagina <a href=../screener>screener</a></p>
+    <%end%>
   </div>
 </div>
+<%= debug(@tot) %>
 </body>

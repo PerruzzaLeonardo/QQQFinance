@@ -1,9 +1,9 @@
 <h1>Price#oscillazione_prezzo</h1>
 
 <p>
-  <%= @greeting %> <%=@user.nome%>,
+  <%= @greeting %> <%=@user.nome%> <%=@user.cognome%>,
 </p>
 <p>
-con la presente desideriamo informarti che il titolo <%=@isin%> che possiedi in Wallet ha subito un oscillazione di prezzo superiore al 5% rispetto all'ultimo aggiornamento.
-In particolare, si trova ora a <%=@prezzo%>$, con una variazione complessiva di <%=@variazione%>
+con la presente desideriamo informarti che la tua posizione in <%=@isin%> ha subito un oscillazione di prezzo superiore al 5% dall'ultimo aggiornamento.
+In particolare,il titolo ha subito una variazione di <%=@variazione%> %, e si trova ora a <%=@prezzo%>$ per azione.
 </p>

@@ -20,6 +20,7 @@ class WalletsController < ApplicationController
         @tot=tot+(posizione.quantità*@azioni[i].prezzo)
         i+=1
       end
+      render :text => @tot.inspect
     end
   end 
 
