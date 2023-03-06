@@ -3,21 +3,24 @@ class WalletsController < ApplicationController
 
   # GET /wallets or /wallets.json
   def index
-    if Current.user==nil
-      redirect_to '/login',notice: 'Per accedere alla pagina del Wallet, è prima necessario autenticarsi col proprio account' 
+    if !user_signed_in?
+      redirect_to '/users/sign_in',notice: 'Per accedere alla pagina del Wallet, è prima necessario autenticarsi col proprio account' 
     else
-      @curr_user=Current.user.username
-      @posizioni = Wallet.where("user=?",params[:curr_user])
+      @curr_user=current_user.username
+      @posizioni = Wallet.where(user:@curr_user)
       @azioni = [] #nuova variabile contenente le info dell'azione estratta
-      @quanita = [] #variabile indica la quantita di azione i-esima in "posizioni" che l'utente detiene
+      @quantita = [] #variabile indica la quantita di azione i-esima in "posizioni" che l'utente detiene
+      @tot=0
       i=0
       @posizioni.each do |posizione|
         #in azione dovrei avere tuple username,azione,quantita. vedere come è fatta la variabile ed estrarre nelle due righe sotto
         #solo 'azione' nella prima e solo 'quantita' nella seconda (controlla se giusto come fatto)
-        @azioni[i]=Azione.where(:isin => posizione.isin)
+        @azioni[i]=Azione.where(isin:posizione.azione).first
         @quantita[i]=posizione.quantità
+        @tot=@tot+(posizione.quantità*@azioni[i].prezzo)
         i+=1
       end
+      render :text => @posizioni.inspect
     end
   end 
 
