@@ -19,7 +19,7 @@ class Azione < ApplicationRecord
         end
         #isin contiene tutti gli isin inseriti nel database
 
-        for n in 0..len
+        for n in 0..0 #len
             url = URI("https://yh-finance.p.rapidapi.com/stock/v2/get-summary?symbol="+isin[n])
             http = Net::HTTP.new(url.host, url.port)
             http.use_ssl = true
@@ -33,27 +33,24 @@ class Azione < ApplicationRecord
             
             res=JSON.parse(response.read_body)
 
-            puts isin[n]
-            puts n
-
             @prezzo=res["financialData"]["currentPrice"]["raw"] #prezzo è di tipo float quando lo inserisco
-=begin
-            #controllo vecchio prezzo per capire se dover mandare la mail
-            prec=Azione.where(isin:isin[n]).first.prezzo #ERRORE: PREC RISULTA NIL ANCHE SE NEL DB PREZZO È UN INTERO
-            @ticker=isin[n]
 
-            if prezzo>prec*1.05 or prezzo<prec*0.95 #se prezzo è salito piu di 5% o sceso di piu di 5%, invia notifica
-                @variazione = ((prezzo - prec) / prec) * 100
+
+            #controllo vecchio prezzo per capire se dover mandare la mail
+            prec=Azione.where(isin:isin[n]).first.prezzo 
+            @ticker=isin[n]
+            puts prec
+            if @prezzo>prec*1.05 or @prezzo<prec*0.95 #se prezzo è salito piu di 5% o sceso di piu di 5%, invia notifica
+                @variazione = ((@prezzo - prec) / prec) * 100
                 portafogli=Wallet.where(azione:isin[n])
                 x=0
                 while x<portafogli.length
-                    @utente=User.where(username:portafogli[x].user)
-                    price_mailer.oscillazione_prezzo(@utente,@ticker,@prezzo,@variazione).deliver_later
-                    
+                    @utente=User.where(username:portafogli[x].user).first
+                    PriceMailer.oscillazione_prezzo(@utente,@ticker,@prezzo,@variazione).deliver_later
                     x=x+1
                 end
             end
-=end          
+
 
             nome=res["quoteType"]["shortName"]
             settore=res["summaryProfile"]["sector"]
@@ -76,14 +73,13 @@ class Azione < ApplicationRecord
             ebitda=res["financialData"]["ebitdaMargins"]["raw"]*100
             
             azioni[n].update(nome:nome,settore:settore,paese:paese,marketcap:marketcap,prezzo:@prezzo,volume:volume,pe:pe,ps:ps,pb:pb,divyield:divyield,roe:roe,roa:roa,debteq:debteq,opmargin:opmargin,ebitda:ebitda)
-            puts @prezzo
         end
 
 
 =begin PRIMO INSERIMENTO IN DB
 
        Azione.destroy_all
-       n=1
+       n=0
        temp=["AAPL", "ABNB", "ADBE", "ADI", "ADP", "ADSK", "AEP", "ALGN", "AMAT", "AMD", "AMGN", "AMZN", "ANSS", "ASML", "ATVI", "AVGO", "AZN", "BIIB", "BKNG", "BKR", "CDNS", "CEG", "CHTR", "CMCSA", "COST", "CPRT", "CRWD", "CSCO", "CSGP", "CSX", "CTAS", "CTSH", "DDOG", "DLTR", "DXCM", "EA", "EBAY", "ENPH", "EXC", "FANG", "FAST", "FISV", "FTNT", "GFS", "GILD", "GOOG", "GOOGL", "HON", "IDXX", "ILMN", "INTC", "INTU", "ISRG", "JD", "KDP", "KHC", "KLAC", "LCID", "LRCX", "LULU", "MAR", "MCHP", "MDLZ", "MELI", "META", "MNST", "MRNA", "MRVL", "MSFT", "MU", "NFLX", "NVDA", "NXPI", "ODFL", "ORLY", "PANW", "PAYX", "PCAR", "PDD", "PEP", "PYPL", "QCOM", "REGN", "RIVN", "ROST", "SBUX", "SGEN", "SIRI", "SNPS", "TEAM", "TMUS", "TSLA", "TXN", "VRSK", "VRTX", "WBA", "WBD", "WDAY", "XEL", "ZM", "ZS"]
         for i in temp
             a=Azione.new(id:n,isin:i)

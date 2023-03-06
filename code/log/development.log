@@ -37102,3 +37102,976 @@ Completed 200 OK in 30ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5755
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mAzione Update (0.2ms)[0m  [1m[33mUPDATE "aziones" SET "prezzo" = ?, "updated_at" = ? WHERE "aziones"."id" = ?[0m  [["prezzo", 119.24], ["updated_at", "2023-03-06 09:57:47.527742"], ["id", 101]]
   [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Update (0.4ms)[0m  [1m[33mUPDATE "aziones" SET "prezzo" = ?, "updated_at" = ? WHERE "aziones"."id" = ?[0m  [["prezzo", 10.0], ["updated_at", "2023-03-06 10:14:14.102804"], ["id", 1]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+[ActiveJob] Failed enqueuing ActionMailer::MailDeliveryJob to Async(default): ActiveJob::SerializationError (Unsupported argument type: ActiveRecord::Relation)
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? /* loading for inspect */ LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 11]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? /* loading for inspect */ LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 11]]
+  [1m[36mAzione Load (1.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+  [1m[36mAzione Load (1.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "LucaVe"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (4.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "LucaVe"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 81e152ec-c3a9-4ff8-b697-26c47f52153f) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[nil, "AAPL", 151.03, 1410.3]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "LucaVe"], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 6e1c2aed-526b-40a2-ba31-d7dc1c905363) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x00007fb6a0422530 @uri=#<URI::GID gid://qqq-finance/User/7>>, "AAPL", 151.03, 1410.3]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 54c7a1bc-1962-4ddc-a899-4e4360a9e968) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x00007fb6a05120f8 @uri=#<URI::GID gid://qqq-finance/User/8>>, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [81e152ec-c3a9-4ff8-b697-26c47f52153f] Performing ActionMailer::MailDeliveryJob (Job ID: 81e152ec-c3a9-4ff8-b697-26c47f52153f) from Async(default) enqueued at 2023-03-06T10:21:19Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[nil, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [81e152ec-c3a9-4ff8-b697-26c47f52153f] PriceMailer#oscillazione_prezzo: processed outbound mail in 123.9ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [81e152ec-c3a9-4ff8-b697-26c47f52153f] Error performing ActionMailer::MailDeliveryJob (Job ID: 81e152ec-c3a9-4ff8-b697-26c47f52153f) from Async(default) in 132.5ms: NoMethodError (undefined method `email' for nil:NilClass):
+/home/davide/Scrivania/QQQFinance/code/app/mailers/price_mailer.rb:10:in `oscillazione_prezzo'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/base.rb:215:in `process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/lib/action_text/rendering.rb:20:in `with_renderer'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/callbacks.rb:233:in `process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/base.rb:151:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:25:in `block in process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:24:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionview-7.0.4/lib/action_view/rendering.rb:39:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:646:in `block in process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:645:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:128:in `block in processed_mailer'
+<internal:kernel>:90:in `tap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:127:in `processed_mailer'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:118:in `deliver_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/mail_delivery_job.rb:23:in `perform'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363] Performing ActionMailer::MailDeliveryJob (Job ID: 6e1c2aed-526b-40a2-ba31-d7dc1c905363) from Async(default) enqueued at 2023-03-06T10:21:19Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x00007fb6a0a7fe50 @uri=#<URI::GID gid://qqq-finance/User/7>>, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendering price_mailer/oscillazione_prezzo.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendered price_mailer/oscillazione_prezzo.html.erb within layouts/mailer (Duration: 0.6ms | Allocations: 476)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendered layout layouts/mailer.html.erb (Duration: 2.2ms | Allocations: 724)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendering price_mailer/oscillazione_prezzo.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendered price_mailer/oscillazione_prezzo.text.erb within layouts/mailer (Duration: 1.2ms | Allocations: 121)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363]   Rendered layout layouts/mailer.text.erb (Duration: 3.9ms | Allocations: 311)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363] PriceMailer#oscillazione_prezzo: processed outbound mail in 32.2ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363] Delivered mail 6405bea01ece6_2d2742e0-3bd@davide-VirtualBox.mail (1932.3ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363] Date: Mon, 06 Mar 2023 11:21:20 +0100
+From: qqqfinanceassi@gmail.com
+To: lucave@gmail.com
+Message-ID: <6405bea01ece6_2d2742e0-3bd@davide-VirtualBox.mail>
+Subject: Oscillazione posizione superiore al 5%
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6405bea017be5_2d2742e0-470";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6405bea017be5_2d2742e0-470
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Price#oscillazione_prezzo
+
+Ciao, find me in app/views/price_mailer/oscillazione_prezzo.text.erb
+
+
+----==_mimepart_6405bea017be5_2d2742e0-470
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Price#oscillazione_prezzo</h1>
+
+<p>
+  Ciao Luca Verdi,
+</p>
+<p>
+con la presente desideriamo informarti che la tua posizione in AAPL ha subito un oscillazione di prezzo superiore al 5% dall'ultimo aggiornamento.
+In particolare,il titolo ha subito una variazione di 1410.3 %, e si trova ora a 151.03$ per azione.
+</p>
+  </body>
+</html>
+
+----==_mimepart_6405bea017be5_2d2742e0-470--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [6e1c2aed-526b-40a2-ba31-d7dc1c905363] Performed ActionMailer::MailDeliveryJob (Job ID: 6e1c2aed-526b-40a2-ba31-d7dc1c905363) from Async(default) in 1983.2ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968] Performing ActionMailer::MailDeliveryJob (Job ID: 54c7a1bc-1962-4ddc-a899-4e4360a9e968) from Async(default) enqueued at 2023-03-06T10:21:19Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x00007fb6a0b8ef80 @uri=#<URI::GID gid://qqq-finance/User/8>>, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendering price_mailer/oscillazione_prezzo.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendered price_mailer/oscillazione_prezzo.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 17)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendered layout layouts/mailer.html.erb (Duration: 0.2ms | Allocations: 106)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendering price_mailer/oscillazione_prezzo.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendered price_mailer/oscillazione_prezzo.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 7)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968]   Rendered layout layouts/mailer.text.erb (Duration: 0.1ms | Allocations: 96)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968] PriceMailer#oscillazione_prezzo: processed outbound mail in 3.6ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968] Delivered mail 6405bea2d683_2d2742e0-196@davide-VirtualBox.mail (1226.0ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968] Date: Mon, 06 Mar 2023 11:21:22 +0100
+From: qqqfinanceassi@gmail.com
+To: qqqfinanceassi@gmail.com
+Message-ID: <6405bea2d683_2d2742e0-196@davide-VirtualBox.mail>
+Subject: Oscillazione posizione superiore al 5%
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6405bea2b741_2d2742e0-25f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6405bea2b741_2d2742e0-25f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Price#oscillazione_prezzo
+
+Ciao, find me in app/views/price_mailer/oscillazione_prezzo.text.erb
+
+
+----==_mimepart_6405bea2b741_2d2742e0-25f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Price#oscillazione_prezzo</h1>
+
+<p>
+  Ciao Account Prova,
+</p>
+<p>
+con la presente desideriamo informarti che la tua posizione in AAPL ha subito un oscillazione di prezzo superiore al 5% dall'ultimo aggiornamento.
+In particolare,il titolo ha subito una variazione di 1410.3 %, e si trova ora a 151.03$ per azione.
+</p>
+  </body>
+</html>
+
+----==_mimepart_6405bea2b741_2d2742e0-25f--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [54c7a1bc-1962-4ddc-a899-4e4360a9e968] Performed ActionMailer::MailDeliveryJob (Job ID: 54c7a1bc-1962-4ddc-a899-4e4360a9e968) from Async(default) in 1247.57ms
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."azione" = ?[0m  [["azione", "AAPL"]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "lucave"], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: d3f663f4-3337-4c89-9bb0-2b254a552836) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[nil, "AAPL", 151.03, 1410.3]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "LucaVe"], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d3f663f4-3337-4c89-9bb0-2b254a552836] Performing ActionMailer::MailDeliveryJob (Job ID: d3f663f4-3337-4c89-9bb0-2b254a552836) from Async(default) enqueued at 2023-03-06T10:22:59Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[nil, "AAPL", 151.03, 1410.3]}
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x000055fd652dc860 @uri=#<URI::GID gid://qqq-finance/User/7>>, "AAPL", 151.03, 1410.3]}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72) to Async(default) with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x000055fd653278d8 @uri=#<URI::GID gid://qqq-finance/User/8>>, "AAPL", 151.03, 1410.3]}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Update (0.2ms)[0m  [1m[33mUPDATE "aziones" SET "prezzo" = ?, "updated_at" = ? WHERE "aziones"."id" = ?[0m  [["prezzo", 151.03], ["updated_at", "2023-03-06 10:22:59.071149"], ["id", 1]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d3f663f4-3337-4c89-9bb0-2b254a552836] PriceMailer#oscillazione_prezzo: processed outbound mail in 120.6ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d3f663f4-3337-4c89-9bb0-2b254a552836] Error performing ActionMailer::MailDeliveryJob (Job ID: d3f663f4-3337-4c89-9bb0-2b254a552836) from Async(default) in 156.95ms: NoMethodError (undefined method `email' for nil:NilClass):
+/home/davide/Scrivania/QQQFinance/code/app/mailers/price_mailer.rb:10:in `oscillazione_prezzo'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/base.rb:215:in `process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/lib/action_text/rendering.rb:20:in `with_renderer'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actiontext-7.0.4/lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/callbacks.rb:233:in `process_action'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionpack-7.0.4/lib/abstract_controller/base.rb:151:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:25:in `block in process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/rescuable.rb:24:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionview-7.0.4/lib/action_view/rendering.rb:39:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:646:in `block in process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/base.rb:645:in `process'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:128:in `block in processed_mailer'
+<internal:kernel>:90:in `tap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:127:in `processed_mailer'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/message_delivery.rb:118:in `deliver_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/actionmailer-7.0.4/lib/action_mailer/mail_delivery_job.rb:23:in `perform'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:59:in `block in _perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/i18n-1.12.0/lib/i18n.rb:322:in `with_locale'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/core_ext/time/zones.rb:66:in `use_zone'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/timezones.rb:9:in `block (2 levels) in <module:Timezones>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:58:in `_perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:20:in `_perform_job'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:46:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `block in perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:25:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `block in instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/notifications.rb:206:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:35:in `instrument'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/instrumentation.rb:14:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `block in perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:37:in `tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/tagged_logging.rb:99:in `tagged'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:25:in `tag_logger'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/logging.rb:18:in `perform_now'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:24:in `block in execute'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:54:in `block (4 levels) in <class:Railtie>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:72:in `block in wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/execution_wrapper.rb:92:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/reloader.rb:71:in `wrap'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/railtie.rb:53:in `block (3 levels) in <class:Railtie>'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `instance_exec'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activesupport-7.0.4/lib/active_support/callbacks.rb:138:in `run_callbacks'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/execution.rb:22:in `execute'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/activejob-7.0.4/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:352:in `run_task'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:343:in `block (3 levels) in create_worker'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `loop'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:334:in `block (2 levels) in create_worker'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `catch'
+/home/davide/.rvm/gems/ruby-3.0.0/gems/concurrent-ruby-1.1.10/lib/concurrent-ruby/concurrent/executor/ruby_thread_pool_executor.rb:333:in `block in create_worker'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493] Performing ActionMailer::MailDeliveryJob (Job ID: 2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493) from Async(default) enqueued at 2023-03-06T10:22:59Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x000055fd63a26370 @uri=#<URI::GID gid://qqq-finance/User/7>>, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendering price_mailer/oscillazione_prezzo.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendered price_mailer/oscillazione_prezzo.html.erb within layouts/mailer (Duration: 0.9ms | Allocations: 477)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendered layout layouts/mailer.html.erb (Duration: 1.3ms | Allocations: 725)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendering price_mailer/oscillazione_prezzo.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendered price_mailer/oscillazione_prezzo.text.erb within layouts/mailer (Duration: 0.3ms | Allocations: 121)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493]   Rendered layout layouts/mailer.text.erb (Duration: 2.9ms | Allocations: 311)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493] PriceMailer#oscillazione_prezzo: processed outbound mail in 15.3ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493] Delivered mail 6405bf0335968_2f163f208706a@davide-VirtualBox.mail (1370.2ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493] Date: Mon, 06 Mar 2023 11:22:59 +0100
+From: qqqfinanceassi@gmail.com
+To: lucave@gmail.com
+Message-ID: <6405bf0335968_2f163f208706a@davide-VirtualBox.mail>
+Subject: Oscillazione posizione superiore al 5%
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6405bf0334a1e_2f163f20869bb";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6405bf0334a1e_2f163f20869bb
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Price#oscillazione_prezzo
+
+Ciao, find me in app/views/price_mailer/oscillazione_prezzo.text.erb
+
+
+----==_mimepart_6405bf0334a1e_2f163f20869bb
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Price#oscillazione_prezzo</h1>
+
+<p>
+  Ciao Luca Verdi,
+</p>
+<p>
+con la presente desideriamo informarti che la tua posizione in AAPL ha subito un oscillazione di prezzo superiore al 5% dall'ultimo aggiornamento.
+In particolare,il titolo ha subito una variazione di 1410.3 %, e si trova ora a 151.03$ per azione.
+</p>
+  </body>
+</html>
+
+----==_mimepart_6405bf0334a1e_2f163f20869bb--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493] Performed ActionMailer::MailDeliveryJob (Job ID: 2f2d9d36-ef5c-4d0b-a3ba-d83ad4daa493) from Async(default) in 1398.5ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72] Performing ActionMailer::MailDeliveryJob (Job ID: 4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72) from Async(default) enqueued at 2023-03-06T10:22:59Z with arguments: "PriceMailer", "oscillazione_prezzo", "deliver_now", {:args=>[#<GlobalID:0x000055fd64a011c8 @uri=#<URI::GID gid://qqq-finance/User/8>>, "AAPL", 151.03, 1410.3]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendering price_mailer/oscillazione_prezzo.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendered price_mailer/oscillazione_prezzo.html.erb within layouts/mailer (Duration: 0.1ms | Allocations: 17)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendered layout layouts/mailer.html.erb (Duration: 0.3ms | Allocations: 106)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendering layout layouts/mailer.text.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendering price_mailer/oscillazione_prezzo.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendered price_mailer/oscillazione_prezzo.text.erb within layouts/mailer (Duration: 0.0ms | Allocations: 7)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72]   Rendered layout layouts/mailer.text.erb (Duration: 0.2ms | Allocations: 96)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72] PriceMailer#oscillazione_prezzo: processed outbound mail in 5.9ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72] Delivered mail 6405bf049713f_2f163f2087284@davide-VirtualBox.mail (1364.1ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72] Date: Mon, 06 Mar 2023 11:23:00 +0100
+From: qqqfinanceassi@gmail.com
+To: qqqfinanceassi@gmail.com
+Message-ID: <6405bf049713f_2f163f2087284@davide-VirtualBox.mail>
+Subject: Oscillazione posizione superiore al 5%
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6405bf0495569_2f163f20871f9";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6405bf0495569_2f163f20871f9
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+Price#oscillazione_prezzo
+
+Ciao, find me in app/views/price_mailer/oscillazione_prezzo.text.erb
+
+
+----==_mimepart_6405bf0495569_2f163f20871f9
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1>Price#oscillazione_prezzo</h1>
+
+<p>
+  Ciao Account Prova,
+</p>
+<p>
+con la presente desideriamo informarti che la tua posizione in AAPL ha subito un oscillazione di prezzo superiore al 5% dall'ultimo aggiornamento.
+In particolare,il titolo ha subito una variazione di 1410.3 %, e si trova ora a 151.03$ per azione.
+</p>
+  </body>
+</html>
+
+----==_mimepart_6405bf0495569_2f163f20871f9--
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72] Performed ActionMailer::MailDeliveryJob (Job ID: 4f4a6e32-d9e3-4a9b-9456-5cb29cecfb72) from Async(default) in 1386.23ms
+Started GET "/" for 127.0.0.1 at 2023-03-06 11:32:40 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 531)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1202)
+  Rendered layout layouts/application.html.erb (Duration: 114.1ms | Allocations: 37719)
+Completed 200 OK in 141ms (Views: 118.8ms | ActiveRecord: 0.0ms | Allocations: 43317)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-06 11:33:25 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3905)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 6237)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 0.5ms | Allocations: 27482)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-06 11:33:34 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/8
+Completed 303 See Other in 576ms (ActiveRecord: 0.2ms | Allocations: 6260)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-06 11:33:34 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 802)
+  Rendered users/_user.html.erb (Duration: 1.1ms | Allocations: 883)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2273)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4491)
+Completed 200 OK in 21ms (Views: 17.7ms | ActiveRecord: 0.3ms | Allocations: 7214)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:33:42 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 700)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 3050)
+Completed 200 OK in 20ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 5840)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-06 11:34:15 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 0.6ms | Allocations: 605)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1049)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3223)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.1ms | Allocations: 4499)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2023-03-06 11:34:17 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.1ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 20.8ms | Allocations: 6840)
+  Rendered users/edit.html.erb within layouts/application (Duration: 25.6ms | Allocations: 7944)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 10097)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.2ms | Allocations: 11117)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-06 11:34:18 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 610)
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 797)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2984)
+Completed 200 OK in 14ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 4154)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:34:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2421)
+Completed 200 OK in 21ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 4100)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:39:52 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 348)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1001)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 15144)
+Completed 200 OK in 72ms (Views: 38.6ms | ActiveRecord: 0.8ms | Allocations: 22205)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:39:55 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2420)
+Completed 200 OK in 13ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 4095)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:40:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE (user=NULL)[0m
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 348)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1093)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 15200)
+Completed 200 OK in 70ms (Views: 39.9ms | ActiveRecord: 1.2ms | Allocations: 22250)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:41:01 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 18.4ms | Allocations: 8854)
+
+
+  
+NameError (undefined local variable or method `curr_user' for #<WalletsController:0x00000000024018>
+Did you mean?  @curr_user
+               current_user
+               @current_user):
+  
+app/controllers/wallets_controller.rb:10:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:41:11 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.2ms | Allocations: 23494)
+
+
+  
+NoMethodError (undefined method `isin' for #<Wallet id: 4, user: "ACCprova", azione: "GOOGL", quantità: 11, created_at: "2023-03-06 08:42:03.327235000 +0000", updated_at: "2023-03-06 08:42:03.327235000 +0000">):
+  
+app/controllers/wallets_controller.rb:18:in `block in index'
+app/controllers/wallets_controller.rb:15:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:41:46 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 1.5ms | Allocations: 10036)
+
+
+  
+NoMethodError (undefined method `[]=' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:15:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:42:59 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms | Allocations: 12695)
+
+
+  
+NameError (undefined local variable or method `tot' for #<WalletsController:0x000000000396c0>
+Did you mean?  @tot
+               not):
+  
+app/controllers/wallets_controller.rb:20:in `block in index'
+app/controllers/wallets_controller.rb:15:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:43:16 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 1.5ms | Allocations: 31600)
+
+
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `prezzo' for #<ActiveRecord::Relation [#<Azione id: 47, nome: "Alphabet Inc.", isin: "GOOGL", settore: "Communication Services", paese: "United States", marketcap: 1201585782784.0, prezzo: 93.65, volume: 35129670.0, pe: 15.3273325, ps: 4.2483478, pb: 4.6977677, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.703, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.835504000 +0000", updated_at: "2023-03-06 09:48:40.285842000 +0000">]>):
+  
+app/controllers/wallets_controller.rb:20:in `block in index'
+app/controllers/wallets_controller.rb:15:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:43:44 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 1.5ms | Allocations: 16514)
+
+
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `prezzo' for #<ActiveRecord::Relation [#<Azione id: 47, nome: "Alphabet Inc.", isin: "GOOGL", settore: "Communication Services", paese: "United States", marketcap: 1201585782784.0, prezzo: 93.65, volume: 35129670.0, pe: 15.3273325, ps: 4.2483478, pb: 4.6977677, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.703, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.835504000 +0000", updated_at: "2023-03-06 09:48:40.285842000 +0000">]>):
+  
+app/controllers/wallets_controller.rb:21:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:44:20 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 24)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4622)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4694)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 12.4ms | Allocations: 14715)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `azioni' for #<ActionView::Base:0x0000000004efc0>
+Did you mean?  @azioni):
+    46:        </tr>
+    47:        <% i=0%>
+    48:        <%= while i<@azioni.length() do %>
+    49:        <tr><td><%=azioni[i].nome%></td><td><%=azioni[i].isin%></td><td><%=azioni[i].paese%></td><td><%=azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    50:        <% i+=1 %>
+    51:        <%end %>
+    52:      </table>
+  
+app/views/wallets/index.html.erb:49
+app/controllers/wallets_controller.rb:23:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:45:07 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 346)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+  ↳ app/controllers/wallets_controller.rb:23:in `index'
+  Rendered wallets/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 8839)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8911)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.6ms | Allocations: 11568)
+
+
+  
+ActionView::Template::Error (undefined method `nome' for #<ActiveRecord::Relation [#<Azione id: 47, nome: "Alphabet Inc.", isin: "GOOGL", settore: "Communication Services", paese: "United States", marketcap: 1201585782784.0, prezzo: 93.65, volume: 35129670.0, pe: 15.3273325, ps: 4.2483478, pb: 4.6977677, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.703, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.835504000 +0000", updated_at: "2023-03-06 09:48:40.285842000 +0000">]>
+Did you mean?  none):
+    46:        </tr>
+    47:        <% i=0%>
+    48:        <%= while i<@azioni.length() do %>
+    49:        <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    50:        <% i+=1 %>
+    51:        <%end %>
+    52:      </table>
+  
+app/views/wallets/index.html.erb:49
+app/controllers/wallets_controller.rb:23:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:45:54 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 1.4ms | Allocations: 16497)
+
+
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? /* loading for inspect */ LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 11]]
+  
+NoMethodError (undefined method `prezzo' for #<ActiveRecord::Relation [#<Azione id: 47, nome: "Alphabet Inc.", isin: "GOOGL", settore: "Communication Services", paese: "United States", marketcap: 1201585782784.0, prezzo: 93.65, volume: 35129670.0, pe: 15.3273325, ps: 4.2483478, pb: 4.6977677, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.703, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.835504000 +0000", updated_at: "2023-03-06 09:48:40.285842000 +0000">]>):
+  
+app/controllers/wallets_controller.rb:20:in `block in index'
+app/controllers/wallets_controller.rb:15:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:48:08 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4538)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 4610)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.7ms | Allocations: 20255)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `micropost' for #<ActionView::Base:0x0000000005da70>):
+    46:        </tr>
+    47:        <% i=0%>
+    48:        <%= while i<@azioni.length() do %>
+    49:        <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %></td></tr>
+    50:        <% i+=1 %>
+    51:        <%end %>
+    52:      </table>
+  
+app/views/wallets/index.html.erb:49
+app/controllers/wallets_controller.rb:23:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:50:41 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 348)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 5368)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 5440)
+Completed 500 Internal Server Error in 84ms (ActiveRecord: 1.6ms | Allocations: 21404)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `micropost' for #<ActionView::Base:0x00000000064d20>):
+    46:        </tr>
+    47:        <% i=0%>
+    48:        <%= while i<@azioni.length() do %>
+    49:        <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><!--<%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %>--></td></tr>
+    50:        <% i+=1 %>
+    51:        <%end %>
+    52:      </table>
+  
+app/views/wallets/index.html.erb:49
+app/controllers/wallets_controller.rb:23:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:52:51 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 346)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5393)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5465)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.3ms | Allocations: 9193)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `micropost' for #<ActionView::Base:0x00000000065310>):
+    46:        </tr>
+    47:        <% i=0%>
+    48:        <%= while i<@azioni.length() do %>
+    49:        <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td> <!--<%= link_to 'Destroy', micropost, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-outline-dark' %>--> </td></tr>
+    50:        <% i+=1 %>
+    51:        <%end %>
+    52:      </table>
+  
+app/views/wallets/index.html.erb:49
+app/controllers/wallets_controller.rb:23:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:53:05 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.2ms | Allocations: 346)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1800)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 15947)
+Completed 200 OK in 58ms (Views: 39.1ms | ActiveRecord: 0.4ms | Allocations: 19705)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-06 11:53:35 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "GOOGL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:18:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 349)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1620)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4196)
+Completed 200 OK in 44ms (Views: 24.5ms | ActiveRecord: 0.3ms | Allocations: 7959)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-06 11:54:59 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered users/_user.html.erb (Duration: 11.2ms | Allocations: 849)
+  Rendered users/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1428)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3647)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.1ms | Allocations: 5448)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-06 11:55:07 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 735)
+  Rendered news/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 5413)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 7634)
+Completed 200 OK in 109ms (Views: 45.6ms | ActiveRecord: 1.4ms | Allocations: 29232)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-06 11:55:09 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.8ms | Allocations: 734)
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3498)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 5858)
+Completed 200 OK in 16ms (Views: 14.8ms | ActiveRecord: 0.5ms | Allocations: 6944)
+
+
