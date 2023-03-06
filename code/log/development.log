@@ -27387,16 +27387,6 @@ Processing by ScreenerController#index as HTML
 Completed 200 OK in 362ms (Views: 282.8ms | ActiveRecord: 7.7ms | Allocations: 5905)
 
 
-<<<<<<< HEAD
-Started GET "/" for 127.0.0.1 at 2023-03-02 15:16:06 +0100
-  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by IndexController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering index/index.html.erb within layouts/application
-  Rendered _header.html.erb (Duration: 17.0ms | Allocations: 441)
-  Rendered index/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 1112)
-  Rendered layout layouts/application.html.erb (Duration: 605.8ms | Allocations: 51342)
-Completed 200 OK in 681ms (Views: 626.8ms | ActiveRecord: 0.0ms | Allocations: 56938)
 
 
 Started GET "/news" for 127.0.0.1 at 2023-03-02 15:16:55 +0100

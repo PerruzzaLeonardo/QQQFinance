@@ -14,7 +14,7 @@ class Users::SessionsController < Devise::SessionsController
     end 
 
 
-  def create
+  def create #super
     self.resource = warden.authenticate!
     set_flash_message!(:notice, :signed_in)
     sign_in(resource_name, resource)
@@ -22,11 +22,15 @@ class Users::SessionsController < Devise::SessionsController
     respond_with resource
   end
 
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
 
+    def destroy #super
+      signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+      set_flash_message! :notice, :signed_out if signed_out
+      yield if block_given?
+      respond_to_on_destroy
+    end
+   
+  
   # protected
 
   # If you have extra params to permit, append them to the sanitizer.
