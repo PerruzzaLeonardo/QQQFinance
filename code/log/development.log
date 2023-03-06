@@ -31377,3 +31377,3613 @@ Processing by UsersController#index as TURBO_STREAM
 Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 0.1ms | Allocations: 5016)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:07:43 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 575)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1394)
+  Rendered layout layouts/application.html.erb (Duration: 108.0ms | Allocations: 42181)
+Completed 200 OK in 140ms (Views: 118.9ms | ActiveRecord: 0.0ms | Allocations: 48518)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-05 14:07:54 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 4479)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 7061)
+Completed 200 OK in 79ms (Views: 36.3ms | ActiveRecord: 0.5ms | Allocations: 28850)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-05 14:08:05 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"lucab@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "lucab@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/users/4
+Completed 303 See Other in 223ms (ActiveRecord: 0.3ms | Allocations: 7194)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2023-03-05 14:08:05 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.3ms | Allocations: 965)
+  Rendered users/_user.html.erb (Duration: 4.3ms | Allocations: 1072)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2750)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 5126)
+Completed 200 OK in 28ms (Views: 22.3ms | ActiveRecord: 0.4ms | Allocations: 8248)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:08:09 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.8ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1117)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 3397)
+Completed 200 OK in 15ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 4875)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:08:13 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 730)
+  Rendered users/_form.html.erb (Duration: 9.4ms | Allocations: 5330)
+  Rendered users/edit.html.erb within layouts/application (Duration: 13.6ms | Allocations: 6453)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 6524)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.3ms | Allocations: 7592)
+
+
+  
+ActionView::Template::Error (undefined method `pubblico' for #<ActionView::Helpers::FormBuilder:0x00000210d5e1a388 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false}, @template=#<ActionView::Base:0x0000000000f2a8>, @object=#<User id: 4, nome: "Luca", cognome: "blu", username: "lucab", pubblico: "", commento: "", created_at: "2023-03-01 14:43:55.311504000 +0000", updated_at: "2023-03-04 21:43:24.780970000 +0000", email: "lucab@gmail.com">, @object_name="user", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>
+Did you mean?  public_method):
+    51:   </div>
+    52: 
+    53:   <div class=" m-2 form-check form-switch ">
+    54:   <%if(form.pubblico=="si")%>
+    55:     <input class="form-check-input" type="checkbox" role="switch" id="pubblico" checked>
+    56:   <%else%>
+    57:     <input class="form-check-input" type="checkbox" role="switch" id="pubblico">
+  
+app/views/users/_form.html.erb:54
+app/views/users/_form.html.erb:1
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:08:53 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 9.0ms | Allocations: 7177)
+  Rendered users/edit.html.erb within layouts/application (Duration: 15.8ms | Allocations: 8905)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 8980)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms | Allocations: 10872)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `usrer' for #<ActionView::Base:0x0000000000f6e0>
+Did you mean?  user
+               @user):
+    51:   </div>
+    52: 
+    53:   <div class=" m-2 form-check form-switch ">
+    54:   <%if(usrer.pubblico=="si")%>
+    55:     <input class="form-check-input" type="checkbox" role="switch" id="pubblico" checked>
+    56:   <%else%>
+    57:     <input class="form-check-input" type="checkbox" role="switch" id="pubblico">
+  
+app/views/users/_form.html.erb:54
+app/views/users/_form.html.erb:1
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:09:00 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.0ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 70.9ms | Allocations: 10869)
+  Rendered users/edit.html.erb within layouts/application (Duration: 78.1ms | Allocations: 12608)
+  Rendered layout layouts/application.html.erb (Duration: 83.6ms | Allocations: 15266)
+Completed 200 OK in 95ms (Views: 89.4ms | ActiveRecord: 0.4ms | Allocations: 17155)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:09:03 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 2044)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:09:04 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 19)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 854)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1435)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3713)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.1ms | Allocations: 5158)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:09:05 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 6.9ms | Allocations: 731)
+  Rendered users/_form.html.erb (Duration: 4.4ms | Allocations: 2262)
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3144)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5415)
+Completed 200 OK in 23ms (Views: 18.9ms | ActiveRecord: 0.4ms | Allocations: 6389)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:11:05 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.9ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 7.5ms | Allocations: 3087)
+  Rendered users/edit.html.erb within layouts/application (Duration: 16.1ms | Allocations: 4816)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 7344)
+Completed 200 OK in 42ms (Views: 35.3ms | ActiveRecord: 0.4ms | Allocations: 9135)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:11:09 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1456)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:11:09 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.7ms | Allocations: 844)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1412)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3689)
+Completed 200 OK in 17ms (Views: 12.2ms | ActiveRecord: 0.1ms | Allocations: 4996)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:11:11 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.7ms | Allocations: 2231)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3111)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5368)
+Completed 200 OK in 16ms (Views: 12.4ms | ActiveRecord: 0.4ms | Allocations: 6336)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:11:15 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1311)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:11:15 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 3.0ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3113)
+Completed 200 OK in 18ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 4286)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:11:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.9ms | Allocations: 2231)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3111)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5368)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 6352)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:12:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.9ms | Allocations: 1225)
+  Rendered users/_form.html.erb (Duration: 6.1ms | Allocations: 3410)
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5141)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 7669)
+Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.3ms | Allocations: 9464)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:12:32 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.9ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 2476)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3356)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5613)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 6651)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:12:42 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 6.4ms | Allocations: 4593)
+  Rendered users/edit.html.erb within layouts/application (Duration: 12.9ms | Allocations: 6321)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 6396)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms | Allocations: 8161)
+
+
+  
+ActionView::Template::Error (undefined method `checkbox' for #<ActionView::Helpers::FormBuilder:0x00000210d71823d0 @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false}, @template=#<ActionView::Base:0x00000000010518>, @object=#<User id: 4, nome: "Luca", cognome: "blu", username: "lucab", pubblico: "", commento: "", created_at: "2023-03-01 14:43:55.311504000 +0000", updated_at: "2023-03-04 21:43:24.780970000 +0000", email: "lucab@gmail.com">, @object_name="user", @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>
+Did you mean?  check_box):
+    61: 
+    62:   <div class="row m-2">
+    63:     <%= form.label :pubblico, style: "display: switch" %>
+    64:     <%= form.checkbox :pubblico,size: "50x8" %> </div>
+    65:  </div>
+    66: 
+    67:   <div class="row m-2">
+  
+app/views/users/_form.html.erb:64
+app/views/users/_form.html.erb:1
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:13:12 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.0ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 80.5ms | Allocations: 11591)
+  Rendered users/edit.html.erb within layouts/application (Duration: 87.5ms | Allocations: 13330)
+  Rendered layout layouts/application.html.erb (Duration: 92.8ms | Allocations: 15988)
+Completed 200 OK in 103ms (Views: 97.7ms | ActiveRecord: 0.3ms | Allocations: 17873)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:13:26 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.7ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 5.2ms | Allocations: 3414)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.9ms | Allocations: 5140)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 7668)
+Completed 200 OK in 28ms (Views: 23.7ms | ActiveRecord: 0.3ms | Allocations: 9608)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:16:12 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.8ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 5.6ms | Allocations: 3300)
+  Rendered users/edit.html.erb within layouts/application (Duration: 13.7ms | Allocations: 5026)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 7554)
+Completed 200 OK in 33ms (Views: 27.5ms | ActiveRecord: 0.3ms | Allocations: 9414)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:16:56 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.9ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 6.0ms | Allocations: 3661)
+  Rendered users/edit.html.erb within layouts/application (Duration: 14.8ms | Allocations: 5389)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5464)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms | Allocations: 7301)
+
+
+  
+ActionView::Template::Error (no implicit conversion of String into Hash):
+    61: 
+    62:   <div class="row m-2">
+    63:     <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    64:     <%= form.check_box :pubblico, "si" %> </div>
+    65:  </div>
+    66: 
+    67:   <div class="row m-2">
+  
+app/views/users/_form.html.erb:64
+app/views/users/_form.html.erb:1
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:18:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.4ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 1683)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3411)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3487)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 5329)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, :checked_value "si",:unchecked_value "no"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, :checked_value "si",:unchecked_value "no"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:19:52 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 6.1ms | Allocations: 3310)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.8ms | Allocations: 5036)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 7578)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 9450)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:20:01 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (2.1ms)[0m  [1m[33mUPDATE "users" SET "pubblico" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["pubblico", "si"], ["updated_at", "2023-03-05 13:20:01.337752"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 19ms (ActiveRecord: 9.4ms | Allocations: 3796)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:20:01 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 3.3ms | Allocations: 844)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1412)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3689)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.1ms | Allocations: 4996)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:20:09 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.7ms | Allocations: 2402)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3282)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5539)
+Completed 200 OK in 19ms (Views: 14.0ms | ActiveRecord: 0.3ms | Allocations: 6531)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:20:12 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (3.0ms)[0m  [1m[33mUPDATE "users" SET "pubblico" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["pubblico", "no"], ["updated_at", "2023-03-05 13:20:12.427376"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 10.4ms | Allocations: 2854)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:20:12 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.9ms | Allocations: 644)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 841)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3132)
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 4322)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:21:50 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 6.2ms | Allocations: 2401)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3281)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 5538)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 6516)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:21:55 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 6ms (ActiveRecord: 0.1ms | Allocations: 1321)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:21:55 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3113)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 4292)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:21:57 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 2401)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3281)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5538)
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 6508)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:22:00 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1300)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:22:00 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.9ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 3113)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4306)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:22:01 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 2401)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3281)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5538)
+Completed 200 OK in 16ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6528)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:22:32 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.5ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 1.1ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3403)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3479)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.3ms | Allocations: 5258)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:22:37 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 1659)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2541)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2611)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 3655)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:22:38 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 3.6ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1491)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 4054)
+Completed 200 OK in 21ms (Views: 14.5ms | ActiveRecord: 0.1ms | Allocations: 5336)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:22:39 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 1.4ms | Allocations: 1659)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2541)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 2611)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 3559)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {class="form-check-input"},"si", "no"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected '='
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:22:42 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 644)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 834)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3125)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4307)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:24:15 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1964)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 4528)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.1ms | Allocations: 6563)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:24:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 810)
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2858)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 2928)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms | Allocations: 4033)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {:class "form-check-input"},"si", "no"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {:class "form-check-input"},"si", "no"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:25:12 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 0.8ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3401)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3477)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms | Allocations: 5221)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {},"si", "no",:class "form-check-input"  %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {},"si", "no",:class "form-check-input"  %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting ')'
+app/views/users/edit.html.erb:10
+Started POST "/__web_console/repl_sessions/c93323660b82f75493366806da0f51f8/trace" for 127.0.0.1 at 2023-03-05 14:25:42 +0100
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:28:21 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.5ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3401)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3477)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.3ms | Allocations: 5300)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {:class "form-check-input" },"si", "no" %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {:class "form-check-input" },"si", "no" %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:28:42 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 1.0ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3404)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 3480)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 5306)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {:class, "form-check-input" },"si", "no" %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {:class, "form-check-input" },"si", "no" %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started POST "/__web_console/repl_sessions/bdb677c5f82d53df43929db83419780a/trace" for 127.0.0.1 at 2023-03-05 14:28:50 +0100
+Started POST "/__web_console/repl_sessions/bdb677c5f82d53df43929db83419780a/trace" for 127.0.0.1 at 2023-03-05 14:28:53 +0100
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:28:59 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.0ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 0.9ms | Allocations: 1673)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.6ms | Allocations: 3401)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3477)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 5300)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+    
+  <div class="row m-2">
+    <div class="col-7">
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :nome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :nome %>
+        </div> 
+      </div>
+
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :cognome %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :cognome %>
+        </div> 
+      </div>
+        
+        
+      <div class="row">
+        <div class="col"> 
+          <h2><%= form.label :email %>
+        </div>
+        <div class="col">
+          <h2><%= form.text_field :email %>
+        </div> 
+      </div>
+    </div>
+
+    <div class="col-5">
+      <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2>
+        <%= form.label :username, style: "display: block" %>
+        <%= form.text_field :username %> </div>
+      </div>
+  </div>
+
+  <div class=" m-2 form-check form-switch ">
+  <%if(user.pubblico=="si")%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+  <%else%>
+    <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+  <%end%>
+    <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+  </div>
+
+  <div class="row m-2">
+    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+    <%= form.check_box :pubblico, {:class"form-check-input" },"si", "no" %> </div>
+ </div>
+
+  <div class="row m-2">
+    <%= form.label :commento, style: "display: block" %>
+    <%= form.text_area :commento,size: "50x8" %> </div>
+ </div>
+  <br>
+  <div class="m-2">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+):
+1:    <%= form_with(model: user) do |form| %>
+2:      <% if user.errors.any? %>
+3:        <div style="color: red">
+4:          <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+5:    
+6:          <ul>
+7:            <% user.errors.each do |error| %>
+8:              <li><%= error.full_message %></li>
+9:            <% end %>
+10:          </ul>
+11:        </div>
+12:      <% end %>
+13:        
+14:      <div class="row m-2">
+15:        <div class="col-7">
+16:          <div class="row">
+17:            <div class="col"> 
+18:              <h2><%= form.label :nome %>
+19:            </div>
+20:            <div class="col">
+21:              <h2><%= form.text_field :nome %>
+22:            </div> 
+23:          </div>
+24:    
+25:          <div class="row">
+26:            <div class="col"> 
+27:              <h2><%= form.label :cognome %>
+28:            </div>
+29:            <div class="col">
+30:              <h2><%= form.text_field :cognome %>
+31:            </div> 
+32:          </div>
+33:            
+34:            
+35:          <div class="row">
+36:            <div class="col"> 
+37:              <h2><%= form.label :email %>
+38:            </div>
+39:            <div class="col">
+40:              <h2><%= form.text_field :email %>
+41:            </div> 
+42:          </div>
+43:        </div>
+44:    
+45:        <div class="col-5">
+46:          <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+47:          <div class="field form-group text-center"><h2>
+48:            <%= form.label :username, style: "display: block" %>
+49:            <%= form.text_field :username %> </div>
+50:          </div>
+51:      </div>
+52:    
+53:      <div class=" m-2 form-check form-switch ">
+54:      <%if(user.pubblico=="si")%>
+55:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="si" checked>
+56:      <%else%>
+57:        <input class="form-check-input" type="checkbox" role="switch" id="pubblico" value="no">
+58:      <%end%>
+59:        <label class="form-check-label" for="pubblico">Vuoi rendere pubblico il tuo wallet?</label>
+60:      </div>
+61:    
+62:      <div class="row m-2">
+63:        <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+64:        <%= form.check_box :pubblico, {:class"form-check-input" },"si", "no" %> </div>
+65:     </div>
+66:    
+67:      <div class="row m-2">
+68:        <%= form.label :commento, style: "display: block" %>
+69:        <%= form.text_area :commento,size: "50x8" %> </div>
+70:     </div>
+71:      <br>
+72:      <div class="m-2">
+73:        <%= form.submit %>
+74:      </div>
+75:    <% end %>
+  
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected string literal, expecting =>
+app/views/users/_form.html.erb:64: syntax error, unexpected '}', expecting ')'
+app/views/users/_form.html.erb:64: syntax error, unexpected ',', expecting ')'
+app/views/users/edit.html.erb:10
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:29:06 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 5.4ms | Allocations: 3322)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.8ms | Allocations: 5048)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7590)
+Completed 200 OK in 28ms (Views: 22.9ms | ActiveRecord: 0.3ms | Allocations: 9450)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:29:17 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.5ms)[0m  [1m[33mUPDATE "users" SET "pubblico" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["pubblico", "si"], ["updated_at", "2023-03-05 13:29:17.900915"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 9.2ms | Allocations: 3055)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:29:17 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.4ms | Allocations: 844)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1412)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3689)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 4984)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:29:19 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.4ms | Allocations: 2412)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.6ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5549)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.2ms | Allocations: 6519)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:29:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.0ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3106)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4284)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:29:24 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.3ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.4ms | Allocations: 2412)
+  Rendered users/edit.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 5549)
+Completed 200 OK in 19ms (Views: 14.3ms | ActiveRecord: 0.6ms | Allocations: 6515)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:29:26 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.0ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3106)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 4278)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:29:27 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.9ms | Allocations: 2412)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3292)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5549)
+Completed 200 OK in 17ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 6525)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:29:30 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "pubblico" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["pubblico", "no"], ["updated_at", "2023-03-05 13:29:30.084719"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 17ms (ActiveRecord: 9.1ms | Allocations: 2836)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:29:30 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.8ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3113)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 4292)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:29:31 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.9ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5548)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.3ms | Allocations: 6514)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:02 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.6ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 4.6ms | Allocations: 3317)
+  Rendered users/edit.html.erb within layouts/application (Duration: 10.8ms | Allocations: 5043)
+  Rendered layout layouts/application.html.erb (Duration: 17.1ms | Allocations: 7571)
+Completed 200 OK in 27ms (Views: 22.6ms | ActiveRecord: 0.3ms | Allocations: 9360)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.3ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.3ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 5548)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 6594)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:30:06 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1396)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:30:07 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.7ms | Allocations: 849)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3711)
+Completed 200 OK in 21ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 5008)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:07 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.0ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5548)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 6535)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:10 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.5ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 5548)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 6528)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:26 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.7ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 5.1ms | Allocations: 3317)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5043)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 7571)
+Completed 200 OK in 28ms (Views: 23.0ms | ActiveRecord: 0.4ms | Allocations: 9374)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:36 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 1220)
+  Rendered users/_form.html.erb (Duration: 4.9ms | Allocations: 3248)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4974)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 7502)
+Completed 200 OK in 29ms (Views: 23.7ms | ActiveRecord: 0.3ms | Allocations: 9370)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:30:43 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "pubblico" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["pubblico", "si"], ["updated_at", "2023-03-05 13:30:43.882827"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 10.4ms | Allocations: 3062)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:30:43 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 844)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1412)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3689)
+Completed 200 OK in 18ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 4988)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:30:46 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.1ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.2ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5548)
+Completed 200 OK in 17ms (Views: 12.9ms | ActiveRecord: 0.3ms | Allocations: 6528)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:32:47 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 1304)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:32:47 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.2ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3113)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 4306)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:32:52 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.7ms | Allocations: 2416)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.7ms | Allocations: 3296)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 5567)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 0.2ms | Allocations: 6541)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:33:03 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>"ciao"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["commento", "ciao"], ["updated_at", "2023-03-05 13:33:03.786435"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 9.6ms | Allocations: 2872)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:33:03 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.0ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 835)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3112)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4295)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:33:11 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 729)
+  Rendered users/_user.html.erb (Duration: 2.0ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1619)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3888)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 5346)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:34:45 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 3.1ms | Allocations: 985)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1980)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 4544)
+Completed 200 OK in 26ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 6582)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:34:52 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 810)
+  Rendered users/_user.html.erb (Duration: 2.2ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1699)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 3968)
+Completed 200 OK in 18ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 5511)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:36:54 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 988)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1967)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4531)
+Completed 200 OK in 24ms (Views: 18.2ms | ActiveRecord: 0.1ms | Allocations: 6552)
+
+
+Started GET "/users/2/" for 127.0.0.1 at 2023-03-05 14:37:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 810)
+  Rendered users/_user.html.erb (Duration: 2.2ms | Allocations: 639)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1697)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3966)
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 0.3ms | Allocations: 5526)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:37:04 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.9ms | Allocations: 729)
+  Rendered users/_user.html.erb (Duration: 2.2ms | Allocations: 643)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3764)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 5135)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-03-05 14:37:08 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.2ms | Allocations: 641)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3105)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 4279)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:37:10 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.9ms | Allocations: 3105)
+  Rendered users/edit.html.erb within layouts/application (Duration: 8.9ms | Allocations: 4207)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 6464)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.3ms | Allocations: 7483)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:37:14 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["commento", ""], ["updated_at", "2023-03-05 13:37:14.856893"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 17ms (ActiveRecord: 8.8ms | Allocations: 2987)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:37:14 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.9ms | Allocations: 641)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3156)
+Completed 200 OK in 12ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 4386)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:38:04 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.9ms | Allocations: 965)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1945)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4509)
+Completed 200 OK in 30ms (Views: 24.6ms | ActiveRecord: 0.1ms | Allocations: 6545)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:38:38 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 973)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1958)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4536)
+Completed 200 OK in 22ms (Views: 17.0ms | ActiveRecord: 0.1ms | Allocations: 6752)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:38:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.3ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.4ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1964)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4528)
+Completed 200 OK in 26ms (Views: 20.6ms | ActiveRecord: 0.1ms | Allocations: 6739)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:39:04 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1965)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 4529)
+Completed 200 OK in 25ms (Views: 19.3ms | ActiveRecord: 0.1ms | Allocations: 6740)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:39:08 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.6ms | Allocations: 810)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1719)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3988)
+Completed 200 OK in 19ms (Views: 12.6ms | ActiveRecord: 0.3ms | Allocations: 5565)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:39:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.3ms | Allocations: 1220)
+  Rendered users/_user.html.erb (Duration: 2.8ms | Allocations: 985)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2645)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5202)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 0.3ms | Allocations: 7434)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:39:28 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.9ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1095)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 3373)
+Completed 200 OK in 15ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 4693)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:39:37 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1965)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 4529)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.1ms | Allocations: 6558)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:40:11 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.6ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1964)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4528)
+Completed 200 OK in 23ms (Views: 18.0ms | ActiveRecord: 0.1ms | Allocations: 6749)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:40:17 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 810)
+  Rendered users/_user.html.erb (Duration: 1.9ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 3991)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.3ms | Allocations: 5564)
+
+
+Started GET "/users/2/" for 127.0.0.1 at 2023-03-05 14:40:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 643)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3770)
+Completed 200 OK in 14ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 5135)
+
+
+Started GET "/users/2/" for 127.0.0.1 at 2023-03-05 14:40:39 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 4.4ms | Allocations: 1220)
+  Rendered users/_user.html.erb (Duration: 3.0ms | Allocations: 983)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.4ms | Allocations: 2645)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5202)
+Completed 200 OK in 36ms (Views: 28.2ms | ActiveRecord: 0.4ms | Allocations: 7398)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:40:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_user.html.erb (Duration: 2.4ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1495)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 3764)
+Completed 200 OK in 14ms (Views: 10.1ms | ActiveRecord: 0.4ms | Allocations: 5206)
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2023-03-05 14:41:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 1220)
+  Rendered users/_user.html.erb (Duration: 2.8ms | Allocations: 985)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2650)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 5207)
+Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.3ms | Allocations: 7412)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:41:21 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.7ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1094)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3372)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 4682)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:41:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 351)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 968)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1965)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 4529)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 0.1ms | Allocations: 6580)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:41:38 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 810)
+  Rendered users/_form.html.erb (Duration: 5.1ms | Allocations: 3105)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.4ms | Allocations: 4288)
+  Rendered layout layouts/application.html.erb (Duration: 14.1ms | Allocations: 6545)
+Completed 200 OK in 20ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 7690)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:41:45 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>"ciao a tutti"}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["commento", "ciao a tutti"], ["updated_at", "2023-03-05 13:41:45.975533"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 18ms (ActiveRecord: 9.2ms | Allocations: 3003)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:41:46 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 1.8ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 878)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3155)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.1ms | Allocations: 4367)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:41:49 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 4.2ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5548)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 6530)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:41:57 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.0ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 828)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3105)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.2ms | Allocations: 4287)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2023-03-05 14:42:02 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.6ms | Allocations: 729)
+  Rendered users/_form.html.erb (Duration: 3.8ms | Allocations: 2411)
+  Rendered users/edit.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3291)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5548)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 6532)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2023-03-05 14:42:05 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Luca", "cognome"=>"blu", "email"=>"lucab@gmail.com", "username"=>"lucab", "pubblico"=>"si", "commento"=>""}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mUser Update (1.7ms)[0m  [1m[33mUPDATE "users" SET "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["commento", ""], ["updated_at", "2023-03-05 13:42:05.557166"], ["id", 4]]
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:41:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 21ms (ActiveRecord: 8.9ms | Allocations: 2877)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:42:05 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 644)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 841)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 3134)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 4308)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:26 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 896)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1241)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 3858)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.2ms | Allocations: 5007)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:28 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 730)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3181)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 3761)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:28 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 730)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 3181)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.1ms | Allocations: 3705)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:29 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.1ms | Allocations: 730)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3181)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 3699)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:29 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 730)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 792)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3181)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 3709)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:42:30 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.5ms | Allocations: 645)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 847)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3124)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.2ms | Allocations: 4299)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-05 14:42:31 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  Rendered users/_user.html.erb (Duration: 2.1ms | Allocations: 639)
+  Rendered users/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 3106)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 4290)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:49 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.6ms | Allocations: 575)
+  Rendered index/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1394)
+  Rendered layout layouts/application.html.erb (Duration: 129.8ms | Allocations: 42058)
+Completed 200 OK in 154ms (Views: 137.4ms | ActiveRecord: 0.0ms | Allocations: 48396)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:57 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 124)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 213)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 2656)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3285)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:42:58 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2577)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 3081)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-05 14:43:02 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 137)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 37.0ms | Allocations: 23360)
+  Rendered layout layouts/application.html.erb (Duration: 42.8ms | Allocations: 25990)
+Completed 200 OK in 54ms (Views: 46.6ms | ActiveRecord: 0.8ms | Allocations: 28003)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-05 14:43:06 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered news/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 5219)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 7587)
+Completed 200 OK in 66ms (Views: 24.5ms | ActiveRecord: 1.5ms | Allocations: 31087)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-05 14:43:16 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 739)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3128)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.2ms | Allocations: 3698)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:43:22 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2576)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 3077)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-05 14:43:29 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 103)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 675)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3064)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 3580)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:43:35 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2575)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3079)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-05 14:43:36 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3070)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 3572)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-05 14:43:37 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered news/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3608)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 5885)
+Completed 200 OK in 20ms (Views: 10.8ms | ActiveRecord: 0.9ms | Allocations: 10824)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:43:37 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2575)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 3073)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-05 14:43:38 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 2575)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 3065)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-05 14:44:21 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:86
+  Rendered screener/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 675)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3064)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.1ms | Allocations: 3582)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:44:30 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 136)
+  Rendered azione/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3198)
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 5661)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:46:38 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 460)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 977)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3779)
+Completed 200 OK in 22ms (Views: 16.6ms | ActiveRecord: 0.1ms | Allocations: 5672)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:46:42 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.1ms | Allocations: 460)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 3777)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 0.1ms | Allocations: 5653)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:47:02 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 962)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3764)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 0.1ms | Allocations: 5647)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:47:09 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.2ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 962)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3764)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.2ms | Allocations: 5648)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:47:16 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.3ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 962)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 3764)
+Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 0.2ms | Allocations: 5639)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:47:25 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 975)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3777)
+Completed 200 OK in 21ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 5672)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:49:12 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.1ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 978)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3796)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.2ms | Allocations: 5687)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-05 14:49:33 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 463)
+  Rendered azione/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 976)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3781)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 5654)
+
+
