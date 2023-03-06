@@ -1,95 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>QQQFinance</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-  </head>
-<body>
-<%=render "/header"%>
-  <p>
-    <div class="btn-group d-grid gap-4 d-md-flex justify-content-md-center">
-      <button type="button" class="btn btn-light">Param 1</button>
-      <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-      <button type="button" class="btn btn-light">Param 2</button>
-      <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-      <button type="button" class="btn btn-light">Param 3</button>
-      <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-      <button type="button" class="btn btn-light">Param 4</button>
-      <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-        <span class="visually-hidden">Toggle Dropdown</span>
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-    <div class="d-grid gap-4 d-md-flex justify-content-md-center">
-      <button class="btn btn-outline-success" type="submit">Aggiorna lista</button>
-    </div>
-  </p>
-  <p>
-    <div class="position-relative m-4 d-md-flex justify-content-md-center">
-      <form class="row g-3">
-        <div class="col-auto">
-          <label for="staticMessage" class="visually-hidden">CodiceISIN</label>
-          <input type="text" readonly class="form-control-plaintext" id="staticMessage" value="Aggiungi al wallet:">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>QQQFinance</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    </head>
+  <body>
+    <%=render "/header"%>
+    <p>
+      <div class="row">
+        <div class="col">
+          <div class="mb-3">
+            <label for="formExamplePaese" class="form-label">Paese</label>
+            <input type="text" class="form-control" id="formExamplePaese" placeholder="Qualsiasi">
+          </div>
         </div>
-        <div class="col-auto">
-          <label for="inputISIN" class="visually-hidden">CodiceISIN</label>
-          <input type="text" class="form-control" id="inputISIN" placeholder="Codice ISIN">
+        <div class="col">
+          <label for="examplePrice" class="form-label">Prezzo minimo</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
+          <label for="examplePrice2" class="form-label">Prezzo massimo</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
         </div>
-        <div class="col-auto">
-          <button type="submit" class="btn btn-primary mb-3">Ricerca</button>
+        <div class="col">
+          <label for="exampleMarketcap" class="form-label">Marketcap minimo</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
+          <label for="exampleMarketcap2" class="form-label">Marketcap massimo</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
         </div>
-        <div class="col-auto">
-          <select class="form-select" id="inputGroupSelect02">
-            <option selected>Quantità</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-          </select>
-          <label class="input-group-text" for="inputGroupSelect02">Aggiungi</label>
+        <div class="col">
+          <div class="mb-3">
+            <label for="formExampleSettore" class="form-label">Settore</label>
+            <input type="text" class="form-control" id="formExampleSettore" placeholder="Qualsiasi">
+          </div>
         </div>
-      </form>
-    </div>
-  </p>
-  <h1>Azioni</h1>
-  <ul>
-    <% @variabili.each do |variabile| %>
-      <li>
-        <%= variabile.nome %>
-        <%= variabile.isin %>
-      </li>
-    <% end %>
-  </ul>
-
-</body>
+        <div class="col">
+          <label for="exampleVolume" class="form-label">Volume minimo</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="VolumeMin">
+            <span class="input-group-text">K</span>
+          </div>
+          <label for="exampleVolume2" class="form-label">Volume massimo</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="VolumeMax">
+            <span class="input-group-text">K</span>
+          </div>
+        </div>
+        <div class="col">
+          <label for="exampleEBITDA" class="form-label">EBITDA min</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="EbitdaMin (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
+          <label for="exampleEBITDA2" class="form-label">EBITDA max</label>
+          <div class="input-group mb-3">
+            <span class="input-group-text">€</span>
+            <input type="text" class="form-control" aria-label="EbitdaMax (to the nearest euro)">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+        <div class="col">
+          <label for="exampleROE" class="form-label">ROE min</label>
+          <input type="text" class="form-control" aria-label="RoeMin">
+          <label for="exampleROE2" class="form-label">ROE max</label>
+          <input type="text" class="form-control" aria-label="RoeMax">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="exampleROA" class="form-label">ROA min</label>
+          <input type="text" class="form-control" aria-label="RoaMin">
+          <label for="exampleROA2" class="form-label">ROA max</label>
+          <input type="text" class="form-control" aria-label="RoaMax">
+        </div>
+        <div class="col">
+          <label for="examplePE" class="form-label">PE min</label>
+          <input type="text" class="form-control" aria-label="PeMin">
+          <label for="examplePE2" class="form-label">PE max</label>
+          <input type="text" class="form-control" aria-label="PeMax">
+        </div>
+        <div class="col">
+          <label for="examplePS" class="form-label">PS min</label>
+          <input type="text" class="form-control" aria-label="PsMin">
+          <label for="examplePS2" class="form-label">PS max</label>
+          <input type="text" class="form-control" aria-label="PsMax">
+        </div>
+        <div class="col">
+          <label for="examplePB" class="form-label">PB min</label>
+          <input type="text" class="form-control" aria-label="PbMin">
+          <label for="examplePB2" class="form-label">PB max</label>
+          <input type="text" class="form-control" aria-label="PbMax">
+        </div>
+        <div class="col">
+          <label for="exampleDY" class="form-label">Div Yield min</label>
+          <input type="text" class="form-control" aria-label="DyMin">
+          <label for="exampleDY2" class="form-label">Div Yield max</label>
+          <input type="text" class="form-control" aria-label="DyMax">
+        </div>
+        <div class="col">
+          <label for="exampleDE" class="form-label">Debt Eq min</label>
+          <input type="text" class="form-control" aria-label="DeMin">
+          <label for="exampleDE2" class="form-label">Debt Eq max</label>
+          <input type="text" class="form-control" aria-label="DeMax">
+        </div>
+        <div class="col">
+          <label for="exampleOPM" class="form-label">OP Margin min</label>
+          <input type="text" class="form-control" aria-label="OpMMin">
+          <label for="exampleOPM2" class="form-label">OP Margin max</label>
+          <input type="text" class="form-control" aria-label="OpMMax">
+        </div>
+      </div>
+      <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+        <button class="btn btn-outline-primary" type="submit">Aggiorna lista</button>
+      </div>
+    </p>
+    <p>
+      <% if current_user %>
+      <div class="position-relative m-4 d-md-flex justify-content-md-center">
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="staticMessage" class="visually-hidden">CodiceISIN</label>
+            <input type="text" readonly class="form-control-plaintext" id="staticMessage" value="Aggiungi al wallet:">
+          </div>
+          <div class="col-auto">
+            <label for="inputISIN" class="visually-hidden">CodiceISIN</label>
+            <input type="text" class="form-control" id="inputISIN" placeholder="Codice ISIN">
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Ricerca</button>
+          </div>
+          <div class="col-auto">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Quantità" aria-label="Azioni_wallet" aria-describedby="button-addon2">
+              <button class="btn btn-outline-primary" type="button" id="button-addon2">Aggiungi</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <% end %>
+    </p>
+    <h1>Azioni</h1>
+    <ul>
+      <% @variabili.each do |variabile| %>
+        <div class="row">
+          <%= variabile.nome =%>
+          <%= variabile.isin =%>
+        </div>
+      <% end %>
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  </body>
 </html>

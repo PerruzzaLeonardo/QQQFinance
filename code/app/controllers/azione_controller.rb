@@ -38,7 +38,7 @@ class AzioneController < ApplicationController
       end
 
     private
-    def set_movie
+    def set_movie 
       @azione = Azione.find(params[:id])
     end
 
