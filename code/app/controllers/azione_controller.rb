@@ -38,9 +38,6 @@ class AzioneController < ApplicationController
       end
 
     private
-    def set_movie
-      @azione = Azione.find(params[:id])
-    end
 
     def azione_params
       params.require(:azione).permit(:nome, :isin, :settore, :paese, :marketcap, :prezzo, :volume, :pe, :ps, :pb, :divyield, :roe, :roa, :debteq, :opmargin, :ebitda)

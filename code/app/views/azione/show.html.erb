@@ -8,7 +8,7 @@
         <h1 class="col-3 text-center"><%= @azione.nome %></h1>  
         <h4 class="col p-2"><%= @azione.isin %> </h4>
     </div>
-    <p class="p-2 text-center">il prezzo di quest'azione è <%= @azione.prezzo %>$</p>
+    <p class="p-2 text-center">Il prezzo di quest'azione è <%= @azione.prezzo %>$</p>
     <div class="container-fluid row">
         <div class="col-6">
         <table class="table">
@@ -41,7 +41,7 @@
                         {
                             "width": "100%",
                             "height": "300px",
-                            "symbol": "AAPL",
+                            "symbol": "<%=@azione.isin%>",
                             "interval": "D",
                             "timezone": "Etc/UTC",
                             "theme": "light",
