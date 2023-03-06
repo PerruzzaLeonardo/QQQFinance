@@ -35,14 +35,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
           private 
           def sign_up_params
             
-            params.require(resource_name).permit([:nome,:cognome,:username,:email,:password]) #da completare
+            params.require(resource_name).permit([:nome,:cognome,:username,:email,:password,:pubblico]) #da completare
            
        
         end 
       
          # protected
           def configure_permitted_parameters
-            devise_parameter_sanitizer.permit(:sign_up, keys: [:cognome,:nome,:username])
+            devise_parameter_sanitizer.permit(:sign_up, keys: [:cognome,:nome,:username,:pubblico])
           end
        
  

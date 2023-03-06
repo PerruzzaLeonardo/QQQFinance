@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     post "/users/sign_up" => "users/registrations#create"
     post "/users/sign_in" => "users/sessions#create"
+    get "users/sign_out" => "users/sessions#destroy"
   end
   resources :wallets
   resources :users
