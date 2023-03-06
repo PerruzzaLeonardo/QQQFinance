@@ -1,5 +1,5 @@
 class Azione < ApplicationRecord
-    attr_accessor :prezzo
+    include ActionMailer::MailHelper
 
     def self.aggiorna_azioni
         require 'uri'
@@ -33,6 +33,9 @@ class Azione < ApplicationRecord
             
             res=JSON.parse(response.read_body)
 
+            puts isin[n]
+            puts n
+
             @prezzo=res["financialData"]["currentPrice"]["raw"] #prezzo è di tipo float quando lo inserisco
 =begin
             #controllo vecchio prezzo per capire se dover mandare la mail
@@ -50,8 +53,8 @@ class Azione < ApplicationRecord
                     x=x+1
                 end
             end
-=end
-            
+=end          
+
             nome=res["quoteType"]["shortName"]
             settore=res["summaryProfile"]["sector"]
             paese=res["summaryProfile"]["country"]
@@ -73,17 +76,20 @@ class Azione < ApplicationRecord
             ebitda=res["financialData"]["ebitdaMargins"]["raw"]*100
             
             azioni[n].update(nome:nome,settore:settore,paese:paese,marketcap:marketcap,prezzo:@prezzo,volume:volume,pe:pe,ps:ps,pb:pb,divyield:divyield,roe:roe,roa:roa,debteq:debteq,opmargin:opmargin,ebitda:ebitda)
+            puts @prezzo
         end
 
-=begin    PRIMO INSERIMENTO IN DB
+
+=begin PRIMO INSERIMENTO IN DB
 
        Azione.destroy_all
+       n=1
        temp=["AAPL", "ABNB", "ADBE", "ADI", "ADP", "ADSK", "AEP", "ALGN", "AMAT", "AMD", "AMGN", "AMZN", "ANSS", "ASML", "ATVI", "AVGO", "AZN", "BIIB", "BKNG", "BKR", "CDNS", "CEG", "CHTR", "CMCSA", "COST", "CPRT", "CRWD", "CSCO", "CSGP", "CSX", "CTAS", "CTSH", "DDOG", "DLTR", "DXCM", "EA", "EBAY", "ENPH", "EXC", "FANG", "FAST", "FISV", "FTNT", "GFS", "GILD", "GOOG", "GOOGL", "HON", "IDXX", "ILMN", "INTC", "INTU", "ISRG", "JD", "KDP", "KHC", "KLAC", "LCID", "LRCX", "LULU", "MAR", "MCHP", "MDLZ", "MELI", "META", "MNST", "MRNA", "MRVL", "MSFT", "MU", "NFLX", "NVDA", "NXPI", "ODFL", "ORLY", "PANW", "PAYX", "PCAR", "PDD", "PEP", "PYPL", "QCOM", "REGN", "RIVN", "ROST", "SBUX", "SGEN", "SIRI", "SNPS", "TEAM", "TMUS", "TSLA", "TXN", "VRSK", "VRTX", "WBA", "WBD", "WDAY", "XEL", "ZM", "ZS"]
         for i in temp
-            a=Azione.new(isin:i)
+            a=Azione.new(id:n,isin:i)
+            n+=1
             a.save!
         end
-        
 =end
 
     end
