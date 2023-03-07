@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_17_162625) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_154506) do
   create_table "aziones", force: :cascade do |t|
     t.string "nome"
     t.string "isin"
@@ -28,6 +28,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_17_162625) do
     t.float "debteq"
     t.float "opmargin"
     t.float "ebitda"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.string "user"
+    t.string "isin"
+    t.string "commento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

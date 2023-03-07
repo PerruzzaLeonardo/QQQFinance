@@ -57,5 +57,25 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+    <h4><p >Commenti</p></h4>
+    <ul class="list-group list-group-flush">
+        <%@commenti.each do |commento|%>
+                <li class="list-group-item ">
+                    <div class="row">
+                    <div class="col-1">
+                        <%= image_tag "profilo2.jpeg",class:"card-img-top "%>
+                    </div>
+                    <div class="col-10">
+                        <h5><p><%=commento.user%></p></h5>
+                        <p><%=commento.commento%></p>
+                    </div>
+                    </div>
+                </li>  
+           
+        <%end%>
+    </ul>
+    </div>
 </body>
 

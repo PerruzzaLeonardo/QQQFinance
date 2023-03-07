@@ -1,2 +1,0 @@
-class Profilo < ApplicationRecord
-end
