@@ -2,6 +2,8 @@ class ContactsController < ApplicationController
     require 'mail_form'
     def new
         @contact = Contact.new
+        @utenti=User.all.order(:username)
+        @us=[]
     end
 
     def create
