@@ -1,4 +1,26 @@
-<body class="contatti">
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function() {
+      $('#mySelect').select2();
+    });
+
+    $(document).ready(function(){
+    $('#motivo').on('change', function() {  
+        var name=this.value;
+        if (name=='Segnalazione utente'){
+            $('#utenti').show();
+        }
+        else{
+            $('#utenti').hide();
+        }
+    });
+})
+  </script>
 <%=render "/header"%>
 <br>
 <div class="container px-8 py-6 rounded-md shadow bg-white">
@@ -22,35 +44,56 @@
 <br>
     <div class="row field mb-6">
         <div class="col-4"></div>
-        <div class="col-2">Motivo della comunicazione:</div>
-        <div class="col-3"><select class="form-select" placeholder="prova" aria-label="Default select example">
+        <div class="col-2">Motivo della comunicazione</div>
+        <div class="col-3"><select class="form-select" name="motivo" id="motivo" aria-label="Default select example">
          <option selected disabled> Seleziona:</option>
-         <option>Segnalazione utente</option>
-         <option>Segnalazione bug</option>
-         <option>Feedback e suggerimenti</option>
+         <option value="Segnalazione utente">Segnalazione utente</option>
+         <option value="Segnalazione bug">Segnalazione bug</option>
+         <option value="Feedback e suggerimenti">Feedback e suggerimenti</option>
          <option>Altro</option>
          </select>
         </div>
         <div class="col-4"></div>
     </div>
+<div id="utenti">
+<br>
+<div class="row field mb-6">
+    <div class="col-4"></div>
+    <div class="col-2">Utente da segnalare</div>
+    <%@us.push(['-','-'])%>
+    <%@utenti.each do |utente|%>
+    <%@us.push([utente.username,utente.username])%>
+    <%end%>
+    <div class="col-2"><%= form.select :utente_segnalato, options_for_select(@us) %>
+    <!--<div class="col-2"><select class="form select" style="width: 100%;" name="utenti" id="selectuser" data-live-search="true" aria-label="Default select example">
+      <option selected disabled>Seleziona</option>
+      <%@utenti.each do |utente|%>
+       <option><%=utente.username%></option>
+      <%end%>
+      </select>
+      </div>-->
+    <div class="col-4"></div>
+    </div>
+    </div>
+</div>
 <br>
     <div class="row field mb-6">
         <div class="col-4"></div>
-        <div class="col-2"><%= form.label :name %>:</div>
+        <div class="col-2"><%= form.label :name %></div>
         <div class="col-2"><%= form.text_field :name %> </div>
         <div class="col-4"></div>
     </div>
 <br>
     <div class="row field mb-6">
         <div class="col-4"></div>
-        <div class="col-2"><%= form.label :email %>:</div>
+        <div class="col-2"><%= form.label :email %></div>
         <div class="col-2"><%= form.text_field :email %> </div>
         <div class="col-4"></div>
     </div>
 <br>
     <div class="row field">
         <div class="col-4"></div>
-        <div class="col-2"><%= form.label :message %>: </div>
+        <div class="col-2"><%= form.label :message %> </div>
         <div class="col-2"><%= form.text_area :message %> </div>
         <div class="col-4"></div>
     </div>
@@ -61,4 +104,6 @@
     <% end %>
     <br>
 </div>
+</div>
+
 </body>

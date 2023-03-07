@@ -25,11 +25,11 @@ Rails.application.routes.draw do
 
   root 'index#index'
 
-
-
- 
-
   get 'screener'=>'screener#index'  
+
+  resources :contacts, only: [:new, :create ]
+  get '/contacts', to: 'contacts#new', as: 'contact'
+  get 'contacts/sent'
 
 
     
