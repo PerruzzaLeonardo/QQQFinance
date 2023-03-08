@@ -1,5 +1,5 @@
 <head></head>
-<body>
+<body >
 <%=render "/header"%>
 
 <div class="container">
@@ -12,17 +12,22 @@
  </div>
  <hr>
 
- <form method='POST'>
+ <form action="/wallet/movimenti" method='post' onsubmit="location.reload();">
 
  <div class="row">
   <div class="col-4">
    <h2>aggiungi posizione:</h2>
   </div>
   <div class="col-4">
-   <input class="form-control me-2" type="search" name="ricerca" placeholder="Ricerca ISIN" aria-label="Cerca">
+  <input list="brow" class="form-control me-2" type="search" name="isin" id="isin"placeholder="Ricerca ISIN" aria-label="Cerca">
+  <datalist id="brow">
+   <%@az.each do |i|%>
+    <option value=<%=i.isin%>>
+   <%end%>
+  </datalist>
   </div>
   <div class="col-2">
-   <input name='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
+   <input name='quantita' id='quantita' type='number' min='1' placeholder="Quantità" class='form-control'>
   </div>
   <div class="col-2">
    <button type="submit" class="btn btn-primary">Aggiungi</button>
@@ -46,15 +51,19 @@
        </tr>
        <% i=0%>
        <%= while i<@azioni.length() do %>
-       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td> </td></tr>
+       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><button type="button" class="btn btn-primary btn-danger btn-sm">rimuovi</button></td></tr>
        <% i+=1 %>
        <%end %>
      </table>
     </div>
+    
+
+
+
+
     <% if @tot==0%>
     <p class="text-center">Il tuo wallet è vuoto.<br>Aggiungine alcune utilizzando l'apposito tool che trovi qui sopra o nella pagina <a href=../screener>screener</a></p>
     <%end%>
   </div>
 </div>
-<!--<%= debug(@posizioni) %>-->
 </body>

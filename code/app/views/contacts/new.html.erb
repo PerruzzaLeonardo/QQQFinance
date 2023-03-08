@@ -10,6 +10,10 @@
     });
 
     $(document).ready(function(){
+        $('#utenti').hide()
+    });
+
+    $(document).ready(function(){
     $('#motivo').on('change', function() {  
         var name=this.value;
         if (name=='Segnalazione utente'){
@@ -60,18 +64,7 @@
 <div class="row field mb-6">
     <div class="col-4"></div>
     <div class="col-2">Utente da segnalare</div>
-    <%@us.push(['-','-'])%>
-    <%@utenti.each do |utente|%>
-    <%@us.push([utente.username,utente.username])%>
-    <%end%>
-    <div class="col-2"><%= form.select :utente_segnalato, options_for_select(@us) %>
-    <!--<div class="col-2"><select class="form select" style="width: 100%;" name="utenti" id="selectuser" data-live-search="true" aria-label="Default select example">
-      <option selected disabled>Seleziona</option>
-      <%@utenti.each do |utente|%>
-       <option><%=utente.username%></option>
-      <%end%>
-      </select>
-      </div>-->
+    <div class="col-2"><%= form.select :utente_segnalato, options_for_select(@us) %> 
     <div class="col-4"></div>
     </div>
     </div>
@@ -101,7 +94,7 @@
     <div style="text-align:center;">
         <%= form.submit "Invia" %>
     </div>
-    <% end %>
+    <%end%>
     <br>
 </div>
 </div>

@@ -1,9 +1,9 @@
 class ContactsController < ApplicationController
     require 'mail_form'
+    before_action :set_select_collections,only: [:new, :create]
+
     def new
         @contact = Contact.new
-        @utenti=User.all.order(:username)
-        @us=[]
     end
 
     def create
@@ -20,4 +20,13 @@ class ContactsController < ApplicationController
 
   end
 
+  private
+  def set_select_collections
+    @utenti=User.all.order(:username)
+    @us=[]
+    @us.push(['-','-'])
+    @utenti.each do |utente|
+        @us.push([utente.username,utente.username])
+  end
+end
 end

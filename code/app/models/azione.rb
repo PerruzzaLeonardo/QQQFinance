@@ -19,7 +19,7 @@ class Azione < ApplicationRecord
         end
         #isin contiene tutti gli isin inseriti nel database
 
-        for n in 0..0 #len
+        for n in 0..len        # AGGIORNATE CON ROUND(2) FINO A ID=88 manca da SNPS compreso in poi
             url = URI("https://yh-finance.p.rapidapi.com/stock/v2/get-summary?symbol="+isin[n])
             http = Net::HTTP.new(url.host, url.port)
             http.use_ssl = true
@@ -33,7 +33,7 @@ class Azione < ApplicationRecord
             
             res=JSON.parse(response.read_body)
 
-            @prezzo=res["financialData"]["currentPrice"]["raw"] #prezzo è di tipo float quando lo inserisco
+            @prezzo=res["financialData"]["currentPrice"]["raw"].round(2) #prezzo è di tipo float quando lo inserisco
 
 
             #controllo vecchio prezzo per capire se dover mandare la mail
@@ -57,20 +57,30 @@ class Azione < ApplicationRecord
             paese=res["summaryProfile"]["country"]
             marketcap=res["summaryDetail"]["marketCap"]["raw"]
             volume=res["summaryDetail"]["volume"]["raw"]
-            pe=res["defaultKeyStatistics"]["forwardPE"]["raw"]
-            ps=res["summaryDetail"]["priceToSalesTrailing12Months"]["raw"]
+            pe=res["defaultKeyStatistics"]["forwardPE"]["raw"].round(2)
+            ps=res["summaryDetail"]["priceToSalesTrailing12Months"]["raw"].round(2)
             pb=res["defaultKeyStatistics"]["priceToBook"]["raw"]
-            divyield=res["summaryDetail"]["trailingAnnualDividendYield"]["raw"]*100
+            if pb==nil
+                pb=0
+            else
+                pb=pb.round(2)
+            end
+            divyield=res["summaryDetail"]["trailingAnnualDividendYield"]["raw"]*100.round(2)
             roe=res["financialData"]["returnOnEquity"]["raw"]
             if roe==nil
                 roe=0
             else
-                roe=roe*100
+                roe=roe*100.round(2)
             end
-            roa=res["financialData"]["returnOnAssets"]["raw"]*100
+            roa=res["financialData"]["returnOnAssets"]["raw"]*100.round(2)
             debteq=res["financialData"]["debtToEquity"]["raw"]
-            opmargin=res["financialData"]["operatingMargins"]["raw"]*100
-            ebitda=res["financialData"]["ebitdaMargins"]["raw"]*100
+            if debteq==nil
+                debteq=0
+            else
+                debteq=debteq.round(2)
+            end
+            opmargin=res["financialData"]["operatingMargins"]["raw"]*100.round(2)
+            ebitda=res["financialData"]["ebitdaMargins"]["raw"]*100.round(2)
             
             azioni[n].update(nome:nome,settore:settore,paese:paese,marketcap:marketcap,prezzo:@prezzo,volume:volume,pe:pe,ps:ps,pb:pb,divyield:divyield,roe:roe,roa:roa,debteq:debteq,opmargin:opmargin,ebitda:ebitda)
         end

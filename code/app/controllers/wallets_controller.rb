@@ -13,16 +13,28 @@ class WalletsController < ApplicationController
       @tot=0
       i=0
       @posizioni.each do |posizione|
-        #in azione dovrei avere tuple username,azione,quantita. vedere come è fatta la variabile ed estrarre nelle due righe sotto
-        #solo 'azione' nella prima e solo 'quantita' nella seconda (controlla se giusto come fatto)
         @azioni[i]=Azione.where(isin:posizione.azione).first
         @quantita[i]=posizione.quantità
         @tot=@tot+(posizione.quantità*@azioni[i].prezzo)
         i+=1
+
+      @az=Azione.all
       end
-      render :text => @posizioni.inspect
     end
   end 
+
+  def movimenti
+    @isin = params[:isin]
+    @numero = params[:quantita].to_i
+    @tmp=Wallet.where(user:current_user.username,azione:@isin).first
+    if @tmp==nil
+      Wallet.create(user:current_user.username,azione:@isin,quantità:@numero)
+    else
+      n=@tmp.quantità+@numero
+      @tmp.update(quantità:n)
+    end
+    redirect_to '/wallet'
+  end
 
   # GET /wallets/1 or /wallets/1.json
   def show

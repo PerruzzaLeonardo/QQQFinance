@@ -31,6 +31,5 @@ Rails.application.routes.draw do
   get '/contacts', to: 'contacts#new', as: 'contact'
   get 'contacts/sent'
 
-
-    
+  post '/wallet/movimenti', to: 'wallets#movimenti'
 end
