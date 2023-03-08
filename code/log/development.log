@@ -52820,3 +52820,403 @@ Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 0.3ms | Allocations: 532
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mAzione Update (0.3ms)[0m  [1m[33mUPDATE "aziones" SET "marketcap" = ?, "prezzo" = ?, "volume" = ?, "pe" = ?, "ps" = ?, "pb" = ?, "debteq" = ?, "updated_at" = ? WHERE "aziones"."id" = ?[0m  [["marketcap", 15795430400.0], ["prezzo", 4.06], ["volume", 21534675.0], ["pe", 12.69], ["ps", 1.75], ["pb", 0.0], ["debteq", 0.0], ["updated_at", "2023-03-08 11:42:06.174586"], ["id", 88]]
   [1m[36mTRANSACTION (62.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-03-08 16:20:37 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.4ms | Allocations: 531)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1202)
+  Rendered layout layouts/application.html.erb (Duration: 284.1ms | Allocations: 39247)
+Completed 200 OK in 345ms (Views: 292.2ms | ActiveRecord: 0.0ms | Allocations: 44846)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-08 16:20:43 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 3905)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 6248)
+Completed 200 OK in 79ms (Views: 33.5ms | ActiveRecord: 0.4ms | Allocations: 27518)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-08 16:20:45 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 4057)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 6408)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 7909)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-08 16:21:38 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Giuseppe", "cognome"=>"Bianchi", "username"=>"GBianchi", "email"=>"123456@gmail.com", "password"=>"[FILTERED]", "pubblico"=>"si"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (3.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Giuseppe"], ["cognome", "Bianchi"], ["username", "GBianchi"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-08 15:21:39.057021"], ["updated_at", "2023-03-08 15:21:39.057021"], ["email", "123456@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 667ms (ActiveRecord: 19.7ms | Allocations: 7698)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-08 16:21:39 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 587)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 2860)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 3593)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-08 16:21:46 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"123456@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 303 See Other in 678ms (ActiveRecord: 0.2ms | Allocations: 3723)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2023-03-08 16:21:47 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 9.4ms | Allocations: 802)
+  Rendered users/_user.html.erb (Duration: 6.6ms | Allocations: 884)
+  Rendered users/show.html.erb within layouts/application (Duration: 29.8ms | Allocations: 2297)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 4521)
+Completed 200 OK in 44ms (Views: 34.7ms | ActiveRecord: 0.3ms | Allocations: 7238)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:21:53 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:6:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:15:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2036)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 2108)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.7ms | Allocations: 5161)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    21:   <div class="col-4">
+    22:   <input list="brow" class="form-control me-2" type="search" name="isin" id="isin"placeholder="Ricerca ISIN" aria-label="Cerca">
+    23:   <datalist id="brow">
+    24:    <%@az.each do |i|%>
+    25:     <option value=<%=i.isin%>>
+    26:    <%end%>
+    27:   </datalist>
+  
+app/views/wallets/index.html.erb:24
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:22:33 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 24)
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/wallets/index.html.erb:24
+  Rendered wallets/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 22170)
+  Rendered layout layouts/application.html.erb (Duration: 76.6ms | Allocations: 36517)
+Completed 200 OK in 134ms (Views: 78.1ms | ActiveRecord: 1.7ms | Allocations: 44657)
+
+
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-08 16:22:53 +0100
+Processing by WalletsController#movimenti as TURBO_STREAM
+  Parameters: {"isin"=>"", "quantita"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:28:in `movimenti'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ? AND "wallets"."azione" = ? ORDER BY "wallets"."id" ASC LIMIT ?[0m  [["user", "GBianchi"], ["azione", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:28:in `movimenti'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "GBianchi"], ["azione", ""], ["quantità", 1], ["created_at", "2023-03-08 15:22:53.817502"], ["updated_at", "2023-03-08 15:22:53.817502"]]
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+  [1m[36mTRANSACTION (59.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:22:53 +0100
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+Redirected to http://localhost:3000/wallet
+Completed 302 Found in 90ms (ActiveRecord: 59.9ms | Allocations: 18677)
+
+
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 3173)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:23:03 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms | Allocations: 2826)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/users/11" for 127.0.0.1 at 2023-03-08 16:23:06 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 734)
+  Rendered users/_user.html.erb (Duration: 0.7ms | Allocations: 654)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1567)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3799)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 6206)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:23:08 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 2837)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/" for 127.0.0.1 at 2023-03-08 16:23:20 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 8.3ms | Allocations: 734)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 800)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3186)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.1ms | Allocations: 4175)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:23:23 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 2847)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:24:04 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 2846)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+Started GET "/" for 127.0.0.1 at 2023-03-08 16:24:18 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 10.0ms | Allocations: 446)
+  Rendered index/index.html.erb within layouts/application (Duration: 10.6ms | Allocations: 826)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 3427)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4486)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-08 16:24:36 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1077)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3435)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.0ms | Allocations: 5080)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-08 16:24:43 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"123456@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "123456@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/11
+Completed 303 See Other in 499ms (ActiveRecord: 0.2ms | Allocations: 2371)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2023-03-08 16:24:43 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:10
+  Rendered _header.html.erb (Duration: 6.4ms | Allocations: 734)
+  Rendered users/_user.html.erb (Duration: 1.0ms | Allocations: 851)
+  Rendered users/show.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1991)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4214)
+Completed 200 OK in 29ms (Views: 20.8ms | ActiveRecord: 0.2ms | Allocations: 6169)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:24:46 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", ""], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.6ms | Allocations: 2841)
+
+
+  
+NoMethodError (undefined method `prezzo' for nil:NilClass):
+  
+app/controllers/wallets_controller.rb:19:in `block in index'
+app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Destroy (0.2ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = ?[0m  [["id", 10]]
+  [1m[36mTRANSACTION (48.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:25:47 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 22)
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/wallets/index.html.erb:24
+  Rendered wallets/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2595)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 4965)
+Completed 200 OK in 45ms (Views: 35.5ms | ActiveRecord: 0.5ms | Allocations: 7216)
+
+
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-08 16:26:01 +0100
+Processing by WalletsController#movimenti as TURBO_STREAM
+  Parameters: {"isin"=>"AMZN", "quantita"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:28:in `movimenti'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ? AND "wallets"."azione" = ? ORDER BY "wallets"."id" ASC LIMIT ?[0m  [["user", "GBianchi"], ["azione", "AMZN"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:28:in `movimenti'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+  [1m[36mWallet Create (5.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "GBianchi"], ["azione", "AMZN"], ["quantità", 3], ["created_at", "2023-03-08 15:26:01.400264"], ["updated_at", "2023-03-08 15:26:01.400264"]]
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/wallets_controller.rb:30:in `movimenti'
+Redirected to http://localhost:3000/wallet
+Completed 302 Found in 39ms (ActiveRecord: 24.1ms | Allocations: 3290)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:26:01 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AMZN"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/wallets/index.html.erb:24
+  Rendered wallets/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2110)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 4419)
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 0.9ms | Allocations: 6696)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-08 16:26:05 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:7:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "GBianchi"]]
+  ↳ app/controllers/wallets_controller.rb:16:in `index'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "AMZN"], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:17:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (2.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/wallets/index.html.erb:24
+  Rendered wallets/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2104)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 4413)
+Completed 200 OK in 44ms (Views: 25.7ms | ActiveRecord: 3.0ms | Allocations: 6700)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-08 16:26:16 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 34ms (ActiveRecord: 0.2ms | Allocations: 4938)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-08 16:26:16 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2484)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 2972)
+
+

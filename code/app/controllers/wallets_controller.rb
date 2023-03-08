@@ -3,6 +3,7 @@ class WalletsController < ApplicationController
 
   # GET /wallets or /wallets.json
   def index
+    @az=Azione.all
     if !user_signed_in?
       redirect_to '/users/sign_in',notice: 'Per accedere alla pagina del Wallet, è prima necessario autenticarsi col proprio account' 
     else
@@ -17,8 +18,6 @@ class WalletsController < ApplicationController
         @quantita[i]=posizione.quantità
         @tot=@tot+(posizione.quantità*@azioni[i].prezzo)
         i+=1
-
-      @az=Azione.all
       end
     end
   end 
