@@ -13,11 +13,10 @@ Rails.application.routes.draw do
   resources :azione
   resources :profilo
   resources :news
-  
+  resources :comment
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   #get 'myprofile'=>'profilo#index' #il mio profilo è gestito da funzione index in profilo_controller.rb
-  get 'profilo/:id'=>'profilo#altro' #la visualizzazione di altri profili è gestita da show in profilo_controller.rb
-
+  post '/azione/:id', to: 'comment#create'
   get 'news'=>'news#index'
   # Defines the root path route ("/")
   # root "articles#index"
