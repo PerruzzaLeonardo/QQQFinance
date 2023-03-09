@@ -51,7 +51,7 @@
        </tr>
        <% i=0%>
        <%= while i<@azioni.length() do %>
-       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><button type="button" class="btn btn-primary btn-danger btn-sm">rimuovi</button></td></tr>
+       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><%= button_to 'rimuovi', wallets_path(params: { isin: @azioni[i].isin}), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
        <% i+=1 %>
        <%end %>
      </table>

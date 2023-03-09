@@ -57332,3 +57332,135 @@ Completed 200 OK in 69ms (Views: 43.9ms | Allocations: 3872)
 
 
 Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-08 22:57:16 +0100
+Started GET "/" for 127.0.0.1 at 2023-03-09 10:06:33 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.2ms | Allocations: 529)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 428.2ms | Allocations: 55353)
+Completed 200 OK in 478ms (Views: 445.0ms | ActiveRecord: 0.0ms | Allocations: 60942)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:06:55 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 44.2ms | Allocations: 4426)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 6773)
+Completed 200 OK in 86ms (Views: 57.1ms | ActiveRecord: 0.5ms | Allocations: 28983)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:07:05 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4146)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::SessionsController:0x000000000100e0>):
+  
+app/controllers/users/sessions_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2023-03-09 10:07:18 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2497)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 2979)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-09 10:07:18 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2483)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 2949)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:07:21 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 846)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3123)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 3866)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:07:53 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4085)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::SessionsController:0x00000000010540>):
+  
+app/controllers/users/sessions_controller.rb:18:in `create'
+Started GET "/" for 127.0.0.1 at 2023-03-09 10:09:32 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2496)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms | Allocations: 2984)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-09 10:09:32 +0100
+Processing by IndexController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2483)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2967)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-09 10:09:34 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3935)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 6289)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.0ms | Allocations: 7799)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-09 10:10:01 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"nome", "cognome"=>"cognome", "username"=>"UtenteProva", "email"=>"mail@mail.com", "password"=>"[FILTERED]", "pubblico"=>"si"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "mail@mail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "nome"], ["cognome", "cognome"], ["username", "UtenteProva"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-09 09:10:01.767863"], ["updated_at", "2023-03-09 09:10:01.767863"], ["email", "mail@mail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", nil], ["uid", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 574ms (ActiveRecord: 16.8ms | Allocations: 7735)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:10:01 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3125)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 3893)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-09 10:10:16 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"mail@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 4075)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::SessionsController:0x00000000010bd0>):
+  
+app/controllers/users/sessions_controller.rb:18:in `create'

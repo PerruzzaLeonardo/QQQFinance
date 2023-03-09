@@ -35,6 +35,13 @@ class WalletsController < ApplicationController
     redirect_to '/wallet'
   end
 
+  def destroy
+    @wallet = Wallet.find_by(isin: params[:isin],user:current_user.username)
+    @wallet.destroy
+
+    redirect_to '/wallet'
+  end
+
   # GET /wallets/1 or /wallets/1.json
   def show
   end
@@ -46,11 +53,6 @@ class WalletsController < ApplicationController
 
   # GET /wallets/1/edit
   def edit
-  end
-
-  def destroy
-    @wallet=Wallet.find(params[:id])
-    @wallet.destroy
   end
 
   # POST /wallets or /wallets.json
