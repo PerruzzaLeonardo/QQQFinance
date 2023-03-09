@@ -35,6 +35,19 @@ class WalletsController < ApplicationController
     redirect_to '/wallet'
   end
 
+  def destroy
+    @wallet = Wallet.find_by(isin: params[:isin],user:current_user.username)
+    @wallet.destroy
+
+    redirect_to '/wallet'
+  end
+
+  def rimozione
+    @wallet=Wallet.where(user:current_user.username)
+    @wallet.destroy
+
+    redirect_to '/wallet'
+  end
   # GET /wallets/1 or /wallets/1.json
   def show
   end
@@ -46,11 +59,6 @@ class WalletsController < ApplicationController
 
   # GET /wallets/1/edit
   def edit
-  end
-
-  def destroy
-    @wallet=Wallet.find(params[:id])
-    @wallet.destroy
   end
 
   # POST /wallets or /wallets.json
@@ -80,7 +88,7 @@ class WalletsController < ApplicationController
       end
     end
   end
-
+=begin
   # DELETE /wallets/1 or /wallets/1.json
   def destroy
     @wallet.destroy
@@ -90,7 +98,7 @@ class WalletsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
+=end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wallet

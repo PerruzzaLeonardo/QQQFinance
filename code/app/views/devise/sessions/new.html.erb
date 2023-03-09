@@ -37,6 +37,8 @@
 		<button type="reset" class="btn btn-danger btn-lg">Reset</button>
 		</div>
 		</div>
+	</div>
+	<%end%>
 	
 	</div>
 </div>
@@ -53,13 +55,20 @@
 	<div class="col">
 	</div>
 	<div class="col">
-	<button class="btn btn-success btn-lg" type="button" name="Google">Accedi con Google</button>
-	</div>
-	<div class="col">
-	</div>	
-	
- </div>
+	 </div>
 </div>
+   
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= form_for "Google",
+      url: omniauth_authorize_path(resource_name, provider),method: :post,data: {turbo: "false"} do |f| %>
+  	<%= f.submit "Google" %>
+    <% end %>  
+  <% end %>
+<% end %>
+
+	
+
 	
 	
 <br>
@@ -67,6 +76,6 @@
 <br>
 <p class="text-center fw-semibold fs-2">Se non hai ancora un account, <a href="/users/sign_up">registrati</a></p>
 
-<% end %>
+
 </body>
 </html>
