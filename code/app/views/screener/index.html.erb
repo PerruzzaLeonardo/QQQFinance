@@ -14,11 +14,18 @@
     <%=render "/header"%>
     <p>
       <div class="row">
-        <div class="col">
-          <div class="mb-3">
-            <label for="formExamplePaese" class="form-label">Paese</label>
-            <input type="text" class="form-control" id="formExamplePaese" placeholder="Qualsiasi">
-          </div>
+        <div class="col px-4">
+        Paese
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Qualsiasi</option>
+            <option value="1">Australia</option>
+            <option value="2">Canada</option>
+            <option value="3">China</option>
+            <option value="4">Netherlands</option>
+            <option value="5">United Kingdom</option>
+            <option value="6">United States</option>
+            <option value="7">Uruguay</option>
+          </select>
         </div>
         <div class="col">
           <label for="examplePrice" class="form-label">Prezzo minimo</label>
@@ -49,21 +56,27 @@
           </div>
         </div>
         <div class="col">
-          <div class="mb-3">
-            <label for="formExampleSettore" class="form-label">Settore</label>
-            <input type="text" class="form-control" id="formExampleSettore" placeholder="Qualsiasi">
-          </div>
+          Settore
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Qualsiasi</option>
+            <option value="1">Communication services</option>
+            <option value="2">Consumer cyclical</option>
+            <option value="3">Consumer defensive</option>
+            <option value="4">Energy</option>
+            <option value="5">Healthcare</option>
+            <option value="6">Industrials</option>
+            <option value="7">Real estate</option>
+            <option value="8">Techonology</option>
+          </select>
         </div>
         <div class="col">
           <label for="exampleVolume" class="form-label">Volume minimo</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="VolumeMin">
-            <span class="input-group-text">K</span>
           </div>
           <label for="exampleVolume2" class="form-label">Volume massimo</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" aria-label="VolumeMax">
-            <span class="input-group-text">K</span>
           </div>
         </div>
         <div class="col">
@@ -80,7 +93,7 @@
             <span class="input-group-text">.00</span>
           </div>
         </div>
-        <div class="col">
+        <div class="col px-4">
           <label for="exampleROE" class="form-label">ROE min</label>
           <input type="text" class="form-control" aria-label="RoeMin">
           <label for="exampleROE2" class="form-label">ROE max</label>
@@ -88,7 +101,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col">
+        <div class="col px-4">
           <label for="exampleROA" class="form-label">ROA min</label>
           <input type="text" class="form-control" aria-label="RoaMin">
           <label for="exampleROA2" class="form-label">ROA max</label>
@@ -124,7 +137,7 @@
           <label for="exampleDE2" class="form-label">Debt Eq max</label>
           <input type="text" class="form-control" aria-label="DeMax">
         </div>
-        <div class="col">
+        <div class="col px-4">
           <label for="exampleOPM" class="form-label">OP Margin min</label>
           <input type="text" class="form-control" aria-label="OpMMin">
           <label for="exampleOPM2" class="form-label">OP Margin max</label>
@@ -159,16 +172,56 @@
         </form>
       </div>
       <% end %>
-    </p>
+    </p>  
     <h1>Azioni</h1>
-    <ul>
-      <% @variabili.each do |variabile| %>
-        <div class="row">
-          <%= variabile.nome =%>
-          <%= variabile.isin =%>
-        </div>
-      <% end %>
-    </ul>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Codice identificativo">ISIN</a></th>
+          <th scope="col">Paese</th>
+          <th scope="col">Prezzo(€)</th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato">Marketcap(€)</a></th>
+          <th scope="col">Settore</th>
+          <th scope="col">Volume</th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization">EBITDA(€)</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Return On Equity">ROE</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Return On Asset">ROA</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio">PE</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio">PS</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio">PB</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo">Div Yield</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale">Debt Eq</a></th>
+          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo">Op Margin</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @variabili.each do |variabile| %>
+          <tr>
+            <th scope="row"><%= variabile.nome =%></th>
+            <td><li><%= link_to variabile.isin, variabile %></li></td>
+            <td><%= variabile.paese %></td>
+            <td><%= variabile.prezzo %></td>
+            <td><%= variabile.marketcap %></td>
+            <td><%= variabile.settore %></td>
+            <td><%= variabile.volume %></td>
+            <td><%= variabile.ebitda %></td>
+            <td><%= variabile.roe %></td>
+            <td><%= variabile.roa %></td>
+            <td><%= variabile.pe %></td>
+            <td><%= variabile.ps %></td>
+            <td><%= variabile.pb %></td>
+            <td><%= variabile.divyield %></td>
+            <td><%= variabile.debteq %></td>
+            <td><%= variabile.opmargin %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
 </html>
