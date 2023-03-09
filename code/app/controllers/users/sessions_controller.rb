@@ -15,7 +15,7 @@ class Users::SessionsController < Devise::SessionsController
 
 
   def create #super
-    self.resource = warden.authenticate!(auth)
+    self.resource = warden.authenticate!
     set_flash_message!(:notice, :signed_in)
     sign_in(resource_name, resource)
     yield resource if block_given?
