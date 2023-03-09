@@ -9,7 +9,12 @@ Rails.application.routes.draw do
     post "/users/sign_in" => "users/sessions#create"
     get "users/sign_out" => "users/sessions#destroy"
   end
-  resources :wallets
+
+  resources :wallets do
+    delete 'rimozione', on: :collection
+    delete 'elimina',on: :collection
+  end
+
   resources :users
   resources :azione
   resources :news
@@ -31,6 +36,11 @@ Rails.application.routes.draw do
   get 'contacts/sent'
 
   post '/wallet/movimenti', to: 'wallets#movimenti'
-  post '/wallet/rimozione', to: 'wallets#rimozione', as: 'rimozione_wallet'
+  post '/wallet/rimozione', to: 'wallets#rimozione'
+
+  delete 'wallets/rimozione', to: 'wallets#rimozione', as: 'delete_wallets'
+  delete 'wallets/elimina', to: 'wallets#elimina', as: 'delete_position'
+
+  get 'header' => 'header#header'
 
 end

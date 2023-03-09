@@ -28,7 +28,7 @@ Devise.setup do |config|
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
   config.mailer_sender = 'QQQFinanceASSI@gmail.com'
-  config.omniauth :google_oauth2, 
+  config.omniauth :google_oauth2,
   Rails.application.credentials.dig(:GOOGLE_OAUTH_CLIENT_ID),
   Rails.application.credentials.dig(:GOOGLE_OAUTH_CLIENT_SECRET)
 

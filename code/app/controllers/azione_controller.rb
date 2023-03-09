@@ -6,10 +6,10 @@ class AzioneController < ApplicationController
   def show
     @azione =Azione.find(params[:id])
     @commenti=Comment.where(isin: @azione.id )
-    end
+  end
 
   def new
-      @azione=Azione.new
+    @azione=Azione.new
   end
   
   def create

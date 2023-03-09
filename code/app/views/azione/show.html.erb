@@ -62,8 +62,8 @@
         <h4><p ><%=@commenti.length()%> Commenti</p></h4>
         <ul class="list-group list-group-flush">
             <%@commenti.each do |commento|%>
-                    <li class="list-group-item ">
-                        <div class="row">
+                <li class="list-group-item ">
+                    <div class="row">
                         <div class="col-1">
                             <%= image_tag "profilo2.jpeg",class:"card-img-top "%>
                         </div>
@@ -71,22 +71,22 @@
                             <h5><p><%=commento.user%></p></h5>
                             <p><%=commento.commento%></p>
                         </div>
-                        </div>
-                    </li>  
-            
+                    </div>
+                </li>  
             <%end%>
         </ul>
-
-        <h4><p>Lascia un commento</p></h4>
-        <%= form_with(model: @commento) do |form| %>
-            <div class="row m-2">
-                <%= form.hidden_field :user, value: current_user.username %>
-                <%= form.hidden_field :isin, value: @azione.id %>
-                <%= form.text_area :commento, size: "70x5" %>
-                <div class="m-2">
-                    <%= form.submit %>
+        <%if(current_user)%>
+            <h4><p>Lascia un commento</p></h4>
+            <%= form_with(model: @commento) do |form| %>
+                <div class="row m-2">
+                    <%= form.hidden_field :user, value: current_user.username %>
+                    <%= form.hidden_field :isin, value: @azione.id %>
+                    <%= form.text_area :commento, size: "70x5" %>
+                    <div class="m-2">
+                        <%= form.submit %>
+                    </div>
                 </div>
-            </div>
+            <%end%>
         <%end%>
     </div>
 </body>

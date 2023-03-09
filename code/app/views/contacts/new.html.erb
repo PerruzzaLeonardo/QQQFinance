@@ -4,27 +4,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 </head>
 <body>
-  <script>
-    $(document).ready(function() {
-      $('#mySelect').select2();
-    });
-
-    $(document).ready(function(){
-        $('#utenti').hide()
-    });
-
-    $(document).ready(function(){
-    $('#motivo').on('change', function() {  
-        var name=this.value;
-        if (name=='Segnalazione utente'){
-            $('#utenti').show();
-        }
-        else{
-            $('#utenti').hide();
-        }
-    });
-})
-  </script>
 <%=render "/header"%>
 <br>
 <div class="container px-8 py-6 rounded-md shadow bg-white">
@@ -98,5 +77,25 @@
     <br>
 </div>
 </div>
+  <script>
+    $(document).ready(function() {
+      $('#mySelect').select2();
+    });
 
+    $(document).ready(function(){
+        $('#utenti').hide()
+    });
+
+    $(document).ready(function(){
+    $('#motivo').on('change', function() {  
+        var name=this.value;
+        if (name=='Segnalazione utente'){
+            $('#utenti').show();
+        }
+        else{
+            $('#utenti').hide();
+        }
+    });
+})
+  </script>
 </body>

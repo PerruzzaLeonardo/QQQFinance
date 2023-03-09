@@ -11,12 +11,8 @@
   <%= render @user %>
   
 
-  <div class="row m-2">
-    <br>
-    <br>
-
-    <%
-    if (@user.commento!="") #se non è vuoto
+  <div class="container-fluid row m-2">
+    <%if (!@user.commento or @user.commento!="") #se non è vuoto
       @commento=@user.commento
     else
       @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
@@ -24,4 +20,3 @@
 
     <textarea rows=8 cols=50 placeholder="<%= @commento %>" disabled></textarea>
   </div>
-
