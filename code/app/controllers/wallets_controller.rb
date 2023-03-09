@@ -23,30 +23,39 @@ class WalletsController < ApplicationController
   end 
 
   def movimenti
-    @isin = params[:isin]
-    @numero = params[:quantita].to_i
-    @tmp=Wallet.where(user:current_user.username,azione:@isin).first
-    if @tmp==nil
-      Wallet.create(user:current_user.username,azione:@isin,quantità:@numero)
-    else
-      n=@tmp.quantità+@numero
-      @tmp.update(quantità:n)
+    @az=Azione.all
+    lista=[]
+    @az.each do |x|
+      lista.push(x.isin)
     end
+    @isin = params[:isin].upcase
+    @numero = params[:quantita].to_i
+    if lista.include?(@isin)
+      @tmp=Wallet.where(user:current_user.username,azione:@isin).first
+      if @tmp==nil
+        Wallet.create(user:current_user.username,azione:@isin,quantità:@numero)
+      else
+        n=@tmp.quantità+@numero
+        @tmp.update(quantità:n)
+      end
+    else
+      flash[:notice]=@isin+" non è un isin valido, scegline uno tra quelli proposti nel menu a tendina"
+    end
+
     redirect_to '/wallet'
   end
 
-  def destroy
-    @wallet = Wallet.find_by(isin: params[:isin],user:current_user.username)
+  def elimina
+    @wallet = Wallet.find_by(azione: params[:isin],user:current_user.username)
     @wallet.destroy
-
-    redirect_to '/wallet'
+  
+    redirect_to '/wallet',notice: "Posizione rimossa"
   end
 
   def rimozione
     @wallet=Wallet.where(user:current_user.username)
-    @wallet.destroy
-
-    redirect_to '/wallet'
+    @wallet.destroy_all
+    redirect_to '/wallet',notice:"Il wallet è stato svuotato"
   end
   # GET /wallets/1 or /wallets/1.json
   def show
@@ -88,7 +97,7 @@ class WalletsController < ApplicationController
       end
     end
   end
-=begin
+
   # DELETE /wallets/1 or /wallets/1.json
   def destroy
     @wallet.destroy
@@ -98,7 +107,7 @@ class WalletsController < ApplicationController
       format.json { head :no_content }
     end
   end
-=end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_wallet

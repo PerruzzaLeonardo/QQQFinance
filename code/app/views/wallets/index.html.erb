@@ -4,15 +4,20 @@
 
 <div class="container">
 <br>
+<% if flash[:notice] %>
+  <div class="alert alert-danger alert-dismissable">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
  <div class="row">
    <div class="col-12">
      <h1>Valore totale wallet:</h1>
-     <div class="text-center"><h2 style="color:green" id="valore"> <%=@tot%> $</h2></div>
+     <div class="text-center"><h2 style="color:green" id="valore"> <%=@tot.round(2)%> $</h2></div>
    </div>
  </div>
  <hr>
 
- <form action="/wallet/movimenti" method='post' onsubmit="location.reload();">
+ <form action="/wallet/movimenti" method='post' >
 
  <div class="row">
   <div class="col-4">
@@ -51,7 +56,7 @@
        </tr>
        <% i=0%>
        <%= while i<@azioni.length() do %>
-       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=@azioni[i].prezzo * @quantita[i]%>$</td><td><%= button_to 'rimuovi', wallets_path(params: { isin: @azioni[i].isin}), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
+       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=(@azioni[i].prezzo * @quantita[i]).round(2)%>$</td><td><%= button_to 'rimuovi', delete_position_path(isin:@azioni[i].isin), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
        <% i+=1 %>
        <%end %>
      </table>
@@ -60,7 +65,9 @@
     <p class="text-center">Il tuo wallet è vuoto.<br>Aggiungine alcune utilizzando l'apposito tool che trovi qui sopra o nella pagina <a href=../screener>screener</a></p>
     <%end%>
   </div>
-  <%= button_to 'Cancella wallet', rimozione_wallet_path, method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler eliminare l&#39 intero wallet? Tutte le modifiche andranno perse.'} %>
+  <%if @tot!=0%>
+  <%= button_to 'Svuota wallet', delete_wallets_path, method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler eliminare l&#39 intero wallet? Tutte le modifiche andranno perse.'} %>
+  <%end%>
 </div>
 <%=render '/footer'%>
 </body>
