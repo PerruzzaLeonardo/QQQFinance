@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   get 'contacts/sent'
 
   post '/wallet/movimenti', to: 'wallets#movimenti'
+  post '/wallet/rimozione', to: 'wallets#rimozione', as: 'rimozione_wallet'
+
 end

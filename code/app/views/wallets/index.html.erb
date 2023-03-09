@@ -56,14 +56,11 @@
        <%end %>
      </table>
     </div>
-    
-
-
-
-
     <% if @tot==0%>
     <p class="text-center">Il tuo wallet è vuoto.<br>Aggiungine alcune utilizzando l'apposito tool che trovi qui sopra o nella pagina <a href=../screener>screener</a></p>
     <%end%>
   </div>
+  <%= button_to 'Cancella wallet', rimozione_wallet_path, method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler eliminare l&#39 intero wallet? Tutte le modifiche andranno perse.'} %>
 </div>
+<%=render '/footer'%>
 </body>
