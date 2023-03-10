@@ -2,6 +2,8 @@ class CommentController < ApplicationController
     def index
         @commenti=Comment.all
     end
+
+
     def new
         @Commento=Comment.new
     end
@@ -21,9 +23,19 @@ class CommentController < ApplicationController
         end
       end 
 
+      def destroy
+        @commento=Comment.find(params[:id])
+        @commento.destroy
+    
+        respond_to do |format|
+          format.html { redirect_to azione_url(@commento.isin), notice: "comment was successfully destroyed." }
+          format.json { head :no_content }
+        end
+      end
+
     private
 
     def comment_params
-        params.permit(:user,:isin,:commento)
+        params.permit(:user_id,:isin,:commento)
       end
 end

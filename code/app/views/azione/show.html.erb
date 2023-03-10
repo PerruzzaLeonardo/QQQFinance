@@ -7,6 +7,17 @@
     <div class="row pt-2">
         <h1 class="col-3 text-center"><%= @azione.nome %></h1>  
         <h4 class="col p-2"><%= @azione.isin %> </h4>
+        <div class="col">   
+            <form action="/wallet/movimenti" method='post' class="row" >
+                <input type="hidden" name="isin" id="isin" value="<%= @azione.isin %>" />
+                <div class="col">
+                    <input name='quantita' id='quantita' type='number' min='1' placeholder="Quantità" class='form-control' required>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Aggiungi</button>
+                </div> 
+            </form>
+        </div>
     </div>
     <p class="p-2 text-center">Il prezzo di quest'azione è <%= @azione.prezzo %>$</p>
     <div class="container-fluid row">
@@ -68,7 +79,18 @@
                             <%= image_tag "profilo2.jpeg",class:"card-img-top "%>
                         </div>
                         <div class="col-10">
-                            <h5><p><%=commento.user%></p></h5>
+                            <div class="d-flex">
+                                <p class="h5"><%=User.find(commento.user_id).username%></p>       
+                                <%if(current_user.id==commento.user_id)%>
+                                </p>
+                                    <%=link_to "Elimina",comment_path(commento),data: {
+                                        turbo_method: :delete,
+                                        turbo_confirm: "Sei sicuro?"
+                                    },class:"ms-3" %>
+                                </p>  
+                                <%end%>
+                                
+                            </div>
                             <p><%=commento.commento%></p>
                         </div>
                     </div>
@@ -79,7 +101,7 @@
             <h4><p>Lascia un commento</p></h4>
             <%= form_with(model: @commento) do |form| %>
                 <div class="row m-2">
-                    <%= form.hidden_field :user, value: current_user.username %>
+                    <%= form.hidden_field :user_id, value: current_user.id %>
                     <%= form.hidden_field :isin, value: @azione.id %>
                     <%= form.text_area :commento, size: "70x5" %>
                     <div class="m-2">

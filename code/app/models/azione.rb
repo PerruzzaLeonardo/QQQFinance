@@ -1,4 +1,5 @@
 class Azione < ApplicationRecord
+    #has_many :comment  ,dependent: :destroy
     include ActionMailer::MailHelper
 
     def self.aggiorna_azioni
