@@ -20,11 +20,19 @@
       <div class="col-auto">
         <i class="bi-search"></i>
       </div>
+
       <div class="col-auto">
-        <label for="inputISIN" class="visually-hidden">CodiceISIN</label>
-        <input type="text" class="form-control" id="inputISIN" placeholder="Codice ISIN">
+      <form action="/index/cerca" method='post' id="form-home">      
+      <input list="lista" class="form-control me-2" type="search" name='ricerca' id='ricerca' placeholder="Ricerca" aria-label="Cerca" >
+       <datalist id="lista">
+        <%@ricerca.each do |i|%>
+         <option value=<%=i[0] %>(<%=i[1]%>)>
+        <%end%>
+       </datalist>
+       </form>
       </div>
     </form>
+
     </div>
     <div class="d-grid gap-4 d-md-flex justify-content-md-center">
       <a href="../screener" class="btn btn-primary" role="button" data-bs-toggle="button">Screener</a>
@@ -35,7 +43,20 @@
       <% end %>    
     </div>
     <div class="position-relative m-4 d-grid gap-2 d-md-flex justify-content-md-center">
+     <% if !current_user %>
       <button type="button" class="btn btn-primary btn-lg" href="../login">Login</button>
+      <%else%>
+      <button type="button" class="btn btn-primary btn-lg" href="../logout">Logout</button> <!--implementa logout-->
+      <%end%>
     </div>
+<script>
+  const searchForm = document.querySelector('#form-home');
+  const searchInput = document.querySelector('#ricerca');
+  searchInput.addEventListener('input', function() {
+    searchForm.submit();
+});
+
+</script>
+
   </body>
 </html>

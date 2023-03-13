@@ -1,13 +1,16 @@
 class HeaderController < ApplicationController
-    def header
+    def partial
         @ricerca=[]    #aggiungo oggetti tipo [isin,'azione',id] e [username,'utente',id]
-        @azioni=Azioni.all
+        @azioni=Azione.all
         @utenti=User.all
+        i=0
         @azioni.each do |azione|
-            @ricerca.push([azione.isin,'azione',azione.id])
+            @ricerca[i]=[azione.isin,'azione',azione.id]
+            i+=1
         end
         @utenti.each do |utente|
-            @ricerca.push([utente.username,'utente',utente.id])
+            @ricerca[i]=[utente.username,'utente',utente.id]
+            i+=1
         end
     end
 end

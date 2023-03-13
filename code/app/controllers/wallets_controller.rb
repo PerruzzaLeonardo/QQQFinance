@@ -20,7 +20,7 @@ class WalletsController < ApplicationController
         i+=1
       end
     end
-  end 
+  end
 
   def movimenti
     @az=Azione.all

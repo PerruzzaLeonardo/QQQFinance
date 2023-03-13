@@ -44,14 +44,14 @@
  <div class="row">
    <h1>Azioni detenute:</h1>
    <div class=" table-responsive">
-     <table name="portafoglio" style="text-align:center" class="table text-black" rules="rows">
+     <table name="portafoglio" style="text-align:center" class="table text-black" id="tab" rules="rows">
        <tr>
-       <th>Nome</th>
-       <th>ISIN</th>
-       <th>Paese</th>
-       <th>Settore</th>
-       <th>Quantità</th>
-       <th>ValorePosizione</th>
+       <th class="clickable" onclick="ordina(0)">Nome</th>
+       <th class="clickable" onclick="ordina(1)">ISIN</th>
+       <th class="clickable" onclick="ordina(2)">Paese</th>
+       <th class="clickable" onclick="ordina(3)">Settore</th>
+       <th class="clickable" onclick="ordina(4)">Quantità</th>
+       <th class="clickable" onclick="ordina(5)">ValorePosizione</th>
        <tr></tr>
        </tr>
        <% i=0%>
@@ -70,4 +70,36 @@
   <%end%>
 </div>
 <%=render '/footer'%>
+
+<script>
+function ordina(col) {
+  var table, rows, switching, i, x, y, shouldSwitch;
+  table = document.getElementById("tab"); // ID della tabella
+  switching = true;
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[col];
+      y = rows[i + 1].getElementsByTagName("TD")[col];
+      if (isNaN(x.innerHTML)) {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else {
+        if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+    }
+  }
+}
+</script>
 </body>

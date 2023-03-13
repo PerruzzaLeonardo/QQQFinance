@@ -1,6 +1,9 @@
 class ContactsController < ApplicationController
     require 'mail_form'
     before_action :set_select_collections,only: [:new, :create]
+    
+    def index
+    end
 
     def new
         @contact = Contact.new

@@ -92,3 +92,11 @@
  .contatti{
   background: 'sfondocontact.jpg' no-repeat center;
  }
+
+ .clickable{
+  cursor:pointer;
+}
+
+.clickable:hover{
+  color:#2196F3
+}
