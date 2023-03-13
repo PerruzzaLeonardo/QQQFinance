@@ -43,4 +43,6 @@ Rails.application.routes.draw do
 
   get 'header' => 'header#header'
 
+  post '/index/cerca',to: 'index#cerca'
+
 end
