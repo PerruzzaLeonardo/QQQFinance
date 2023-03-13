@@ -20,10 +20,12 @@ class IndexController < ApplicationController
         cerca, tipo = @cercato.split(/\(|\)/)
 
         if tipo=='azione'
-            id=Azione.where(isin:cerca).id
+            id=Azione.find_by(isin:cerca).id
+            id=id.to_s
             redirect_to "/azione/"+id
         elsif tipo=='utente'
-            id=User.where(username:cerca).id
+            id=User.find_by(username:cerca).id
+            id=id.to_s
             redirect_to "/users/"+id
         else
             #segnala errore

@@ -89,9 +89,11 @@
   visibility:visible;
  }
 
- .contatti{
-  background: 'sfondocontact.jpg' no-repeat center;
- }
+ .sfondo_home {
+  background-image: url('sfondoD.png');
+  background-size: cover;
+}
+
 
  .clickable{
   cursor:pointer;
