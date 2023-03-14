@@ -1,5 +1,6 @@
 class WalletsController < ApplicationController
   before_action :set_wallet, only: %i[ show edit update destroy ]
+  helper_method :sort_column, :sort_direction
 
   # GET /wallets or /wallets.json
   def index
@@ -19,7 +20,17 @@ class WalletsController < ApplicationController
         @tot=@tot+(posizione.quantità*@azioni[i].prezzo)
         i+=1
       end
+      #variabile contenente gli stessi valori di 'azioni' ma sottoforma di ActiveRecord:Relation invece che di array
+      @prova = Azione.where(id: @azioni)
     end
+  end
+
+  def sort_column
+    Product.column_names.include?(params[:sort]) ? params[:sort] : "name"
+  end
+  
+  def sort_direction
+    %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
   end
 
   def movimenti

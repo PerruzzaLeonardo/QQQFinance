@@ -94,6 +94,10 @@
   background-size: cover;
 }
 
+.sfondo_contact {
+  background-image: url('sfondoconctact.png');
+  background-size: cover;
+}
 
  .clickable{
   cursor:pointer;

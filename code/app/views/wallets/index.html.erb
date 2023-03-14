@@ -45,20 +45,24 @@
    <h1>Azioni detenute:</h1>
    <div class=" table-responsive">
      <table name="portafoglio" style="text-align:center" class="table text-black" id="tab" rules="rows">
+     <thead> 
        <tr>
-       <th class="clickable" onclick="ordina(0)">Nome</th>
-       <th class="clickable" onclick="ordina(1)">ISIN</th>
-       <th class="clickable" onclick="ordina(2)">Paese</th>
-       <th class="clickable" onclick="ordina(3)">Settore</th>
-       <th class="clickable" onclick="ordina(4)">Quantità</th>
-       <th class="clickable" onclick="ordina(5)">ValorePosizione</th>
+       <th id="nome-header" class="clickable" >Nome</th>
+       <th id="isin-header"class="clickable" >ISIN</th>
+       <th id="paese-header"class="clickable" >Paese</th>
+       <th id="settore-header"class="clickable">Settore</th>
+       <th id="quantita-header"class="clickable" >Quantità</th>
+       <th id="valore-header"class="clickable" >ValorePosizione</th>
        <tr></tr>
        </tr>
+       </thead>
+       <tbody>
        <% i=0%>
        <%= while i<@azioni.length() do %>
        <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i]%></td><td><%=(@azioni[i].prezzo * @quantita[i]).round(2)%>$</td><td><%= button_to 'rimuovi', delete_position_path(isin:@azioni[i].isin), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
        <% i+=1 %>
        <%end %>
+       </tbody>
      </table>
     </div>
     <% if @tot==0%>
@@ -70,36 +74,51 @@
   <%end%>
 </div>
 <%=render '/footer'%>
-
 <script>
-function ordina(col) {
-  var table, rows, switching, i, x, y, shouldSwitch;
-  table = document.getElementById("tab"); // ID della tabella
-  switching = true;
-  while (switching) {
-    switching = false;
-    rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i++) {
-      shouldSwitch = false;
-      x = rows[i].getElementsByTagName("TD")[col];
-      y = rows[i + 1].getElementsByTagName("TD")[col];
-      if (isNaN(x.innerHTML)) {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      } else {
-        if (parseFloat(x.innerHTML) < parseFloat(y.innerHTML)) {
-          shouldSwitch = true;
-          break;
-        }
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".clickable");
+  const sortingState = {};
+
+  headers.forEach(header => {
+    sortingState[header.id] = { direction: "desc", lastSorted: null };
+
+    header.addEventListener("click", () => {
+      const table = document.querySelector("#tab");
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      const index = Array.from(header.parentNode.children).indexOf(header);
+      const { direction, lastSorted } = sortingState[header.id];
+
+      let newDirection = direction === "desc" ? "asc" : "desc";
+      if (lastSorted !== null && index !== lastSorted) {
+        newDirection = "desc";
       }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-    }
-  }
-}
+
+      sortingState[header.id] = { direction: newDirection, lastSorted: index };
+      header.dataset.direction = newDirection;
+
+      const sortedRows = rows.sort((a, b) => {
+        const aCol = a.querySelectorAll("td")[index].textContent;
+        const bCol = b.querySelectorAll("td")[index].textContent;
+        if (!isNaN(aCol) && !isNaN(bCol)) {
+          return parseInt(aCol, 10) - parseInt(bCol, 10);
+        }
+        return aCol.localeCompare(bCol);
+      });
+
+      if (newDirection === "asc") {
+        sortedRows.reverse();
+      }
+
+      tbody.innerHTML = "";
+      sortedRows.forEach(row => {
+        tbody.appendChild(row);
+      });
+    });
+  });
+});
+
+
 </script>
 </body>
