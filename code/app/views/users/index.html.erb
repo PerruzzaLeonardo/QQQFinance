@@ -2,13 +2,32 @@
   <%=render "/header"%>
   <div class="row pt-2">
     <div class="col-5">
+      <% flash.each do |type, msg| %>
+        <div>
+          <%= msg %>
+        </div>
+      <% end %>
       <h1>IL MIO PROFILO</h1>
     </div>
     <div class="col-7">
       <%= link_to "Modifica profilo",edit_user_path(@user) %>
     </div>
   </div>  
-  <%= render @user %>
+  <div class="row">
+  <div class="col-7">
+    <div class="field form-group"> <h2>Nome: <%= @user.nome %> </div>
+    <div class="field form-group"> <h2>Cognome: <%= @user.cognome %> </div>
+    <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
+  </div>
+
+  <div class="col-5">
+    <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <div class="field form-group text-center"><h2> <%= @user.username %> </div>
+  </div>
+</div>
+
+<div class="row">
+
   
 
   <div class="container-fluid row m-2">
