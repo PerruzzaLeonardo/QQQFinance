@@ -10032,3 +10032,1031 @@ Processing by WalletsController#index as HTML
 Completed 200 OK in 57ms (Views: 29.9ms | ActiveRecord: 1.1ms | Allocations: 13347)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:33:31 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.9ms | Allocations: 529)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.0ms | Allocations: 1816)
+  Rendered layout layouts/application.html.erb (Duration: 540.1ms | Allocations: 61125)
+Completed 200 OK in 765ms (Views: 577.3ms | ActiveRecord: 1.4ms | Allocations: 111731)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:33:38 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 103)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 515)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3038)
+Completed 200 OK in 20ms (Views: 7.3ms | ActiveRecord: 0.5ms | Allocations: 6196)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:36:38 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 431)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1424)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4223)
+Completed 200 OK in 49ms (Views: 38.7ms | ActiveRecord: 0.9ms | Allocations: 8089)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:36:52 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.9ms | Allocations: 431)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1343)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4143)
+Completed 200 OK in 36ms (Views: 17.6ms | ActiveRecord: 0.7ms | Allocations: 7998)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:37:29 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 9.7ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1602)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4400)
+Completed 200 OK in 51ms (Views: 31.7ms | ActiveRecord: 0.6ms | Allocations: 8247)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:40:29 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1658)
+  Rendered layout layouts/application.html.erb (Duration: 48.9ms | Allocations: 4462)
+Completed 200 OK in 75ms (Views: 56.9ms | ActiveRecord: 0.6ms | Allocations: 8315)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:40:56 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.8ms | Allocations: 434)
+  Rendered index/index.html.erb within layouts/application (Duration: 62.6ms | Allocations: 1345)
+  Rendered layout layouts/application.html.erb (Duration: 68.6ms | Allocations: 4148)
+Completed 200 OK in 167ms (Views: 115.6ms | ActiveRecord: 5.8ms | Allocations: 8008)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:41:57 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 4398)
+Completed 200 OK in 62ms (Views: 37.8ms | ActiveRecord: 1.3ms | Allocations: 8262)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:42:06 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 6.9ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4397)
+Completed 200 OK in 43ms (Views: 27.3ms | ActiveRecord: 0.7ms | Allocations: 8260)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:42:18 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 4402)
+Completed 200 OK in 41ms (Views: 26.4ms | ActiveRecord: 0.7ms | Allocations: 8253)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:42:29 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (12.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.7ms | Allocations: 431)
+  Rendered _footer.html.erb (Duration: 1.7ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1599)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4398)
+Completed 200 OK in 46ms (Views: 23.4ms | ActiveRecord: 12.8ms | Allocations: 8247)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:43:15 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 426)
+  Rendered _footer.html.erb (Duration: 4.3ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1594)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4392)
+Completed 200 OK in 38ms (Views: 22.4ms | ActiveRecord: 0.5ms | Allocations: 8253)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:47:04 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 28.2ms | Allocations: 5416)
+  Rendered index/index.html.erb within layouts/application (Duration: 29.0ms | Allocations: 5991)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 6064)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.7ms | Allocations: 9899)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
+        <div class="container-fluid">
+            <a class="navbar-brand ms-2" href="../.." > QQQFinance</a>
+            <% if controller_name == "index"%>
+             <i class="bi bi-0-circle"></i>
+            <% elsif controller_name == "pages"%>        
+            <form class="d-flex ms-md-auto" method="POST" action="">
+                <input class="form-control me-2" type="search" name="ricerca" placeholder="Search" aria-label="Search">
+            </form>
+            
+            <ul class="navbar-nav ms-md-auto nav-link m-2 " >
+            <% if current_user %>
+                <li class='ms-2 link-light'><i class="bi bi-person-circle"></i>
+                    <a href='/users' class='link-light ps-2'><%= current_user.nome %> </a>
+                </li>
+                <li class='ms-2'><a href='users/sign_out' class='link-light'>Logout</a></li> 
+            <% else %> 
+                <li class='nav-link m-2'><a href='/users/sign_in' class='link-light'>Accedi</a></li>
+                <li class='nav-link m-2'><a href='/users/sign_up' class='link-light'>Registrati</a></li>
+            <% end %> 
+            </ul>  
+        </div>
+    </nav>
+    <nav class="navbar navbar-dark bg-primary ">     
+        <div class="row ps-3">
+            <a class='link-light col-3 ps-3 nav-link' href="..">Home</a>
+            <% if current_user %>
+                <a class='link-light col-3 ps-3 nav-link' href="../wallet">Wallet</a>
+            <% else %> 
+                <a class='link-light col-3 ps-3 nav-link disabled' href="../wallet">Wallet</a>
+            <% end %> 
+            <a class='link-light col-3 ps-3 nav-link' href="../screener" >Screener</a>
+            <a class='link-light col-3 ps-4 nav-link' disabled href="../news" >Notizie</a>
+        </div> 
+    </nav>
+
+
+
+):
+1:        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">    
+2:        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
+3:            <div class="container-fluid">
+4:                <a class="navbar-brand ms-2" href="../.." > QQQFinance</a>
+5:                <% if controller_name == "index"%>
+6:                 <i class="bi bi-0-circle"></i>
+7:                <% elsif controller_name == "pages"%>        
+8:                <form class="d-flex ms-md-auto" method="POST" action="">
+9:                    <input class="form-control me-2" type="search" name="ricerca" placeholder="Search" aria-label="Search">
+10:                </form>
+11:                
+12:                <ul class="navbar-nav ms-md-auto nav-link m-2 " >
+13:                <% if current_user %>
+14:                    <li class='ms-2 link-light'><i class="bi bi-person-circle"></i>
+15:                        <a href='/users' class='link-light ps-2'><%= current_user.nome %> </a>
+16:                    </li>
+17:                    <li class='ms-2'><a href='users/sign_out' class='link-light'>Logout</a></li> 
+18:                <% else %> 
+19:                    <li class='nav-link m-2'><a href='/users/sign_in' class='link-light'>Accedi</a></li>
+20:                    <li class='nav-link m-2'><a href='/users/sign_up' class='link-light'>Registrati</a></li>
+21:                <% end %> 
+22:                </ul>  
+23:            </div>
+24:        </nav>
+25:        <nav class="navbar navbar-dark bg-primary ">     
+26:            <div class="row ps-3">
+27:                <a class='link-light col-3 ps-3 nav-link' href="..">Home</a>
+28:                <% if current_user %>
+29:                    <a class='link-light col-3 ps-3 nav-link' href="../wallet">Wallet</a>
+30:                <% else %> 
+31:                    <a class='link-light col-3 ps-3 nav-link disabled' href="../wallet">Wallet</a>
+32:                <% end %> 
+33:                <a class='link-light col-3 ps-3 nav-link' href="../screener" >Screener</a>
+34:                <a class='link-light col-3 ps-4 nav-link' disabled href="../news" >Notizie</a>
+35:            </div> 
+36:        </nav>
+37:    
+38:    
+  
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/_header.html.erb:41: syntax error, unexpected end-of-input, expecting `end'
+app/views/index/index.html.erb:11
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:47:17 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.3ms | Allocations: 498)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1665)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4475)
+Completed 200 OK in 40ms (Views: 28.3ms | ActiveRecord: 0.7ms | Allocations: 8326)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:47:40 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 5.1ms | Allocations: 488)
+  Rendered _footer.html.erb (Duration: 4.9ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1655)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4453)
+Completed 200 OK in 50ms (Views: 33.8ms | ActiveRecord: 0.7ms | Allocations: 8306)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:47:50 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.6ms | Allocations: 482)
+  Rendered _footer.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 1649)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 4447)
+Completed 200 OK in 48ms (Views: 33.3ms | ActiveRecord: 0.5ms | Allocations: 8298)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:48:52 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 484)
+  Rendered _footer.html.erb (Duration: 10.6ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 1651)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 4449)
+Completed 200 OK in 58ms (Views: 48.5ms | ActiveRecord: 0.5ms | Allocations: 8304)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:49:02 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 482)
+  Rendered _footer.html.erb (Duration: 5.0ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1649)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 4447)
+Completed 200 OK in 31ms (Views: 21.5ms | ActiveRecord: 0.7ms | Allocations: 8304)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:49:09 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 482)
+  Rendered _footer.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1649)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 4447)
+Completed 200 OK in 47ms (Views: 33.1ms | ActiveRecord: 0.5ms | Allocations: 8300)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:49:17 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 481)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1648)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 4446)
+Completed 200 OK in 40ms (Views: 24.8ms | ActiveRecord: 0.4ms | Allocations: 8303)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:49:28 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 13.4ms | Allocations: 481)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 1648)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 4446)
+Completed 200 OK in 49ms (Views: 34.0ms | ActiveRecord: 0.6ms | Allocations: 8299)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:51:52 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.0ms | Allocations: 501)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1669)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | Allocations: 4479)
+Completed 200 OK in 57ms (Views: 43.4ms | ActiveRecord: 0.7ms | Allocations: 8327)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:52:52 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 481)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1648)
+  Rendered layout layouts/application.html.erb (Duration: 90.6ms | Allocations: 9236)
+Completed 200 OK in 132ms (Views: 108.5ms | ActiveRecord: 0.5ms | Allocations: 13085)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:53:27 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 482)
+  Rendered _footer.html.erb (Duration: 2.2ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1649)
+  Rendered layout layouts/application.html.erb (Duration: 71.2ms | Allocations: 9556)
+Completed 200 OK in 96ms (Views: 78.6ms | ActiveRecord: 0.5ms | Allocations: 13417)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:53:59 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 8177)
+Completed 200 OK in 66ms (Views: 59.7ms | ActiveRecord: 0.4ms | Allocations: 11306)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:54:11 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 67.5ms | Allocations: 7259)
+Completed 200 OK in 84ms (Views: 74.8ms | ActiveRecord: 0.5ms | Allocations: 10379)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 09:57:26 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 560)
+  Rendered _footer.html.erb (Duration: 3.1ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1727)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 4525)
+Completed 200 OK in 28ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 8375)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-15 09:57:31 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 122)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4873)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 7334)
+Completed 200 OK in 97ms (Views: 31.2ms | ActiveRecord: 1.3ms | Allocations: 30182)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 09:57:36 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 61.1ms | Allocations: 4933)
+  Rendered layout layouts/application.html.erb (Duration: 63.5ms | Allocations: 7524)
+Completed 200 OK in 103ms (Views: 74.0ms | ActiveRecord: 0.2ms | Allocations: 16124)
+
+
+Started GET "/sfondoconctact.png" for 127.0.0.1 at 2023-03-15 09:57:36 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondoconctact.png"):
+  
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 09:57:42 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 122)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 32.2ms | Allocations: 9682)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 12302)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.3ms | Allocations: 13369)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-15 09:57:46 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 2544)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 5127)
+Completed 200 OK in 50ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 7226)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 09:59:01 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 564)
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 25.6ms | Allocations: 10094)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 12905)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.5ms | Allocations: 14125)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 10:09:01 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.8ms | Allocations: 564)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 41.9ms | Allocations: 10298)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 13109)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.5ms | Allocations: 14312)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 10:09:12 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 112)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 8720)
+  Rendered layout layouts/application.html.erb (Duration: 80.3ms | Allocations: 16374)
+Completed 200 OK in 84ms (Views: 83.3ms | ActiveRecord: 0.3ms | Allocations: 16861)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:09:15 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3819)
+Completed 200 OK in 32ms (Views: 20.9ms | ActiveRecord: 0.8ms | Allocations: 7561)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 10:09:20 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 112)
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 8720)
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 11253)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.4ms | Allocations: 11740)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-15 10:09:22 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4832)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7292)
+Completed 200 OK in 35ms (Views: 16.8ms | ActiveRecord: 0.6ms | Allocations: 12806)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-15 10:10:03 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 564)
+  Rendered _footer.html.erb (Duration: 4.8ms | Allocations: 129)
+  Rendered news/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 5496)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 8159)
+Completed 200 OK in 47ms (Views: 31.6ms | ActiveRecord: 0.8ms | Allocations: 13780)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-15 10:10:19 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.9ms | Allocations: 568)
+  Rendered _footer.html.erb (Duration: 10.6ms | Allocations: 129)
+  Rendered news/index.html.erb within layouts/application (Duration: 21.5ms | Allocations: 5500)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 8163)
+Completed 200 OK in 57ms (Views: 29.1ms | ActiveRecord: 0.7ms | Allocations: 13800)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-15 10:10:30 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.6ms | Allocations: 563)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:199
+  Rendered screener/index.html.erb within layouts/application (Duration: 38.4ms | Allocations: 10091)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 12903)
+Completed 200 OK in 67ms (Views: 65.8ms | ActiveRecord: 0.3ms | Allocations: 14119)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:10:32 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 111)
+  Rendered _footer.html.erb (Duration: 2.6ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1224)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3819)
+Completed 200 OK in 19ms (Views: 13.4ms | ActiveRecord: 0.4ms | Allocations: 7482)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:13:42 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 3101)
+Completed 200 OK in 13ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 6226)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:13:43 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2018)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4608)
+Completed 200 OK in 16ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 6295)
+
+
+Started GET "/sfondoconctact.png" for 127.0.0.1 at 2023-03-15 10:13:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondoconctact.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:14:35 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 591)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3125)
+Completed 200 OK in 27ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 6156)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:14:39 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3893)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 0.1ms | Allocations: 4960)
+
+
+Started GET "/sfondoconctact.png" for 127.0.0.1 at 2023-03-15 10:14:39 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondoconctact.png"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:15:26 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 71.4ms | Allocations: 8836)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.1ms | Allocations: 9899)
+
+
+Started GET "/images/sfondoconctact.png" for 127.0.0.1 at 2023-03-15 10:15:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/sfondoconctact.png"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:15:55 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 9009)
+Completed 200 OK in 70ms (Views: 62.7ms | ActiveRecord: 0.2ms | Allocations: 10066)
+
+
+Started GET "/sfondoconctact.jpg" for 127.0.0.1 at 2023-03-15 10:15:55 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/sfondoconctact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:16:37 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 9830)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.1ms | Allocations: 10897)
+
+
+Started GET "/images/sfondoconctact.jpg" for 127.0.0.1 at 2023-03-15 10:16:38 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/sfondoconctact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:16:48 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 8187)
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 0.1ms | Allocations: 9248)
+
+
+Started GET "/images/sfondoconctact.jpg" for 127.0.0.1 at 2023-03-15 10:16:48 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/images/sfondoconctact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:17:24 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 59.3ms | Allocations: 9093)
+Completed 200 OK in 68ms (Views: 64.2ms | ActiveRecord: 0.1ms | Allocations: 10146)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/images/sfondoconctact.jpg"):
+  
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:17:39 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1372)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3945)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.1ms | Allocations: 5018)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-15 10:17:47 +0100
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 114)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1368)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3893)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.1ms | Allocations: 4971)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:23:22 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (6.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.5ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 2.6ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 243.1ms | Allocations: 61797)
+Completed 200 OK in 359ms (Views: 264.5ms | ActiveRecord: 1.4ms | Allocations: 112176)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-15 10:23:26 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 4419)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 7003)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 9132)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-15 10:23:34 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/8
+Completed 303 See Other in 498ms (ActiveRecord: 0.2ms | Allocations: 6140)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-15 10:23:34 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:78:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACprova"]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 2.7ms | Allocations: 838)
+  Rendered users/_user.html.erb (Duration: 2.7ms | Allocations: 817)
+  Rendered users/show.html.erb within layouts/application (Duration: 22.3ms | Allocations: 2354)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 4812)
+Completed 200 OK in 58ms (Views: 45.5ms | ActiveRecord: 0.7ms | Allocations: 8793)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:23:56 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 737)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1169)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3692)
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 6859)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:24:01 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 5.1ms | Allocations: 736)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3689)
+Completed 200 OK in 18ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 6837)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-15 10:24:06 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 31ms (ActiveRecord: 0.1ms | Allocations: 5344)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:24:06 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 107)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 3107)
+Completed 200 OK in 28ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 6244)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-15 10:24:10 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3101)
+Completed 200 OK in 30ms (Views: 16.7ms | ActiveRecord: 0.4ms | Allocations: 6243)
+
+
