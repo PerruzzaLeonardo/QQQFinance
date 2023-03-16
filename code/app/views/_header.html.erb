@@ -1,10 +1,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">    
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">  
         <div class="container-fluid">
-            <a class="navbar-brand ms-2" href="../.." > QQQFinance</a>          
-            <form class="d-flex ms-md-auto" method="POST" action="">
-                <input class="form-control me-2" type="search" name="ricerca" placeholder="Search" aria-label="Search">
-            </form>
+            <a class="navbar-brand ms-2" href="../.." > QQQFinance</a>
+            <% if controller_name == "index"%>
+             <i class="icona_header bi bi-house d-flex ms-md-auto"></i>
+            <% elsif controller_name == "wallets"%>
+             <i class="icona_header bi bi-wallet2 d-flex ms-md-auto"></i>
+            <% elsif controller_name == "news"%>
+             <i class="icona_header bi bi-newspaper d-flex ms-md-auto"></i>
+            <% elsif controller_name == "screener"%>
+             <i class="icona_header bi bi-graph-up d-flex ms-md-auto"></i>
+            <% elsif controller_name == "contacts"%>
+             <i class="icona_header bi bi-envelope d-flex ms-md-auto"></i>
+            <%end%> 
             
             <ul class="navbar-nav ms-md-auto nav-link m-2 " >
             <% if current_user %>

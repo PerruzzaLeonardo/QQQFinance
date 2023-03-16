@@ -48,9 +48,11 @@
      <% if !current_user %>
       <button type="button" class="btn btn-primary btn-lg" href="../login">Login</button>
       <%else%>
-      <button type="button" class="btn btn-primary btn-lg" href="../logout">Logout</button> <!--implementa logout-->
+      <button type="button" class="btn btn-primary btn-lg" href="users/sign_out">Logout</button> 
       <%end%>
     </div>
+    <br><br><br><br><br><br><br><br><br><br>
+   <%=render "/footer"%>
   </div>
 
 <script>
