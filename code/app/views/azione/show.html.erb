@@ -70,9 +70,9 @@
     </div>
 
     <div class="container">
-        <h4><p ><%=@commenti.length()%> Commenti</p></h4>
+        <h4><p ><%=@azione.comment.length()%> Commenti</p></h4>
         <ul class="list-group list-group-flush">
-            <%@commenti.each do |commento|%>
+            <%@azione.comment.each do |commento|%>
                 <li class="list-group-item ">
                     <div class="row">
                         <div class="col-1">
@@ -80,7 +80,7 @@
                         </div>
                         <div class="col-10">
                             <div class="d-flex">
-                                <p class="h5"><%=User.find(commento.user_id).username%></p> 
+                                <p class="h5"><%=commento.user.username%></p> 
                                 <%if(current_user)%>      
                                     <%if(current_user.id==commento.user_id)%>
                                     </p>
@@ -103,7 +103,7 @@
             <%= form_with(model: @commento) do |form| %>
                 <div class="row m-2">
                     <%= form.hidden_field :user_id, value: current_user.id %>
-                    <%= form.hidden_field :isin, value: @azione.id %>
+                    <%= form.hidden_field :azione_id, value: @azione.id %>
                     <%= form.text_area :commento, size: "70x5" %>
                     <div class="m-2">
                         <%= form.submit %>

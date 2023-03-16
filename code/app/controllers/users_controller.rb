@@ -9,6 +9,13 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @user = User.find(params[:id])
+    @azioni=Wallet.where(user:@user.username)
+    @nome=Array.new
+    @quantita=Array.new
+    @azioni.each do |azione|
+      @nome.push(azione.azione)
+      @quantita.push(azione.quantità)
+    end
   end
 
   # GET /users/new
@@ -18,6 +25,10 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
+
+    if @user.id != current_user.id
+      redirect_to users_path, alert: "Non puoi modificare questo profilo"
+    end
   end
 
   # POST /users or /users.json

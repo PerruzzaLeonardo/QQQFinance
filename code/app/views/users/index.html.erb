@@ -2,6 +2,11 @@
   <%=render "/header"%>
   <div class="row pt-2">
     <div class="col-5">
+          <% flash.each do |type, msg| %>
+        <div>
+          <%= msg %>
+        </div>
+      <% end %>
       <h1>IL MIO PROFILO</h1>
     </div>
     <div class="col-7">
@@ -16,7 +21,7 @@
   </div>
 
   <div class="col-5">
-    <%= image_tag "profilo2.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <%= image_tag "profilo.jpeg",class:"card-img-top",alt:"Card image cap" %>
     <div class="field form-group text-center"><h2> <%= @user.username %> </div>
   </div>
 </div>

@@ -5,10 +5,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2,:facebook]
-    
-    #validates :nome,:cognome ,length: { minimum: 2 }
-    #validates :nome,:cognome,:email, presence: true 
-    
+  
+    validates :nome,:cognome ,length: { minimum: 2 }
+    validates :nome,:cognome,:email, presence: true 
+    validates :username, presence: true,uniqueness: {case_sensitive: true}
 
  
      
