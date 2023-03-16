@@ -1860,3 +1860,676 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 4492)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:37:54 +0100
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:44:27 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (3.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 31.7ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 13.6ms | Allocations: 132)
+  Rendered index/index.html.erb within layouts/application (Duration: 75.4ms | Allocations: 2209)
+  Rendered layout layouts/application.html.erb (Duration: 516.7ms | Allocations: 44222)
+Completed 200 OK in 1032ms (Views: 534.1ms | ActiveRecord: 22.6ms | Allocations: 94621)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:44:37 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 19.8ms | Allocations: 593)
+  Rendered layout layouts/application.html.erb (Duration: 51.3ms | Allocations: 3305)
+Completed 200 OK in 104ms (Views: 59.4ms | ActiveRecord: 2.3ms | Allocations: 6379)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:44:41 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 65.6ms | Allocations: 4716)
+  Rendered layout layouts/application.html.erb (Duration: 73.2ms | Allocations: 7488)
+Completed 200 OK in 100ms (Views: 86.3ms | ActiveRecord: 0.0ms | Allocations: 9637)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:44:43 +0100
+Started GET "/users/auth/facebook/callback?code=AQDY23GmVU8n_sqsMQkJnpcUzY3mVO4msxJBf06Bp2Jl4F3PpL9kCoi3YGPesLJKet_CPpfWq3UQ5C8KxRWDr0xYnauuo-XDUSpq8GE60hopWy5MSeHzyRhT6RmIXJsCOkoT_yTkGP6C80O8b8OhTI7EeZF55FJAYwN36DEK9cttzZEWusW-K86V-NhoB_6bdOb1ghsCkFELi3_J7gBg8q572lFXL0imxbegwaf2UT5vGjjatHqZYgKN4p1TwVxcboAOOPoHvs2QGrwouFnmFPnR8yFA5WZp-mjNZZIpfggJqNVqDlQwPMuxdTxEgRXltxKJ9SOsODyaNHZwuDV-Nbp3SHIg2eJgk8uTMMfde6jwFQ77ZfAXHIferpyCTs2rah4&state=a0306050f56dc086ae87985d03d0d2d326025c275b3aa64d" for 127.0.0.1 at 2023-03-16 22:44:45 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDY23GmVU8n_sqsMQkJnpcUzY3mVO4msxJBf06Bp2Jl4F3PpL9kCoi3YGPesLJKet_CPpfWq3UQ5C8KxRWDr0xYnauuo-XDUSpq8GE60hopWy5MSeHzyRhT6RmIXJsCOkoT_yTkGP6C80O8b8OhTI7EeZF55FJAYwN36DEK9cttzZEWusW-K86V-NhoB_6bdOb1ghsCkFELi3_J7gBg8q572lFXL0imxbegwaf2UT5vGjjatHqZYgKN4p1TwVxcboAOOPoHvs2QGrwouFnmFPnR8yFA5WZp-mjNZZIpfggJqNVqDlQwPMuxdTxEgRXltxKJ9SOsODyaNHZwuDV-Nbp3SHIg2eJgk8uTMMfde6jwFQ77ZfAXHIferpyCTs2rah4", "state"=>"a0306050f56dc086ae87985d03d0d2d326025c275b3aa64d"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (38.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (4.1ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leonardo Perruzza"], ["cognome", nil], ["username", "Leonardo Perruzza"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:44:47.111396"], ["updated_at", "2023-03-16 21:44:47.111396"], ["email", "leoperruzza@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "facebook"], ["uid", "3656966831256589"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 611ms (ActiveRecord: 58.8ms | Allocations: 9565)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:44:47 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 6.3ms | Allocations: 834)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1275)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 3986)
+Completed 200 OK in 44ms (Views: 26.2ms | ActiveRecord: 3.4ms | Allocations: 7166)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:44:53 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1325)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 3974)
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 0.3ms | Allocations: 5812)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-16 22:48:09 +0100
+  
+SyntaxError (/home/leotlc/Scrivania/finale vero/code/app/models/user.rb:49: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/models/user.rb:49: syntax error, unexpected end-of-input, expecting `end'
+app/models/user.rb:49: syntax error, unexpected end-of-input, expecting `end'
+app/models/user.rb:49: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:48:27 +0100
+  
+SyntaxError (/home/leotlc/Scrivania/finale vero/code/app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'
+app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'
+app/models/user.rb:50: syntax error, unexpected end-of-input, expecting `end'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:48:29 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:48:35 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:48:41 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:49:01 +0100
+  
+NameError (undefined local variable or method `sel' for User:Class
+Did you mean?  self):
+  
+app/models/user.rb:28:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:49:37 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 12.4ms | Allocations: 1070)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 1517)
+  Rendered layout layouts/application.html.erb (Duration: 87.9ms | Allocations: 17180)
+Completed 200 OK in 171ms (Views: 100.3ms | ActiveRecord: 9.7ms | Allocations: 31897)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:49:40 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 3568)
+Completed 200 OK in 35ms (Views: 22.3ms | ActiveRecord: 0.7ms | Allocations: 5241)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-16 22:49:41 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 24.3ms | Allocations: 4225)
+  Rendered users/edit.html.erb within layouts/application (Duration: 69.1ms | Allocations: 4727)
+  Rendered layout layouts/application.html.erb (Duration: 82.9ms | Allocations: 7309)
+Completed 200 OK in 103ms (Views: 86.2ms | ActiveRecord: 0.8ms | Allocations: 9669)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-16 22:49:44 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (1.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 145ms (ActiveRecord: 12.2ms | Allocations: 11229)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:49:44 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (12.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 5.1ms | Allocations: 783)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1308)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 4019)
+Completed 200 OK in 44ms (Views: 18.6ms | ActiveRecord: 12.7ms | Allocations: 7240)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-16 22:49:48 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 3299)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 6085)
+Completed 200 OK in 50ms (Views: 46.1ms | ActiveRecord: 0.0ms | Allocations: 7613)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:49:52 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1122)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 3899)
+Completed 200 OK in 50ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 5241)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:49:54 +0100
+Started GET "/users/auth/facebook/callback?code=AQBokC6O2nDyQtephU51ByAZtSAGx6NkR43iscqJsdpYQ5TXqXh0EgLXGimmGrOSLF7w3us38u-VuVoCGBjNvnCsxGXecgsd6GA69x_p0OI1jYF87zuzetvwMxFaf1oSYf7d5waYgKQavw6neDiuZHc6ryiWXFsKqT0cX3qz_z9_V4tI-g2S2bhMdiAWEyXy1MAQidyhsjHOnM8eCUubCYXOgwwYqkCiy3iTbFKnPDORHdStpRN69v_blW_lDlqCQyIyl3lbmlz0KNoF-orjbUu6cWNu04mjlFDWogYpNV7sNou-vL-OoW2SlUVw8d6ALEyKAI6pa0EegYJy42aaC2qjZGuN66dGnxPEkZixE7DBFUDrKEorp16GrZ5qUyvZJpI&state=7c6d8b97ab40b70911c760947515c53d1d17302b4002141a" for 127.0.0.1 at 2023-03-16 22:49:55 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQBokC6O2nDyQtephU51ByAZtSAGx6NkR43iscqJsdpYQ5TXqXh0EgLXGimmGrOSLF7w3us38u-VuVoCGBjNvnCsxGXecgsd6GA69x_p0OI1jYF87zuzetvwMxFaf1oSYf7d5waYgKQavw6neDiuZHc6ryiWXFsKqT0cX3qz_z9_V4tI-g2S2bhMdiAWEyXy1MAQidyhsjHOnM8eCUubCYXOgwwYqkCiy3iTbFKnPDORHdStpRN69v_blW_lDlqCQyIyl3lbmlz0KNoF-orjbUu6cWNu04mjlFDWogYpNV7sNou-vL-OoW2SlUVw8d6ALEyKAI6pa0EegYJy42aaC2qjZGuN66dGnxPEkZixE7DBFUDrKEorp16GrZ5qUyvZJpI", "state"=>"7c6d8b97ab40b70911c760947515c53d1d17302b4002141a"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 595ms (ActiveRecord: 7.3ms | Allocations: 4799)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:49:57 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.5ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 3755)
+Completed 200 OK in 44ms (Views: 35.9ms | ActiveRecord: 0.0ms | Allocations: 4509)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:50:21 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 71.0ms | Allocations: 16836)
+Completed 200 OK in 119ms (Views: 82.8ms | ActiveRecord: 3.2ms | Allocations: 22673)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:50:23 +0100
+Started GET "/users/auth/facebook/callback?code=AQB2xHcqAR0djiQuQk1PEsFG9Cn1Bn6ibQhq4lqiko6PcczIK086TADiweGFu1dfMd7cyPH6pVPWNSe-9d59I0vmCs68JDm4ywz7XfCYuFoz0zU3_1X26i2m-wpiC-AEcRy1q-Ad_sZJsgoRIZNOQLScCqWw2so7olyRvVYMGTFn7TIaT8zJ37Q5mfuDLkU13CTLOtyr2mGZXzXpDmBTefqtkDe33Tx8HDNRM211L-ts4hKUsh2C94QKd5SLZsfgetN07K4jhGjnKw3oKzXkYAUxZR27dgZx48SpDInP4K_0e8bumIE9C0CALfGIGi5kZ4rkOMG74fITmkQpAF8jYIADwoCEobv2yssaMvtwtiB_jtWSHu8A28J0DdyU2b-h0r4&state=1bf1a2773f14253f8c1c358b204fa886096c2ea3f2cfd34c" for 127.0.0.1 at 2023-03-16 22:50:24 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQB2xHcqAR0djiQuQk1PEsFG9Cn1Bn6ibQhq4lqiko6PcczIK086TADiweGFu1dfMd7cyPH6pVPWNSe-9d59I0vmCs68JDm4ywz7XfCYuFoz0zU3_1X26i2m-wpiC-AEcRy1q-Ad_sZJsgoRIZNOQLScCqWw2so7olyRvVYMGTFn7TIaT8zJ37Q5mfuDLkU13CTLOtyr2mGZXzXpDmBTefqtkDe33Tx8HDNRM211L-ts4hKUsh2C94QKd5SLZsfgetN07K4jhGjnKw3oKzXkYAUxZR27dgZx48SpDInP4K_0e8bumIE9C0CALfGIGi5kZ4rkOMG74fITmkQpAF8jYIADwoCEobv2yssaMvtwtiB_jtWSHu8A28J0DdyU2b-h0r4", "state"=>"1bf1a2773f14253f8c1c358b204fa886096c2ea3f2cfd34c"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 555ms (ActiveRecord: 1.8ms | Allocations: 5088)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:50:26 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 3756)
+Completed 200 OK in 35ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 4495)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:50:38 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 16844)
+Completed 200 OK in 103ms (Views: 76.1ms | ActiveRecord: 2.7ms | Allocations: 22667)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:50:40 +0100
+Started GET "/users/auth/facebook/callback?code=AQDgRCZZxRrgwuA-UvV_5yIg7VQv2q3FH4qGz0R8QEDzqZ1iJ2sa4EmgnSN5eZIveekzWXINA4_a4M44Dl9RNuldLUEPATg-m7XmsjeuFuoQ0f0sxkEQGRvlPjSiLw-dBZ3R5kyqvCxh0on6am4-6hPd80dcpPLMdxGNxaGWC-pVnpijkvETr4hS7y-mZs2kt22M8xVXoO_Fz2VRIXXUF8qTznZWZD_PfVyGSvZvVNqno2nVGaROSJU8jhL7uFail1vzQtXIzwUCbdJLTj58MRl3uY47pe5xmy-Xs6hNMIIF_Ofhd8imw0v8pwb8BgcEgSjeBf5QCm2nX9jndw_uAhY4LK6FsZEDvhwC-D_0QFjNeILhuNtsG-wezKQHKtSBNKU&state=d66bc59c4a82e280f4cae89baed2f7e2eb44234efecc8760" for 127.0.0.1 at 2023-03-16 22:50:40 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQDgRCZZxRrgwuA-UvV_5yIg7VQv2q3FH4qGz0R8QEDzqZ1iJ2sa4EmgnSN5eZIveekzWXINA4_a4M44Dl9RNuldLUEPATg-m7XmsjeuFuoQ0f0sxkEQGRvlPjSiLw-dBZ3R5kyqvCxh0on6am4-6hPd80dcpPLMdxGNxaGWC-pVnpijkvETr4hS7y-mZs2kt22M8xVXoO_Fz2VRIXXUF8qTznZWZD_PfVyGSvZvVNqno2nVGaROSJU8jhL7uFail1vzQtXIzwUCbdJLTj58MRl3uY47pe5xmy-Xs6hNMIIF_Ofhd8imw0v8pwb8BgcEgSjeBf5QCm2nX9jndw_uAhY4LK6FsZEDvhwC-D_0QFjNeILhuNtsG-wezKQHKtSBNKU", "state"=>"d66bc59c4a82e280f4cae89baed2f7e2eb44234efecc8760"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 523ms (ActiveRecord: 1.6ms | Allocations: 5075)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:50:42 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 3743)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 4490)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:51:29 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 16742)
+Completed 200 OK in 56ms (Views: 36.1ms | ActiveRecord: 1.6ms | Allocations: 22509)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:51:30 +0100
+Started GET "/users/auth/facebook/callback?code=AQAWKFgNkMPUz1RHbUN0bs0hR_Yvsc0ufey5dv1i86qFq4hJSdaRo0gfr3XCpA93tIAdfuKLh_QhfD7oncEX0j-EvRj_ID72wbcdu-AjruGDm4r_Nz3iv3MpfB047px1c4W1Ff6wTC4LxWkwGiACkLclk-2laVzQ_H05czrKM0x_C6pbMFYViEawfPc8q5OnNsQ9elrEar6fKZEG_lh9nlpv1X9gNiLzdTuKyDeD_HrY3QkhDafFima96w-LjHwQpVZGgyDRl2NEKFf5FrKBWJguKHlUjnIlP8Y2xHCnzhVtx5Uo9Yo_0CsYX9cccUp5sozILRh4517KgpS-SBbp1M-cKdM9-xYLemj6nQaaZUy5xao9eGoSEAGzK2NSvyTVSZY&state=4f1a29b8212cbac5b75f66905e27d3975566d5ebac9e15df" for 127.0.0.1 at 2023-03-16 22:51:31 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAWKFgNkMPUz1RHbUN0bs0hR_Yvsc0ufey5dv1i86qFq4hJSdaRo0gfr3XCpA93tIAdfuKLh_QhfD7oncEX0j-EvRj_ID72wbcdu-AjruGDm4r_Nz3iv3MpfB047px1c4W1Ff6wTC4LxWkwGiACkLclk-2laVzQ_H05czrKM0x_C6pbMFYViEawfPc8q5OnNsQ9elrEar6fKZEG_lh9nlpv1X9gNiLzdTuKyDeD_HrY3QkhDafFima96w-LjHwQpVZGgyDRl2NEKFf5FrKBWJguKHlUjnIlP8Y2xHCnzhVtx5Uo9Yo_0CsYX9cccUp5sozILRh4517KgpS-SBbp1M-cKdM9-xYLemj6nQaaZUy5xao9eGoSEAGzK2NSvyTVSZY", "state"=>"4f1a29b8212cbac5b75f66905e27d3975566d5ebac9e15df"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leonardo Perruzza"], ["cognome", nil], ["username", "Leonardo Perruzza"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-16 21:51:33.293149"], ["updated_at", "2023-03-16 21:51:33.293149"], ["email", "leoperruzza@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "facebook"], ["uid", "3656966831256589"], ["immagine", nil]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (49.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/
+Completed 302 Found in 558ms (ActiveRecord: 52.4ms | Allocations: 5586)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:51:33 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.4ms | Allocations: 830)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.5ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 4067)
+Completed 200 OK in 75ms (Views: 36.4ms | ActiveRecord: 5.8ms | Allocations: 14236)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:54:52 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 915)
+  Rendered layout layouts/application.html.erb (Duration: 47.2ms | Allocations: 16441)
+Completed 200 OK in 84ms (Views: 52.2ms | ActiveRecord: 3.2ms | Allocations: 22994)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-16 22:54:54 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 14.2ms | Allocations: 2514)
+  Rendered users/edit.html.erb within layouts/application (Duration: 20.3ms | Allocations: 2758)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 5340)
+Completed 200 OK in 68ms (Views: 40.0ms | ActiveRecord: 0.6ms | Allocations: 7577)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-16 22:54:57 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (9.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 133ms (ActiveRecord: 11.4ms | Allocations: 6980)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:54:57 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (2.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 6.1ms | Allocations: 793)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 4073)
+Completed 200 OK in 85ms (Views: 35.7ms | ActiveRecord: 4.8ms | Allocations: 14227)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:54:59 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 3955)
+Completed 200 OK in 66ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 5305)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:55:01 +0100
+Started GET "/users/auth/facebook/callback?code=AQAOAZ2LkPbNGBkSafgIlDmlzKrVRe86hVG1BNCPMOwmY5-royf_0v1GaCS8-bXEW-HqJ1x2kTkMk6HCMU2r3nSN0_l4eWm9aKVDEIV8jOF5t8MBw5LR-hYqk9ZiEkeq51UuTz4gZLK7UisXFAdIxs2aaIHRmNZiTVjyJSRGgNsZ1KjACPF9JQ8w4C_wZDSalG3AJonAnOuiqaKWFxSqkWb6z4NVgtWGOyzlYO0HZ7IpTx7JG3cakq7yQ0xTgN7y4AJC79-M6vmrxxWrncchYUpwcOTUBusuGLnZER_9W9wrwxRCD4l4cAHEaDpnLn4bYg6SxMYpTBzT-QKfs_CGwgt7o-r4eNsSJNAaNKg6ZevsfYhCg6Hh27gx8X-LLfTbvbk&state=d2c4d4db3730ee38b9d0eff7103cd0ca69195f2ae2899c64" for 127.0.0.1 at 2023-03-16 22:55:02 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAOAZ2LkPbNGBkSafgIlDmlzKrVRe86hVG1BNCPMOwmY5-royf_0v1GaCS8-bXEW-HqJ1x2kTkMk6HCMU2r3nSN0_l4eWm9aKVDEIV8jOF5t8MBw5LR-hYqk9ZiEkeq51UuTz4gZLK7UisXFAdIxs2aaIHRmNZiTVjyJSRGgNsZ1KjACPF9JQ8w4C_wZDSalG3AJonAnOuiqaKWFxSqkWb6z4NVgtWGOyzlYO0HZ7IpTx7JG3cakq7yQ0xTgN7y4AJC79-M6vmrxxWrncchYUpwcOTUBusuGLnZER_9W9wrwxRCD4l4cAHEaDpnLn4bYg6SxMYpTBzT-QKfs_CGwgt7o-r4eNsSJNAaNKg6ZevsfYhCg6Hh27gx8X-LLfTbvbk", "state"=>"d2c4d4db3730ee38b9d0eff7103cd0ca69195f2ae2899c64"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Perruzza"], ["cognome", nil], ["username", "Leonardo Perruzza"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-16 21:55:04.386168"], ["updated_at", "2023-03-16 21:55:04.386168"], ["email", "leoperruzza@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "facebook"], ["uid", "3656966831256589"], ["immagine", nil]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (47.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/
+Completed 302 Found in 615ms (ActiveRecord: 49.2ms | Allocations: 5260)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:55:04 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 4.6ms | Allocations: 738)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 3890)
+Completed 200 OK in 46ms (Views: 28.2ms | ActiveRecord: 2.2ms | Allocations: 7064)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:55:08 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3431)
+Completed 200 OK in 37ms (Views: 27.4ms | ActiveRecord: 0.3ms | Allocations: 4588)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-16 22:55:30 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 2.0ms | Allocations: 41)
+  Rendered users/_form.html.erb (Duration: 12.6ms | Allocations: 2555)
+  Rendered users/edit.html.erb within layouts/application (Duration: 18.2ms | Allocations: 2834)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 18324)
+Completed 200 OK in 109ms (Views: 61.9ms | ActiveRecord: 4.7ms | Allocations: 25880)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-16 22:55:35 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (1.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 20.3ms | Allocations: 6965)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:55:35 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (2.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.0ms | Allocations: 793)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1282)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 4067)
+Completed 200 OK in 88ms (Views: 39.3ms | ActiveRecord: 4.6ms | Allocations: 14210)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:55:36 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3950)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 5309)
+
+
+Started POST "/users/auth/facebook" for 127.0.0.1 at 2023-03-16 22:55:38 +0100
+Started GET "/users/auth/facebook/callback?code=AQC7gMDTPgxBCAQd6qj1ICIVX6wqYJHps4pSdWjlXSs6aCQxRB2cHarvfRPpK7Sa8kutCed_H-IVn8Jleq5V_ppp7q7jWb3xCQcJKpPMh0dwbgMUUfekvP26CXsUiQ8aP76RMXE3EHS8K41Y5AizOxaz0OBp6ZKl5m8ULEp9WwQqoeaUn2KLpUp6ZScnWVKaxUTyolb81xCCnGn9bqX6P4ga51iEnx76ZBIxv9jB68iZOX_b6FvcXobQUW2VnrpUOesWwfUOUylrsKkbDT8MTPGr_nWTic6Y9s1pLwoxbZK6jwtDHNBwS_ttiO1P1M3LRDo65NYodGZ39NrTQ3nWuj4wuM4e4D7keHhdYXdkFbybZHrrfDwG1VYUzSzMqNjMBGQ&state=d04d4c4aef33fb2fd93501fa013a987dd1c5df9ae9dc808d" for 127.0.0.1 at 2023-03-16 22:55:38 +0100
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQC7gMDTPgxBCAQd6qj1ICIVX6wqYJHps4pSdWjlXSs6aCQxRB2cHarvfRPpK7Sa8kutCed_H-IVn8Jleq5V_ppp7q7jWb3xCQcJKpPMh0dwbgMUUfekvP26CXsUiQ8aP76RMXE3EHS8K41Y5AizOxaz0OBp6ZKl5m8ULEp9WwQqoeaUn2KLpUp6ZScnWVKaxUTyolb81xCCnGn9bqX6P4ga51iEnx76ZBIxv9jB68iZOX_b6FvcXobQUW2VnrpUOesWwfUOUylrsKkbDT8MTPGr_nWTic6Y9s1pLwoxbZK6jwtDHNBwS_ttiO1P1M3LRDo65NYodGZ39NrTQ3nWuj4wuM4e4D7keHhdYXdkFbybZHrrfDwG1VYUzSzMqNjMBGQ", "state"=>"d04d4c4aef33fb2fd93501fa013a987dd1c5df9ae9dc808d"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "facebook"], ["uid", "3656966831256589"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leoperruzza@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leonardo Perruzza"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leonardo"], ["cognome", "Perruzza"], ["username", "Leonardo Perruzza"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-16 21:55:40.304358"], ["updated_at", "2023-03-16 21:55:40.304358"], ["email", "leoperruzza@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "facebook"], ["uid", "3656966831256589"], ["immagine", nil]]
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:30:in `from_omniauthFacebook'
+Redirected to http://localhost:3000/
+Completed 302 Found in 542ms (ActiveRecord: 47.8ms | Allocations: 5258)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:55:40 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (7.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 4.2ms | Allocations: 739)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1180)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3904)
+Completed 200 OK in 36ms (Views: 16.3ms | ActiveRecord: 7.6ms | Allocations: 7091)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:55:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 841)
+  Rendered layout layouts/application.html.erb (Duration: 23.9ms | Allocations: 3448)
+Completed 200 OK in 33ms (Views: 27.1ms | ActiveRecord: 0.4ms | Allocations: 4614)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:55:53 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 3432)
+Completed 200 OK in 32ms (Views: 22.6ms | ActiveRecord: 0.3ms | Allocations: 4573)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:56:07 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.0ms | Allocations: 829)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 3436)
+Completed 200 OK in 77ms (Views: 49.5ms | ActiveRecord: 0.9ms | Allocations: 4582)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-16 22:56:08 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 16.5ms | Allocations: 2459)
+  Rendered users/edit.html.erb within layouts/application (Duration: 22.2ms | Allocations: 2696)
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 5278)
+Completed 200 OK in 80ms (Views: 60.3ms | ActiveRecord: 0.5ms | Allocations: 6876)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-16 22:56:11 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (3.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://localhost:3000/
+Completed 302 Found in 73ms (ActiveRecord: 10.5ms | Allocations: 3065)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:56:12 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (3.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 5.0ms | Allocations: 768)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1246)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 3957)
+Completed 200 OK in 63ms (Views: 39.9ms | ActiveRecord: 4.2ms | Allocations: 7122)
+
+

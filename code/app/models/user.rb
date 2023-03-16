@@ -17,11 +17,28 @@ class User < ApplicationRecord
         user.email = auth.info.email
         user.password = Devise.friendly_token[0,20]
         user.nome=auth.info.name
+        user.nome=auth.info.given_name
         user.username=auth.info.name
-        user.pubblico="si"
+        user.pubblico="no"
 
       end
-    end
+    end 
+
+    
+      def self.from_omniauthFacebook(auth)
+          #creo un nuovo metodo dato che il nome dei campi di Facebook è diverso
+          where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+            user.email = auth.info.email
+            user.password = Devise.friendly_token[0,20]
+            infoUser=auth.info.name.split(" ")
+            user.nome=infoUser[0]
+            user.cognome=infoUser[1]
+            user.username=auth.info.name
+            user.pubblico="no"
+          end 
+        
+
+      end
   
    
 
