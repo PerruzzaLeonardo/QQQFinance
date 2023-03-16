@@ -12,7 +12,6 @@ class IndexController < ApplicationController
             @ricerca[i]=[utente.username,'utente']
             i+=1
         end
-        #@ricerca=@ricerca.sort
     end
     def cerca
         @cercato=params[:ricerca]
