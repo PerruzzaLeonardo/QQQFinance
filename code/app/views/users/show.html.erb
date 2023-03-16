@@ -1,21 +1,33 @@
  <%=render "/header"%>
 <%= render @user %>
-<div class="row m-2">
-    <textarea rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
+<div class="row">
+    <div class="col-md-6">
+        <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
+        <h2>Se ritieni il messaggio offensivo:
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" href="#segnalazione">Segnala Utente</button></h2> 
+    </div>
+    <div class="col-md-4 offset-md-1 ">
+        <canvas id="myChart"></canvas>     
+    </div>
 </div>
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
 <script>
+    var variable =[];
+    <% @nome.each do |nom|%>
+        variable.push('<%= nom %>') 
+    <%end%> 
     const ctx = document.getElementById('myChart');
     new Chart(ctx, {    
         type: 'pie',
         data: {
-        labels: [ "RED"],
+        labels: variable,
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'prezzo totale',
+            data: <%= @quantita %>,
             borderWidth: 1
         }]
         },

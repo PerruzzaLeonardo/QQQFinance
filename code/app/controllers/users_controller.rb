@@ -13,8 +13,10 @@ class UsersController < ApplicationController
     @nome=Array.new
     @quantita=Array.new
     @azioni.each do |azione|
-      @nome.push(azione.azione)
-      @quantita.push(azione.quantità)
+      @prezzotot=Azione.where(isin: azione.azione )
+      @nome.push(azione.azione.to_s)
+      @prezzotot=@prezzotot[0].prezzo*azione.quantità
+      @quantita.push(@prezzotot)
     end
   end
 

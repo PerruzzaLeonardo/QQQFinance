@@ -14,7 +14,7 @@ class CommentController < ApplicationController
     
         respond_to do |format|
           if @commento.save
-            format.html { redirect_to azione_url(@commento.isin), notice: "comment was successfully created." }
+            format.html { redirect_to azione_url(@commento.azione_id), notice: "comment was successfully created." }
             format.json { render :show, status: :created, location: @commento }
           else
             format.html { render :new, status: :unprocessable_entity }
@@ -28,7 +28,7 @@ class CommentController < ApplicationController
         @commento.destroy
     
         respond_to do |format|
-          format.html { redirect_to azione_url(@commento.isin), notice: "comment was successfully destroyed." }
+          format.html { redirect_to azione_url(@commento.azione_id), notice: "comment was successfully destroyed." }
           format.json { head :no_content }
         end
       end
