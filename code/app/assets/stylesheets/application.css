@@ -95,7 +95,7 @@
 }
 
 .sfondo_contact {
-  background-image: url('sfondoconctact.jpg');
+  background-image: url('sfondoconctact.png');
   background-size: cover;
 }
 
@@ -105,10 +105,4 @@
 
 .clickable:hover{
   color:#2196F3
-}
-
-
-.icona_header{
-  font-size: 2.5rem;
-  color:white;
 }

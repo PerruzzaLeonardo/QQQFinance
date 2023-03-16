@@ -1,0 +1,43 @@
+<div class="container">
+<%=render "/header"%>
+ <div class="row">
+  <div class="col-12 centered">
+   <h1>Profilo di <% altrui.username %></h1>
+   <h2> sua immagine qui</h2>
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-6">
+   <textarea rows=4 cols=50 readonly>prova</textarea>
+  </div>
+  <div class="col-6">
+  MOSTRA GRAFICO qui (tabella più comoda?)
+  </div>
+ </div>
+ <h2>Se ritieni il messaggio offensivo:
+  <button type="button" class="btn btn-danger" data-bs-toggle="modal" href="#segnalazione">Segnala Utente</button></h2> 
+ <div class="modal" id="segnalazione">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Segnalazione utente</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form> <!-- popolo il campo action di form per indicare cosa fare coi dati inseriti-->
+         Segnala utente_XX per:
+         <select>
+          <option value="odio">Incitamento all'odio</option>
+          <option value="truffa">Truffa</option>
+          <option value="fake">Finge di essere qualcun'altro</option>
+          <option value="altro">Altro</option>
+         <textarea rows=4 cols=50>Inserisci qui un commento alla segnalazione</textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+        <button type="submit" class="btn btn-primary">Invia</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

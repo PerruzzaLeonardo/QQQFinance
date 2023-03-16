@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_14_171227) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_09_233033) do
   create_table "aziones", force: :cascade do |t|
     t.string "nome"
     t.string "isin"
@@ -33,11 +33,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_171227) do
   end
 
   create_table "comments", force: :cascade do |t|
+    t.integer "isin"
     t.string "commento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "azione_id"
   end
 
   create_table "news", force: :cascade do |t|
@@ -65,7 +65,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_14_171227) do
     t.datetime "remember_created_at"
     t.string "provider"
     t.string "uid"
-    t.string "immagine"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

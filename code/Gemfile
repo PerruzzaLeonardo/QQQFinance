@@ -8,10 +8,11 @@ gem 'jquery-rails'
 #devise
 gem 'devise'
 
-#google
+#google-facebook
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
+gem 'omniauth-facebook'
 
 #gemma per inviare mail direttamente da forms
 gem 'mail_form'
