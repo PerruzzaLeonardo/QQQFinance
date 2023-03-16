@@ -45,4 +45,7 @@ Rails.application.routes.draw do
 
   post '/index/cerca',to: 'index#cerca'
 
+  post '/screener/aggiungi', to: 'screener#aggiungi'
+  post '/screener/aggiorna', to: 'screener#aggiorna'
+
 end

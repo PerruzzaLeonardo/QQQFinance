@@ -1,3 +1,3 @@
-class Screner < ApplicationRecord
+class Screener < ApplicationRecord
 end
 

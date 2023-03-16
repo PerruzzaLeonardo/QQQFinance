@@ -13,165 +13,160 @@
   <body>
     <%=render "/header"%>
     <p>
+      <form action="/screener/aggiorna" method='post'>
       <div class="row">
         <div class="col px-4">
-        Paese
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Qualsiasi</option>
-            <option value="1">Australia</option>
-            <option value="2">Canada</option>
-            <option value="3">China</option>
-            <option value="4">Netherlands</option>
-            <option value="5">United Kingdom</option>
-            <option value="6">United States</option>
-            <option value="7">Uruguay</option>
+          Paese
+          <select class="form-select" name="paesescelto" id="PaeseScelto" aria-label="PaeseScelto">
+            <option selected value="Qualsiasi">Qualsiasi</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Netherlands">Netherlands</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+            <option value="Uruguay">Uruguay</option>
           </select>
         </div>
         <div class="col">
-          <label for="examplePrice" class="form-label">Prezzo minimo</label>
+          <label for="prezzomin" class="form-label">Prezzo minimo</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="prezzomin" id="PrezzoMin">
           </div>
-          <label for="examplePrice2" class="form-label">Prezzo massimo</label>
+          <label for="prezzomax" class="form-label">Prezzo massimo</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="prezzomax" id="PrezzoMax">
           </div>
         </div>
         <div class="col">
-          <label for="exampleMarketcap" class="form-label">Marketcap minimo</label>
+          <label for="marketcapmin" class="form-label">Marketcap minimo</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="marketcapmin" id="MarketcapMin">
           </div>
-          <label for="exampleMarketcap2" class="form-label">Marketcap massimo</label>
+          <label for="marketcapmax" class="form-label">Marketcap massimo</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="marketcapmax" id="MarketcapMax">
           </div>
         </div>
         <div class="col">
           Settore
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Qualsiasi</option>
-            <option value="1">Communication services</option>
-            <option value="2">Consumer cyclical</option>
-            <option value="3">Consumer defensive</option>
-            <option value="4">Energy</option>
-            <option value="5">Healthcare</option>
-            <option value="6">Industrials</option>
-            <option value="7">Real estate</option>
-            <option value="8">Techonology</option>
+          <select class="form-select" nome="settorescelto" id="SettoreScelto" aria-label="Default select example">
+            <option selected value="Qualsiasi">Qualsiasi</option>
+            <option value="Communication services">Communication services</option>
+            <option value="Consumer cyclical">Consumer cyclical</option>
+            <option value="Consumer defensive">Consumer defensive</option>
+            <option value="Energy">Energy</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Industrials">Industrials</option>
+            <option value="Real estate">Real estate</option>
+            <option value="Techonology">Techonology</option>
           </select>
         </div>
         <div class="col">
-          <label for="exampleVolume" class="form-label">Volume minimo</label>
+          <label for="volumemin" class="form-label">Volume minimo</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="VolumeMin">
+            <input type="text" class="form-control" nome="volumemin" id="VolumeMin" aria-label="VolumeMin">
           </div>
-          <label for="exampleVolume2" class="form-label">Volume massimo</label>
+          <label for="volumemax" class="form-label">Volume massimo</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" aria-label="VolumeMax">
+            <input type="text" class="form-control" nome="volumemax" id="VolumeMax" aria-label="VolumeMax">
           </div>
         </div>
         <div class="col">
-          <label for="exampleEBITDA" class="form-label">EBITDA min</label>
+          <label for="ebitdamin" class="form-label">EBITDA min</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="EbitdaMin (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="ebitdamin" id="EbitdaMin">
           </div>
-          <label for="exampleEBITDA2" class="form-label">EBITDA max</label>
+          <label for="ebitdamax" class="form-label">EBITDA max</label>
           <div class="input-group mb-3">
             <span class="input-group-text">€</span>
-            <input type="text" class="form-control" aria-label="EbitdaMax (to the nearest euro)">
-            <span class="input-group-text">.00</span>
+            <input type="text" class="form-control" nome="ebitdamax" id="EbitdaMax">
           </div>
         </div>
         <div class="col px-4">
-          <label for="exampleROE" class="form-label">ROE min</label>
-          <input type="text" class="form-control" aria-label="RoeMin">
-          <label for="exampleROE2" class="form-label">ROE max</label>
-          <input type="text" class="form-control" aria-label="RoeMax">
+          <label for="roemin" class="form-label">ROE min</label>
+          <input type="text" class="form-control" nome="roemin" id="RoeMin" aria-label="RoeMin">
+          <label for="roemax" class="form-label">ROE max</label>
+          <input type="text" class="form-control" nome="roemax" id="RoeMax" aria-label="RoeMax">
         </div>
       </div>
       <div class="row">
         <div class="col px-4">
-          <label for="exampleROA" class="form-label">ROA min</label>
-          <input type="text" class="form-control" aria-label="RoaMin">
-          <label for="exampleROA2" class="form-label">ROA max</label>
-          <input type="text" class="form-control" aria-label="RoaMax">
+          <label for="roamin" class="form-label">ROA min</label>
+          <input type="text" class="form-control" nome="roamin" id="RoaMin" aria-label="RoaMin">
+          <label for="roamax" class="form-label">ROA max</label>
+          <input type="text" class="form-control" nome="roamax" id="RoaMax" aria-label="RoaMax">
         </div>
         <div class="col">
-          <label for="examplePE" class="form-label">PE min</label>
-          <input type="text" class="form-control" aria-label="PeMin">
-          <label for="examplePE2" class="form-label">PE max</label>
-          <input type="text" class="form-control" aria-label="PeMax">
+          <label for="pemin" class="form-label">PE min</label>
+          <input type="text" class="form-control" nome="pemin" id="PeMin" aria-label="PeMin">
+          <label for="pemax" class="form-label">PE max</label>
+          <input type="text" class="form-control" nome="pemax" id="PeMax" aria-label="PeMax">
         </div>
         <div class="col">
-          <label for="examplePS" class="form-label">PS min</label>
-          <input type="text" class="form-control" aria-label="PsMin">
-          <label for="examplePS2" class="form-label">PS max</label>
-          <input type="text" class="form-control" aria-label="PsMax">
+          <label for="psmin" class="form-label">PS min</label>
+          <input type="text" class="form-control" nome="psmin" id="PsMin" aria-label="PsMin">
+          <label for="psmax" class="form-label">PS max</label>
+          <input type="text" class="form-control" nome="psmax" id="PsMax" aria-label="PsMax">
         </div>
         <div class="col">
-          <label for="examplePB" class="form-label">PB min</label>
-          <input type="text" class="form-control" aria-label="PbMin">
-          <label for="examplePB2" class="form-label">PB max</label>
-          <input type="text" class="form-control" aria-label="PbMax">
+          <label for="pbmin" class="form-label">PB min</label>
+          <input type="text" class="form-control" nome="pbmin" id="PbMin" aria-label="PbMin">
+          <label for="pbmax" class="form-label">PB max</label>
+          <input type="text" class="form-control" nome="pbmax" id="PbMax" aria-label="PbMax">
         </div>
         <div class="col">
-          <label for="exampleDY" class="form-label">Div Yield min</label>
-          <input type="text" class="form-control" aria-label="DyMin">
-          <label for="exampleDY2" class="form-label">Div Yield max</label>
-          <input type="text" class="form-control" aria-label="DyMax">
+          <label for="dymin" class="form-label">Div Yield min</label>
+          <input type="text" class="form-control" nome="dymin" id="DyMin" aria-label="DyMin">
+          <label for="dymax" class="form-label">Div Yield max</label>
+          <input type="text" class="form-control" nome="dymax" id="DyMax" aria-label="DyMax">
         </div>
         <div class="col">
-          <label for="exampleDE" class="form-label">Debt Eq min</label>
-          <input type="text" class="form-control" aria-label="DeMin">
-          <label for="exampleDE2" class="form-label">Debt Eq max</label>
-          <input type="text" class="form-control" aria-label="DeMax">
+          <label for="demin" class="form-label">Debt Eq min</label>
+          <input type="text" class="form-control" nome="demin" id="DeMin" aria-label="DeMin">
+          <label for="demax" class="form-label">Debt Eq max</label>
+          <input type="text" class="form-control" nome="demax" id="DeMax" aria-label="DeMax">
         </div>
         <div class="col px-4">
-          <label for="exampleOPM" class="form-label">OP Margin min</label>
-          <input type="text" class="form-control" aria-label="OpMMin">
-          <label for="exampleOPM2" class="form-label">OP Margin max</label>
-          <input type="text" class="form-control" aria-label="OpMMax">
+          <label for="opmmin" class="form-label">OP Margin min</label>
+          <input type="text" class="form-control" nome="opmmin" id="OpMMin" aria-label="OpMMin">
+          <label for="opmmax" class="form-label">OP Margin max</label>
+          <input type="text" class="form-control" nome="opmmax" id="OPMMax" aria-label="OpMMax">
         </div>
       </div>
       <div class="d-grid gap-4 d-md-flex justify-content-md-center">
         <button class="btn btn-outline-primary" type="submit">Aggiorna lista</button>
       </div>
     </p>
+    </form>
     <p>
-      <% if current_user %>
-      <div class="position-relative m-4 d-md-flex justify-content-md-center">
-        <form class="row g-3">
-          <div class="col-auto">
-            <label for="staticMessage" class="visually-hidden">CodiceISIN</label>
-            <input type="text" readonly class="form-control-plaintext" id="staticMessage" value="Aggiungi al wallet:">
-          </div>
-          <div class="col-auto">
-            <label for="inputISIN" class="visually-hidden">CodiceISIN</label>
-            <input type="text" class="form-control" id="inputISIN" placeholder="Codice ISIN">
-          </div>
-          <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-3">Ricerca</button>
-          </div>
-          <div class="col-auto">
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" placeholder="Quantità" aria-label="Azioni_wallet" aria-describedby="button-addon2">
-              <button class="btn btn-outline-primary" type="button" id="button-addon2">Aggiungi</button>
-            </div>
-          </div>
-        </form>
+      <form action="/screener/aggiungi" method='post'>
+      <div class="row">
+        <div class="col-4 px-4">
+          <h2>Aggiungi al wallet:</h2>
+        </div>
+        <div class="col-4">
+          <input list="brow" class="form-control me-2" type="search" name="isin" id="isin"placeholder="Ricerca ISIN" aria-label="Cerca" required>
+          <datalist id="brow">
+            <% @aggiunta.each do |i|%>
+              <option value=<%= i.isin %>>
+            <% end %>
+          </datalist>
+        </div>
+        <div class="col-2">
+          <input name='quantita' id='quantita' type='number' min='1' placeholder="Quantità" class='form-control' required>
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-primary">Aggiungi</button>
+        </div>
       </div>
-      <% end %>
+    </div>
+    </form>
     </p>  
     <h1>Azioni</h1>
     <table class="table">
@@ -196,24 +191,24 @@
         </tr>
       </thead>
       <tbody>
-        <% @variabili.each do |variabile| %>
+        <% @soluzione.each do |sol| %>
           <tr>
-            <th scope="row"><%= variabile.nome =%></th>
-            <td><li><%= link_to variabile.isin, variabile %></li></td>
-            <td><%= variabile.paese %></td>
-            <td><%= variabile.prezzo %></td>
-            <td><%= variabile.marketcap %></td>
-            <td><%= variabile.settore %></td>
-            <td><%= variabile.volume %></td>
-            <td><%= variabile.ebitda %></td>
-            <td><%= variabile.roe %></td>
-            <td><%= variabile.roa %></td>
-            <td><%= variabile.pe %></td>
-            <td><%= variabile.ps %></td>
-            <td><%= variabile.pb %></td>
-            <td><%= variabile.divyield %></td>
-            <td><%= variabile.debteq %></td>
-            <td><%= variabile.opmargin %></td>
+            <th scope="row"><%= sol.nome =%></th>
+            <td><li><%= link_to sol.isin, sol %></li></td>
+            <td><%= sol.paese %></td>
+            <td><%= sol.prezzo.round(2) %></td>
+            <td><%= sol.marketcap.round(2) %></td>
+            <td><%= sol.settore %></td>
+            <td><%= sol.volume.round(2) %></td>
+            <td><%= sol.ebitda.round(2) %></td>
+            <td><%= sol.roe.round(2) %></td>
+            <td><%= sol.roa.round(2) %></td>
+            <td><%= sol.pe.round(2) %></td>
+            <td><%= sol.ps.round(2) %></td>
+            <td><%= sol.pb.round(2) %></td>
+            <td><%= sol.divyield.round(2) %></td>
+            <td><%= sol.debteq.round(2) %></td>
+            <td><%= sol.opmargin.round(2) %></td>
           </tr>
         <% end %>
       </tbody>
