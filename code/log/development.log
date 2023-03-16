@@ -1,0 +1,1862 @@
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:00:14 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (10.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 10.1ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 11.2ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 51.2ms | Allocations: 2209)
+  Rendered layout layouts/application.html.erb (Duration: 998.4ms | Allocations: 107211)
+Completed 200 OK in 1371ms (Views: 1027.9ms | ActiveRecord: 17.8ms | Allocations: 157861)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:00:22 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 34.7ms | Allocations: 5262)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 8036)
+Completed 200 OK in 72ms (Views: 48.1ms | ActiveRecord: 0.0ms | Allocations: 10172)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:00:25 +0100
+Started GET "/users/auth/google_oauth2/callback?state=53cf910fd7f25cef619fd55e6ec5907eca8e8f50fccc523e&code=4%2F0AWtgzh5_cYfW97W2ByUN6LQvXK11U8OCN8YCJ1WSBzCWKDaNgGVOCQxD18OoXMoIG0cz6Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:00:26 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"53cf910fd7f25cef619fd55e6ec5907eca8e8f50fccc523e", "code"=>"4/0AWtgzh5_cYfW97W2ByUN6LQvXK11U8OCN8YCJ1WSBzCWKDaNgGVOCQxD18OoXMoIG0cz6Q", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 3.1ms | Allocations: 11239)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::OmniauthCallbacksController:0x00000000014690>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:14:in `google_oauth2'
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:02:54 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (3.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 22.1ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 8.6ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 41.9ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 291.2ms | Allocations: 43815)
+Completed 200 OK in 568ms (Views: 302.7ms | ActiveRecord: 8.2ms | Allocations: 94219)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:02:58 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 69.6ms | Allocations: 4716)
+  Rendered layout layouts/application.html.erb (Duration: 99.8ms | Allocations: 7488)
+Completed 200 OK in 117ms (Views: 112.0ms | ActiveRecord: 0.0ms | Allocations: 9619)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:03:00 +0100
+Started GET "/users/auth/google_oauth2/callback?state=c001d06bb7a55f44c81aba389a2850b82a05de48859b38db&code=4%2F0AWtgzh7QhmabVZ4brB55pzaw6Rda3a2O02SLWKe-4cjQQf6HjNnz-Mez0jYCoHco2kNvuA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:03:01 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"c001d06bb7a55f44c81aba389a2850b82a05de48859b38db", "code"=>"4/0AWtgzh7QhmabVZ4brB55pzaw6Rda3a2O02SLWKe-4cjQQf6HjNnz-Mez0jYCoHco2kNvuA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Completed 500 Internal Server Error in 494ms (ActiveRecord: 1.1ms | Allocations: 7224)
+
+
+  
+I18n::MissingInterpolationArgument (missing interpolation argument :reason in "Could not authenticate you from %{kind} because \"%{reason}\"." ({:kind=>"Google"} given)):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:14:in `google_oauth2'
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:03:46 +0100
+Started GET "/users/auth/google_oauth2/callback?state=6566bfbcdfbef2de86fc9886e6fc996cc4316fb947cb3e86&code=4%2F0AWtgzh7rT-FVmOVG0VX0y4CZcA89XQvOHmPhPUm9AimrwBDL61mcAzi8PofUqp9AJU5WhQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:03:47 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"6566bfbcdfbef2de86fc9886e6fc996cc4316fb947cb3e86", "code"=>"4/0AWtgzh7rT-FVmOVG0VX0y4CZcA89XQvOHmPhPUm9AimrwBDL61mcAzi8PofUqp9AJU5WhQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Completed 500 Internal Server Error in 517ms (ActiveRecord: 3.3ms | Allocations: 12438)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::OmniauthCallbacksController:0x0000000001cf20>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:14:in `google_oauth2'
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:04:40 +0100
+Started GET "/users/auth/google_oauth2/callback?state=3d04c97a42a74fd7a3ad27c0fea82934214f546d0f4ea188&code=4%2F0AWtgzh5epUAHSs19m4VoUb8PuUXw2qTgzXhNlnfMDNOsEG8EXYMqNaBQASa_9WnKh3v6Ew&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:04:41 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"3d04c97a42a74fd7a3ad27c0fea82934214f546d0f4ea188", "code"=>"4/0AWtgzh5epUAHSs19m4VoUb8PuUXw2qTgzXhNlnfMDNOsEG8EXYMqNaBQASa_9WnKh3v6Ew", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Completed 500 Internal Server Error in 546ms (ActiveRecord: 3.4ms | Allocations: 12309)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::OmniauthCallbacksController:0x00000000025378>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:14:in `google_oauth2'
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:05:19 +0100
+Started GET "/users/auth/google_oauth2/callback?state=77f101324df2dba780254619f8dbd772b50760a63055f0d9&code=4%2F0AWtgzh6I_hAAO9g42N6d1LZloBOKVo2cugLLv5J-AAjdQ06Si7QNcenDgx6AmjaQ7xd2_A&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:05:20 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"77f101324df2dba780254619f8dbd772b50760a63055f0d9", "code"=>"4/0AWtgzh6I_hAAO9g42N6d1LZloBOKVo2cugLLv5J-AAjdQ06Si7QNcenDgx6AmjaQ7xd2_A", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 510ms (ActiveRecord: 4.5ms | Allocations: 8772)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:05:22 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 16844)
+Completed 200 OK in 70ms (Views: 66.4ms | ActiveRecord: 0.0ms | Allocations: 18200)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:06:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 5.9ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 2.9ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 393.3ms | Allocations: 43630)
+Completed 200 OK in 869ms (Views: 401.8ms | ActiveRecord: 21.9ms | Allocations: 94045)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:06:19 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.9ms | Allocations: 4716)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 7488)
+Completed 200 OK in 42ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 9625)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:06:21 +0100
+Started GET "/users/auth/google_oauth2/callback?state=8ace09c8c1b13293d9509f3ea769bc79824fbb978da11347&code=4%2F0AWtgzh4dvSdrMpVIY0QRdno6izb9HCWKKbs4VJx6QiLERiSQ6TnfbBqMJMJvLuaX-IZNdw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:06:22 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"8ace09c8c1b13293d9509f3ea769bc79824fbb978da11347", "code"=>"4/0AWtgzh4dvSdrMpVIY0QRdno6izb9HCWKKbs4VJx6QiLERiSQ6TnfbBqMJMJvLuaX-IZNdw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 520ms (ActiveRecord: 1.3ms | Allocations: 6828)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:06:24 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3744)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.0ms | Allocations: 4496)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:08:51 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 16843)
+Completed 200 OK in 90ms (Views: 66.3ms | ActiveRecord: 1.8ms | Allocations: 22691)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:08:52 +0100
+Started GET "/users/auth/google_oauth2/callback?state=a5fc8aaf1bd3626e082b1918187bceb43661ce2c3ee97708&code=4%2F0AWtgzh4IcGTCNEhMXcb1Z9So8VQCw0HuJ5IrQFAunMQxC0qwiydEvsdZDL89Nc024xfuyw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:08:54 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"a5fc8aaf1bd3626e082b1918187bceb43661ce2c3ee97708", "code"=>"4/0AWtgzh4IcGTCNEhMXcb1Z9So8VQCw0HuJ5IrQFAunMQxC0qwiydEvsdZDL89Nc024xfuyw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Completed 500 Internal Server Error in 507ms (ActiveRecord: 1.3ms | Allocations: 7851)
+
+
+  
+NameError (undefined local variable or method `auth' for #<Users::OmniauthCallbacksController:0x0000000001ccf0>):
+  
+app/controllers/users/omniauth_callbacks_controller.rb:14:in `google_oauth2'
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:09:50 +0100
+Started GET "/users/auth/google_oauth2/callback?state=47188e1dcc19cb96afe0eb96c9d1944468d575f1f14603c9&code=4%2F0AWtgzh7vU_BlxMXtPr3m3GgmpR8NLuIwGzPwuIDY-Iw_yvi7BVCS6czbyQrwRvpG_9vb7Q&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:09:50 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"47188e1dcc19cb96afe0eb96c9d1944468d575f1f14603c9", "code"=>"4/0AWtgzh7vU_BlxMXtPr3m3GgmpR8NLuIwGzPwuIDY-Iw_yvi7BVCS6czbyQrwRvpG_9vb7Q", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 485ms (ActiveRecord: 3.5ms | Allocations: 8757)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:09:52 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 47.1ms | Allocations: 16843)
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 18190)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:11:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 4.7ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 1.2ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 261.0ms | Allocations: 43784)
+Completed 200 OK in 557ms (Views: 272.2ms | ActiveRecord: 9.4ms | Allocations: 94192)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:11:30 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 4716)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 7488)
+Completed 200 OK in 79ms (Views: 51.0ms | ActiveRecord: 0.0ms | Allocations: 9621)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:11:44 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://127.0.0.1:3000/users/8
+Completed 303 See Other in 498ms (ActiveRecord: 0.5ms | Allocations: 6137)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-16 22:11:44 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 840)
+  Rendered users/_user.html.erb (Duration: 5.3ms | Allocations: 898)
+  Rendered users/show.html.erb within layouts/application (Duration: 21.2ms | Allocations: 2421)
+  Rendered layout layouts/application.html.erb (Duration: 29.9ms | Allocations: 5067)
+Completed 200 OK in 93ms (Views: 38.3ms | ActiveRecord: 3.4ms | Allocations: 22979)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:11:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3846)
+Completed 200 OK in 22ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 5105)
+
+
+Started GET "/users/8/edit" for 127.0.0.1 at 2023-03-16 22:11:52 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 25.7ms | Allocations: 4219)
+  Rendered users/edit.html.erb within layouts/application (Duration: 31.9ms | Allocations: 4714)
+  Rendered layout layouts/application.html.erb (Duration: 48.2ms | Allocations: 7298)
+Completed 200 OK in 71ms (Views: 52.8ms | ActiveRecord: 0.5ms | Allocations: 8964)
+
+
+Started DELETE "/users/8" for 127.0.0.1 at 2023-03-16 22:11:56 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Destroy (1.1ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 266ms (ActiveRecord: 10.6ms | Allocations: 27329)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:11:56 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (1.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 4.8ms | Allocations: 770)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1246)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3969)
+Completed 200 OK in 29ms (Views: 16.6ms | ActiveRecord: 2.2ms | Allocations: 7129)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:11:58 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3744)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 4477)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:11:59 +0100
+Started GET "/users/auth/google_oauth2/callback?state=5c5f63979c2620f0cd9e48e8743f173d179e1f214fd7ab10&code=4%2F0AWtgzh6oVr4sUt_lUdwUlOgRkbQ50m1XtWTsMQ0qZW2T4QIdBixRHatLKoj7BSLwM4sGgQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:12:01 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"5c5f63979c2620f0cd9e48e8743f173d179e1f214fd7ab10", "code"=>"4/0AWtgzh6oVr4sUt_lUdwUlOgRkbQ50m1XtWTsMQ0qZW2T4QIdBixRHatLKoj7BSLwM4sGgQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", nil], ["cognome", nil], ["username", nil], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-16 21:12:03.499720"], ["updated_at", "2023-03-16 21:12:03.499720"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (45.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 621ms (ActiveRecord: 47.2ms | Allocations: 5922)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:03 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 10.7ms | Allocations: 733)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 1171)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 3882)
+Completed 200 OK in 44ms (Views: 26.0ms | ActiveRecord: 2.2ms | Allocations: 7029)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:12:25 +0100
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 39ms (ActiveRecord: 4.1ms | Allocations: 6487)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:25 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (3.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 15.1ms | Allocations: 748)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 1191)
+  Rendered layout layouts/application.html.erb (Duration: 100.6ms | Allocations: 16852)
+Completed 200 OK in 241ms (Views: 120.3ms | ActiveRecord: 6.8ms | Allocations: 27021)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-16 22:12:28 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 50ms (ActiveRecord: 0.2ms | Allocations: 2394)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:28 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 117)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 596)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 3307)
+Completed 200 OK in 51ms (Views: 31.5ms | ActiveRecord: 2.4ms | Allocations: 6467)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:12:29 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1162)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 3933)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 5133)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:12:30 +0100
+Started GET "/users/auth/google_oauth2/callback?state=68675fe9035a2893adaa76aae6ae2eaa5fea588164f610e2&code=4%2F0AWtgzh7Eu92f8AU5WFLKHL3qX0DCOpYSq9PZtMY7UtUv2HgEP7-QiYJ6UFyJSVpYrVikBQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:12:31 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"68675fe9035a2893adaa76aae6ae2eaa5fea588164f610e2", "code"=>"4/0AWtgzh7Eu92f8AU5WFLKHL3qX0DCOpYSq9PZtMY7UtUv2HgEP7-QiYJ6UFyJSVpYrVikBQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 1133)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:32 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 34.4ms | Allocations: 733)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 50.5ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 103.1ms | Allocations: 3881)
+Completed 200 OK in 206ms (Views: 124.6ms | ActiveRecord: 18.7ms | Allocations: 7047)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-16 22:12:36 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 14ms (ActiveRecord: 0.2ms | Allocations: 1741)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:37 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3308)
+Completed 200 OK in 46ms (Views: 22.9ms | ActiveRecord: 2.2ms | Allocations: 6460)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:12:40 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 3744)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.0ms | Allocations: 4488)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:12:43 +0100
+Started GET "/users/auth/google_oauth2/callback?state=79f0a26a6e7b75e6e871848026119f08d7522eb2ef3cdbea&code=4%2F0AWtgzh5Y5nZBwAAyG3zu-N8ZRI8j6Pq-lmkBB6edBkqIMvr_iuWjvyI282jjdg8VD4C8IQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:12:44 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"79f0a26a6e7b75e6e871848026119f08d7522eb2ef3cdbea", "code"=>"4/0AWtgzh5Y5nZBwAAyG3zu-N8ZRI8j6Pq-lmkBB6edBkqIMvr_iuWjvyI282jjdg8VD4C8IQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 979)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:12:47 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 11.1ms | Allocations: 733)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 18.2ms | Allocations: 1170)
+  Rendered layout layouts/application.html.erb (Duration: 34.3ms | Allocations: 3883)
+Completed 200 OK in 79ms (Views: 41.9ms | ActiveRecord: 4.5ms | Allocations: 7038)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-03-16 22:12:55 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 37)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 3554)
+Completed 200 OK in 105ms (Views: 67.5ms | ActiveRecord: 0.4ms | Allocations: 5227)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:12:57 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 32.6ms | Allocations: 2484)
+  Rendered users/edit.html.erb within layouts/application (Duration: 38.5ms | Allocations: 2726)
+  Rendered layout layouts/application.html.erb (Duration: 53.9ms | Allocations: 5310)
+Completed 200 OK in 89ms (Views: 59.9ms | ActiveRecord: 0.6ms | Allocations: 7550)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:13:02 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 119ms (ActiveRecord: 9.7ms | Allocations: 9151)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:13:02 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 4.9ms | Allocations: 769)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 3960)
+Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 2.4ms | Allocations: 7121)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:17:39 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 133)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 16287)
+Completed 200 OK in 108ms (Views: 49.2ms | ActiveRecord: 6.1ms | Allocations: 30975)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:17:41 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3967)
+Completed 200 OK in 28ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 5327)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:17:42 +0100
+Started GET "/users/auth/google_oauth2/callback?state=3509f1c4a35ea4b038cc80cb5549594e4314efcd252f9f5b&code=4%2F0AWtgzh5XqanArbq6UOpoiXShqlm06JsdeIjnAzWcImnwbznY_4Spgv6AYZOhh5sFsfKyIA&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:17:43 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"3509f1c4a35ea4b038cc80cb5549594e4314efcd252f9f5b", "code"=>"4/0AWtgzh5XqanArbq6UOpoiXShqlm06JsdeIjnAzWcImnwbznY_4Spgv6AYZOhh5sFsfKyIA", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 510ms (ActiveRecord: 2.2ms | Allocations: 5019)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:17:46 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 3747)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.0ms | Allocations: 4488)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:18:11 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 70.2ms | Allocations: 16843)
+Completed 200 OK in 121ms (Views: 77.2ms | ActiveRecord: 3.3ms | Allocations: 22675)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:18:13 +0100
+Started GET "/users/auth/google_oauth2/callback?state=e855f2eff99124492ce1befa3cf30ab243a3bbe6e646d88c&code=4%2F0AWtgzh6kAqpBNpTx4KO1OEmM76A9socFb967-qmEBdkyYHs9wQFD14he7cZPNSjgIq8Pqg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:18:13 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"e855f2eff99124492ce1befa3cf30ab243a3bbe6e646d88c", "code"=>"4/0AWtgzh6kAqpBNpTx4KO1OEmM76A9socFb967-qmEBdkyYHs9wQFD14he7cZPNSjgIq8Pqg", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 535ms (ActiveRecord: 1.2ms | Allocations: 5041)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:18:15 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3747)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.0ms | Allocations: 4479)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:18:47 +0100
+Started GET "/users/auth/google_oauth2/callback?state=c98ffcf200e3c46ac64bb2b20e6fadbbe462335539e45c03&code=4%2F0AWtgzh5bN3yBfVxXOhDH--FZNYPzmKe-dQ64RCoEwl8wvUwXTiPGF2i25_TID1TNlFgUhw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:18:47 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"c98ffcf200e3c46ac64bb2b20e6fadbbe462335539e45c03", "code"=>"4/0AWtgzh5bN3yBfVxXOhDH--FZNYPzmKe-dQ64RCoEwl8wvUwXTiPGF2i25_TID1TNlFgUhw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 510ms (ActiveRecord: 1.4ms | Allocations: 4171)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:18:49 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 3743)
+Completed 200 OK in 38ms (Views: 34.8ms | ActiveRecord: 0.0ms | Allocations: 4480)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:19:06 +0100
+Started GET "/users/auth/google_oauth2/callback?state=958fc00e8bbde8a9dd10efaecdff430903b5682c6065e6e1&code=4%2F0AWtgzh52AUUQ7I-rBv7qJ4tYgTDH019IWoMPuTy9e7pmLG15srMD2Ej4GQVOptrTSyxuyQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:19:06 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"958fc00e8bbde8a9dd10efaecdff430903b5682c6065e6e1", "code"=>"4/0AWtgzh52AUUQ7I-rBv7qJ4tYgTDH019IWoMPuTy9e7pmLG15srMD2Ej4GQVOptrTSyxuyQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", nil], ["cognome", nil], ["username", nil], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-16 21:19:08.610289"], ["updated_at", "2023-03-16 21:19:08.610289"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (44.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 586ms (ActiveRecord: 48.9ms | Allocations: 9249)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:19:08 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 4.5ms | Allocations: 827)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1276)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 16839)
+Completed 200 OK in 106ms (Views: 48.8ms | ActiveRecord: 20.5ms | Allocations: 26986)
+
+
+Started GET "/users/" for 127.0.0.1 at 2023-03-16 22:19:14 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 37)
+  Rendered users/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 902)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 3550)
+Completed 200 OK in 106ms (Views: 61.5ms | ActiveRecord: 0.4ms | Allocations: 5233)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:19:16 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 9.2ms | Allocations: 2495)
+  Rendered users/edit.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2737)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 5319)
+Completed 200 OK in 38ms (Views: 19.6ms | ActiveRecord: 0.9ms | Allocations: 7555)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:19:19 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (6.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (8.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 87ms (ActiveRecord: 31.7ms | Allocations: 6972)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:19:19 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (38.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.9ms | Allocations: 782)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1258)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 3981)
+Completed 200 OK in 97ms (Views: 37.6ms | ActiveRecord: 38.7ms | Allocations: 7145)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:19:42 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 16845)
+Completed 200 OK in 92ms (Views: 68.3ms | ActiveRecord: 1.9ms | Allocations: 22702)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:19:43 +0100
+Started GET "/users/auth/google_oauth2/callback?state=43f94dd0cb9df8886ef0a27a0ba91bf653baf7bdc553b1c1&code=4%2F0AWtgzh6itHWk5t2-I15OYbG5UxfkOJYzhM-2YyHwtBnx_gj8uJu6ZHN-FBXO7PvYz9fINw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:19:44 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"43f94dd0cb9df8886ef0a27a0ba91bf653baf7bdc553b1c1", "code"=>"4/0AWtgzh6itHWk5t2-I15OYbG5UxfkOJYzhM-2YyHwtBnx_gj8uJu6ZHN-FBXO7PvYz9fINw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 512ms (ActiveRecord: 1.3ms | Allocations: 5061)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:19:45 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3747)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms | Allocations: 4505)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:20:11 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.8ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 148.4ms | Allocations: 16744)
+Completed 200 OK in 217ms (Views: 179.3ms | ActiveRecord: 5.3ms | Allocations: 22520)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:20:12 +0100
+Started GET "/users/auth/google_oauth2/callback?state=977ad2ea82d79974b5516b8bceba4d31a90e2741bce9d620&code=4%2F0AWtgzh7AKZzAc2-41HREkrqAMXHA7On2eLjwRFRpsJ6W9bjgqarlzGfCdwDp_H9i5a6cmA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:20:13 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"977ad2ea82d79974b5516b8bceba4d31a90e2741bce9d620", "code"=>"4/0AWtgzh7AKZzAc2-41HREkrqAMXHA7On2eLjwRFRpsJ6W9bjgqarlzGfCdwDp_H9i5a6cmA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:20:15.472897"], ["updated_at", "2023-03-16 21:20:15.472897"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (46.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 521ms (ActiveRecord: 48.3ms | Allocations: 5547)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:20:15 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 10.1ms | Allocations: 831)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 17.2ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 4066)
+Completed 200 OK in 82ms (Views: 34.6ms | ActiveRecord: 5.1ms | Allocations: 14211)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:20:17 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 60.1ms | Allocations: 3555)
+Completed 200 OK in 84ms (Views: 66.9ms | ActiveRecord: 0.3ms | Allocations: 5236)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-16 22:20:26 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 15ms (ActiveRecord: 0.3ms | Allocations: 1854)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:20:26 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.3ms | Allocations: 117)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 597)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 3320)
+Completed 200 OK in 44ms (Views: 27.1ms | ActiveRecord: 2.7ms | Allocations: 6471)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:20:27 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 3744)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.0ms | Allocations: 4492)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:20:29 +0100
+Started GET "/users/auth/google_oauth2/callback?state=a8e08dd7cd434571336f574c88767bbc76f37c1e2f29f2a6&code=4%2F0AWtgzh5SeBwcAfEAGiUJfm9__HsDHucCxCxoIdvKXuncr4XKszvWOmQOjFZqPbW6yG39hg&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:20:30 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"a8e08dd7cd434571336f574c88767bbc76f37c1e2f29f2a6", "code"=>"4/0AWtgzh5SeBwcAfEAGiUJfm9__HsDHucCxCxoIdvKXuncr4XKszvWOmQOjFZqPbW6yG39hg", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 983)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:20:31 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.5ms | Allocations: 738)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1176)
+  Rendered layout layouts/application.html.erb (Duration: 37.2ms | Allocations: 3888)
+Completed 200 OK in 86ms (Views: 39.4ms | ActiveRecord: 6.1ms | Allocations: 7045)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-16 22:22:02 +0100
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 16ms (ActiveRecord: 0.4ms | Allocations: 1732)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:22:02 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 586)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 3297)
+Completed 200 OK in 41ms (Views: 23.3ms | ActiveRecord: 2.8ms | Allocations: 6449)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:22:05 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3744)
+Completed 200 OK in 22ms (Views: 14.6ms | ActiveRecord: 0.0ms | Allocations: 4479)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:23:56 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 16839)
+Completed 200 OK in 116ms (Views: 73.4ms | ActiveRecord: 2.9ms | Allocations: 22677)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:23:58 +0100
+Started GET "/users/auth/google_oauth2/callback?state=f1ab58d173a4ae8b3ef30ed5255b14b4e771beef2921a514&code=4%2F0AWtgzh7itntp6QgN7q4waOcjlTmoe2BHTgfARG99dpDzsQHaB0MBEmbrj9LSdG_Xm7LWrQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:23:59 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"f1ab58d173a4ae8b3ef30ed5255b14b4e771beef2921a514", "code"=>"4/0AWtgzh7itntp6QgN7q4waOcjlTmoe2BHTgfARG99dpDzsQHaB0MBEmbrj9LSdG_Xm7LWrQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 1470)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:24:00 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 6.9ms | Allocations: 828)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1278)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 4063)
+Completed 200 OK in 72ms (Views: 29.1ms | ActiveRecord: 4.6ms | Allocations: 14209)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:24:02 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 3555)
+Completed 200 OK in 81ms (Views: 62.4ms | ActiveRecord: 0.5ms | Allocations: 5237)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:24:04 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 11.0ms | Allocations: 2502)
+  Rendered users/edit.html.erb within layouts/application (Duration: 16.0ms | Allocations: 2746)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 5328)
+Completed 200 OK in 58ms (Views: 35.6ms | ActiveRecord: 0.9ms | Allocations: 7578)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:24:07 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 95ms (ActiveRecord: 10.2ms | Allocations: 6984)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:24:07 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 6.1ms | Allocations: 779)
+  Rendered _footer.html.erb (Duration: 0.6ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3966)
+Completed 200 OK in 37ms (Views: 22.8ms | ActiveRecord: 2.3ms | Allocations: 7126)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:24:17 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 133)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 617)
+  Rendered layout layouts/application.html.erb (Duration: 96.5ms | Allocations: 16283)
+Completed 200 OK in 272ms (Views: 104.2ms | ActiveRecord: 25.3ms | Allocations: 30930)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:24:19 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1194)
+  Rendered layout layouts/application.html.erb (Duration: 46.5ms | Allocations: 3965)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.0ms | Allocations: 5328)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:24:20 +0100
+Started GET "/users/auth/google_oauth2/callback?state=c1505695f5d581d3c1ff1a8e49e62f31b14897a7e62c2070&code=4%2F0AWtgzh5Mi_rfVCIF9l5rHw5T9UR5HS2EvxrvXGxt4axGVqxCIC-xe5gdqEuJ_WKNLAokaQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:24:21 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"c1505695f5d581d3c1ff1a8e49e62f31b14897a7e62c2070", "code"=>"4/0AWtgzh5Mi_rfVCIF9l5rHw5T9UR5HS2EvxrvXGxt4axGVqxCIC-xe5gdqEuJ_WKNLAokaQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:24:22.985685"], ["updated_at", "2023-03-16 21:24:22.985685"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (45.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 534ms (ActiveRecord: 49.5ms | Allocations: 5473)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:24:23 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 5.2ms | Allocations: 818)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1257)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 3973)
+Completed 200 OK in 33ms (Views: 16.7ms | ActiveRecord: 2.9ms | Allocations: 7134)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:24:25 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 3558)
+Completed 200 OK in 50ms (Views: 29.8ms | ActiveRecord: 0.2ms | Allocations: 5230)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:24:47 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 41)
+  Rendered users/_form.html.erb (Duration: 18.6ms | Allocations: 2559)
+  Rendered users/edit.html.erb within layouts/application (Duration: 24.3ms | Allocations: 2838)
+  Rendered layout layouts/application.html.erb (Duration: 100.2ms | Allocations: 18333)
+Completed 200 OK in 161ms (Views: 108.3ms | ActiveRecord: 4.2ms | Allocations: 25900)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:24:51 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (52.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 129ms (ActiveRecord: 55.7ms | Allocations: 6973)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:24:51 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (7.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 24.1ms | Allocations: 793)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 54.4ms | Allocations: 4077)
+Completed 200 OK in 210ms (Views: 83.3ms | ActiveRecord: 10.2ms | Allocations: 14232)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:26:22 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 51.5ms | Allocations: 16845)
+Completed 200 OK in 82ms (Views: 55.9ms | ActiveRecord: 1.9ms | Allocations: 22630)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:26:24 +0100
+Started GET "/users/auth/google_oauth2/callback?state=a77726605f2051a365190cd55a12f84f3d78f9cd4add97de&code=4%2F0AWtgzh4ODFcf1Q5uFbAMmqOIDEddTsFqkZ783DveoUolBabE0TXYCGlIQPMBfkm3d65Zdw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:26:24 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"a77726605f2051a365190cd55a12f84f3d78f9cd4add97de", "code"=>"4/0AWtgzh4ODFcf1Q5uFbAMmqOIDEddTsFqkZ783DveoUolBabE0TXYCGlIQPMBfkm3d65Zdw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:26:26.483890"], ["updated_at", "2023-03-16 21:26:26.483890"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (51.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 568ms (ActiveRecord: 53.3ms | Allocations: 5551)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:26:26 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 18.2ms | Allocations: 831)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 28.4ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 4074)
+Completed 200 OK in 171ms (Views: 83.6ms | ActiveRecord: 4.8ms | Allocations: 14214)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:26:29 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 13.9ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 3555)
+Completed 200 OK in 73ms (Views: 57.5ms | ActiveRecord: 0.4ms | Allocations: 5213)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:26:55 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 41)
+  Rendered users/_form.html.erb (Duration: 16.8ms | Allocations: 2560)
+  Rendered users/edit.html.erb within layouts/application (Duration: 20.5ms | Allocations: 2839)
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 18341)
+Completed 200 OK in 145ms (Views: 93.5ms | ActiveRecord: 3.2ms | Allocations: 25972)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:26:58 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 92ms (ActiveRecord: 10.7ms | Allocations: 6968)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:26:58 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (2.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.6ms | Allocations: 793)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 1283)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 4068)
+Completed 200 OK in 132ms (Views: 62.9ms | ActiveRecord: 5.3ms | Allocations: 14217)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:27:00 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (16.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 579)
+  Rendered layout layouts/application.html.erb (Duration: 46.4ms | Allocations: 3290)
+Completed 200 OK in 98ms (Views: 54.9ms | ActiveRecord: 18.1ms | Allocations: 6430)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:27:01 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 43.3ms | Allocations: 3956)
+Completed 200 OK in 56ms (Views: 48.9ms | ActiveRecord: 0.0ms | Allocations: 5298)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:27:02 +0100
+Started GET "/users/auth/google_oauth2/callback?state=0d032871b3e6b40e6bc5e2e6e9891edb242092cd0e7418ed&code=4%2F0AWtgzh4lI1uytqeiGgRJCKaVrS_HCeW2MBnSHwPvdgZ2sBaH4gmbmSNVQHGj_sCns86Qqw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:27:03 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"0d032871b3e6b40e6bc5e2e6e9891edb242092cd0e7418ed", "code"=>"4/0AWtgzh4lI1uytqeiGgRJCKaVrS_HCeW2MBnSHwPvdgZ2sBaH4gmbmSNVQHGj_sCns86Qqw", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 473ms (ActiveRecord: 1.7ms | Allocations: 4685)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:27:05 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.3ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3749)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.0ms | Allocations: 4486)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:27:53 +0100
+Started GET "/users/auth/google_oauth2/callback?state=76c6fbcf12b8c2a7c7abf1137b1de3da961a5076b3bf2496&code=4%2F0AWtgzh432Ex1yGmL0pIlja7lYGvTzKYyFadjvRX4XmMAmE35hHdTuEGyv3JgqbSK5UZo0g&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:27:53 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"76c6fbcf12b8c2a7c7abf1137b1de3da961a5076b3bf2496", "code"=>"4/0AWtgzh432Ex1yGmL0pIlja7lYGvTzKYyFadjvRX4XmMAmE35hHdTuEGyv3JgqbSK5UZo0g", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 493ms (ActiveRecord: 5.0ms | Allocations: 9509)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:27:55 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1192)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 16842)
+Completed 200 OK in 71ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 18198)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:27:57 +0100
+Started GET "/users/auth/google_oauth2/callback?state=afb903e5806c62e02460ff6a522bf84f14458d027ec6ef4e&code=4%2F0AWtgzh79GJqus8mFmAXePtnEq4Pj9QzPxcWeHJmMVxuecvfNAuZqp2NFMz894tiDm818Lg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:27:58 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"afb903e5806c62e02460ff6a522bf84f14458d027ec6ef4e", "code"=>"4/0AWtgzh79GJqus8mFmAXePtnEq4Pj9QzPxcWeHJmMVxuecvfNAuZqp2NFMz894tiDm818Lg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 653ms (ActiveRecord: 1.3ms | Allocations: 4155)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:28:00 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 3743)
+Completed 200 OK in 38ms (Views: 35.1ms | ActiveRecord: 0.0ms | Allocations: 4484)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:29:05 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1193)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 16755)
+Completed 200 OK in 110ms (Views: 74.1ms | ActiveRecord: 2.9ms | Allocations: 22528)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:29:07 +0100
+Started GET "/users/auth/google_oauth2/callback?state=0d2266ab003b287ee224ccd196391c7c029ccc05457305ef&code=4%2F0AWtgzh5HfctDUpAdkLJkZwJyormmj8rRckFezy7YydOh30exDa-3SrFIwxYsU1FTRYY2qA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:29:08 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"0d2266ab003b287ee224ccd196391c7c029ccc05457305ef", "code"=>"4/0AWtgzh5HfctDUpAdkLJkZwJyormmj8rRckFezy7YydOh30exDa-3SrFIwxYsU1FTRYY2qA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:29:10.326365"], ["updated_at", "2023-03-16 21:29:10.326365"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (57.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 559ms (ActiveRecord: 60.6ms | Allocations: 5548)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:29:10 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 5.2ms | Allocations: 831)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 20.0ms | Allocations: 4078)
+Completed 200 OK in 67ms (Views: 22.6ms | ActiveRecord: 4.3ms | Allocations: 14287)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:29:12 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3561)
+Completed 200 OK in 28ms (Views: 15.8ms | ActiveRecord: 1.3ms | Allocations: 5230)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:29:45 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 26.9ms | Allocations: 2502)
+  Rendered users/edit.html.erb within layouts/application (Duration: 31.3ms | Allocations: 2746)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 5328)
+Completed 200 OK in 125ms (Views: 63.6ms | ActiveRecord: 1.1ms | Allocations: 7565)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:29:48 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (4.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (61.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 193ms (ActiveRecord: 68.4ms | Allocations: 9155)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:29:48 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (2.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.4ms | Allocations: 779)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1255)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 3966)
+Completed 200 OK in 57ms (Views: 35.7ms | ActiveRecord: 3.4ms | Allocations: 7131)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:30:34 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1195)
+  Rendered layout layouts/application.html.erb (Duration: 254.3ms | Allocations: 16866)
+Completed 200 OK in 322ms (Views: 270.8ms | ActiveRecord: 2.7ms | Allocations: 22650)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:30:37 +0100
+Started GET "/users/auth/google_oauth2/callback?state=71780e8509b3c173282d7cb97365a150ab19b1e27858e789&code=4%2F0AWtgzh6oWeL1HxZY6QRB5-6HGDH53mnl4I2zj12WrSF1VG1BWUOMPu0hlAUqQDkCAri1mg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:30:38 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"71780e8509b3c173282d7cb97365a150ab19b1e27858e789", "code"=>"4/0AWtgzh6oWeL1HxZY6QRB5-6HGDH53mnl4I2zj12WrSF1VG1BWUOMPu0hlAUqQDkCAri1mg", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:30:40.385812"], ["updated_at", "2023-03-16 21:30:40.385812"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (46.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 564ms (ActiveRecord: 48.2ms | Allocations: 5547)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:30:40 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 6.5ms | Allocations: 831)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1281)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 4078)
+Completed 200 OK in 83ms (Views: 25.3ms | ActiveRecord: 5.1ms | Allocations: 14291)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:30:42 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 907)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 3555)
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 0.4ms | Allocations: 5233)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:33:00 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 41)
+  Rendered users/_form.html.erb (Duration: 69.1ms | Allocations: 2558)
+  Rendered users/edit.html.erb within layouts/application (Duration: 78.6ms | Allocations: 2840)
+  Rendered layout layouts/application.html.erb (Duration: 178.6ms | Allocations: 18352)
+Completed 200 OK in 406ms (Views: 219.3ms | ActiveRecord: 3.5ms | Allocations: 25917)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:33:05 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (0.6ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (48.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 123ms (ActiveRecord: 50.9ms | Allocations: 6992)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:33:05 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.0ms | Allocations: 793)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 1280)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 4075)
+Completed 200 OK in 67ms (Views: 23.9ms | ActiveRecord: 4.2ms | Allocations: 14226)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:33:08 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1179)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 3950)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.0ms | Allocations: 5297)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:33:09 +0100
+Started GET "/users/auth/google_oauth2/callback?state=6a8bcea7b27d167314fe422856be805c649a1ca31e7283a5&code=4%2F0AWtgzh7A2D4Bg5RNRk34xfsyMr-V4MAsFEHlOXCbcbsn7LxFQIaq07_Il1UeNQAgAQHwaw&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:33:10 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"6a8bcea7b27d167314fe422856be805c649a1ca31e7283a5", "code"=>"4/0AWtgzh7A2D4Bg5RNRk34xfsyMr-V4MAsFEHlOXCbcbsn7LxFQIaq07_Il1UeNQAgAQHwaw", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "QQQ"], ["cognome", nil], ["username", "QQQ"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-16 21:33:12.964607"], ["updated_at", "2023-03-16 21:33:12.964607"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["immagine", nil]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (43.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 552ms (ActiveRecord: 46.2ms | Allocations: 5235)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:33:13 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 12.6ms | Allocations: 738)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 18.7ms | Allocations: 1177)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | Allocations: 3895)
+Completed 200 OK in 65ms (Views: 44.8ms | ActiveRecord: 6.0ms | Allocations: 7066)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-16 22:33:16 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 840)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 3450)
+Completed 200 OK in 51ms (Views: 32.1ms | ActiveRecord: 5.3ms | Allocations: 4621)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-16 22:33:17 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 29.5ms | Allocations: 2454)
+  Rendered users/edit.html.erb within layouts/application (Duration: 35.5ms | Allocations: 2691)
+  Rendered layout layouts/application.html.erb (Duration: 90.0ms | Allocations: 5273)
+Completed 200 OK in 137ms (Views: 94.8ms | ActiveRecord: 2.2ms | Allocations: 6873)
+
+
+Started DELETE "/users/12" for 127.0.0.1 at 2023-03-16 22:33:21 +0100
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (6.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mUser Destroy (9.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 12]]
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+  [1m[36mTRANSACTION (47.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:64:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 128ms (ActiveRecord: 64.3ms | Allocations: 3053)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-16 22:33:21 +0100
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (1.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 9.9ms | Allocations: 768)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 15.6ms | Allocations: 1244)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 3955)
+Completed 200 OK in 62ms (Views: 37.7ms | ActiveRecord: 2.4ms | Allocations: 7106)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-16 22:33:23 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 3243)
+  Rendered layout layouts/application.html.erb (Duration: 42.5ms | Allocations: 6023)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 7527)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-16 22:33:45 +0100
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"qqq", "cognome"=>"", "username"=>"qqq", "email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Create User"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "qqq"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "qqq"], ["cognome", ""], ["username", "qqq"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-16 21:33:45.813599"], ["updated_at", "2023-03-16 21:33:45.813599"], ["email", "qqqfinanceassi@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (46.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 521ms (ActiveRecord: 48.7ms | Allocations: 4003)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:33:45 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3744)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 0.0ms | Allocations: 4497)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:33:51 +0100
+Started GET "/users/auth/google_oauth2/callback?state=e7174d07111423e9a5d7a6f5a3ec0f60a848d22dc8731e44&code=4%2F0AWtgzh57AW_0wI_kT8rhLT1KYI40MxWQdlEW7qP9SBPoPtoqKKJDjER3Ver4t-Ohwf9NJQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:33:52 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"e7174d07111423e9a5d7a6f5a3ec0f60a848d22dc8731e44", "code"=>"4/0AWtgzh57AW_0wI_kT8rhLT1KYI40MxWQdlEW7qP9SBPoPtoqKKJDjER3Ver4t-Ohwf9NJQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 435ms (ActiveRecord: 1.3ms | Allocations: 4163)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:33:54 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3743)
+Completed 200 OK in 25ms (Views: 21.1ms | ActiveRecord: 0.0ms | Allocations: 4480)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 22:33:59 +0100
+Started GET "/users/auth/google_oauth2/callback?state=4f5f04a9cf0d5e67e9c732c8a0e8c2e7f5c3c6398faadc82&code=4%2F0AWtgzh5OWRcpPPXFw2FUPADzz8Iea49w78UH93jgm5EaaNtVZiyMMBQlOLvcgkqriovsjQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-16 22:33:59 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"4f5f04a9cf0d5e67e9c732c8a0e8c2e7f5c3c6398faadc82", "code"=>"4/0AWtgzh5OWRcpPPXFw2FUPADzz8Iea49w78UH93jgm5EaaNtVZiyMMBQlOLvcgkqriovsjQ", "scope"=>"email profile openid https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 593ms (ActiveRecord: 1.3ms | Allocations: 4164)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-16 22:34:01 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1041)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3743)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 4492)
+
+
