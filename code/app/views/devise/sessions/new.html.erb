@@ -15,7 +15,7 @@
   </div>
 <% end %>
 
-<%= form_for(resource, :as => @user, :url => session_path(@user)) do |form| %>
+<%=form_with(model: @user, url: session_path(@user))do |form| %>
 
 <br>
 <div class="container text-center">
@@ -49,24 +49,27 @@
  <div class="row">
 	<div class="col">
 	</div>
-	<div class="col">
-	<button class="btn btn-primary btn-lg" type="button" name="Facebook">Accedi con Facebook</button>
 	</div>
 	<div class="col">
 	</div>
 	<div class="col">
 	 </div>
-</div>
+	 <br>
+	 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br>
+<% end %>
+<br>
+<br>
+<br>
+
    
 
 <%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
-  <% end %>
+  <%- User.omniauth_providers.each do |provider| %>
+    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false }, class: 'btn btn-success btn-lg' %><br>
+	  <% end %>
 <% end %>
-
-	
-	
+	</div>
 <br>
 <br>
 <br>

@@ -3,28 +3,24 @@
 class Users::SessionsController < Devise::SessionsController
    # before_action :configure_sign_in_params, only: [:create]
 
-  def resource
-    instance_variable_get(:"@#{resource_name}")
+  def new
+    @user=User.new
   end 
 
 
- 
-    def resource_name
-      devise_mapping.name
-    end 
 
 
   def create #super
-    self.resource = warden.authenticate!(auth_options)
+    @user = warden.authenticate!(auth_options)
     set_flash_message!(:notice, :signed_in)
-    sign_in(resource_name, resource)
-    yield resource if block_given?
-    respond_with resource
+    sign_in(:user, @user)
+    yield user if block_given?
+    respond_with @user
   end
 
 
     def destroy #super
-      signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(resource_name))
+      signed_out = (Devise.sign_out_all_scopes ? sign_out : sign_out(user))
       set_flash_message! :notice, :signed_out if signed_out
       yield if block_given?
       respond_to_on_destroy

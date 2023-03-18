@@ -17,7 +17,7 @@
  <%end%>
 <%end%>
 </h1>
-<%= form_for(resource, :as => @user, :url => registration_path(@user)) do |form| %>
+<%= form_with(model: @user, url: registration_path(@user)) do |form| %>
 	
 <br>
 		<div class="row">

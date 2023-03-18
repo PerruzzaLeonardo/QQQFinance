@@ -9611,6 +9611,7 @@ Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.0ms | Allocations: 450
 
 Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 23:20:37 +0100
 Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-16 23:20:50 +0100
+<<<<<<< HEAD
 >>>>>>> 901e2035ff70effa51082ec30e0d4433214cd733
 Started GET "/" for 127.0.0.1 at 2023-03-17 00:00:21 +0100
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -11567,11 +11568,208 @@ Started GET "/" for 127.0.0.1 at 2023-03-17 01:01:30 +0100
   [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by IndexController#index as HTML
   [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+=======
+Started GET "/" for 127.0.0.1 at 2023-03-17 18:13:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (16.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 11.4ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 3.4ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 24.6ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 551.5ms | Allocations: 73555)
+Completed 200 OK in 713ms (Views: 563.9ms | ActiveRecord: 18.2ms | Allocations: 124173)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-17 18:14:04 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 122)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:156
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/index.html.erb:194
+  Rendered screener/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 11008)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 13631)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.3ms | Allocations: 14749)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-17 18:15:26 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 5230)
+  Rendered layout layouts/application.html.erb (Duration: 32.7ms | Allocations: 7820)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 9917)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-17 18:15:35 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:18:in `create'
+Redirected to http://localhost:3000/users/12
+Completed 303 See Other in 516ms (ActiveRecord: 1.5ms | Allocations: 6157)
+
+
+Started GET "/users/12" for 127.0.0.1 at 2023-03-17 18:15:36 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "qqq"]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 2.5ms | Allocations: 837)
+  Rendered users/_user.html.erb (Duration: 5.0ms | Allocations: 815)
+  Rendered users/show.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2333)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4793)
+Completed 200 OK in 35ms (Views: 20.5ms | ActiveRecord: 0.6ms | Allocations: 8811)
+
+
+Started GET "/wallet" for 127.0.0.1 at 2023-03-17 18:15:46 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/wallets_controller.rb:8:in `index'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "qqq"]]
+  ↳ app/controllers/wallets_controller.rb:17:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 33)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/wallets/index.html.erb:29
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 2949)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 5567)
+Completed 200 OK in 41ms (Views: 26.3ms | ActiveRecord: 0.5ms | Allocations: 8009)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-17 18:16:29 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 31.9ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 64.7ms | Allocations: 3583)
+Completed 200 OK in 86ms (Views: 68.3ms | ActiveRecord: 0.1ms | Allocations: 4833)
+
+
+Started GET "/users/12/edit" for 127.0.0.1 at 2023-03-17 18:16:31 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  Rendered users/_form.html.erb (Duration: 35.0ms | Allocations: 7588)
+  Rendered users/edit.html.erb within layouts/application (Duration: 37.7ms | Allocations: 8086)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 10492)
+Completed 200 OK in 96ms (Views: 42.3ms | ActiveRecord: 0.2ms | Allocations: 12147)
+
+
+Started PATCH "/users/12" for 127.0.0.1 at 2023-03-17 18:16:41 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"qqq", "cognome"=>"", "email"=>"qqqfinanceassi@gmail.com", "username"=>"ACCprova", "pubblico"=>"no", "commento"=>""}, "commit"=>"Update User", "id"=>"12"}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:52:in `block in update'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ACCprova"], ["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:52:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:52:in `block in update'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:18
+  Rendered _header.html.erb (Duration: 3.6ms | Allocations: 745)
+  Rendered users/_form.html.erb (Duration: 13.9ms | Allocations: 2896)
+  Rendered users/edit.html.erb within layouts/application (Duration: 24.3ms | Allocations: 3847)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 6253)
+Completed 422 Unprocessable Entity in 49ms (Views: 28.9ms | ActiveRecord: 3.3ms | Allocations: 10859)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-17 18:17:37 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 29)
+  Rendered users/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 762)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3177)
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 0.1ms | Allocations: 4321)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-18 19:44:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (3.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.3ms | Allocations: 668)
+  Rendered _footer.html.erb (Duration: 2.2ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 36.6ms | Allocations: 2208)
+  Rendered layout layouts/application.html.erb (Duration: 505.1ms | Allocations: 74394)
+Completed 200 OK in 919ms (Views: 520.1ms | ActiveRecord: 34.3ms | Allocations: 125014)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:44:06 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 42.1ms | Allocations: 5274)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 7882)
+Completed 200 OK in 64ms (Views: 59.0ms | ActiveRecord: 0.0ms | Allocations: 9517)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:44:08 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1042)
+  Rendered layout layouts/application.html.erb (Duration: 45.2ms | Allocations: 3571)
+Completed 200 OK in 75ms (Views: 72.4ms | ActiveRecord: 0.0ms | Allocations: 4215)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:47:26 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 34.2ms | Allocations: 5024)
+  Rendered layout layouts/application.html.erb (Duration: 219.6ms | Allocations: 44450)
+Completed 200 OK in 340ms (Views: 235.6ms | ActiveRecord: 1.7ms | Allocations: 70837)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-18 19:47:32 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+>>>>>>> 453da17abcbba3a6ea78ba9bfe72bd7195208c11
   ↳ app/controllers/index_controller.rb:7:in `index'
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/controllers/index_controller.rb:11:in `index'
   Rendering layout layouts/application.html.erb
   Rendering index/index.html.erb within layouts/application
+<<<<<<< HEAD
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
   ↳ app/views/_header.html.erb:21
   Rendered _header.html.erb (Duration: 14.1ms | Allocations: 3739)
@@ -12890,11 +13088,24 @@ Started GET "/" for 127.0.0.1 at 2023-03-17 10:00:37 +0100
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by IndexController#index as HTML
   [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+=======
+  Rendered _header.html.erb (Duration: 3.2ms | Allocations: 607)
+  Rendered _footer.html.erb (Duration: 6.7ms | Allocations: 128)
+  Rendered index/index.html.erb within layouts/application (Duration: 21.0ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 4410)
+Completed 200 OK in 187ms (Views: 45.8ms | ActiveRecord: 4.8ms | Allocations: 30201)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-18 19:47:34 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+>>>>>>> 453da17abcbba3a6ea78ba9bfe72bd7195208c11
   ↳ app/controllers/index_controller.rb:7:in `index'
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   ↳ app/controllers/index_controller.rb:11:in `index'
   Rendering layout layouts/application.html.erb
   Rendering index/index.html.erb within layouts/application
+<<<<<<< HEAD
   Rendered _header.html.erb (Duration: 3.6ms | Allocations: 720)
   Rendered _footer.html.erb (Duration: 1.3ms | Allocations: 132)
   Rendered index/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 2456)
@@ -33423,5 +33634,86 @@ Processing by AzioneController#show as HTML
   Rendered azione/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 7462)
   Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 10005)
 Completed 200 OK in 23ms (Views: 18.7ms | ActiveRecord: 0.5ms | Allocations: 10969)
+=======
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.5ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 581)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 3108)
+Completed 200 OK in 110ms (Views: 71.8ms | ActiveRecord: 2.6ms | Allocations: 6278)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-18 19:47:39 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.5ms | Allocations: 3888)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 6484)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.0ms | Allocations: 7982)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:47:43 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1020)
+  Rendered layout layouts/application.html.erb (Duration: 24.3ms | Allocations: 3546)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.0ms | Allocations: 4201)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:49:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 25.3ms | Allocations: 5285)
+  Rendered layout layouts/application.html.erb (Duration: 240.9ms | Allocations: 44702)
+Completed 200 OK in 357ms (Views: 254.3ms | ActiveRecord: 2.6ms | Allocations: 71085)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:50:06 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1661)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 4459)
+Completed 200 OK in 66ms (Views: 60.9ms | ActiveRecord: 0.0ms | Allocations: 6040)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:50:13 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 1658)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 4456)
+Completed 200 OK in 59ms (Views: 54.3ms | ActiveRecord: 0.0ms | Allocations: 6038)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-18 19:50:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 73.6ms | Allocations: 5290)
+  Rendered layout layouts/application.html.erb (Duration: 392.4ms | Allocations: 44921)
+Completed 200 OK in 549ms (Views: 411.9ms | ActiveRecord: 10.4ms | Allocations: 71315)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2023-03-18 19:51:01 +0100
+  
+SyntaxError (/home/leotlc/Scrivania/pass/code/app/controllers/users/passwords_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/users/passwords_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users/passwords_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users/passwords_controller.rb:36: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/users/password/new" for 127.0.0.1 at 2023-03-18 19:51:24 +0100
+Processing by Users::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 5.6ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 11.8ms | Allocations: 761)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 90.9ms | Allocations: 2871)
+  Rendered layout layouts/application.html.erb (Duration: 176.8ms | Allocations: 17549)
+Completed 200 OK in 209ms (Views: 183.5ms | ActiveRecord: 2.3ms | Allocations: 23537)
+>>>>>>> 453da17abcbba3a6ea78ba9bfe72bd7195208c11
 
 
