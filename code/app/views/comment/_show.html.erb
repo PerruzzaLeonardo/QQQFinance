@@ -1,0 +1,26 @@
+<%@azione.comment.each do |commento|%>
+    <li class="list-group-item ">
+        <div class="row">
+            <div class="col-1">
+                <%= image_tag commento.user.immagine,class:"card-img-top "%>
+            </div>
+            <div class="col-10">
+                <div class="d-flex">
+                    <p class="h5"><%=commento.user.username%></p> 
+                    <%if(current_user)%>      
+                        <%if(current_user.id==commento.user_id)%>
+                        </p>
+                            <%=link_to "Elimina",comment_path(commento),data: {
+                                turbo_method: :delete,
+                                turbo_confirm: "Sei sicuro?"
+                            },class:"ms-3" %>
+                            <%=link_to "Modifica",edit_comment_path(commento.id),class:"ms-3"%>
+                        </p>  
+                        <%end%>
+                    <%end%>
+                </div>
+                <textarea rows=2 cols=50 placeholder="<%= commento.commento %>" <%=@modifica%>></textarea>
+            </div>
+        </div>
+    </li>  
+<%end%>

@@ -7,8 +7,9 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:google_oauth2,:facebook]
   
     validates :nome,length: { minimum: 2 }
-    validates :nome,:password, :email, presence: true 
+    validates :nome, :email, presence: true 
     validates :username, presence: true,uniqueness: {case_sensitive: true}
+    validates :immagine, presence: true
 
  
      

@@ -13,23 +13,20 @@
       <%= link_to "Modifica profilo",edit_user_path(@user) %>
     </div>
   </div>  
-  <div class="row">
-  <div class="col-7">
-    <div class="field form-group"> <h2>Nome: <%= @user.nome %> </div>
-    <div class="field form-group"> <h2>Cognome: <%= @user.cognome %> </div>
-    <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
-  </div>
 
-  <div class="col-5">
-    <%= image_tag "profilo.jpeg",class:"card-img-top",alt:"Card image cap" %>
-    <div class="field form-group text-center"><h2> <%= @user.username %> </div>
+  <div class="row">
+    <div class="col-7">
+      <div class="field form-group"> <h2>Nome: <%= @user.nome %> </div>
+      <div class="field form-group"> <h2>Cognome: <%= @user.cognome %> </div>
+      <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
+    </div>
+    <div class="col-5">
+      <%= image_tag @user.immagine,class:"card-img-top d-block img-fluid",alt:"Card image cap" %>
+      <div class="field form-group text-center"><h2> <%= @user.username %> </div>
+    </div>
   </div>
-</div>
 
 <div class="row">
-
-  
-
   <div class="container-fluid row m-2">
     <%if (!@user.commento or @user.commento!="") #se non è vuoto
       @commento=@user.commento
@@ -39,3 +36,4 @@
 
     <textarea rows=8 cols=50 placeholder="<%= @commento %>" disabled></textarea>
   </div>
+</div>

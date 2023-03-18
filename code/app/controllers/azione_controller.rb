@@ -5,8 +5,7 @@ class AzioneController < ApplicationController
 
   def show
     @azione =Azione.find(params[:id])
-    @commenti=Comment.where(isin: @azione.id )
-    #@cuser=Users.where(id: @commenti.user_id)
+    @modifica="disabled"
   end
 
   def new

@@ -43,7 +43,9 @@
     </div>
 
     <div class="col-5">
-      <%= image_tag "profilo.jpeg",class:"card-img-top",alt:"Card image cap" %>
+    <div class="modal-body" data-toggle="modal" data-target="#exampleModal">
+      <%= image_tag @user.immagine,class:"card-img-top",alt:"Card image cap" %>
+    </div>
       <div class="field form-group text-center"><h2>
         <%= form.label :username, style: "display: block" %>
         <%= form.text_field :username %> </div>
@@ -60,7 +62,92 @@
     <%= form.text_area :commento,size: "50x8" %> </div>
  </div>
   <br>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Scegli il tuo avatar</h1>
+          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+          <div class="modal-body">
+            <div class="row">
+
+              <div class="col">
+                <div class="row">
+                  <%= image_tag "profilo1",class:"rounded mx-auto d-block img-fluid"%>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo1" %> 
+                </div>
+              </div>
+              
+              <div class="col">
+                 <div class="row">
+                  <%= image_tag "profilo2.png",class:"rounded mx-auto d-block img-fluid" %>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo2" %> 
+                </div> 
+              </div>
+
+              <div class="col">
+                 <div class="row">
+                  <%= image_tag "profilo3.png",class:"rounded mx-auto d-block img-fluid" %>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo3" %> 
+                </div> 
+              </div>
+
+            </div>
+            
+            <div class="row">
+
+              <div class="col">
+                <div class="row">
+                  <%= image_tag "profilo4.png",class:"rounded mx-auto d-block img-fluid"%>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo4" %> 
+                </div>
+              </div>
+              
+              <div class="col">
+                 <div class="row">
+                  <%= image_tag "profilo5.png",class:"rounded mx-auto d-block img-fluid" %>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo5" %> 
+                </div> 
+              </div>
+
+              <div class="col">
+                 <div class="row">
+                  <%= image_tag "profilo6.png",class:"rounded mx-auto d-block img-fluid" %>
+                </div>
+                <div class="row">  
+                  <%= form.radio_button :immagine,"profilo6" %> 
+                </div> 
+              </div>
+
+            </div>
+          </div>
+        <div class="modal-footer"  >
+          
+          <%= form.radio_button :immagine,"profilo",class:"btn btn-secondary btn-check",id:"profilo" %>
+          <label class="btn btn-secondary" for="profilo">Non voglio un avatar</label>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
   <div class="m-2">
-    <%= form.submit %>
+    <%= form.submit "Salva modifiche",class:"btn btn-primary" %>
   </div>
 <% end %>
+

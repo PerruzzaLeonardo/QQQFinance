@@ -7,7 +7,11 @@
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" href="#segnalazione">Segnala Utente</button></h2> 
     </div>
     <div class="col-md-4 offset-md-1 ">
+    <%if @user.pubblico=="si"%>
         <canvas id="myChart"></canvas>     
+    <%else%>
+        <h1>Il wallet di questo utente è privato</h1>
+    <%end%>
     </div>
 </div>
 

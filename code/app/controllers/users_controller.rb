@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @user = User.find(params[:id])
+    if @user.immagine==nil
+      @user.immagine="profilo"
+    end
     @azioni=Wallet.where(user:@user.username)
     @nome=Array.new
     @quantita=Array.new
@@ -27,7 +30,6 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-
     if @user.id != current_user.id
       redirect_to users_path, alert: "Non puoi modificare questo profilo"
     end
@@ -79,6 +81,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:nome, :cognome, :email, :username, :pubblico, :commento)
+      params.require(:user).permit(:nome, :cognome, :email, :username, :pubblico, :commento,:immagine)
     end
 end

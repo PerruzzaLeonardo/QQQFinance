@@ -1,0 +1,11 @@
+<h4><p>Lascia un commento</p></h4>
+<%= form_with(model: @commento) do |form| %>
+    <div class="row m-2">
+        <%= form.hidden_field :user_id, value: current_user.id %>
+        <%= form.hidden_field :azione_id, value: @azione.id %>
+        <%= form.text_area :commento, size: "70x5" %>
+        <div class="m-2">
+            <%= form.submit %>
+        </div>
+    </div>
+<%end%>
