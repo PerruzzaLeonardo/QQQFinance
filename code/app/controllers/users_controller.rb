@@ -12,6 +12,9 @@ class UsersController < ApplicationController
     if @user.immagine==nil
       @user.immagine="profilo"
     end
+    if(current_user==@user)
+      redirect_to "/users"
+    end
     @azioni=Wallet.where(user:@user.username)
     @nome=Array.new
     @quantita=Array.new
@@ -31,7 +34,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     if @user.id != current_user.id
-      redirect_to users_path, alert: "Non puoi modificare questo profilo"
+      redirect_to users_path, alert: "Non puoi modificare il profilo di un altro utente"
     end
   end
 
