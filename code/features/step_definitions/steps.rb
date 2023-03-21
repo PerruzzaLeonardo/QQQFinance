@@ -1,15 +1,15 @@
 Given("i am a registered user") do
-    @user=create(:user)
+    @user = create(:user)
     visit "users/sign_in"
-    fill_in "loginemail" :with=>@user.email
-    fill_in "loginpassword" :with=>@user.password
+    fill_in "email", with: @user.email
+    fill_in "password", with: @user.password
     click_button 'login'
-end
+  end  
 
 Given ("i am logged in") do
     visit "users/sign_in"
-    fill_in "loginemail" :with=>@user.email
-    fill_in "loginpassword" :with=>@user.password
+    fill_in "email", with: @user.email
+    fill_in "password", with: @user.password
     click_button 'login'
 end
 
