@@ -11,208 +11,63 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
     </head>
   <body>
-    <%=render "/header"%>
+    <%=render "/header"%> 
     <p>
-      <form action="/screener/aggiorna" method='post'>
-      <div class="row">
-        <div class="col px-4">
-          Paese
-          <select class="form-select" name="paesescelto" id="PaeseScelto" aria-label="PaeseScelto">
-            <option selected value="Qualsiasi">Qualsiasi</option>
-            <option value="Australia">Australia</option>
-            <option value="Canada">Canada</option>
-            <option value="China">China</option>
-            <option value="Netherlands">Netherlands</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <option value="United States">United States</option>
-            <option value="Uruguay">Uruguay</option>
-          </select>
-        </div>
-        <div class="col">
-          <label for="prezzomin" class="form-label">Prezzo minimo</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="prezzomin" id="PrezzoMin">
-          </div>
-          <label for="prezzomax" class="form-label">Prezzo massimo</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="prezzomax" id="PrezzoMax">
-          </div>
-        </div>
-        <div class="col">
-          <label for="marketcapmin" class="form-label">Marketcap minimo</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="marketcapmin" id="MarketcapMin">
-          </div>
-          <label for="marketcapmax" class="form-label">Marketcap massimo</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="marketcapmax" id="MarketcapMax">
-          </div>
-        </div>
-        <div class="col">
-          Settore
-          <select class="form-select" nome="settorescelto" id="SettoreScelto" aria-label="Default select example">
-            <option selected value="Qualsiasi">Qualsiasi</option>
-            <option value="Communication services">Communication services</option>
-            <option value="Consumer cyclical">Consumer cyclical</option>
-            <option value="Consumer defensive">Consumer defensive</option>
-            <option value="Energy">Energy</option>
-            <option value="Healthcare">Healthcare</option>
-            <option value="Industrials">Industrials</option>
-            <option value="Real estate">Real estate</option>
-            <option value="Techonology">Techonology</option>
-          </select>
-        </div>
-        <div class="col">
-          <label for="volumemin" class="form-label">Volume minimo</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" nome="volumemin" id="VolumeMin" aria-label="VolumeMin">
-          </div>
-          <label for="volumemax" class="form-label">Volume massimo</label>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" nome="volumemax" id="VolumeMax" aria-label="VolumeMax">
-          </div>
-        </div>
-        <div class="col">
-          <label for="ebitdamin" class="form-label">EBITDA min</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="ebitdamin" id="EbitdaMin">
-          </div>
-          <label for="ebitdamax" class="form-label">EBITDA max</label>
-          <div class="input-group mb-3">
-            <span class="input-group-text">€</span>
-            <input type="text" class="form-control" nome="ebitdamax" id="EbitdaMax">
-          </div>
-        </div>
-        <div class="col px-4">
-          <label for="roemin" class="form-label">ROE min</label>
-          <input type="text" class="form-control" nome="roemin" id="RoeMin" aria-label="RoeMin">
-          <label for="roemax" class="form-label">ROE max</label>
-          <input type="text" class="form-control" nome="roemax" id="RoeMax" aria-label="RoeMax">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col px-4">
-          <label for="roamin" class="form-label">ROA min</label>
-          <input type="text" class="form-control" nome="roamin" id="RoaMin" aria-label="RoaMin">
-          <label for="roamax" class="form-label">ROA max</label>
-          <input type="text" class="form-control" nome="roamax" id="RoaMax" aria-label="RoaMax">
-        </div>
-        <div class="col">
-          <label for="pemin" class="form-label">PE min</label>
-          <input type="text" class="form-control" nome="pemin" id="PeMin" aria-label="PeMin">
-          <label for="pemax" class="form-label">PE max</label>
-          <input type="text" class="form-control" nome="pemax" id="PeMax" aria-label="PeMax">
-        </div>
-        <div class="col">
-          <label for="psmin" class="form-label">PS min</label>
-          <input type="text" class="form-control" nome="psmin" id="PsMin" aria-label="PsMin">
-          <label for="psmax" class="form-label">PS max</label>
-          <input type="text" class="form-control" nome="psmax" id="PsMax" aria-label="PsMax">
-        </div>
-        <div class="col">
-          <label for="pbmin" class="form-label">PB min</label>
-          <input type="text" class="form-control" nome="pbmin" id="PbMin" aria-label="PbMin">
-          <label for="pbmax" class="form-label">PB max</label>
-          <input type="text" class="form-control" nome="pbmax" id="PbMax" aria-label="PbMax">
-        </div>
-        <div class="col">
-          <label for="dymin" class="form-label">Div Yield min</label>
-          <input type="text" class="form-control" nome="dymin" id="DyMin" aria-label="DyMin">
-          <label for="dymax" class="form-label">Div Yield max</label>
-          <input type="text" class="form-control" nome="dymax" id="DyMax" aria-label="DyMax">
-        </div>
-        <div class="col">
-          <label for="demin" class="form-label">Debt Eq min</label>
-          <input type="text" class="form-control" nome="demin" id="DeMin" aria-label="DeMin">
-          <label for="demax" class="form-label">Debt Eq max</label>
-          <input type="text" class="form-control" nome="demax" id="DeMax" aria-label="DeMax">
-        </div>
-        <div class="col px-4">
-          <label for="opmmin" class="form-label">OP Margin min</label>
-          <input type="text" class="form-control" nome="opmmin" id="OpMMin" aria-label="OpMMin">
-          <label for="opmmax" class="form-label">OP Margin max</label>
-          <input type="text" class="form-control" nome="opmmax" id="OPMMax" aria-label="OpMMax">
-        </div>
-      </div>
-      <div class="d-grid gap-4 d-md-flex justify-content-md-center">
-        <button class="btn btn-outline-primary" type="submit">Aggiorna lista</button>
-      </div>
+      <%= render "filtri" %>
     </p>
-    </form>
+    <p> 
+      <%= render "aggiungi" %>
+    </p>
     <p>
-      <form action="/screener/aggiungi" method='post'>
-      <div class="row">
-        <div class="col-4 px-4">
-          <h2>Aggiungi al wallet:</h2>
-        </div>
-        <div class="col-4">
-          <input list="brow" class="form-control me-2" type="search" name="isin" id="isin"placeholder="Ricerca ISIN" aria-label="Cerca" required>
-          <datalist id="brow">
-            <% @aggiunta.each do |i|%>
-              <option value=<%= i.isin %>>
-            <% end %>
-          </datalist>
-        </div>
-        <div class="col-2">
-          <input name='quantita' id='quantita' type='number' min='1' placeholder="Quantità" class='form-control' required>
-        </div>
-        <div class="col-2">
-          <button type="submit" class="btn btn-primary">Aggiungi</button>
-        </div>
-      </div>
-    </div>
-    </form>
-    </p>  
-    <h1>Azioni</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Nome</th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Codice identificativo">ISIN</a></th>
-          <th scope="col">Paese</th>
-          <th scope="col">Prezzo(€)</th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato">Marketcap(€)</a></th>
-          <th scope="col">Settore</th>
-          <th scope="col">Volume</th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization">EBITDA(€)</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Return On Equity">ROE</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Return On Asset">ROA</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio">PE</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio">PS</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio">PB</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo">Div Yield</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale">Debt Eq</a></th>
-          <th scope="col"><a href="#" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo">Op Margin</a></th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @soluzione.each do |sol| %>
-          <tr>
-            <th scope="row"><%= sol.nome =%></th>
-            <td><li><%= link_to sol.isin, sol %></li></td>
-            <td><%= sol.paese %></td>
-            <td><%= sol.prezzo.round(2) %></td>
-            <td><%= sol.marketcap.round(2) %></td>
-            <td><%= sol.settore %></td>
-            <td><%= sol.volume.round(2) %></td>
-            <td><%= sol.ebitda.round(2) %></td>
-            <td><%= sol.roe.round(2) %></td>
-            <td><%= sol.roa.round(2) %></td>
-            <td><%= sol.pe.round(2) %></td>
-            <td><%= sol.ps.round(2) %></td>
-            <td><%= sol.pb.round(2) %></td>
-            <td><%= sol.divyield.round(2) %></td>
-            <td><%= sol.debteq.round(2) %></td>
-            <td><%= sol.opmargin.round(2) %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+      <%= render "azioni" %>
+    </p>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".clickable");
+  const sortingState = {};
+
+  headers.forEach(header => {
+    sortingState[header.id] = { direction: "desc", lastSorted: null };
+
+    header.addEventListener("click", () => {
+      const table = document.querySelector("#tab");
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      const index = Array.from(header.parentNode.children).indexOf(header);
+      const { direction, lastSorted } = sortingState[header.id];
+
+      let newDirection = direction === "desc" ? "asc" : "desc";
+      if (lastSorted !== null && index !== lastSorted) {
+        newDirection = "desc";
+      }
+
+      sortingState[header.id] = { direction: newDirection, lastSorted: index };
+      header.dataset.direction = newDirection;
+
+      const sortedRows = rows.sort((a, b) => {
+        const aCol = a.querySelectorAll("td")[index].textContent;
+        const bCol = b.querySelectorAll("td")[index].textContent;
+        if (!isNaN(aCol) && !isNaN(bCol)) {
+          return parseInt(aCol, 10) - parseInt(bCol, 10);
+        }
+        return aCol.localeCompare(bCol);
+      });
+
+      if (newDirection === "asc") {
+        sortedRows.reverse();
+      }
+
+      tbody.innerHTML = "";
+      sortedRows.forEach(row => {
+        tbody.appendChild(row);
+      });
+    });
+  });
+});
+
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
   <script>
