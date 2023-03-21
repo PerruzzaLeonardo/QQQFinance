@@ -1,134 +1,255 @@
 class ScreenerController < ApplicationController
+    helper_method :sort_column, :sort_direction
+    
     def index
-        @risultati = Azione.all
         @aggiunta = Azione.all
         @soluzione = Azione.all
 
-    end
+        @paese_scelto = params[:paesescelto]
+        if @paese_scelto != "Qualsiasi" && @paese_scelto != nil
+            @soluzione = @soluzione.where(paese: @paese_scelto)
+        end
+        
+        @prezzo_min = params[:prezzomin]
+        @prezzo_max = params[:prezzomax]
+        if @prezzo_min != "" && @prezzo_min != nil
+            @soluzione = @soluzione.where("prezzo >= ?", @prezzo_min.to_f)
+        end
+        if @prezzo_max != "" && @prezzo_max != nil
+            @soluzione = @soluzione.where("prezzo <= ?", @prezzo_max.to_f)
+        end
 
-    def new
-        @screener = Screener.new
-    end
+        @marketcap_min = params[:marketcapmin]
+        @marketcap_max = params[:marketcapmax]
+        if @marketcap_min != "" && @marketcap_min != nil
+            @soluzione = @soluzione.where("marketcap >= ?", @marketcap_min.to_f)
+        end
+        if @marketcap_max != "" && @marketcap_max != nil
+            @soluzione = @soluzione.where("marketcap <= ?", @marketcap_max.to_f)
+        end
+        
+        
+        @settore_scelto = params[:settorescelto]
+        if @settore_scelto != "Qualsiasi" && @settore_scelto != nil
+            @soluzione = @soluzione.where(settore: @settore_scelto)
+        end
 
-    def create
-        @screener = Screener.new(screener_params)
-        if @screener.save
-            redirect_to root_path
-        else
-            render :new
+        @volume_min = params[:volumemin]
+        @volume_max = params[:volumemax]
+        if @volume_min != "" && @volume_min != nil
+            @soluzione = @soluzione.where("volume >= ?", @volume_min.to_f)
+        end
+        if @volume_max != "" && @volume_max != nil
+            @soluzione = @soluzione.where("volume <= ?", @volume_max.to_f)
+        end
+        
+        @ebitda_min = params[:ebitdamin]
+        @ebitda_max = params[:ebitdamax]
+        if @ebitda_min != "" && @ebitda_min != nil
+            @soluzione = @soluzione.where("ebitda >= ?", @ebitda_min.to_f)
+        end
+        if @ebitda_max != "" && @ebitda_max != nil
+            @soluzione = @soluzione.where("ebitda <= ?", @ebitda_max.to_f)
+        end
+        
+        @roe_min = params[:roemin]
+        @roe_max = params[:roemax]
+        if @roe_min != "" && @roe_min != nil
+            @soluzione = @soluzione.where("roe >= ?", @roe_min.to_f)
+        end
+        if @roe_max != "" && @roe_max != nil
+            @soluzione = @soluzione.where("roe <= ?", @roe_max.to_f)
+        end
+        
+        @roa_min = params[:roamin]
+        @roa_max = params[:roamax]
+        if @roa_min != "" && @roa_min != nil
+            @soluzione = @soluzione.where("roa >= ?", @roa_min.to_f)
+        end
+        if @roa_max != "" && @roa_max != nil
+            @soluzione = @soluzione.where("roa <= ?", @roa_max.to_f)
+        end
+        
+        @pe_min = params[:pemin]
+        @pe_max = params[:pemax]
+        if @pe_min != "" && @pe_min != nil
+            @soluzione = @soluzione.where("pe >= ?", @pe_min.to_f)
+        end
+        if @pe_max != "" && @pe_max != nil
+            @soluzione = @soluzione.where("pe <= ?", @pe_max.to_f)
+        end
+        
+        @ps_min = params[:psmin]
+        @ps_max = params[:psmax]
+        if @ps_min != "" && @ps_min != nil
+            @soluzione = @soluzione.where("ps >= ?", @ps_min.to_f)
+        end
+        if @ps_max != "" && @ps_max != nil
+            @soluzione = @soluzione.where("ps <= ?", @ps_max.to_f)
+        end
+        
+        @pb_min = params[:pbmin]
+        @pb_max = params[:pbmax]
+        if @pb_min != "" && @pb_min != nil
+            @soluzione = @soluzione.where("pb >= ?", @pb_min.to_f)
+        end
+        if @pb_max != "" && @pb_max != nil
+            @soluzione = @soluzione.where("pb <= ?", @pb_max.to_f)
+        end
+        
+        @dy_min = params[:dymin]
+        @dy_max = params[:dymax]
+        if @dy_min != "" && @dy_min != nil
+            @soluzione = @soluzione.where("divyield >= ?", @dy_min.to_f)
+        end
+        if @dy_max != "" && @dy_max != nil
+            @soluzione = @soluzione.where("divyield <= ?", @dy_max.to_f)
+        end
+        
+        @de_min = params[:demin]
+        @de_max = params[:demax]
+        if @de_min != "" && @de_min != nil
+            @soluzione = @soluzione.where("debteq >= ?", @de_min.to_f)
+        end
+        if @de_max != "" && @de_max != nil
+            @soluzione = @soluzione.where("debteq <= ?", @de_max.to_f)
+        end
+        
+        @opm_min = params[:opmmin]
+        @opm_max = params[:opmmax]
+        if @opm_min != "" && @opm_min != nil
+            @soluzione = @soluzione.where("opmargin >= ?", @opm_min.to_f)
+        end
+        if @opm_max != "" && @opm_max != nil
+            @soluzione = @soluzione.where("opmargin <= ?", @opm_max.to_f)
         end
     end
     
     def aggiorna
-        @paese_scelto = params[:paesescelto]
+        @soluzione = Azione.all
+        @aggiunta = Azione.all
 
+        paese_scelto = params[:paesescelto]
+        if paese_scelto != "Qualsiasi" && paese_scelto != nil
+            @soluzione = @soluzione.where(paese: paese_scelto)
+        end
+        
         @prezzo_min = params[:prezzomin]
         @prezzo_max = params[:prezzomax]
-        if @prezzo_min == nil
-            @prezzo_min = 0
+        if @prezzo_min != "" && @prezzo_min != nil
+            @soluzione = @soluzione.where("prezzo >= ?", @prezzo_min.to_f)
         end
-        if @prezzo_max == nil
-            @prezzo_max = 100000000000
-        end
-        @marketcap_min = params[:marketcapmin]
-        @marketcap_max = params[:marketcapmax]
-        if @marketcap_min == nil
-            @marketcap_min = 0
-        end
-        if @marketcap_max == nil
-            @marketcap_max = 100000000000
-        end
-        @settore_scelto = params[:settorescelto]
-        @volume_min = params[:volumemin]
-        @volume_max = params[:volumemax]
-        if @volume_min == nil
-            @volume_min = 0
-        end
-        if @volume_max == nil
-            @volume_max = 100000000000
-        end
-        @ebitda_min = params[:ebitdamin]
-        @ebitda_max = params[:ebitdamax]
-        if @ebitda_min == nil
-            @ebitda_min = 0
-        end
-        if @ebitda_max == nil
-            @ebitda_max = 100000000000
-        end
-        @roe_min = params[:roemin]
-        @roe_max = params[:roemax]
-        if @roe_min == nil
-            @roe_min = -10000000000
-        end
-        if @roe_max == nil
-            @roe_max = 100000000000
-        end
-        @roa_min = params[:roamin]
-        @roa_max = params[:roamax]
-        if @roa_min == nil
-            @roa_min = -10000000000
-        end
-        if @roa_max == nil
-            @roa_max = 100000000000
-        end
-        @pe_min = params[:pemin]
-        @pe_max = params[:pemax]
-        if @pe_min == nil
-            @pe_min = 0
-        end
-        if @pe_max == nil
-            @pe_max = 100000000000
-        end
-        @ps_min = params[:psmin]
-        @ps_max = params[:psmax]
-        if @ps_min == nil
-            @ps_min = 0
-        end
-        if @ps_max == nil
-            @ps_max = 100000000000
-        end
-        @pb_min = params[:pbmin]
-        @pb_max = params[:pbmax]
-        if @pb_min == nil
-            @pb_min = 0
-        end
-        if @pb_max == nil
-            @pb_max = 100000000000
-        end
-        @dy_min = params[:dymin]
-        @dy_max = params[:dymax]
-        if @dy_min == nil
-            @dy_min = 0
-        end
-        if @dy_max == nil
-            @dy_max = 100000000000
-        end
-        @de_min = params[:demin]
-        @de_max = params[:demax]
-        if @de_min == nil
-            @de_min = 0
-        end
-        if @de_max == nil
-            @de_max = 100000000000
-        end
-        @opm_min = params[:opmmin]
-        @opm_max = params[:opmmax]
-        if @opm_min == nil
-            @opm_min = 0
-        end
-        if @opm_max == nil
-            @opm_max = 100000000000
-        end
-        @screener = Screener.new(screener_params)
-        if @screener.aggiorna
-            respond_to do |format|
-                format.html{redirect_to '/screener', notice: "Screener was successfully updated"}
-            end
+        if @prezzo_max != "" && @prezzo_max != nil
+            @soluzione = @soluzione.where("prezzo <= ?", @prezzo_max.to_f)
         end
 
-        @soluzione=Azione.where(paese: @paese_scelto)
+        @marketcap_min = params[:marketcapmin]
+        @marketcap_max = params[:marketcapmax]
+        if @marketcap_min != "" && @marketcap_min != nil
+            @soluzione = @soluzione.where("marketcap >= ?", @marketcap_min.to_f)
+        end
+        if @marketcap_max != "" && @marketcap_max != nil
+            @soluzione = @soluzione.where("marketcap <= ?", @marketcap_max.to_f)
+        end
+        
+        
+        @settore_scelto = params[:settorescelto]
+        if @settore_scelto != "Qualsiasi" && @settore_scelto != nil
+            @soluzione = @soluzione.where(settore: @settore_scelto)
+        end
+
+        @volume_min = params[:volumemin]
+        @volume_max = params[:volumemax]
+        if @volume_min != "" && @volume_min != nil
+            @soluzione = @soluzione.where("volume >= ?", @volume_min.to_f)
+        end
+        if @volume_max != "" && @volume_max != nil
+            @soluzione = @soluzione.where("volume <= ?", @volume_max.to_f)
+        end
+        
+        @ebitda_min = params[:ebitdamin]
+        @ebitda_max = params[:ebitdamax]
+        if @ebitda_min != "" && @ebitda_min != nil
+            @soluzione = @soluzione.where("ebitda >= ?", @ebitda_min.to_f)
+        end
+        if @ebitda_max != "" && @ebitda_max != nil
+            @soluzione = @soluzione.where("ebitda <= ?", @ebitda_max.to_f)
+        end
+        
+        @roe_min = params[:roemin]
+        @roe_max = params[:roemax]
+        if @roe_min != "" && @roe_min != nil
+            @soluzione = @soluzione.where("roe >= ?", @roe_min.to_f)
+        end
+        if @roe_max != "" && @roe_max != nil
+            @soluzione = @soluzione.where("roe <= ?", @roe_max.to_f)
+        end
+        
+        @roa_min = params[:roamin]
+        @roa_max = params[:roamax]
+        if @roa_min != "" && @roa_min != nil
+            @soluzione = @soluzione.where("roa >= ?", @roa_min.to_f)
+        end
+        if @roa_max != "" && @roa_max != nil
+            @soluzione = @soluzione.where("roa <= ?", @roa_max.to_f)
+        end
+        
+        @pe_min = params[:pemin]
+        @pe_max = params[:pemax]
+        if @pe_min != "" && @pe_min != nil
+            @soluzione = @soluzione.where("pe >= ?", @pe_min.to_f)
+        end
+        if @pe_max != "" && @pe_max != nil
+            @soluzione = @soluzione.where("pe <= ?", @pe_max.to_f)
+        end
+        
+        @ps_min = params[:psmin]
+        @ps_max = params[:psmax]
+        if @ps_min != "" && @ps_min != nil
+            @soluzione = @soluzione.where("ps >= ?", @ps_min.to_f)
+        end
+        if @ps_max != "" && @ps_max != nil
+            @soluzione = @soluzione.where("ps <= ?", @ps_max.to_f)
+        end
+        
+        @pb_min = params[:pbmin]
+        @pb_max = params[:pbmax]
+        if @pb_min != "" && @pb_min != nil
+            @soluzione = @soluzione.where("pb >= ?", @pb_min.to_f)
+        end
+        if @pb_max != "" && @pb_max != nil
+            @soluzione = @soluzione.where("pb <= ?", @pb_max.to_f)
+        end
+        
+        @dy_min = params[:dymin]
+        @dy_max = params[:dymax]
+        if @dy_min != "" && @dy_min != nil
+            @soluzione = @soluzione.where("divyield >= ?", @dy_min.to_f)
+        end
+        if @dy_max != "" && @dy_max != nil
+            @soluzione = @soluzione.where("divyield <= ?", @dy_max.to_f)
+        end
+        
+        @de_min = params[:demin]
+        @de_max = params[:demax]
+        if @de_min != "" && @de_min != nil
+            @soluzione = @soluzione.where("debteq >= ?", @de_min.to_f)
+        end
+        if @de_max != "" && @de_max != nil
+            @soluzione = @soluzione.where("debteq <= ?", @de_max.to_f)
+        end
+        
+        @opm_min = params[:opmmin]
+        @opm_max = params[:opmmax]
+        if @opm_min != "" && @opm_min != nil
+            @soluzione = @soluzione.where("opmargin >= ?", @opm_min.to_f)
+        end
+        if @opm_max != "" && @opm_max != nil
+            @soluzione = @soluzione.where("opmargin <= ?", @opm_max.to_f)
+        end
+       
         #redirect_to request.referer || root_path
-       #@risultati = Azione.where(@paese_scelto in [Azione.paese, "Qualsiasi"], @prezzo.in @prezzo_min.to_i..@prezzo_max.to_i, marketcap: @marketcap_min.to_i..@marketcap_max.to_i, settore: [@settore_scelto, "Qualsiasi"], volume: @volume_min.to_i..@volume_max.to_i, ebitda: @ebitda_min.to_i..@ebitda_max.to_i, roe: @roe_min.to_i..@roe_max.to_i, roa: @roa_min.to_i..@roa_max.to_i, pe: @pe_min.to_i..@pe_max.to_i, ps: @ps_min.to_i..@ps_max.to_i, pb: @pb_min.to_i..@pb_max.to_i, divyield: @dy_min.to_i..@dy_max.to_i, debteq: @de_min.to_i..@de_max.to_i, opmargin: @opm_min.to_i..@opm_max.to_i)
+        
     end
 
     def aggiungi
@@ -153,8 +274,18 @@ class ScreenerController < ApplicationController
     
         redirect_to '/wallet'
     end
+
+    def sort_column
+        Product.column_names.include?(params[:sort]) ? params[:sort] : "name"
+      end
+      
+      def sort_direction
+        %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+      end
+
     private
         def screener_params
-            params.require(:screener).permit(:paesescelto)#, :prezzomin, :prezzomax, :marketcapmin, :marketcapmax, :settorescelto, :volumemin, :volumemax, :ebitdamin, :ebitdamax, :roemin, :roemax, :roamin, :roamax, :pemin, :pemax, :psmin, :psmax, :pbmin, :pbmax, :dymin, :dymax, :demin, :demax, :opmmin, :opmmax)
+            params.require(:screener).permit(:paesescelto, :prezzomin, :prezzomax, :marketcapmin, :marketcapmax, :settorescelto, :volumemin, :volumemax, :ebitdamin, :ebitdamax, :roemin, :roemax, :roamin, :roamax, :pemin, :pemax, :psmin, :psmax, :pbmin, :pbmax, :dymin, :dymax, :demin, :demax, :opmmin, :opmmax)
         end
+
 end

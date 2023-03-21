@@ -1,0 +1,130 @@
+<form action="/screener/aggiorna" method="post">
+  <div class="row">
+    <div class="col px-4">
+      Paese
+      <select class="form-select" name="paesescelto" id="PaeseScelto" aria-label="PaeseScelto">
+        <option selected value='Qualsiasi'>Qualsiasi</option>
+        <option value='Australia'>Australia</option>
+        <option value='Canada'>Canada</option>
+        <option value='China'>China</option>
+        <option value='Netherlands'>Netherlands</option>
+        <option value='United Kingdom'>United Kingdom</option>
+        <option value='United States'>United States</option>
+        <option value='Uruguay'>Uruguay</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="prezzomin" class="form-label">Prezzo minimo</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="prezzomin" id="PrezzoMin">
+      </div>
+      <label for="prezzomax" class="form-label">Prezzo massimo</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="prezzomax" id="PrezzoMax">
+      </div>
+    </div>
+    <div class="col">
+      <label for="marketcapmin" class="form-label">Marketcap minimo</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="marketcapmin" id="MarketcapMin">
+      </div>
+      <label for="marketcapmax" class="form-label">Marketcap massimo</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="marketcapmax" id="MarketcapMax">
+      </div>
+    </div>
+    <div class="col">
+      Settore
+      <select class="form-select" name="settorescelto" id="SettoreScelto" aria-label="Default select example">
+        <option selected value="Qualsiasi">Qualsiasi</option>
+        <option value="Communication services">Communication services</option>
+        <option value="Consumer cyclical">Consumer cyclical</option>
+        <option value="Consumer defensive">Consumer defensive</option>
+        <option value="Energy">Energy</option>
+        <option value="Healthcare">Healthcare</option>
+        <option value="Industrials">Industrials</option>
+        <option value="Real estate">Real estate</option>
+        <option value="Techonology">Techonology</option>
+      </select>
+    </div>
+    <div class="col">
+      <label for="volumemin" class="form-label">Volume minimo</label>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" name="volumemin" id="VolumeMin" aria-label="VolumeMin">
+      </div>
+      <label for="volumemax" class="form-label">Volume massimo</label>
+      <div class="input-group mb-3">
+        <input type="number" class="form-control" name="volumemax" id="VolumeMax" aria-label="VolumeMax">
+      </div>
+    </div>
+    <div class="col">
+      <label for="ebitdamin" class="form-label">EBITDA min</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="ebitdamin" id="EbitdaMin">
+      </div>
+      <label for="ebitdamax" class="form-label">EBITDA max</label>
+      <div class="input-group mb-3">
+        <span class="input-group-text">€</span>
+        <input type="number" class="form-control" name="ebitdamax" id="EbitdaMax">
+      </div>
+    </div>
+    <div class="col px-4">
+      <label for="roemin" class="form-label">ROE min</label>
+      <input type="number" class="form-control" name="roemin" id="RoeMin" aria-label="RoeMin">
+      <label for="roemax" class="form-label">ROE max</label>
+      <input type="number" class="form-control" name="roemax" id="RoeMax" aria-label="RoeMax">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col px-4">
+      <label for="roamin" class="form-label">ROA min</label>
+      <input type="number" class="form-control" name="roamin" id="RoaMin" aria-label="RoaMin">
+      <label for="roamax" class="form-label">ROA max</label>
+      <input type="number" class="form-control" name="roamax" id="RoaMax" aria-label="RoaMax">
+    </div>
+    <div class="col">
+      <label for="pemin" class="form-label">PE min</label>
+      <input type="number" class="form-control" name="pemin" id="PeMin" aria-label="PeMin">
+      <label for="pemax" class="form-label">PE max</label>
+      <input type="number" class="form-control" name="pemax" id="PeMax" aria-label="PeMax">
+    </div>
+    <div class="col">
+      <label for="psmin" class="form-label">PS min</label>
+      <input type="number" class="form-control" name="psmin" id="PsMin" aria-label="PsMin">
+      <label for="psmax" class="form-label">PS max</label>
+      <input type="number" class="form-control" name="psmax" id="PsMax" aria-label="PsMax">
+    </div>
+    <div class="col">
+      <label for="pbmin" class="form-label">PB min</label>
+      <input type="number" class="form-control" name="pbmin" id="PbMin" aria-label="PbMin">
+      <label for="pbmax" class="form-label">PB max</label>
+      <input type="number" class="form-control" name="pbmax" id="PbMax" aria-label="PbMax">
+    </div>
+    <div class="col">
+      <label for="dymin" class="form-label">Div Yield min</label>
+      <input type="number" class="form-control" name="dymin" id="DyMin" aria-label="DyMin">
+      <label for="dymax" class="form-label">Div Yield max</label>
+      <input type="number" class="form-control" name="dymax" id="DyMax" aria-label="DyMax">
+    </div>
+    <div class="col">
+      <label for="demin" class="form-label">Debt Eq min</label>
+      <input type="number" class="form-control" name="demin" id="DeMin" aria-label="DeMin">
+      <label for="demax" class="form-label">Debt Eq max</label>
+      <input type="number" class="form-control" name="demax" id="DeMax" aria-label="DeMax">
+    </div>
+    <div class="col px-4">
+      <label for="opmmin" class="form-label">OP Margin min</label>
+      <input type="number" class="form-control" name="opmmin" id="OpMMin" aria-label="OpMMin">
+      <label for="opmmax" class="form-label">OP Margin max</label>
+      <input type="number" class="form-control" name="opmmax" id="OPMMax" aria-label="OpMMax">
+    </div>
+  </div>
+  <div class="d-grid gap-4 d-md-flex justify-content-md-center">
+    <button class="btn btn-outline-primary" type="submit">Aggiorna lista</button>
+  </div>
+</form>
