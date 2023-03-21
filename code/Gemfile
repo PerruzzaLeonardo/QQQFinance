@@ -70,6 +70,8 @@ group :development, :test do
   gem 'cucumber-rails-training-wheels'
   gem 'capybara'
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -85,13 +87,10 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
   
  group :test do
-  gem 'cucumber-rails', require: false
   # database_cleaner is not mandatory, but highly recommended
-  gem 'database_cleaner'
 end
 end
