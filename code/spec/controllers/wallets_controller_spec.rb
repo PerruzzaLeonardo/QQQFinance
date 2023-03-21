@@ -16,4 +16,3 @@ RSpec.describe WalletsController, type: :controller do
     end
   end
 end
-

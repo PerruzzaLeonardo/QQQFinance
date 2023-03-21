@@ -9,7 +9,6 @@ class User < ApplicationRecord
     validates :nome,length: { minimum: 2 }
     validates :nome, :email, presence: true 
     validates :username, presence: true,uniqueness: {case_sensitive: true}
-    #validates :immagine, presence: true
 
  
      
