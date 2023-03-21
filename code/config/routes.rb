@@ -15,7 +15,7 @@ Rails.application.routes.draw do
     delete 'rimozione', on: :collection
     delete 'elimina',on: :collection
   end
-
+  #resources :screener
   resources :users
   resources :azione
   resources :news
@@ -46,13 +46,9 @@ Rails.application.routes.draw do
 
   post '/index/cerca',to: 'index#cerca'
 
-  post '/screener/aggiungi', to: 'screener#aggiungi'
-  post '/screener/aggiorna', to: 'screener#aggiorna'
-  get '/screener/aggiorna', to: 'screener#aggiorna'
-  post '/screener/index', to:'screener#index'
-
+ 
   get '/screener/risultato', to: 'screener#risultato'
-  post '/screener/risultato', to: 'screener#risultato'
+  post '/screener', to: 'screener#index'
 
 
 end

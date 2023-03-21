@@ -1,47 +1,48 @@
 <h1>Azioni</h1>
-<table class="table-responsive">
-  <thead>
-    <tr>
-      <th scope="col" class="clickable">Nome</th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Codice identificativo">ISIN</a></th>
-      <th scope="col" class="clickable">Paese</th>
-      <th scope="col" class="clickable">Prezzo(€)</th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato">Marketcap(€)</a></th>
-      <th scope="col" class="clickable">Settore</th>
-      <th scope="col" class="clickable">Volume</th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization">EBITDA(€)</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Return On Equity">ROE</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Return On Asset">ROA</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio">PE</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio">PS</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio">PB</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo">Div Yield</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale">Debt Eq</a></th>
-      <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo">Op Margin</a></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @soluzione.each do |sol| %>
+<div class=" table-responsive">
+  <table name="portafoglio" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
       <tr>
-        <th scope="row"><%= sol.nome %></th>
-        <td><li><%= link_to sol.isin, sol %></li></td>
-        <td><%= sol.paese %></td>
-        <td><%= sol.prezzo.round(2) %></td>
-        <td><%= sol.marketcap.round(2) %></td>
-        <td><%= sol.settore %></td>
-        <td><%= sol.volume.round(2) %></td>
-        <td><%= sol.ebitda.round(2) %></td>
-        <td><%= sol.roe.round(2) %></td>
-        <td><%= sol.roa.round(2) %></td>
-        <td><%= sol.pe.round(2) %></td>
-        <td><%= sol.ps.round(2) %></td>
-        <td><%= sol.pb.round(2) %></td>
-        <td><%= sol.divyield.round(2) %></td>
-        <td><%= sol.debteq.round(2) %></td>
-        <td><%= sol.opmargin.round(2) %></td>
+        <th scope="col" class="clickable">Nome</th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Codice identificativo">ISIN</a></th>
+        <th scope="col" class="clickable">Paese</th>
+        <th scope="col" class="clickable">Prezzo(€)</th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato">Marketcap(€)</a></th>
+        <th scope="col" class="clickable">Settore</th>
+        <th scope="col" class="clickable">Volume</th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization">EBITDA(€)</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Return On Equity">ROE</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Return On Asset">ROA</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio">PE</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio">PS</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio">PB</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo">Div Yield</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale">Debt Eq</a></th>
+        <th scope="col" class="clickable"><a href="" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo">Op Margin</a></th>
       </tr>
-      <%=puts sol.nome%>
-    <% end %>
-    
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+      
+    </tbody>
+  </table>
+</div>
