@@ -33,11 +33,7 @@
     <nav class="navbar navbar-dark bg-primary ">     
         <div class="row ps-3">
             <a class='link-light col-3 ps-3 nav-link' href="/">Home</a>
-            <% if current_user %>
                 <a class='link-light col-3 ps-3 nav-link' href="/wallet">Wallet</a>
-            <% else %> 
-                <a class='link-light col-3 ps-3 nav-link disabled' href="/wallet">Wallet</a>
-            <% end %> 
             <a class='link-light col-3 ps-3 nav-link' href="/screener" >Screener</a>
             <a class='link-light col-3 ps-4 nav-link' disabled href="/news" >Notizie</a>
         </div> 

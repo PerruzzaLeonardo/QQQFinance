@@ -38,17 +38,14 @@
     </div>
     <div class="d-grid gap-4 d-md-flex justify-content-md-center">
       <a href="../screener" class="btn btn-primary" role="button" data-bs-toggle="button">Screener</a>
-      <% if current_user %>
         <a href="../wallet" class="btn btn-primary" role="button" data-bs-toggle="button">Wallet</a>
-      <% else %>
-        <a class="btn btn-primary disabled" aria-disabled="true" role="button" data-bs-toggle="button">Wallet</a>
-      <% end %>    
+ 
     </div>
     <div class="position-relative m-4 d-grid gap-2 d-md-flex justify-content-md-center">
      <% if !current_user %>
-      <button type="button" class="btn btn-primary btn-lg" href="/users/sign_in">Login</button>
+      <a class="btn btn-primary btn-lg" role="button" href="/users/sign_in">Login</a>
       <%else%>
-      <button type="button" class="btn btn-primary btn-lg" href='/users/sign_out'>Logout</button> 
+      <a class="btn btn-primary btn-lg" role="button" href="users/sign_out">Logout</a> 
       <%end%>
     </div>
     <br><br><br><br><br><br><br><br><br><br>
