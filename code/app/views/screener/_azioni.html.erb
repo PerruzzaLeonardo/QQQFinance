@@ -3,22 +3,22 @@
   <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
     <thead>
       <tr>
-        <th scope="col"><%= link_to "Nome", order_by: "nome", direction: (@soluzione.order_values != [] || @soluzione.order_values.include?("nome DESC") ? "asc" : "desc") %></th>
-        <th scope="col"><%= link_to "ISIN", order_by: "isin", direction: (@soluzione.order_values.include?("isin DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Codice identificativo"></a></th>
-        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (@soluzione.order_values.include?("paese DESC") ? "asc" : "desc") %></th>
-        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (@soluzione.order_values.include?("prezzo DESC") ? "asc" : "desc") %></th>
-        <th scope="col"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (@soluzione.order_values.include?("marketcap DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"></a></th>
-        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (@soluzione.order_values.include?("settore DESC") ? "asc" : "desc") %></th>
-        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (@soluzione.order_values.include?("volume DESC") ? "asc" : "desc") %></th>
-        <th scope="col"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (@soluzione.order_values.include?("ebitda DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"></a></th>
-        <th scope="col"><%= link_to "ROE", order_by: "roe", direction: (@soluzione.order_values.include?("roe DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Return On Equity"></a></th>
-        <th scope="col"><%= link_to "ROA", order_by: "roa", direction: (@soluzione.order_values.include?("roa DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Return On Asset"></a></th>
-        <th scope="col"><%= link_to "PE", order_by: "pe", direction: (@soluzione.order_values.include?("pe DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"></a></th>
-        <th scope="col"><%= link_to "PS", order_by: "ps", direction: (@soluzione.order_values.include?("ps DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"></a></th>
-        <th scope="col"><%= link_to "PB", order_by: "pb", direction: (@soluzione.order_values.include?("pb DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"></a></th>
-        <th scope="col"><%= link_to "Div Yield", order_by: "divyield", direction: (@soluzione.order_values.include?("divyield DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"></a></th>
-        <th scope="col"><%= link_to "Debt Eq", order_by: "debteq", direction: (@soluzione.order_values.include?("debteq DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"></a></th>
-        <th scope="col"><%= link_to "Op Margin", order_by: "opmargin", direction: (@soluzione.order_values.include?("opmargin DESC") ? "asc" : "desc") %><a data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"></a></th>
+        <th scope="col"><%= link_to "Nome", order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
       </tr>
     </thead>
     <tbody>
