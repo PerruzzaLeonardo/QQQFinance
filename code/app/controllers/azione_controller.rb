@@ -5,7 +5,6 @@ class AzioneController < ApplicationController
 
   def show
     @azione =Azione.find(params[:id])
-    @modifica="disabled"
   end
 
   def new

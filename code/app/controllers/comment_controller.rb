@@ -2,18 +2,14 @@ class CommentController < ApplicationController
   def index
     @commenti=Comment.all
   end
-
-  def edit
-    @commento=Comment.find(params[:id])
-    redirect_to azione_url(@commento.azione_id)
-  end
   
   def update
+    @commento=Comment.find(params[:id])
     respond_to do |format|
       if @commento.update(comment_params)
         format.html { redirect_to azione_url(@commento.azione_id), notice: "comment was successfully updated." }
       else
-        format.html { render :edit, status: :unprocessable_entity }    
+        format.html { redirect_to azione_url(@commento.azione_id),notice: "error to updated comment." }    
       end
     end
   end

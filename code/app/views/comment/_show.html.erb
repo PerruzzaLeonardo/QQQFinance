@@ -5,22 +5,35 @@
                 <%= image_tag commento.user.immagine,class:"card-img-top "%>
             </div>
             <div class="col-10">
-                <div class="d-flex">
-                    <p class="h5"><%=commento.user.username%></p> 
-                    <%if(current_user)%>      
-                        <%if(current_user.id==commento.user_id)%>
-                        </p>
-                            <%=link_to "Elimina",comment_path(commento),data: {
-                                turbo_method: :delete,
-                                turbo_confirm: "Sei sicuro?"
-                            },class:"ms-3" %>
-                            <%=link_to "Modifica",edit_comment_path(commento.id),class:"ms-3"%>
-                        </p>  
+                    <div class="d-flex">
+                        <a class="h5 link-dark" href="/users/<%=commento.user.id%>"><%=commento.user.username%></a> 
+                        <%if(current_user)%>      
+                            <%if(current_user.id==commento.user_id)%>
+                            </p>
+                                <%=link_to "Elimina",comment_path(commento),data: {
+                                    turbo_method: :delete,
+                                    turbo_confirm: "Sei sicuro?"
+                                },class:"ms-3" %>
+                                <a role="button" class="ms-3" onclick="myFunction(<%=commento.id%>)">Modifica</a>
+                            </p>  
+                            <%end%>
                         <%end%>
-                    <%end%>
-                </div>
-                <textarea rows=2 cols=50 placeholder="<%= commento.commento %>" <%=@modifica%> id="commento<%= commento.id %>"></textarea>
+                    </div>
+                    <form action="/comment/<%=commento.id%>" method="post">
+                        <input type="hidden" name="user_id" id="user_id" value="<%= commento.user_id %>" />
+                        <input type="hidden" name="azione_id" id="azione_id" value="<%= commento.azione_id %>" />
+                        <textarea rows=2 cols=50 placeholder="<%= commento.commento %>" name="commento" disabled="true" id="commento<%= commento.id %>"></textarea>
+                        <p><button id="submit<%= commento.id %>" type="submit" class="btn btn-primary" style="display:none" >Modifica</button></p>
+                        
+                    </form>
             </div>
         </div>
     </li>  
+
 <%end%>
+<script>
+                            function myFunction(id) {
+                                document.getElementById("commento"+id).disabled =false;
+                                document.getElementById("submit"+id).style.display = "block";
+                            }
+                        </script>

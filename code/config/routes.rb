@@ -49,6 +49,7 @@ Rails.application.routes.draw do
  
   get '/screener/risultato', to: 'screener#risultato'
   post '/screener', to: 'screener#index'
+  post '/comment/:id', to: 'comment#update'
 
 
 end
