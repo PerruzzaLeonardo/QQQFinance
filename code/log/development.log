@@ -18113,3 +18113,2501 @@ Processing by AzioneController#show as HTML
 Completed 200 OK in 29ms (Views: 22.0ms | ActiveRecord: 1.0ms | Allocations: 10681)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-22 16:06:28 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 69.6ms | Allocations: 3387)
+  Rendered _footer.html.erb (Duration: 29.2ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 202.7ms | Allocations: 4806)
+  Rendered layout layouts/application.html.erb (Duration: 3596.4ms | Allocations: 46977)
+Completed 200 OK in 4220ms (Views: 3667.2ms | ActiveRecord: 121.6ms | Allocations: 97548)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-22 16:07:43 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (5.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (4.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (6.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (4.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (5.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (4.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (6.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (3.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.4ms | Allocations: 754)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 750.9ms | Allocations: 5731)
+  Rendered layout layouts/application.html.erb (Duration: 954.7ms | Allocations: 8221)
+Completed 200 OK in 1274ms (Views: 963.4ms | ActiveRecord: 70.3ms | Allocations: 29994)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:07:47 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.5ms | Allocations: 759)
+  Rendered screener/_filtri.html.erb (Duration: 46.8ms | Allocations: 374)
+  [1m[36mAzione Load (4.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 39.9ms | Allocations: 2257)
+  [1m[36mAzione Load (4.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 53.7ms | Allocations: 12246)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 245.8ms | Allocations: 16347)
+  Rendered layout layouts/application.html.erb (Duration: 456.8ms | Allocations: 18983)
+Completed 200 OK in 534ms (Views: 454.1ms | ActiveRecord: 14.5ms | Allocations: 20350)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-22 16:07:52 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (6.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.6ms | Allocations: 755)
+  [1m[36mComment Load (3.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 203.7ms | Allocations: 6150)
+  Rendered comment/_new.html.erb (Duration: 416.7ms | Allocations: 4966)
+  Rendered comment/_index.html.erb (Duration: 1111.9ms | Allocations: 34996)
+  Rendered azione/show.html.erb within layouts/application (Duration: 1194.9ms | Allocations: 36610)
+  Rendered layout layouts/application.html.erb (Duration: 1394.8ms | Allocations: 39052)
+Completed 200 OK in 1530ms (Views: 1375.1ms | ActiveRecord: 40.9ms | Allocations: 41296)
+
+
+Started POST "/comment/2" for 127.0.0.1 at 2023-03-22 16:08:04 +0100
+Processing by CommentController#update as TURBO_STREAM
+  Parameters: {"user_id"=>"8", "azione_id"=>"1", "commento"=>"bb", "id"=>"2"}
+  [1m[36mComment Load (4.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:7:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: CommentController, action: update, request: #<ActionDispatch::Request:0x00007f257c067478>, params: {"user_id"=>"8", "azione_id"=>"1", "commento"=>"bb", "controller"=>"comment", "action"=>"update", "id"=>"2"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mComment Update (10.6ms)[0m  [1m[33mUPDATE "comments" SET "commento" = ?, "updated_at" = ? WHERE "comments"."id" = ?[0m  [["commento", "bb"], ["updated_at", "2023-03-22 15:08:05.360144"], ["id", 2]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+Redirected to http://127.0.0.1:3000/azione/1
+Completed 302 Found in 143ms (ActiveRecord: 43.1ms | Allocations: 7105)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-22 16:08:05 +0100
+Processing by AzioneController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (4.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.9ms | Allocations: 745)
+  [1m[36mComment Load (3.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 106.0ms | Allocations: 3376)
+  Rendered comment/_new.html.erb (Duration: 5.4ms | Allocations: 2267)
+  Rendered comment/_index.html.erb (Duration: 122.4ms | Allocations: 6436)
+  Rendered azione/show.html.erb within layouts/application (Duration: 136.3ms | Allocations: 7379)
+  Rendered layout layouts/application.html.erb (Duration: 318.8ms | Allocations: 9777)
+Completed 200 OK in 383ms (Views: 307.0ms | ActiveRecord: 18.4ms | Allocations: 10818)
+
+
+Started GET "/azione/2" for 127.0.0.1 at 2023-03-22 16:10:06 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAzione Load (3.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.7ms | Allocations: 745)
+  [1m[36mComment Load (7.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 2]]
+  ↳ app/views/comment/_index.html.erb:1
+  Rendered comment/_show.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered comment/_new.html.erb (Duration: 3.1ms | Allocations: 2282)
+  Rendered comment/_index.html.erb (Duration: 17.4ms | Allocations: 3041)
+  Rendered azione/show.html.erb within layouts/application (Duration: 30.1ms | Allocations: 3934)
+  Rendered layout layouts/application.html.erb (Duration: 252.8ms | Allocations: 6481)
+Completed 200 OK in 323ms (Views: 246.5ms | ActiveRecord: 14.9ms | Allocations: 7472)
+
+
+Started POST "/azione/2" for 127.0.0.1 at 2023-03-22 16:10:16 +0100
+Processing by CommentController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user_id"=>"8", "azione_id"=>"2", "commento"=>"vndsbsb", "commit"=>"Save ", "id"=>"2"}
+[31mUnpermitted parameters: :authenticity_token, :commit, :id. Context: { controller: CommentController, action: create, request: #<ActionDispatch::Request:0x00007f25886afbd0>, params: {"authenticity_token"=>"[FILTERED]", "user_id"=>"8", "azione_id"=>"2", "commento"=>"vndsbsb", "commit"=>"Save ", "controller"=>"comment", "action"=>"create", "id"=>"2"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comment_controller.rb:21:in `block in create'
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:21:in `block in create'
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:21:in `block in create'
+  [1m[36mComment Create (9.8ms)[0m  [1m[32mINSERT INTO "comments" ("commento", "created_at", "updated_at", "user_id", "azione_id") VALUES (?, ?, ?, ?, ?)[0m  [["commento", "vndsbsb"], ["created_at", "2023-03-22 15:10:17.225431"], ["updated_at", "2023-03-22 15:10:17.225431"], ["user_id", 8], ["azione_id", 2]]
+  ↳ app/controllers/comment_controller.rb:21:in `block in create'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comment_controller.rb:21:in `block in create'
+Redirected to http://127.0.0.1:3000/azione/2
+Completed 302 Found in 114ms (ActiveRecord: 30.0ms | Allocations: 4135)
+
+
+Started GET "/azione/2" for 127.0.0.1 at 2023-03-22 16:10:17 +0100
+Processing by AzioneController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAzione Load (4.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 7.6ms | Allocations: 745)
+  [1m[36mComment Load (5.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 2]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 86.3ms | Allocations: 1395)
+  Rendered comment/_new.html.erb (Duration: 6.1ms | Allocations: 2270)
+  Rendered comment/_index.html.erb (Duration: 104.5ms | Allocations: 4428)
+  Rendered azione/show.html.erb within layouts/application (Duration: 115.3ms | Allocations: 5324)
+  Rendered layout layouts/application.html.erb (Duration: 289.6ms | Allocations: 7720)
+Completed 200 OK in 351ms (Views: 279.4ms | ActiveRecord: 16.6ms | Allocations: 8723)
+
+
+Started POST "/comment/5" for 127.0.0.1 at 2023-03-22 16:10:26 +0100
+Processing by CommentController#update as TURBO_STREAM
+  Parameters: {"user_id"=>"8", "azione_id"=>"2", "commento"=>"dfjhvmsucrvbiemibr", "id"=>"5"}
+  [1m[36mComment Load (6.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:7:in `update'
+[31mUnpermitted parameter: :id. Context: { controller: CommentController, action: update, request: #<ActionDispatch::Request:0x00007f257c29e3e0>, params: {"user_id"=>"8", "azione_id"=>"2", "commento"=>"dfjhvmsucrvbiemibr", "controller"=>"comment", "action"=>"update", "id"=>"5"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mComment Update (8.5ms)[0m  [1m[33mUPDATE "comments" SET "commento" = ?, "updated_at" = ? WHERE "comments"."id" = ?[0m  [["commento", "dfjhvmsucrvbiemibr"], ["updated_at", "2023-03-22 15:10:27.277555"], ["id", 5]]
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+  [1m[36mTRANSACTION (17.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comment_controller.rb:9:in `block in update'
+Redirected to http://127.0.0.1:3000/azione/2
+Completed 302 Found in 114ms (ActiveRecord: 37.0ms | Allocations: 4531)
+
+
+Started GET "/azione/2" for 127.0.0.1 at 2023-03-22 16:10:27 +0100
+Processing by AzioneController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mAzione Load (5.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 745)
+  [1m[36mComment Load (3.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 2]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 118.3ms | Allocations: 1395)
+  Rendered comment/_new.html.erb (Duration: 5.9ms | Allocations: 2268)
+  Rendered comment/_index.html.erb (Duration: 135.9ms | Allocations: 4426)
+  Rendered azione/show.html.erb within layouts/application (Duration: 149.6ms | Allocations: 5322)
+  Rendered layout layouts/application.html.erb (Duration: 333.3ms | Allocations: 7719)
+Completed 200 OK in 397ms (Views: 321.3ms | ActiveRecord: 20.1ms | Allocations: 8710)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-22 16:10:36 +0100
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (4.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.7ms | Allocations: 745)
+  [1m[36mComment Load (3.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 107.8ms | Allocations: 3375)
+  Rendered comment/_new.html.erb (Duration: 1.8ms | Allocations: 2268)
+  Rendered comment/_index.html.erb (Duration: 120.2ms | Allocations: 6436)
+  Rendered azione/show.html.erb within layouts/application (Duration: 133.7ms | Allocations: 7329)
+  Rendered layout layouts/application.html.erb (Duration: 323.9ms | Allocations: 9725)
+Completed 200 OK in 410ms (Views: 312.1ms | ActiveRecord: 18.3ms | Allocations: 10728)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-22 16:10:41 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `show'
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (3.8ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/users_controller.rb:21:in `show'
+  [1m[36mAzione Load (6.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "GOOGL"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+  [1m[36mAzione Load (4.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "MDLZ"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+  [1m[36mAzione Load (6.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "TSLA"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+  [1m[36mAzione Load (3.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "MCHP"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+  [1m[36mAzione Load (3.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "ADP"]]
+  ↳ app/controllers/users_controller.rb:24:in `block in show'
+Completed 302 Found in 307ms (ActiveRecord: 63.5ms | Allocations: 20863)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-22 16:10:43 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered users/index.html.erb within layouts/application (Duration: 145.9ms | Allocations: 1269)
+  Rendered layout layouts/application.html.erb (Duration: 333.7ms | Allocations: 3757)
+Completed 200 OK in 429ms (Views: 348.2ms | ActiveRecord: 3.9ms | Allocations: 5540)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-22 16:15:00 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 13.2ms | Allocations: 737)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.8ms | Allocations: 1168)
+  Rendered layout layouts/application.html.erb (Duration: 342.3ms | Allocations: 3731)
+Completed 200 OK in 434ms (Views: 341.4ms | ActiveRecord: 17.5ms | Allocations: 6956)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:22:14 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 19.2ms | Allocations: 4846)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 18.1ms | Allocations: 6186)
+  [1m[36mAzione Load (8.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.5ms | Allocations: 11273)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 73.6ms | Allocations: 22585)
+  Rendered layout layouts/application.html.erb (Duration: 840.3ms | Allocations: 37371)
+Completed 200 OK in 955ms (Views: 825.5ms | ActiveRecord: 23.2ms | Allocations: 40379)
+
+
+Started GET "/screener?paesescelto=Qualsiasi&prezzomin=&prezzomax=50&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-22 16:22:24 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Qualsiasi", "prezzomin"=>"", "prezzomax"=>"50", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.5ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.3ms | Allocations: 2040)
+  [1m[36mAzione Load (4.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE (prezzo <= 50.0) ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 14.8ms | Allocations: 3475)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 40.5ms | Allocations: 6534)
+  Rendered layout layouts/application.html.erb (Duration: 265.6ms | Allocations: 9095)
+Completed 200 OK in 318ms (Views: 253.4ms | ActiveRecord: 14.6ms | Allocations: 9842)
+
+
+Started GET "/screener?direction=asc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 16:22:28 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.1ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (3.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.6ms | Allocations: 2040)
+  [1m[36mAzione Load (6.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 27.4ms | Allocations: 10178)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 56.9ms | Allocations: 13237)
+  Rendered layout layouts/application.html.erb (Duration: 259.7ms | Allocations: 15798)
+Completed 200 OK in 312ms (Views: 248.6ms | ActiveRecord: 13.5ms | Allocations: 16521)
+
+
+Started GET "/screener?direction=desc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 16:22:40 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.7ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.8ms | Allocations: 2040)
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.3ms | Allocations: 10183)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.3ms | Allocations: 13242)
+  Rendered layout layouts/application.html.erb (Duration: 270.4ms | Allocations: 15800)
+Completed 200 OK in 323ms (Views: 259.1ms | ActiveRecord: 13.6ms | Allocations: 16509)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:23:11 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 28.2ms | Allocations: 1140)
+  Rendered screener/_filtri.html.erb (Duration: 27.0ms | Allocations: 375)
+  [1m[36mAzione Load (4.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 34.6ms | Allocations: 2254)
+  Rendered screener/_azioni.html.erb (Duration: 474.3ms | Allocations: 5104)
+  Rendered screener/index.html.erb within layouts/application (Duration: 671.5ms | Allocations: 9567)
+  Rendered layout layouts/application.html.erb (Duration: 673.7ms | Allocations: 9640)
+Completed 500 Internal Server Error in 765ms (ActiveRecord: 8.9ms | Allocations: 11076)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:23:15 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.2ms | Allocations: 742)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.5ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 11.5ms | Allocations: 1884)
+  Rendered screener/index.html.erb within layouts/application (Duration: 36.5ms | Allocations: 4883)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 4955)
+Completed 500 Internal Server Error in 95ms (ActiveRecord: 8.9ms | Allocations: 5681)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:26:49 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 26.5ms | Allocations: 1139)
+  Rendered screener/_filtri.html.erb (Duration: 25.1ms | Allocations: 375)
+  [1m[36mAzione Load (5.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 32.9ms | Allocations: 2254)
+  Rendered screener/_azioni.html.erb (Duration: 82.0ms | Allocations: 1895)
+  Rendered screener/index.html.erb within layouts/application (Duration: 255.9ms | Allocations: 6356)
+  Rendered layout layouts/application.html.erb (Duration: 260.7ms | Allocations: 6429)
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 8.5ms | Allocations: 7850)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= "Nome" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= "Nome" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 16:27:29 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 25.2ms | Allocations: 1139)
+  Rendered screener/_filtri.html.erb (Duration: 28.6ms | Allocations: 375)
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 35.5ms | Allocations: 2254)
+  Rendered screener/_azioni.html.erb (Duration: 80.1ms | Allocations: 1893)
+  Rendered screener/index.html.erb within layouts/application (Duration: 255.7ms | Allocations: 6355)
+  Rendered layout layouts/application.html.erb (Duration: 258.1ms | Allocations: 6428)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 7.9ms | Allocations: 7850)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col">Nome<%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col">Nome<%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:14:03 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 31.1ms | Allocations: 1209)
+  Rendered screener/_filtri.html.erb (Duration: 25.2ms | Allocations: 375)
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 33.6ms | Allocations: 2335)
+  Rendered screener/_azioni.html.erb (Duration: 11.1ms | Allocations: 1893)
+  Rendered screener/index.html.erb within layouts/application (Duration: 186.6ms | Allocations: 6505)
+  Rendered layout layouts/application.html.erb (Duration: 189.4ms | Allocations: 6578)
+Completed 500 Internal Server Error in 313ms (ActiveRecord: 15.1ms | Allocations: 8117)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected label
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:14:21 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 29.1ms | Allocations: 1139)
+  Rendered screener/_filtri.html.erb (Duration: 22.8ms | Allocations: 375)
+  [1m[36mAzione Load (4.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 32.6ms | Allocations: 2254)
+  Rendered screener/_azioni.html.erb (Duration: 75.8ms | Allocations: 1895)
+  Rendered screener/index.html.erb within layouts/application (Duration: 248.0ms | Allocations: 6356)
+  Rendered layout layouts/application.html.erb (Duration: 250.2ms | Allocations: 6429)
+Completed 500 Internal Server Error in 339ms (ActiveRecord: 9.5ms | Allocations: 7851)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= href="" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= href="" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:14:40 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 30.4ms | Allocations: 1139)
+  Rendered screener/_filtri.html.erb (Duration: 28.5ms | Allocations: 375)
+  [1m[36mAzione Load (6.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 34.0ms | Allocations: 2254)
+  Rendered screener/_azioni.html.erb (Duration: 92.2ms | Allocations: 1895)
+  Rendered screener/index.html.erb within layouts/application (Duration: 276.7ms | Allocations: 6356)
+  Rendered layout layouts/application.html.erb (Duration: 279.0ms | Allocations: 6429)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 9.9ms | Allocations: 7852)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Azioni</h1>
+<div class=" table-responsive">
+  <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+    <thead>
+      <tr>
+        <th scope="col"><%= link_to "Nome" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+        <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @soluzione.each do |sol| %>
+        <tr>
+          <th scope="row"><%= sol.nome %></th>
+          <td><li><%= link_to sol.isin, sol %></li></td>
+          <td><%= sol.paese %></td>
+          <td><%= sol.prezzo.round(2) %></td>
+          <td><%= sol.marketcap.round(2) %></td>
+          <td><%= sol.settore %></td>
+          <td><%= sol.volume.round(2) %></td>
+          <td><%= sol.ebitda.round(2) %></td>
+          <td><%= sol.roe.round(2) %></td>
+          <td><%= sol.roa.round(2) %></td>
+          <td><%= sol.pe.round(2) %></td>
+          <td><%= sol.ps.round(2) %></td>
+          <td><%= sol.pb.round(2) %></td>
+          <td><%= sol.divyield.round(2) %></td>
+          <td><%= sol.debteq.round(2) %></td>
+          <td><%= sol.opmargin.round(2) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+):
+1:    <h1>Azioni</h1>
+2:    <div class=" table-responsive">
+3:      <table name="screener" style="text-align:center" class="table text-black" id="tab" rules="rows">
+4:        <thead>
+5:          <tr>
+6:            <th scope="col"><%= link_to "Nome" order_by: "nome", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+7:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Codice identificativo"><%= link_to "ISIN", order_by: "isin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+8:            <th scope="col"><%= link_to "Paese", order_by: "paese", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+9:            <th scope="col"><%= link_to "Prezzo(€)", order_by: "prezzo", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+10:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Capitalizzazione di mercato"><%= link_to "Marketcap(€)", order_by: "marketcap", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+11:            <th scope="col"><%= link_to "Settore", order_by: "settore", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+12:            <th scope="col"><%= link_to "Volume", order_by: "volume", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+13:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Earnings Before Interests Taxes Depreciation and Amortization"><%= link_to "EBITDA(€)", order_by: "ebitda", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+14:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Equity"><%= link_to "ROE", order_by: "roe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+15:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Return On Asset"><%= link_to "ROA", order_by: "roa", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+16:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Earnings ratio"><%= link_to "PE", order_by: "pe", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+17:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Sales ratio"><%= link_to "PS", order_by: "ps", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+18:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Price to Book ratio"><%= link_to "PB", order_by: "pb", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+19:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra l'ultimo dividendo annuo per azione e il prezzo del titolo"><%= link_to "Div Yield", order_by: "divyield", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+20:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Rapporto tra debito e capitale"><%= link_to "Debt Eq", order_by: "debteq", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+21:            <th scope="col" data-bs-toggle="tooltip" data-bs-title="Reddito operativo per unità di ricavo"><%= link_to "Op Margin", order_by: "opmargin", direction: (%w[asc].include?(params[:direction]) ? "desc" : "asc") %></th>
+22:          </tr>
+23:        </thead>
+24:        <tbody>
+25:          <% @soluzione.each do |sol| %>
+26:            <tr>
+27:              <th scope="row"><%= sol.nome %></th>
+28:              <td><li><%= link_to sol.isin, sol %></li></td>
+29:              <td><%= sol.paese %></td>
+30:              <td><%= sol.prezzo.round(2) %></td>
+31:              <td><%= sol.marketcap.round(2) %></td>
+32:              <td><%= sol.settore %></td>
+33:              <td><%= sol.volume.round(2) %></td>
+34:              <td><%= sol.ebitda.round(2) %></td>
+35:              <td><%= sol.roe.round(2) %></td>
+36:              <td><%= sol.roa.round(2) %></td>
+37:              <td><%= sol.pe.round(2) %></td>
+38:              <td><%= sol.ps.round(2) %></td>
+39:              <td><%= sol.pb.round(2) %></td>
+40:              <td><%= sol.divyield.round(2) %></td>
+41:              <td><%= sol.debteq.round(2) %></td>
+42:              <td><%= sol.opmargin.round(2) %></td>
+43:            </tr>
+44:          <% end %>
+45:        </tbody>
+46:      </table>
+47:    </div>
+  
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/screener/_azioni.html.erb:6: syntax error, unexpected ',', expecting ')'
+app/views/screener/index.html.erb:22
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:15:10 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 26.2ms | Allocations: 1139)
+  Rendered screener/_filtri.html.erb (Duration: 27.3ms | Allocations: 375)
+  [1m[36mAzione Load (4.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 35.3ms | Allocations: 2254)
+  [1m[36mAzione Load (5.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 55.8ms | Allocations: 11057)
+  Rendered _footer.html.erb (Duration: 24.0ms | Allocations: 129)
+  Rendered screener/index.html.erb within layouts/application (Duration: 266.1ms | Allocations: 15751)
+  Rendered layout layouts/application.html.erb (Duration: 489.0ms | Allocations: 18633)
+Completed 200 OK in 580ms (Views: 499.4ms | ActiveRecord: 14.0ms | Allocations: 20086)
+
+
+Started GET "/screener?direction=asc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 17:15:15 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.5ms | Allocations: 2040)
+  [1m[36mAzione Load (5.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.6ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 53.4ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 278.8ms | Allocations: 15793)
+Completed 200 OK in 333ms (Views: 266.0ms | ActiveRecord: 15.3ms | Allocations: 16523)
+
+
+Started GET "/screener?paesescelto=Qualsiasi&prezzomin=&prezzomax=50&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-22 17:15:23 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Qualsiasi", "prezzomin"=>"", "prezzomax"=>"50", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.7ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.4ms | Allocations: 2040)
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE (prezzo <= 50.0) ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 14.6ms | Allocations: 3468)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 39.7ms | Allocations: 6527)
+  Rendered layout layouts/application.html.erb (Duration: 258.8ms | Allocations: 9085)
+Completed 200 OK in 323ms (Views: 247.7ms | ActiveRecord: 14.4ms | Allocations: 9788)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:18:42 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 68.5ms | Allocations: 5915)
+  Rendered screener/_filtri.html.erb (Duration: 26.6ms | Allocations: 375)
+  [1m[36mAzione Load (8.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 60.3ms | Allocations: 6593)
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 134.0ms | Allocations: 12090)
+  Rendered _footer.html.erb (Duration: 26.2ms | Allocations: 129)
+  Rendered screener/index.html.erb within layouts/application (Duration: 455.2ms | Allocations: 25902)
+  Rendered layout layouts/application.html.erb (Duration: 1266.5ms | Allocations: 40938)
+Completed 200 OK in 1445ms (Views: 1244.3ms | ActiveRecord: 63.0ms | Allocations: 44673)
+
+
+Started GET "/screener?paesescelto=Qualsiasi&prezzomin=&prezzomax=50&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-22 17:18:54 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Qualsiasi", "prezzomin"=>"", "prezzomax"=>"50", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 7.7ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.2ms | Allocations: 2040)
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE (prezzo <= 50.0) ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 14.3ms | Allocations: 3468)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 38.7ms | Allocations: 6527)
+  Rendered layout layouts/application.html.erb (Duration: 256.1ms | Allocations: 9086)
+Completed 200 OK in 309ms (Views: 243.5ms | ActiveRecord: 14.8ms | Allocations: 9807)
+
+
+Started GET "/screener?direction=asc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 17:19:00 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.2ms | Allocations: 2040)
+  [1m[36mAzione Load (4.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 24.4ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 53.8ms | Allocations: 13235)
+  Rendered layout layouts/application.html.erb (Duration: 273.5ms | Allocations: 15795)
+Completed 200 OK in 328ms (Views: 260.1ms | ActiveRecord: 15.9ms | Allocations: 16524)
+
+
+Started GET "/screener?direction=desc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 17:20:49 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.2ms | Allocations: 2040)
+  [1m[36mAzione Load (7.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 30.0ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 57.6ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 334.0ms | Allocations: 15819)
+Completed 200 OK in 397ms (Views: 317.5ms | ActiveRecord: 19.3ms | Allocations: 16544)
+
+
+Started GET "/screener?direction=asc&order_by=settore" for 127.0.0.1 at 2023-03-22 17:24:16 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"settore"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 13.3ms | Allocations: 2040)
+  [1m[36mAzione Load (6.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."settore" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 31.4ms | Allocations: 10178)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 60.4ms | Allocations: 13237)
+  Rendered layout layouts/application.html.erb (Duration: 288.8ms | Allocations: 15795)
+Completed 200 OK in 345ms (Views: 273.6ms | ActiveRecord: 17.6ms | Allocations: 16518)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:24:26 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.5ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.1ms | Allocations: 2040)
+  [1m[36mAzione Load (5.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 30.0ms | Allocations: 10178)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 59.0ms | Allocations: 13237)
+  Rendered layout layouts/application.html.erb (Duration: 286.9ms | Allocations: 15798)
+Completed 200 OK in 344ms (Views: 274.9ms | ActiveRecord: 14.6ms | Allocations: 16522)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:24:38 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.5ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (3.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 19.4ms | Allocations: 2040)
+  [1m[36mAzione Load (6.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 27.7ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 63.2ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 284.9ms | Allocations: 15822)
+Completed 200 OK in 341ms (Views: 271.7ms | ActiveRecord: 15.9ms | Allocations: 16546)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:31:57 +0100
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/controllers/screener_controller.rb:164:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 17.0ms | Allocations: 4786)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (7.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 13.3ms | Allocations: 2123)
+  Rendered screener/_azioni.html.erb (Duration: 20.8ms | Allocations: 9371)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 59.0ms | Allocations: 16560)
+  Rendered layout layouts/application.html.erb (Duration: 991.1ms | Allocations: 31796)
+Completed 200 OK in 1138ms (Views: 980.5ms | ActiveRecord: 24.4ms | Allocations: 41656)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:32:02 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" ASC[0m
+  ↳ app/controllers/screener_controller.rb:164:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.7ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.1ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 19.9ms | Allocations: 8261)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 47.7ms | Allocations: 11320)
+  Rendered layout layouts/application.html.erb (Duration: 274.4ms | Allocations: 13893)
+Completed 200 OK in 346ms (Views: 264.7ms | ActiveRecord: 17.8ms | Allocations: 17386)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:32:18 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" ASC[0m
+  ↳ app/controllers/screener_controller.rb:164:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 34.0ms | Allocations: 5409)
+  Rendered screener/_filtri.html.erb (Duration: 0.3ms | Allocations: 8)
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.6ms | Allocations: 2123)
+  Rendered screener/_azioni.html.erb (Duration: 17.9ms | Allocations: 9346)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 69.6ms | Allocations: 17158)
+  Rendered layout layouts/application.html.erb (Duration: 756.9ms | Allocations: 31973)
+Completed 200 OK in 975ms (Views: 733.7ms | ActiveRecord: 60.2ms | Allocations: 42156)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:32:27 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  [1m[36mAzione Load (4.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" DESC[0m
+  ↳ app/controllers/screener_controller.rb:164:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.1ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 17.8ms | Allocations: 8261)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 11320)
+  Rendered layout layouts/application.html.erb (Duration: 262.1ms | Allocations: 13905)
+Completed 200 OK in 328ms (Views: 254.4ms | ActiveRecord: 15.2ms | Allocations: 17027)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:36:32 +0100
+  
+SyntaxError (/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:130: syntax error, unexpected local variable or method, expecting ')'
+....order("lower (nome)" direction).all
+...                      ^~~~~~~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+        when "paese"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+        when "prezzo"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+        when "marketcap"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+        when "settore"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+        when "volume"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+        when "ebitda"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+        when "roe"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+        when "roa"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+        when "pe"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+        when "ps"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+        when "pb"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+        when "divyield"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+        when "debteq"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+        when "opmargin"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:161: else without rescue is useless
+        else
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/screener_controller.rb:130: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+app/controllers/screener_controller.rb:130: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+app/controllers/screener_controller.rb:130: syntax error, unexpected local variable or method, expecting ')'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:37:29 +0100
+  
+SyntaxError (/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:130: syntax error, unexpected ':'
+... = @soluzione.order(lower.nome: direction)
+...                              ^
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+        when "paese"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+        when "prezzo"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+        when "marketcap"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+        when "settore"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+        when "volume"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+        when "ebitda"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+        when "roe"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+        when "roa"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+        when "pe"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+        when "ps"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+        when "pb"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+        when "divyield"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+        when "debteq"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+        when "opmargin"
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:161: else without rescue is useless
+        else
+        ^~~~
+/mnt/c/GitHub/QQQFinance/code/app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/screener_controller.rb:130: syntax error, unexpected ':'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+app/controllers/screener_controller.rb:130: syntax error, unexpected ':'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+app/controllers/screener_controller.rb:130: syntax error, unexpected ':'
+app/controllers/screener_controller.rb:133: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:135: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:137: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:139: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:141: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:143: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:145: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:147: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:149: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:151: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:153: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:155: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:157: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:159: syntax error, unexpected `when', expecting `end'
+app/controllers/screener_controller.rb:161: else without rescue is useless
+app/controllers/screener_controller.rb:197: syntax error, unexpected `end', expecting end-of-input
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:38:09 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 41.7ms | Allocations: 5522)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (9.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 30.3ms | Allocations: 6379)
+  [1m[36mAzione Load (6.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 27.5ms | Allocations: 11308)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 106.8ms | Allocations: 23490)
+  Rendered layout layouts/application.html.erb (Duration: 768.5ms | Allocations: 38302)
+Completed 200 OK in 891ms (Views: 716.8ms | ActiveRecord: 67.1ms | Allocations: 41741)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:38:18 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  [1m[36mAzione Load (5.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" /* loading for inspect */ ORDER BY "aziones"."nome" ASC LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms | Allocations: 4899)
+
+
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" /* loading for inspect */ ORDER BY "aziones"."nome" ASC LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `ignorecase' for #<ActiveRecord::Relation [#<Azione id: 13, nome: "ANSYS, Inc.", isin: "ANSS", settore: "Technology", paese: "United States", marketcap: 26239852544.0, prezzo: 301.31, volume: 870008.0, pe: 31.45, ps: 12.7, pb: 5.38, divyield: 0.0, roe: 11.201999, roa: 5.7930004, debteq: 18.27, opmargin: 29.193002, ebitda: 34.739, created_at: "2023-03-06 08:57:43.483480000 +0000", updated_at: "2023-03-08 11:33:43.015830000 +0000">, #<Azione id: 14, nome: "ASML Holding N.V. - New York Re", isin: "ASML", settore: "Technology", paese: "Netherlands", marketcap: 241803247616.0, prezzo: 609.11, volume: 1033002.0, pe: 24.96, ps: 11.42, pb: 27.28, divyield: 0.9340227, roe: 59.354, roa: 12.213001, debteq: 53.16, opmargin: 30.702, ebitda: 33.049, created_at: "2023-03-06 08:57:43.492670000 +0000", updated_at: "2023-03-08 11:33:47.352890000 +0000">, #<Azione id: 15, nome: "Activision Blizzard, Inc", isin: "ATVI", settore: "Communication Services", paese: "United States", marketcap: 62161559552.0, prezzo: 79.26, volume: 4681817.0, pe: 18.96, ps: 8.26, pb: 3.23, divyield: 0.0, roe: 8.213, roa: 3.9739999999999998, debteq: 20.04, opmargin: 22.143999, ebitda: 23.552, created_at: "2023-03-06 08:57:43.502656000 +0000", updated_at: "2023-03-08 11:33:51.252171000 +0000">, #<Azione id: 3, nome: "Adobe Inc.", isin: "ADBE", settore: "Technology", paese: "United States", marketcap: 158117003264.0, prezzo: 344.8, volume: 2252283.0, pe: 19.69, ps: 8.98, pb: 11.34, divyield: 0.0, roe: 32.973, roa: 14.01, debteq: 32.97, opmargin: 34.636002999999995, ebitda: 38.146, created_at: "2023-03-06 08:57:43.376439000 +0000", updated_at: "2023-03-08 11:32:05.175717000 +0000">, #<Azione id: 10, nome: "Advanced Micro Devices, Inc.", isin: "AMD", settore: "Technology", paese: "United States", marketcap: 132311228416.0, prezzo: 82.11, volume: 70959009.0, pe: 18.96, ps: 5.61, pb: 2.42, divyield: 0.0, roe: 4.2410000000000005, roa: 1.975, debteq: 5.4, opmargin: 5.356000000000001, ebitda: 19.914, created_at: "2023-03-06 08:57:43.455730000 +0000", updated_at: "2023-03-08 11:33:22.073048000 +0000">, #<Azione id: 2, nome: "Airbnb, Inc.", isin: "ABNB", settore: "Consumer Cyclical", paese: "United States", marketcap: 80140910592.0, prezzo: 126.94, volume: 5590811.0, pe: 31.97, ps: 9.54, pb: 14.41, divyield: 0.0, roe: 36.632999999999996, roa: 7.9569995, debteq: 42.1, opmargin: 22.544000999999998, ebitda: 23.18, created_at: "2023-03-06 08:57:43.367050000 +0000", updated_at: "2023-03-08 11:32:00.746027000 +0000">, #<Azione id: 8, nome: "Align Technology, Inc.", isin: "ALGN", settore: "Healthcare", paese: "United States", marketcap: 25725732864.0, prezzo: 334.78, volume: 933204.0, pe: 34.37, ps: 6.89, pb: 7.18, divyield: 0.0, roe: 10.01, roa: 6.906, debteq: 3.52, opmargin: 17.589001, ebitda: 20.957, created_at: "2023-03-06 08:57:43.437136000 +0000", updated_at: "2023-03-08 11:32:48.042721000 +0000">, #<Azione id: 46, nome: "Alphabet Inc.", isin: "GOOG", settore: "Communication Services", paese: "United States", marketcap: 1203002933248.0, prezzo: 94.17, volume: 24101536.0, pe: 15.46, ps: 4.25, pb: 4.72, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.7, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.826706000 +0000", updated_at: "2023-03-08 11:37:11.144727000 +0000">, #<Azione id: 47, nome: "Alphabet Inc.", isin: "GOOGL", settore: "Communication Services", paese: "United States", marketcap: 1204711849984.0, prezzo: 93.86, volume: 27835476.0, pe: 15.36, ps: 4.26, pb: 4.71, divyield: 0.0, roe: 23.621, roa: 12.911999, debteq: 11.7, opmargin: 26.461000000000002, ebitda: 32.092997000000004, created_at: "2023-03-06 08:57:43.835504000 +0000", updated_at: "2023-03-08 11:37:17.922708000 +0000">, #<Azione id: 12, nome: "Amazon.com, Inc.", isin: "AMZN", settore: "Consumer Cyclical", paese: "United States", marketcap: 958634983424.0, prezzo: 93.55, volume: 49100668.0, pe: 37.27, ps: 1.87, pb: 6.56, divyield: 0.0, roe: -1.915, roa: 1.733, debteq: 116.36, opmargin: 2.3829998000000003, ebitda: 10.539, created_at: "2023-03-06 08:57:43.473677000 +0000", updated_at: "2023-03-08 11:33:34.141455000 +0000">, ...]>):
+  
+app/controllers/screener_controller.rb:130:in `index'
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:39:07 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 43.8ms | Allocations: 5522)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (8.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 29.1ms | Allocations: 6379)
+  [1m[36mAzione Load (7.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 31.6ms | Allocations: 11314)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 111.0ms | Allocations: 23495)
+  Rendered layout layouts/application.html.erb (Duration: 778.3ms | Allocations: 38310)
+Completed 200 OK in 892ms (Views: 728.5ms | ActiveRecord: 64.7ms | Allocations: 41741)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:39:14 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms | Allocations: 4130)
+
+
+  
+NameError (undefined local variable or method `lower' for #<ScreenerController:0x00000000055460>
+Did you mean?  logger):
+  
+app/controllers/screener_controller.rb:130:in `index'
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:40:28 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 38.7ms | Allocations: 5522)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (7.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 27.1ms | Allocations: 6379)
+  [1m[36mAzione Load (6.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 28.9ms | Allocations: 11321)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 100.9ms | Allocations: 23502)
+  Rendered layout layouts/application.html.erb (Duration: 731.6ms | Allocations: 38314)
+Completed 200 OK in 841ms (Views: 685.5ms | ActiveRecord: 59.8ms | Allocations: 41740)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:40:36 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.6ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.7ms | Allocations: 2040)
+  [1m[36mAzione Load (4.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.1ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.1ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 269.7ms | Allocations: 15792)
+Completed 200 OK in 327ms (Views: 257.3ms | ActiveRecord: 15.1ms | Allocations: 16520)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:40:46 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.6ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.7ms | Allocations: 2040)
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 40.2ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 68.0ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 287.1ms | Allocations: 15819)
+Completed 200 OK in 342ms (Views: 274.9ms | ActiveRecord: 14.6ms | Allocations: 16549)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:41:20 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 41.7ms | Allocations: 5485)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (7.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 28.1ms | Allocations: 6379)
+  [1m[36mAzione Load (7.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.0ms | Allocations: 11326)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 105.1ms | Allocations: 23470)
+  Rendered layout layouts/application.html.erb (Duration: 756.1ms | Allocations: 38279)
+Completed 200 OK in 882ms (Views: 705.6ms | ActiveRecord: 65.6ms | Allocations: 41731)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:41:27 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 6.9ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.3ms | Allocations: 2040)
+  [1m[36mAzione Load (7.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."nome" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 26.5ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 50.5ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 274.5ms | Allocations: 15814)
+Completed 200 OK in 328ms (Views: 261.3ms | ActiveRecord: 15.7ms | Allocations: 16541)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.0ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/screenere" for 127.0.0.1 at 2023-03-22 17:47:05 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/screenere"):
+  
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:47:13 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 107.9ms | Allocations: 23542)
+  Rendered screener/_filtri.html.erb (Duration: 25.6ms | Allocations: 377)
+  [1m[36mAzione Load (5.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 72.4ms | Allocations: 21641)
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 54.7ms | Allocations: 12250)
+  Rendered _footer.html.erb (Duration: 20.0ms | Allocations: 128)
+  Rendered screener/index.html.erb within layouts/application (Duration: 386.2ms | Allocations: 58752)
+  Rendered layout layouts/application.html.erb (Duration: 3974.4ms | Allocations: 100897)
+Completed 200 OK in 4196ms (Views: 3954.3ms | ActiveRecord: 52.2ms | Allocations: 107576)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:47:22 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.7ms | Allocations: 749)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.6ms | Allocations: 2040)
+  [1m[36mAzione Load (5.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 28.4ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 60.1ms | Allocations: 13240)
+  Rendered layout layouts/application.html.erb (Duration: 286.6ms | Allocations: 15803)
+Completed 200 OK in 345ms (Views: 274.1ms | ActiveRecord: 14.9ms | Allocations: 16543)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:48:54 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 62.4ms | Allocations: 5916)
+  Rendered screener/_filtri.html.erb (Duration: 28.2ms | Allocations: 375)
+  [1m[36mAzione Load (8.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 63.6ms | Allocations: 6593)
+  [1m[36mAzione Load (6.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 63.8ms | Allocations: 12084)
+  Rendered _footer.html.erb (Duration: 21.0ms | Allocations: 129)
+  Rendered screener/index.html.erb within layouts/application (Duration: 353.7ms | Allocations: 25899)
+  Rendered layout layouts/application.html.erb (Duration: 1041.1ms | Allocations: 40924)
+Completed 200 OK in 1191ms (Views: 1017.2ms | ActiveRecord: 61.2ms | Allocations: 44691)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:49:00 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.6ms | Allocations: 749)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.5ms | Allocations: 2040)
+  [1m[36mAzione Load (6.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 30.9ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 60.3ms | Allocations: 13240)
+  Rendered layout layouts/application.html.erb (Duration: 262.6ms | Allocations: 15811)
+Completed 200 OK in 322ms (Views: 247.9ms | ActiveRecord: 18.1ms | Allocations: 16521)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:49:03 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.0ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (7.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.5ms | Allocations: 2040)
+  [1m[36mAzione Load (6.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.1ms | Allocations: 10175)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 56.7ms | Allocations: 13234)
+  Rendered layout layouts/application.html.erb (Duration: 283.2ms | Allocations: 15792)
+Completed 200 OK in 340ms (Views: 268.4ms | ActiveRecord: 18.4ms | Allocations: 16508)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:49:07 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.9ms | Allocations: 2040)
+  [1m[36mAzione Load (4.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 24.9ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.8ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 287.0ms | Allocations: 15791)
+Completed 200 OK in 344ms (Views: 274.0ms | ActiveRecord: 15.7ms | Allocations: 16512)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:49:58 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 46.2ms | Allocations: 5523)
+  Rendered screener/_filtri.html.erb (Duration: 0.4ms | Allocations: 8)
+  [1m[36mAzione Load (9.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 37.6ms | Allocations: 6379)
+  [1m[36mAzione Load (6.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 35.5ms | Allocations: 11279)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 127.8ms | Allocations: 23461)
+  Rendered layout layouts/application.html.erb (Duration: 877.3ms | Allocations: 38259)
+Completed 200 OK in 1007ms (Views: 825.6ms | ActiveRecord: 70.2ms | Allocations: 41733)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:50:08 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms | Allocations: 865)
+
+
+  
+ActiveRecord::UnknownAttributeReference (Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "lower(nome) ?".This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql().):
+  
+app/controllers/screener_controller.rb:130:in `index'
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:52:28 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 40.3ms | Allocations: 5522)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (6.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 28.6ms | Allocations: 6379)
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 28.5ms | Allocations: 11285)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 104.9ms | Allocations: 23466)
+  Rendered layout layouts/application.html.erb (Duration: 707.8ms | Allocations: 38282)
+Completed 200 OK in 827ms (Views: 668.1ms | ActiveRecord: 57.3ms | Allocations: 41738)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:52:36 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.1ms | Allocations: 2040)
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 26.3ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 53.2ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 269.0ms | Allocations: 15790)
+Completed 200 OK in 324ms (Views: 256.6ms | ActiveRecord: 14.5ms | Allocations: 16507)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:52:41 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 11.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.5ms | Allocations: 2040)
+  [1m[36mAzione Load (8.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.1ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 60.0ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 293.4ms | Allocations: 15790)
+Completed 200 OK in 354ms (Views: 274.6ms | ActiveRecord: 21.5ms | Allocations: 16502)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:53:09 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 37.9ms | Allocations: 5523)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (7.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 24.9ms | Allocations: 6379)
+  [1m[36mAzione Load (15.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 36.3ms | Allocations: 11290)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 105.0ms | Allocations: 23472)
+  Rendered layout layouts/application.html.erb (Duration: 698.6ms | Allocations: 38286)
+Completed 200 OK in 811ms (Views: 645.9ms | ActiveRecord: 67.1ms | Allocations: 41718)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:53:15 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.6ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.7ms | Allocations: 2041)
+  [1m[36mAzione Load (6.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 26.9ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 53.9ms | Allocations: 13235)
+  Rendered layout layouts/application.html.erb (Duration: 275.5ms | Allocations: 15793)
+Completed 200 OK in 333ms (Views: 261.2ms | ActiveRecord: 17.7ms | Allocations: 16514)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:53:19 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.7ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.6ms | Allocations: 2040)
+  [1m[36mAzione Load (4.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.3ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 58.0ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 286.7ms | Allocations: 15790)
+Completed 200 OK in 350ms (Views: 274.7ms | ActiveRecord: 14.6ms | Allocations: 16508)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:53:25 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 7.5ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.7ms | Allocations: 2040)
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 24.4ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 50.7ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 268.2ms | Allocations: 15790)
+Completed 200 OK in 324ms (Views: 257.4ms | ActiveRecord: 14.1ms | Allocations: 16496)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:53:30 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.3ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.2ms | Allocations: 2040)
+  [1m[36mAzione Load (4.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.7ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 51.5ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 281.6ms | Allocations: 15790)
+Completed 200 OK in 338ms (Views: 269.1ms | ActiveRecord: 14.5ms | Allocations: 16510)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:53:35 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.9ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.2ms | Allocations: 2040)
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 31.3ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 56.1ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 352.9ms | Allocations: 15794)
+Completed 200 OK in 411ms (Views: 340.5ms | ActiveRecord: 14.7ms | Allocations: 16506)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:57:24 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 42.9ms | Allocations: 5523)
+  Rendered screener/_filtri.html.erb (Duration: 0.3ms | Allocations: 8)
+  [1m[36mAzione Load (7.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 32.4ms | Allocations: 6379)
+  [1m[36mAzione Load (4.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 31.9ms | Allocations: 11297)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 116.5ms | Allocations: 23479)
+  Rendered layout layouts/application.html.erb (Duration: 842.2ms | Allocations: 38172)
+Completed 200 OK in 970ms (Views: 795.0ms | ActiveRecord: 65.1ms | Allocations: 41604)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:57:31 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.8ms | Allocations: 744)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 10.8ms | Allocations: 2040)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 35.4ms | Allocations: 9345)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 65.3ms | Allocations: 12405)
+  Rendered layout layouts/application.html.erb (Duration: 287.2ms | Allocations: 14964)
+Completed 200 OK in 345ms (Views: 281.5ms | ActiveRecord: 7.8ms | Allocations: 15663)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:57:46 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.8ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (8.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 12.5ms | Allocations: 2040)
+  [1m[36mAzione Load (7.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 29.2ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 57.7ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 295.5ms | Allocations: 15790)
+Completed 200 OK in 355ms (Views: 277.5ms | ActiveRecord: 20.9ms | Allocations: 16508)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:58:09 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.6ms | Allocations: 744)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 12.3ms | Allocations: 2040)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 22.4ms | Allocations: 9343)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.2ms | Allocations: 12403)
+  Rendered layout layouts/application.html.erb (Duration: 273.1ms | Allocations: 14961)
+Completed 200 OK in 329ms (Views: 263.5ms | ActiveRecord: 12.2ms | Allocations: 15665)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-22 17:59:48 +0100
+Processing by ScreenerController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 44.0ms | Allocations: 5486)
+  Rendered screener/_filtri.html.erb (Duration: 0.3ms | Allocations: 8)
+  [1m[36mAzione Load (7.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 30.6ms | Allocations: 6380)
+  [1m[36mAzione Load (7.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "default_order_column" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 31.7ms | Allocations: 11302)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 113.4ms | Allocations: 23450)
+  Rendered layout layouts/application.html.erb (Duration: 755.5ms | Allocations: 38261)
+Completed 200 OK in 875ms (Views: 706.0ms | ActiveRecord: 65.6ms | Allocations: 41726)
+
+
+Started GET "/screener?direction=asc&order_by=nome" for 127.0.0.1 at 2023-03-22 17:59:55 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.2ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.0ms | Allocations: 2040)
+  [1m[36mAzione Load (4.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.4ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 51.3ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 270.2ms | Allocations: 15790)
+Completed 200 OK in 327ms (Views: 258.6ms | ActiveRecord: 14.1ms | Allocations: 16503)
+
+
+Started GET "/screener?direction=desc&order_by=nome" for 127.0.0.1 at 2023-03-22 18:00:02 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"nome"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.2ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.5ms | Allocations: 2040)
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY lower(nome) ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 24.8ms | Allocations: 10173)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.4ms | Allocations: 13232)
+  Rendered layout layouts/application.html.erb (Duration: 282.5ms | Allocations: 15790)
+Completed 200 OK in 337ms (Views: 269.5ms | ActiveRecord: 15.2ms | Allocations: 16540)
+
+
+Started GET "/screener?direction=asc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 18:00:22 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"asc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.5ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (4.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.5ms | Allocations: 2040)
+  [1m[36mAzione Load (4.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" ASC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 25.5ms | Allocations: 10178)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 52.5ms | Allocations: 13237)
+  Rendered layout layouts/application.html.erb (Duration: 291.3ms | Allocations: 15798)
+Completed 200 OK in 351ms (Views: 278.6ms | ActiveRecord: 15.1ms | Allocations: 16525)
+
+
+Started GET "/screener?direction=desc&order_by=prezzo" for 127.0.0.1 at 2023-03-22 18:00:26 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"direction"=>"desc", "order_by"=>"prezzo"}
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.3ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (6.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 11.4ms | Allocations: 2040)
+  [1m[36mAzione Load (6.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" ORDER BY "aziones"."prezzo" DESC[0m
+  ↳ app/views/screener/_azioni.html.erb:25
+  Rendered screener/_azioni.html.erb (Duration: 27.6ms | Allocations: 10182)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 56.0ms | Allocations: 13241)
+  Rendered layout layouts/application.html.erb (Duration: 282.6ms | Allocations: 15799)
+Completed 200 OK in 342ms (Views: 267.0ms | ActiveRecord: 18.0ms | Allocations: 16526)
+
+

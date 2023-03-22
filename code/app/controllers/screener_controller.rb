@@ -7,43 +7,6 @@ class ScreenerController < ApplicationController
         order_by = params[:order_by] || "default_order_column"
         direction = params[:direction] || "asc"
   
-        case order_by
-        when "nome"
-            @soluzione = @soluzione.order(nome: direction)
-        when "isin"
-            @soluzione = @soluzione.order(isin: direction)
-        when "paese"
-            @soluzione = @soluzione.order(paese: direction)
-        when "prezzo"
-            @soluzione = @soluzione.order(prezzo: direction)
-        when "marketcap"
-            @soluzione = @soluzione.order(marketcap: direction)
-        when "settore"
-            @soluzione = @soluzione.order(settore: direction)
-        when "volume"
-            @soluzione = @soluzione.order(volume: direction)
-        when "ebitda"
-            @soluzione = @soluzione.order(ebitda: direction)
-        when "roe"
-            @soluzione = @soluzione.order(roe: direction)
-        when "roa"
-            @soluzione = @soluzione.order(roa: direction)
-        when "pe"
-            @soluzione = @soluzione.order(pe: direction)
-        when "ps"
-            @soluzione = @soluzione.order(ps: direction)
-        when "pb"
-            @soluzione = @soluzione.order(pb: direction)
-        when "divyield"
-            @soluzione = @soluzione.order(divyield: direction)
-        when "debteq"
-            @soluzione = @soluzione.order(debteq: direction)
-        when "opmargin"
-            @soluzione = @soluzione.order(opmargin: direction)
-        else
-            @soluzione = @soluzione.order(default_order_column: direction)
-        end
-
         @paese_scelto = params[:paesescelto]
         if @paese_scelto != "Qualsiasi" && @paese_scelto != nil
             @soluzione = @soluzione.where(paese: @paese_scelto)
@@ -67,7 +30,7 @@ class ScreenerController < ApplicationController
             @soluzione = @soluzione.where("marketcap <= ?", @marketcap_max.to_f)
         end
         
-        @settore_scelto = params[:settorescelto]
+        @settore_scelto = params[:settosoluzionecelto]
         if @settore_scelto != "Qualsiasi" && @settore_scelto != nil
             @soluzione = @soluzione.where(settore: @settore_scelto)
         end
@@ -161,6 +124,51 @@ class ScreenerController < ApplicationController
         if @opm_max != "" && @opm_max != nil
             @soluzione = @soluzione.where("opmargin <= ?", @opm_max.to_f)
         end
+
+        case order_by
+        when "nome"
+            if direction == "desc"
+                @soluzione = @soluzione.order("lower(nome) ASC")
+                direction = "asc"
+            else
+                if direction == "asc"
+                    @soluzione = @soluzione.order("lower(nome) DESC")
+                    direction = "desc"
+                end
+            end
+        when "isin"
+            @soluzione = @soluzione.order(isin: direction)
+        when "paese"
+            @soluzione = @soluzione.order(paese: direction)
+        when "prezzo"
+            @soluzione = @soluzione.order(prezzo: direction)
+        when "marketcap"
+            @soluzione = @soluzione.order(marketcap: direction)
+        when "settore"
+            @soluzione = @soluzione.order(settore: direction)
+        when "volume"
+            @soluzione = @soluzione.order(volume: direction)
+        when "ebitda"
+            @soluzione = @soluzione.order(ebitda: direction)
+        when "roe"
+            @soluzione = @soluzione.order(roe: direction)
+        when "roa"
+            @soluzione = @soluzione.order(roa: direction)
+        when "pe"
+            @soluzione = @soluzione.order(pe: direction)
+        when "ps"
+            @soluzione = @soluzione.order(ps: direction)
+        when "pb"
+            @soluzione = @soluzione.order(pb: direction)
+        when "divyield"
+            @soluzione = @soluzione.order(divyield: direction)
+        when "debteq"
+            @soluzione = @soluzione.order(debteq: direction)
+        when "opmargin"
+            @soluzione = @soluzione.order(opmargin: direction)
+        else
+            @soluzione = @soluzione.order(default_order_column: direction)
+        end
     end
 
     def aggiungi
@@ -188,7 +196,7 @@ class ScreenerController < ApplicationController
 
     #private
         #def screener_params
-            #params.require(:screener).permit(:paesescelto, :prezzomin, :prezzomax, :marketcapmin, :marketcapmax, :settorescelto, :volumemin, :volumemax, :ebitdamin, :ebitdamax, :roemin, :roemax, :roamin, :roamax, :pemin, :pemax, :psmin, :psmax, :pbmin, :pbmax, :dymin, :dymax, :demin, :demax, :opmmin, :opmmax)
+            #params.require(:screener).permit(:paesescelto, :prezzomin, :prezzomax, :marketcapmin, :marketcapmax, :settosoluzionecelto, :volumemin, :volumemax, :ebitdamin, :ebitdamax, :roemin, :roemax, :roamin, :roamax, :pemin, :pemax, :psmin, :psmax, :pbmin, :pbmax, :dymin, :dymax, :demin, :demax, :opmmin, :opmmax)
         #end
 
 end
