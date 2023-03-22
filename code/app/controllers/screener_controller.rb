@@ -125,12 +125,6 @@ class ScreenerController < ApplicationController
         end
     end
 
-    def show
-        @aggiunta = Azione.all
-        @soluzione = Azione.where(paese: @paese_scelto)
-        @soluzione1=@paese_scelto
-    end
-
     def aggiungi
         @aggiunta = Azione.all
         lista=[]
