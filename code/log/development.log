@@ -25961,3 +25961,120 @@ ActionView::Template::Error (undefined method `nomeaz' for #<Class:0x00007f3728d
 app/views/wallets/index.html.erb:62
 app/views/wallets/index.html.erb:61:in `each'
 app/views/wallets/index.html.erb:61
+Started GET "/" for 127.0.0.1 at 2023-03-24 20:01:15 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (6.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 53.3ms | Allocations: 3385)
+  Rendered _footer.html.erb (Duration: 24.7ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 156.5ms | Allocations: 4802)
+Started GET "/" for 127.0.0.1 at 2023-03-24 20:01:22 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (6.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered layout layouts/application.html.erb (Duration: 4752.7ms | Allocations: 52237)
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 5270ms (Views: 4839.1ms | ActiveRecord: 59.0ms | Allocations: 103136)
+
+
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 34.6ms | Allocations: 1610)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 40.2ms | Allocations: 2553)
+  Rendered layout layouts/application.html.erb (Duration: 255.0ms | Allocations: 5523)
+Completed 200 OK in 361ms (Views: 252.9ms | ActiveRecord: 22.0ms | Allocations: 13529)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-24 20:01:26 +0100
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.4ms | Allocations: 753)
+  Rendered screener/_filtri.html.erb (Duration: 26.6ms | Allocations: 374)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 34.0ms | Allocations: 1512)
+  Rendered screener/_azioni.html.erb (Duration: 41.3ms | Allocations: 7279)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 196.6ms | Allocations: 10854)
+  Rendered layout layouts/application.html.erb (Duration: 421.6ms | Allocations: 13489)
+Completed 200 OK in 522ms (Views: 433.3ms | ActiveRecord: 7.8ms | Allocations: 16629)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-24 20:01:44 +0100
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (4.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.9ms | Allocations: 744)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 6.9ms | Allocations: 1294)
+  Rendered screener/_azioni.html.erb (Duration: 14.7ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 40.0ms | Allocations: 9046)
+  Rendered layout layouts/application.html.erb (Duration: 262.0ms | Allocations: 11606)
+Completed 200 OK in 330ms (Views: 260.8ms | ActiveRecord: 9.1ms | Allocations: 14131)
+
+
+Started GET "/screener?paesescelto=Qualsiasi&prezzomin=&prezzomax=50&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-24 20:01:56 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Qualsiasi", "prezzomin"=>"", "prezzomax"=>"50", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE (prezzo <= 50.0)[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 9.1ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mAzione Load (5.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 9.5ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 3.8ms | Allocations: 1083)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 4153)
+  Rendered layout layouts/application.html.erb (Duration: 265.0ms | Allocations: 6739)
+Completed 200 OK in 340ms (Views: 258.6ms | ActiveRecord: 14.5ms | Allocations: 8274)
+
+
+Started GET "/screener?paesescelto=Qualsiasi&prezzomin=&prezzomax=50&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-24 20:02:01 +0100
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Qualsiasi", "prezzomin"=>"", "prezzomax"=>"50", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  [1m[36mAzione Load (4.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE (prezzo <= 50.0)[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.1ms | Allocations: 743)
+  Rendered screener/_filtri.html.erb (Duration: 0.2ms | Allocations: 8)
+  [1m[36mAzione Load (6.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 12.6ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 2.5ms | Allocations: 1083)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 4153)
+  Rendered layout layouts/application.html.erb (Duration: 252.7ms | Allocations: 6712)
+Completed 200 OK in 321ms (Views: 244.5ms | ActiveRecord: 15.2ms | Allocations: 8184)
+
+

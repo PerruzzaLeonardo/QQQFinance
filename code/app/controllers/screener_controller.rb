@@ -1,12 +1,10 @@
 class ScreenerController < ApplicationController
+    helper_method :sort_column, :sort_direction
         
     def index
         @aggiunta = Azione.all
         @soluzione = Azione.all
         l=[]
-
-        order_by = params[:order_by] || "default_order_column"
-        direction = params[:direction] || "asc"
   
         @paese_scelto = params[:paesescelto]
         if @paese_scelto != "Qualsiasi" && @paese_scelto != nil
@@ -152,51 +150,6 @@ class ScreenerController < ApplicationController
             l.push("Op Margin massimo = " + @opm_max.to_s)
         end
 
-        case order_by
-        when "nome"
-            if direction == "desc"
-                @soluzione = @soluzione.order("lower(nome) ASC")
-                direction = "asc"
-            else
-                if direction == "asc"
-                    @soluzione = @soluzione.order("lower(nome) DESC")
-                    direction = "desc"
-                end
-            end
-        when "isin"
-            @soluzione = @soluzione.order(isin: direction)
-        when "paese"
-            @soluzione = @soluzione.order(paese: direction)
-        when "prezzo"
-            @soluzione = @soluzione.order(prezzo: direction)
-        when "marketcap"
-            @soluzione = @soluzione.order(marketcap: direction)
-        when "settore"
-            @soluzione = @soluzione.order(settore: direction)
-        when "volume"
-            @soluzione = @soluzione.order(volume: direction)
-        when "ebitda"
-            @soluzione = @soluzione.order(ebitda: direction)
-        when "roe"
-            @soluzione = @soluzione.order(roe: direction)
-        when "roa"
-            @soluzione = @soluzione.order(roa: direction)
-        when "pe"
-            @soluzione = @soluzione.order(pe: direction)
-        when "ps"
-            @soluzione = @soluzione.order(ps: direction)
-        when "pb"
-            @soluzione = @soluzione.order(pb: direction)
-        when "divyield"
-            @soluzione = @soluzione.order(divyield: direction)
-        when "debteq"
-            @soluzione = @soluzione.order(debteq: direction)
-        when "opmargin"
-            @soluzione = @soluzione.order(opmargin: direction)
-        else
-            @soluzione = @soluzione.order(default_order_column: direction)
-        end
-
         if l != []
             flash[:filtri] = "Azioni filtrate attraverso i seguenti parametri: "+ l.to_s
         else
@@ -229,6 +182,14 @@ class ScreenerController < ApplicationController
         end
     
         redirect_to '/wallet'
+    end
+
+    def sort_column
+        Product.column_names.include?(params[:sort]) ? params[:sort] : "name"
+    end
+      
+    def sort_direction
+        %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
     end
 
     #private

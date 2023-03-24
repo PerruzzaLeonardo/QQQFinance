@@ -32,6 +32,53 @@
       </div>
     <% end %>
     <%=render "/footer"%>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".clickable");
+  const sortingState = {};
+
+  headers.forEach(header => {
+    sortingState[header.id] = { direction: "desc", lastSorted: null };
+
+    header.addEventListener("click", () => {
+      const table = document.querySelector("#tabella");
+      const tbody = table.querySelector("tbody");
+      const rows = Array.from(tbody.querySelectorAll("tr"));
+
+      const index = Array.from(header.parentNode.children).indexOf(header);
+      const { direction, lastSorted } = sortingState[header.id];
+
+      let newDirection = direction === "desc" ? "asc" : "desc";
+      if (lastSorted !== null && index !== lastSorted) {
+        newDirection = "desc";
+      }
+
+      sortingState[header.id] = { direction: newDirection, lastSorted: index };
+      header.dataset.direction = newDirection;
+
+      const sortedRows = rows.sort((a, b) => {
+        const aCol = a.querySelectorAll("td")[index].textContent;
+        const bCol = b.querySelectorAll("td")[index].textContent;
+        if (!isNaN(aCol) && !isNaN(bCol)) {
+          return parseInt(aCol, 10) - parseInt(bCol, 10);
+        }
+        return aCol.localeCompare(bCol);
+      });
+
+      if (newDirection === "asc") {
+        sortedRows.reverse();
+      }
+
+      tbody.innerHTML = "";
+      sortedRows.forEach(row => {
+        tbody.appendChild(row);
+      });
+    });
+  });
+});
+
+
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
   <script>
