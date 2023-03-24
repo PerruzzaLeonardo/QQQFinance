@@ -27,7 +27,7 @@ class Azione < ApplicationRecord
             http.verify_mode = OpenSSL::SSL::VERIFY_NONE
             
             request = Net::HTTP::Get.new(url)
-            request["X-RapidAPI-Key"] = '077744100emsh424c27eb08db68fp1e9c55jsna3e887dea294'
+            request["X-RapidAPI-Key"] = '860d0f326emshe44b6ed00425478p19d2efjsnab13aa60ecd3'
             request["X-RapidAPI-Host"] = 'yh-finance.p.rapidapi.com'
             
             response = http.request(request)
