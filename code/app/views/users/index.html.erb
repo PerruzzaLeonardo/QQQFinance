@@ -2,9 +2,14 @@
   <%=render "/header"%>
   <div class="row pt-2">
     <div class="col-5">
-          <% flash.each do |type, msg| %>
-        <div>
-          <%= msg %>
+      <% if flash[:alert] %>
+        <div class="alert alert-danger">
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+      <%if flash[:notice]%>
+        <div class="alert alert-success">
+          <%= flash[:notice ] %>
         </div>
       <% end %>
       <h1>IL MIO PROFILO</h1>
@@ -21,7 +26,7 @@
       <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
     </div>
     <div class="col-5">
-      <%= image_tag @user.immagine,class:"card-img-top d-block img-fluid",alt:"Card image cap" %>
+      <%= image_tag @user.immagine,class:"card-img-top img-fluid",alt:"Card image cap" %>
       <div class="field form-group text-center"><h2> <%= @user.username %> </div>
     </div>
   </div>

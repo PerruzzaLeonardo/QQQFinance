@@ -4,6 +4,10 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @user=current_user
+    if(@user.immagine==nil)
+      @user.immagine="profilo"
+      @user.save
+    end
   end
 
   # GET /users/1 or /users/1.json
@@ -44,11 +48,10 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
+        format.html { redirect_to user_url(@user), notice: "Utente creato con successo." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -57,11 +60,9 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to users_path, notice: "User was successfully updated." }
-        format.json { render :index, status: :ok, location: @user }
+        format.html { redirect_to users_path, notice: "Utente modificato con successo." }
       else
         format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -71,8 +72,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to "/", notice: "User was successfully destroyed." }
-      format.json { head :no_content }
+      format.html { redirect_to "/", notice: "Utente eliminato con successo." }
     end
   end
 

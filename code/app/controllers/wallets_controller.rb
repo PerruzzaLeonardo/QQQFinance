@@ -45,15 +45,17 @@ class WalletsController < ApplicationController
       @tmp=Wallet.where(user:current_user.username,azione:@isin).first
       if @tmp==nil
         Wallet.create(user:current_user.username,azione:@isin,quantità:@numero)
+        flash[:notice]="Posizione aggiunta"
       else
         n=@tmp.quantità+@numero
         @tmp.update(quantità:n)
+        flash[:notice]="Posizione aggiornata"
       end
     else
-      flash[:notice]=@isin+" non è un isin valido, scegline uno tra quelli proposti nel menu a tendina"
+      flash[:alert]=@isin+" non è un isin valido, scegline uno tra quelli proposti nel menu a tendina"
     end
 
-    redirect_to '/wallet'
+    redirect_to '/wallet' 
   end
 
   def elimina
@@ -96,28 +98,6 @@ class WalletsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /wallets/1 or /wallets/1.json
-  def update
-    respond_to do |format|
-      if @wallet.update(wallet_params)
-        format.html { redirect_to wallet_url(@wallet), notice: "Wallet was successfully updated." }
-        format.json { render :show, status: :ok, location: @wallet }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @wallet.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /wallets/1 or /wallets/1.json
-  def destroy
-    @wallet.destroy
-
-    respond_to do |format|
-      format.html { redirect_to wallets_url, notice: "Wallet was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
