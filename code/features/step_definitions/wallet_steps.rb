@@ -50,6 +50,10 @@ Given("i am on the login page") do
     visit "users/sign_in"
 end
 
+Given("my wallet isn't empty") do
+  expect(page).to_not have_content('Il tuo wallet è vuoto.')
+end
+
 When("i fill in 'email' with 'luigiverdi@mail.com'") do
     fill_in "user_email",with: "luigiverdi@mail.com"
 end
@@ -62,8 +66,16 @@ When("i press 'submit'") do
     click_button 'Create User'
 end
 
-Then("i should be on the homepage") do
+When("i press 'svuota wallet'") do
+  click_button 'Svuota wallet'
+end
 
+Then("i should be on the homepage") do
+  #aggiungi reindirizzamento dopo averlo sistemato
+end
+
+Then("i should see 'wallet vuoto'") do
+  expect(page).to have_content('Il tuo wallet è vuoto.')
 end
 
 #############################################################
@@ -107,19 +119,28 @@ end
 Then("i should see 'MSFT' in the table below") do
     within("#tab tbody") do
         within("tr:first-child td:first-child") do
-            expect(page).to have_content("Microsoft Corporation")
+            expect(page).to have_content(@azione.nome)
         end
         within("tr:first-child td:nth-child(2)") do
-            expect(page).to have_content("MSFT")
+            expect(page).to have_content(@azione.isin)
         end
         within("tr:first-child td:nth-child(5)") do
-            expect(page).to have_content(23)            
+            expect(page).to have_content(@wallet.quantità)            
         end
     end
 end
 
 Then("i should see the 'svuota wallet' button") do
     expect(page).to have_content("Svuota wallet")
+end
+
+Then("i should be able to delete the wallet by pressing it") do 
+  steps %Q{
+    Given i am on the wallet page
+    And my wallet isn't empty
+    When i press 'svuota wallet'
+    Then i should see 'wallet vuoto'
+  }
 end
   
   

@@ -5234,3 +5234,434 @@ Processing by WalletsController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2064)
 Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 3487)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "LuigiVerdiUsername"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "luigi"], ["cognome", "verdi"], ["username", "LuigiVerdiUsername"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-24 08:51:34.001285"], ["updated_at", "2023-03-24 08:51:34.001285"], ["email", "luigiverdi@mail.com"], ["encrypted_password", "$2a$04$2YSXzd2l9n5GGcp32Yw/yeoUiGgiqr9ZPUmW8z4WWH1LlOEErXWte"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", "profilo2"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 4893)
+  Rendered layout layouts/application.html.erb (Duration: 322.6ms | Allocations: 44285)
+Completed 200 OK in 375ms (Views: 334.4ms | ActiveRecord: 0.0ms | Allocations: 50384)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"luigiverdi@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/1
+Completed 303 See Other in 10ms (ActiveRecord: 0.1ms | Allocations: 2753)
+Started GET "/users/1" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 1994)
+Started GET "/users" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 440)
+  Rendered users/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3035)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 4278)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 5.1ms | Allocations: 125)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2801)
+Completed 200 OK in 25ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 6546)
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"isin"=>"MSFT", "quantita"=>"23"}
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms | Allocations: 413)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1669)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 2586)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-24 08:51:34.763042"], ["updated_at", "2023-03-24 08:51:34.763042"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-24 08:51:34.779367"], ["updated_at", "2023-03-24 08:51:34.779367"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2064)
+Completed 200 OK in 6ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 3499)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:51:34 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (3.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2018)
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 4.0ms | Allocations: 3112)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "LuigiVerdiUsername"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "luigi"], ["cognome", "verdi"], ["username", "LuigiVerdiUsername"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-24 08:53:23.135813"], ["updated_at", "2023-03-24 08:53:23.135813"], ["email", "luigiverdi@mail.com"], ["encrypted_password", "$2a$04$ba2cwJOau.zxbR2VYtNsvus7w2lqqfJwb.oj5HDBVT27dYiqziQxy"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", "profilo2"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 4893)
+  Rendered layout layouts/application.html.erb (Duration: 106.5ms | Allocations: 44285)
+Completed 200 OK in 150ms (Views: 108.4ms | ActiveRecord: 0.0ms | Allocations: 50384)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"luigiverdi@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/1
+Completed 303 See Other in 11ms (ActiveRecord: 0.1ms | Allocations: 2753)
+Started GET "/users/1" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+Completed 302 Found in 14ms (ActiveRecord: 0.4ms | Allocations: 1992)
+Started GET "/users" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 11.2ms | Allocations: 440)
+  Rendered users/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 3035)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.1ms | Allocations: 4286)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2801)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 6534)
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"isin"=>"MSFT", "quantita"=>"23"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 413)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 1669)
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2566)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-24 08:53:23.636396"], ["updated_at", "2023-03-24 08:53:23.636396"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-24 08:53:23.652125"], ["updated_at", "2023-03-24 08:53:23.652125"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2064)
+Completed 200 OK in 11ms (Views: 5.9ms | ActiveRecord: 0.3ms | Allocations: 3489)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:53:23 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2018)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 3108)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "LuigiVerdiUsername"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "luigi"], ["cognome", "verdi"], ["username", "LuigiVerdiUsername"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-24 08:54:20.874750"], ["updated_at", "2023-03-24 08:54:20.874750"], ["email", "luigiverdi@mail.com"], ["encrypted_password", "$2a$04$gdo94.eFSuQ8CznUlIpE3.k63urjQC27S8n8HHEgHLVxIZZLs4vFq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", "profilo2"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:54:20 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4893)
+  Rendered layout layouts/application.html.erb (Duration: 205.6ms | Allocations: 44312)
+Completed 200 OK in 235ms (Views: 209.7ms | ActiveRecord: 0.0ms | Allocations: 50411)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"luigiverdi@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/1
+Completed 303 See Other in 12ms (ActiveRecord: 0.1ms | Allocations: 2753)
+Started GET "/users/1" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms | Allocations: 1990)
+Started GET "/users" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.1ms | Allocations: 440)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3035)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.1ms | Allocations: 4296)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2801)
+Completed 200 OK in 15ms (Views: 6.3ms | ActiveRecord: 0.3ms | Allocations: 6526)
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"isin"=>"MSFT", "quantita"=>"23"}
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 415)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 1669)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 2574)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (4.4ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-24 08:54:21.457999"], ["updated_at", "2023-03-24 08:54:21.457999"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-24 08:54:21.474536"], ["updated_at", "2023-03-24 08:54:21.474536"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2064)
+Completed 200 OK in 7ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 3497)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:54:21 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2018)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 3122)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "LuigiVerdiUsername"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "luigi"], ["cognome", "verdi"], ["username", "LuigiVerdiUsername"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-24 08:58:25.526689"], ["updated_at", "2023-03-24 08:58:25.526689"], ["email", "luigiverdi@mail.com"], ["encrypted_password", "$2a$04$KPncVk7nmYaHstFwdISxQ.u30kwHMoaoU.ry2XThlMRJUCnuxfq4q"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", "profilo2"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 4893)
+  Rendered layout layouts/application.html.erb (Duration: 94.6ms | Allocations: 44283)
+Completed 200 OK in 117ms (Views: 100.1ms | ActiveRecord: 0.0ms | Allocations: 50382)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"luigiverdi@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/1
+Completed 303 See Other in 12ms (ActiveRecord: 0.1ms | Allocations: 2753)
+Started GET "/users/1" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms | Allocations: 1980)
+Started GET "/users" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 440)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1531)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 3035)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 4276)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 2.6ms | Allocations: 125)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1261)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2801)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 6532)
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"isin"=>"MSFT", "quantita"=>"23"}
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 409)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 1669)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.1ms | Allocations: 2574)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-24 08:58:25.977446"], ["updated_at", "2023-03-24 08:58:25.977446"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-24 08:58:25.993897"], ["updated_at", "2023-03-24 08:58:25.993897"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:58:25 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 599)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 2064)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 3491)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:58:26 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 553)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2018)
+Completed 200 OK in 10ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 3106)
+Started DELETE "/wallets/rimozione" for 127.0.0.1 at 2023-03-24 09:58:26 +0100
+Processing by WalletsController#rimozione as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Destroy (0.1ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 24ms (ActiveRecord: 0.2ms | Allocations: 998)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-24 09:58:26 +0100
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 221)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1700)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 2607)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m

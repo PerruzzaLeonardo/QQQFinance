@@ -10,3 +10,4 @@ Scenario: aggiungo un azione al wallet
  Then i should be redirected to the wallet page
  And i should see 'MSFT' in the table below
  And i should see the 'svuota wallet' button
+ And i should be able to delete the wallet by pressing it
