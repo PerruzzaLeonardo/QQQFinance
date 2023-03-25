@@ -161,29 +161,6 @@ class ScreenerController < ApplicationController
         end
     end
 
-    def aggiungi
-        @aggiunta = Azione.all
-        lista=[]
-        @aggiunta.each do |x|
-          lista.push(x.isin)
-        end
-        @isin = params[:isin].upcase
-        @numero = params[:quantita].to_i
-        if lista.include?(@isin)
-          @tmp=Wallet.where(user:current_user.username,azione:@isin).first
-          if @tmp==nil
-            Wallet.create(user:current_user.username,azione:@isin,quantità:@numero)
-          else
-            n=@tmp.quantità+@numero
-            @tmp.update(quantità:n)
-          end
-        else
-          flash[:notice]=@isin+" non è un isin valido, scegline uno tra quelli proposti nel menu a tendina"
-        end
-    
-        redirect_to '/wallet'
-    end
-
     def sort_column
         Product.column_names.include?(params[:sort]) ? params[:sort] : "name"
     end

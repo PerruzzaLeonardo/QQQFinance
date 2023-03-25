@@ -16,5 +16,8 @@
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
-
+set :output, 'log/development.log'
+every 15.minute do
+    rake "news:fetch"
+end
 # Learn more: http://github.com/javan/whenever

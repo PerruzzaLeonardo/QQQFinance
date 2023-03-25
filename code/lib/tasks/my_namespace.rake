@@ -1,6 +1,9 @@
-namespace :my_namespace do
-  desc "TODO"
-  task my_task: :environment do
+namespace :news do
+  desc "Aggiorna le news da mostrare"
+  task :fetch => :environment do
+    puts "Updating news..."
+    News.get_news()
+    puts "#{Time.now} - Success!"
   end
 
 end
