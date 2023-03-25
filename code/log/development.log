@@ -33549,3 +33549,101 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 60ms (Views: 49.1ms | ActiveRecord: 1.0ms | Allocations: 11792)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-25 23:17:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.2ms | Allocations: 588)
+  Rendered _footer.html.erb (Duration: 1.6ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 353.8ms | Allocations: 45042)
+Completed 200 OK in 603ms (Views: 361.9ms | ActiveRecord: 10.0ms | Allocations: 95439)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 23:17:20 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 3265)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 6079)
+Completed 200 OK in 95ms (Views: 91.9ms | ActiveRecord: 0.0ms | Allocations: 7710)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2023-03-25 23:17:21 +0100
+Processing by Users::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 18.5ms | Allocations: 190)
+  Rendered devise/shared/_links.html.erb (Duration: 4.1ms | Allocations: 773)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 50.3ms | Allocations: 4373)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 7195)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.0ms | Allocations: 8648)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2023-03-25 23:17:33 +0100
+Processing by Users::PasswordsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "d0c256b1a4e3ac39115860ff7629b35d29d46ae604a320c34440d65b0d7e71c7"], ["LIMIT", 1]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_password_token" = ?, "reset_password_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-25 22:17:33.519607"], ["reset_password_token", "d0c256b1a4e3ac39115860ff7629b35d29d46ae604a320c34440d65b0d7e71c7"], ["reset_password_sent_at", "2023-03-25 22:17:33.518711"], ["id", 8]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (44.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 20.9ms | Allocations: 403)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 73.9ms
+Delivered mail 641f72fdd8440_3ead40d82972e@leotlc-VirtualBox.mail (3153.8ms)
+Date: Sat, 25 Mar 2023 23:17:33 +0100
+From: QQQFinanceASSI@gmail.com
+Reply-To: QQQFinanceASSI@gmail.com
+To: qqqfinanceassi@gmail.com
+Message-ID: <641f72fdd8440_3ead40d82972e@leotlc-VirtualBox.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello qqqfinanceassi@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=4-mCzw3TqDYYVcXaK4CL">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 3858ms (ActiveRecord: 49.3ms | Allocations: 41942)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 23:17:37 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 3731)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 0.0ms | Allocations: 4451)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2023-03-25 23:18:04 +0100
+Processing by Users::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 144)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 86.2ms | Allocations: 4049)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 6786)
+Completed 200 OK in 133ms (Views: 118.9ms | ActiveRecord: 0.0ms | Allocations: 7596)
+
+
