@@ -63,7 +63,7 @@ When("i fill in 'password' with 'password'") do
 end
 
 When("i press 'submit'") do
-    click_button 'Create User'
+    click_button 'Log in'
 end
 
 When("i press 'svuota wallet'") do
@@ -116,7 +116,7 @@ Then("i should be redirected to the wallet page") do
     visit "/wallet"
 end
 
-Then("i should see 'MSFT' in the table below") do
+Then("i should see 'MSFT' and its details in the table below") do
     within("#tab tbody") do
         within("tr:first-child td:first-child") do
             expect(page).to have_content(@azione.nome)

@@ -8,6 +8,6 @@ Scenario: aggiungo un azione al wallet
  And i fill in 'quantita' with '23'
  And i press 'aggiungi'
  Then i should be redirected to the wallet page
- And i should see 'MSFT' in the table below
+ And i should see 'MSFT' and its details in the table below
  And i should see the 'svuota wallet' button
  And i should be able to delete the wallet by pressing it

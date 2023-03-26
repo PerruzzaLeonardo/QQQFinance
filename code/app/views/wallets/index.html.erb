@@ -64,7 +64,7 @@
        <tbody>
        <% i=0%>
        <%= while i<@azioni.length() do %>
-       <tr><td><%=@azioni[i].nome%></td><td><%=@azioni[i].isin%></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i] %></td><td><%=(@azioni[i].prezzo * @quantita[i]).round(2)%></td><td><%= button_to 'rimuovi', delete_position_path(isin:@azioni[i].isin), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
+       <tr><td><%=@azioni[i].nome%></td><td><%= link_to @azioni[i].isin, @azioni[i] %></td><td><%=@azioni[i].paese%></td><td><%=@azioni[i].settore%></td><td><%=@quantita[i] %></td><td><%=(@azioni[i].prezzo * @quantita[i]).round(2)%></td><td><%= button_to 'rimuovi', delete_position_path(isin:@azioni[i].isin), method: :delete, class: "btn btn-primary btn-danger btn-sm", data: { confirm: 'Sei sicuro di voler rimuovere questa posizione?' } %></td></tr>
        <% i+=1 %>
        <%end %>
        </tbody>
