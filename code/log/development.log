@@ -32699,6 +32699,7 @@ Processing by Users::PasswordsController#new as HTML
 Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 6390)
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2023-03-24 22:52:57 +0100
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by IndexController#index as HTML
@@ -32766,10 +32767,503 @@ Processing by UsersController#edit as HTML
   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
   ↳ app/controllers/users_controller.rb:82:in `set_user'
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+=======
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 16:40:41 +0100
+Started GET "/" for 127.0.0.1 at 2023-03-25 16:40:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (17.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 309.9ms | Allocations: 4535)
+  Rendered _header.html.erb (Duration: 103.1ms | Allocations: 2840)
+  Rendered _footer.html.erb (Duration: 50.4ms | Allocations: 486)
+  Rendered index/index.html.erb within layouts/application (Duration: 537.1ms | Allocations: 7370)
+  Rendered layout layouts/application.html.erb (Duration: 5577.9ms | Allocations: 85321)
+Completed 200 OK in 6754ms (Views: 5784.3ms | ActiveRecord: 42.2ms | Allocations: 140083)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 5682.7ms | Allocations: 86707)
+Completed 200 OK in 6774ms (Views: 5773.7ms | ActiveRecord: 78.0ms | Allocations: 139842)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 16:41:00 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (7.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (6.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 104)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 585)
+  Rendered layout layouts/application.html.erb (Duration: 399.5ms | Allocations: 3259)
+Completed 200 OK in 509ms (Views: 403.4ms | ActiveRecord: 14.1ms | Allocations: 6644)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 16:41:07 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (7.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (6.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (6.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (7.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (6.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (6.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (7.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (7.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (6.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 130)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 9)
+  Rendered news/index.html.erb within layouts/application (Duration: 1335.4ms | Allocations: 5258)
+  Rendered layout layouts/application.html.erb (Duration: 1645.7ms | Allocations: 7805)
+Completed 200 OK in 2251ms (Views: 1663.9ms | ActiveRecord: 103.9ms | Allocations: 31518)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 16:46:51 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (7.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (7.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (7.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (7.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (7.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (7.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (7.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (7.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 656.9ms | Allocations: 3616)
+  Rendered layout layouts/application.html.erb (Duration: 1021.5ms | Allocations: 6056)
+Completed 200 OK in 1226ms (Views: 1025.2ms | ActiveRecord: 73.6ms | Allocations: 11126)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 16:46:56 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (6.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (6.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (5.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (7.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (5.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (5.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (6.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (6.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (5.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 640.3ms | Allocations: 3613)
+  Rendered layout layouts/application.html.erb (Duration: 954.0ms | Allocations: 6054)
+Completed 200 OK in 1156ms (Views: 957.5ms | ActiveRecord: 62.3ms | Allocations: 11013)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 16:52:44 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (6.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (6.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (7.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (7.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (6.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (7.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (7.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (6.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (7.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 587.9ms | Allocations: 3614)
+  Rendered layout layouts/application.html.erb (Duration: 886.1ms | Allocations: 6053)
+Completed 200 OK in 1079ms (Views: 889.2ms | ActiveRecord: 69.2ms | Allocations: 11012)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 16:59:49 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (6.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (5.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (7.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (6.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (6.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (7.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (6.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (6.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 584.6ms | Allocations: 3614)
+  Rendered layout layouts/application.html.erb (Duration: 887.4ms | Allocations: 6053)
+Completed 200 OK in 1106ms (Views: 890.7ms | ActiveRecord: 72.7ms | Allocations: 11203)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-25 17:00:14 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (11.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (11.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (11.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (11.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (10.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (11.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (11.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (10.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (11.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (10.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 893.3ms | Allocations: 3633)
+  Rendered layout layouts/application.html.erb (Duration: 1232.9ms | Allocations: 6098)
+Completed 200 OK in 1568ms (Views: 1237.8ms | ActiveRecord: 112.4ms | Allocations: 11062)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 21:48:13 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (15.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 19.7ms | Allocations: 588)
+  Rendered _footer.html.erb (Duration: 4.9ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 53.7ms | Allocations: 2049)
+  Rendered layout layouts/application.html.erb (Duration: 1943.4ms | Allocations: 118627)
+Completed 200 OK in 2452ms (Views: 1982.2ms | ActiveRecord: 25.6ms | Allocations: 169270)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 21:48:30 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 73.8ms | Allocations: 3269)
+  Rendered layout layouts/application.html.erb (Duration: 90.0ms | Allocations: 6079)
+Completed 200 OK in 145ms (Views: 129.2ms | ActiveRecord: 0.0ms | Allocations: 7694)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-25 21:48:35 +0100
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 71.4ms | Allocations: 5851)
+  Rendered layout layouts/application.html.erb (Duration: 84.9ms | Allocations: 8661)
+Completed 200 OK in 95ms (Views: 92.1ms | ActiveRecord: 0.0ms | Allocations: 10160)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 21:48:44 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 39.6ms | Allocations: 980)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 3722)
+Completed 200 OK in 88ms (Views: 80.2ms | ActiveRecord: 0.0ms | Allocations: 4406)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2023-03-25 21:48:49 +0100
+Started GET "/users/auth/google_oauth2/callback?state=647b284efbd112fc09b944104e070a9cb8c83a60ce75bb86&code=4%2F0AVHEtk7YOphnfZKbh-La7vOcAlOkqhxcQQNY-Zf3IE_eyrBt_ZJOFTwPPAK98xAelxgJQQ&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid&authuser=0&prompt=none" for 127.0.0.1 at 2023-03-25 21:48:49 +0100
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"647b284efbd112fc09b944104e070a9cb8c83a60ce75bb86", "code"=>"4/0AVHEtk7YOphnfZKbh-La7vOcAlOkqhxcQQNY-Zf3IE_eyrBt_ZJOFTwPPAK98xAelxgJQQ", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid", "authuser"=>"0", "prompt"=>"none"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["provider", "google_oauth2"], ["uid", "103737496010269893849"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (39.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "QQQ"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:16:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/models/user.rb:16:in `from_omniauth'
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 550ms (ActiveRecord: 41.3ms | Allocations: 8334)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 21:48:52 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 982)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 3723)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 4395)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-25 21:49:18 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ilariav@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ilariav@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/9
+Completed 303 See Other in 587ms (ActiveRecord: 0.6ms | Allocations: 5683)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-25 21:49:19 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://localhost:3000/users
+  [1m[36mWallet Load (7.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+Completed 302 Found in 194ms (ActiveRecord: 10.9ms | Allocations: 18436)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 21:49:19 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1447)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 4099)
+Completed 200 OK in 53ms (Views: 44.1ms | ActiveRecord: 0.2ms | Allocations: 5844)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 21:49:29 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 34.2ms | Allocations: 7666)
+  Rendered users/edit.html.erb within layouts/application (Duration: 47.7ms | Allocations: 8160)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 10742)
+Completed 200 OK in 74ms (Views: 63.5ms | ActiveRecord: 0.5ms | Allocations: 12420)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 21:49:46 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 25.2ms | Allocations: 6137)
+  Rendered users/edit.html.erb within layouts/application (Duration: 31.6ms | Allocations: 6372)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 8954)
+Completed 200 OK in 78ms (Views: 64.4ms | ActiveRecord: 0.7ms | Allocations: 10564)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2023-03-25 21:50:00 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Ilaria", "cognome"=>"viola", "email"=>"ilariav@gmail.com", "username"=>"ilariaviola", "pubblico"=>"no", "commento"=>"", "immagine"=>"profilo4"}, "commit"=>"Salva modifiche", "id"=>"9"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ilariaviola"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ilariav@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Update (8.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-25 20:50:00.870043"], ["immagine", "profilo4"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 164ms (ActiveRecord: 20.5ms | Allocations: 5506)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 21:50:00 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3460)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 0.3ms | Allocations: 4627)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 21:50:07 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 21.3ms | Allocations: 5905)
+  Rendered users/edit.html.erb within layouts/application (Duration: 27.7ms | Allocations: 6140)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 8721)
+Completed 200 OK in 85ms (Views: 49.1ms | ActiveRecord: 1.1ms | Allocations: 10319)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 21:50:10 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 851)
+  Rendered layout layouts/application.html.erb (Duration: 54.1ms | Allocations: 3452)
+Completed 200 OK in 132ms (Views: 71.8ms | ActiveRecord: 0.3ms | Allocations: 4608)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 21:50:44 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 78.5ms | Allocations: 5905)
+  Rendered users/edit.html.erb within layouts/application (Duration: 100.8ms | Allocations: 6140)
+  Rendered layout layouts/application.html.erb (Duration: 128.1ms | Allocations: 8721)
+Completed 200 OK in 193ms (Views: 144.4ms | ActiveRecord: 0.6ms | Allocations: 10309)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2023-03-25 21:51:25 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Ilaria", "cognome"=>"viola", "email"=>"ilariav@gmail.com", "username"=>"ilariaviola", "pubblico"=>"no", "commento"=>"", "immagine"=>"profilo4"}, "commit"=>"Salva modifiche", "id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ilariaviola"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ilariav@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 78ms (ActiveRecord: 3.1ms | Allocations: 3783)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 21:51:26 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 859)
+  Rendered layout layouts/application.html.erb (Duration: 42.1ms | Allocations: 3460)
+Completed 200 OK in 61ms (Views: 50.5ms | ActiveRecord: 0.3ms | Allocations: 4627)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 21:51:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 851)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3452)
+Completed 200 OK in 42ms (Views: 25.7ms | ActiveRecord: 0.3ms | Allocations: 4609)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 21:52:15 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+>>>>>>> 563f2bfac4ea4186c8fa255ffc1b361b31474c4e
   ↳ app/controllers/users_controller.rb:40:in `edit'
   Rendering layout layouts/application.html.erb
   Rendering users/edit.html.erb within layouts/application
   Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+<<<<<<< HEAD
   Rendered users/_form.html.erb (Duration: 132.6ms | Allocations: 9188)
   Rendered users/edit.html.erb within layouts/application (Duration: 136.7ms | Allocations: 9702)
   Rendered layout layouts/application.html.erb (Duration: 142.2ms | Allocations: 12275)
@@ -32839,3 +33333,1151 @@ Processing by UsersController#edit as HTML
 Completed 200 OK in 88ms (Views: 80.1ms | ActiveRecord: 0.4ms | Allocations: 13553)
 
 
+=======
+  Rendered users/_form.html.erb (Duration: 17.6ms | Allocations: 5905)
+  Rendered users/edit.html.erb within layouts/application (Duration: 19.1ms | Allocations: 6140)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 8721)
+Completed 200 OK in 40ms (Views: 26.8ms | ActiveRecord: 0.5ms | Allocations: 10319)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 22:02:49 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 10.6ms | Allocations: 588)
+  Rendered _footer.html.erb (Duration: 1.0ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 287.0ms | Allocations: 44973)
+Completed 200 OK in 524ms (Views: 298.9ms | ActiveRecord: 5.7ms | Allocations: 95370)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 22:02:54 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 3265)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 6075)
+Completed 200 OK in 70ms (Views: 66.5ms | ActiveRecord: 0.0ms | Allocations: 7704)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-25 22:03:11 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ilariav@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ilariav@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/9
+Completed 303 See Other in 571ms (ActiveRecord: 0.5ms | Allocations: 7663)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-25 22:03:12 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://localhost:3000/users
+  [1m[36mWallet Load (0.5ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (1.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+Completed 302 Found in 110ms (ActiveRecord: 3.9ms | Allocations: 18408)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 22:03:12 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered users/index.html.erb within layouts/application (Duration: 33.0ms | Allocations: 1431)
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 4094)
+Completed 200 OK in 126ms (Views: 95.0ms | ActiveRecord: 1.5ms | Allocations: 5849)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 22:15:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 87ms (ActiveRecord: 1.9ms | Allocations: 25469)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 22:15:36 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 7.0ms | Allocations: 1166)
+  Rendered _footer.html.erb (Duration: 38.6ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 53.1ms | Allocations: 2564)
+  Rendered layout layouts/application.html.erb (Duration: 277.0ms | Allocations: 45529)
+Completed 200 OK in 421ms (Views: 288.2ms | ActiveRecord: 4.8ms | Allocations: 75658)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 22:15:39 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 37)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.8ms | Allocations: 1401)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 4064)
+Completed 200 OK in 50ms (Views: 42.5ms | ActiveRecord: 0.5ms | Allocations: 5893)
+
+
+Started GET "/rote" for 127.0.0.1 at 2023-03-25 22:26:02 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/rote"):
+  
+Started GET "/users" for 127.0.0.1 at 2023-03-25 22:28:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 853)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 3459)
+Completed 200 OK in 62ms (Views: 45.5ms | ActiveRecord: 2.0ms | Allocations: 4810)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 22:35:02 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 48.1ms | Allocations: 11120)
+  Rendered users/edit.html.erb within layouts/application (Duration: 53.8ms | Allocations: 11616)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 14211)
+Completed 200 OK in 79ms (Views: 64.1ms | ActiveRecord: 1.9ms | Allocations: 16761)
+
+
+Started PATCH "/users/9" for 127.0.0.1 at 2023-03-25 22:39:26 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Ilaria", "cognome"=>"viola", "email"=>"ilariav@gmail.com", "username"=>"ilariaviola", "pubblico"=>"no", "commento"=>"Il mio primo commento", "immagine"=>"profilo4"}, "commit"=>"Salva modifiche", "id"=>"9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ilariaviola"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ilariav@gmail.com"], ["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["commento", "Il mio primo commento"], ["updated_at", "2023-03-25 21:39:26.822210"], ["id", 9]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (13.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+Redirected to http://localhost:3000/users
+Completed 302 Found in 73ms (ActiveRecord: 16.4ms | Allocations: 6169)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 22:39:26 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 3526)
+Completed 200 OK in 34ms (Views: 25.8ms | ActiveRecord: 0.3ms | Allocations: 4751)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 22:41:20 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 20.1ms | Allocations: 5929)
+  Rendered users/edit.html.erb within layouts/application (Duration: 21.9ms | Allocations: 6164)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 8749)
+Completed 200 OK in 42ms (Views: 31.8ms | ActiveRecord: 0.7ms | Allocations: 10337)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 22:53:10 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (13.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 84.1ms | Allocations: 5917)
+  Rendered users/edit.html.erb within layouts/application (Duration: 104.8ms | Allocations: 6152)
+  Rendered layout layouts/application.html.erb (Duration: 157.0ms | Allocations: 8737)
+Completed 200 OK in 259ms (Views: 172.7ms | ActiveRecord: 14.7ms | Allocations: 10589)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:02:14 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 12.9ms | Allocations: 424)
+  Rendered users/index.html.erb within layouts/application (Duration: 51.1ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 103.5ms | Allocations: 4635)
+Completed 200 OK in 184ms (Views: 128.2ms | ActiveRecord: 2.0ms | Allocations: 6678)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:03:19 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 424)
+  Rendered users/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 4618)
+Completed 200 OK in 57ms (Views: 38.6ms | ActiveRecord: 0.3ms | Allocations: 6494)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:05:05 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.3ms | Allocations: 424)
+  Rendered users/index.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 36.5ms | Allocations: 4620)
+Completed 200 OK in 56ms (Views: 42.7ms | ActiveRecord: 0.5ms | Allocations: 6489)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:07:01 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.4ms | Allocations: 424)
+  Rendered users/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 1776)
+  Rendered layout layouts/application.html.erb (Duration: 52.4ms | Allocations: 4641)
+Completed 200 OK in 104ms (Views: 67.2ms | ActiveRecord: 0.4ms | Allocations: 6512)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:12:10 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.8ms | Allocations: 424)
+  Rendered users/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4624)
+Completed 200 OK in 36ms (Views: 27.8ms | ActiveRecord: 0.3ms | Allocations: 6497)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 23:12:12 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (3.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 4.4ms | Allocations: 740)
+  Rendered _footer.html.erb (Duration: 12.9ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 28.9ms | Allocations: 1756)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 4574)
+Completed 200 OK in 84ms (Views: 66.3ms | ActiveRecord: 4.1ms | Allocations: 8442)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-25 23:12:15 +0100
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (1.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 11.9ms | Allocations: 751)
+  Rendered screener/_filtri.html.erb (Duration: 2.5ms | Allocations: 374)
+  [1m[36mCACHE Azione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 13.5ms | Allocations: 1512)
+  Rendered screener/_azioni.html.erb (Duration: 45.8ms | Allocations: 7221)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 89.8ms | Allocations: 10769)
+  Rendered layout layouts/application.html.erb (Duration: 107.1ms | Allocations: 13593)
+Completed 200 OK in 130ms (Views: 113.7ms | ActiveRecord: 2.0ms | Allocations: 16637)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 23:12:17 +0100
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 8.8ms | Allocations: 735)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1166)
+  Rendered layout layouts/application.html.erb (Duration: 32.9ms | Allocations: 3911)
+Completed 200 OK in 74ms (Views: 47.1ms | ActiveRecord: 3.5ms | Allocations: 7093)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:12:19 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 15.9ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 39.1ms | Allocations: 3457)
+Completed 200 OK in 61ms (Views: 54.1ms | ActiveRecord: 0.4ms | Allocations: 4623)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-25 23:12:23 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 852)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3459)
+Completed 200 OK in 33ms (Views: 22.4ms | ActiveRecord: 0.4ms | Allocations: 4607)
+
+
+Started GET "/users/9/edit" for 127.0.0.1 at 2023-03-25 23:12:57 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 34.2ms | Allocations: 7004)
+  Rendered users/edit.html.erb within layouts/application (Duration: 39.6ms | Allocations: 7491)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 10087)
+Completed 200 OK in 60ms (Views: 49.1ms | ActiveRecord: 1.0ms | Allocations: 11792)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-25 23:17:16 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (4.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.2ms | Allocations: 588)
+  Rendered _footer.html.erb (Duration: 1.6ms | Allocations: 131)
+  Rendered index/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 353.8ms | Allocations: 45042)
+Completed 200 OK in 603ms (Views: 361.9ms | ActiveRecord: 10.0ms | Allocations: 95439)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 23:17:20 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 3265)
+  Rendered layout layouts/application.html.erb (Duration: 53.6ms | Allocations: 6079)
+Completed 200 OK in 95ms (Views: 91.9ms | ActiveRecord: 0.0ms | Allocations: 7710)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2023-03-25 23:17:21 +0100
+Processing by Users::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 18.5ms | Allocations: 190)
+  Rendered devise/shared/_links.html.erb (Duration: 4.1ms | Allocations: 773)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 50.3ms | Allocations: 4373)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 7195)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.0ms | Allocations: 8648)
+
+
+Started POST "/users/password" for 127.0.0.1 at 2023-03-25 23:17:33 +0100
+Processing by Users::PasswordsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com"}, "commit"=>"Send me reset password instructions"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "d0c256b1a4e3ac39115860ff7629b35d29d46ae604a320c34440d65b0d7e71c7"], ["LIMIT", 1]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mUser Update (2.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "reset_password_token" = ?, "reset_password_sent_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-25 22:17:33.519607"], ["reset_password_token", "d0c256b1a4e3ac39115860ff7629b35d29d46ae604a320c34440d65b0d7e71c7"], ["reset_password_sent_at", "2023-03-25 22:17:33.518711"], ["id", 8]]
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (44.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/passwords_controller.rb:18:in `create'
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (Duration: 20.9ms | Allocations: 403)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 73.9ms
+Delivered mail 641f72fdd8440_3ead40d82972e@leotlc-VirtualBox.mail (3153.8ms)
+Date: Sat, 25 Mar 2023 23:17:33 +0100
+From: QQQFinanceASSI@gmail.com
+Reply-To: QQQFinanceASSI@gmail.com
+To: qqqfinanceassi@gmail.com
+Message-ID: <641f72fdd8440_3ead40d82972e@leotlc-VirtualBox.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello qqqfinanceassi@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=4-mCzw3TqDYYVcXaK4CL">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Redirected to http://localhost:3000/users/sign_in
+Completed 303 See Other in 3858ms (ActiveRecord: 49.3ms | Allocations: 41942)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-25 23:17:37 +0100
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 19.4ms | Allocations: 983)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 3731)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 0.0ms | Allocations: 4451)
+
+
+Started GET "/users/password/edit?reset_password_token=[FILTERED]" for 127.0.0.1 at 2023-03-25 23:18:04 +0100
+Processing by Users::PasswordsController#edit as HTML
+  Parameters: {"reset_password_token"=>"[FILTERED]"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 144)
+  Rendered devise/passwords/edit.html.erb within layouts/application (Duration: 86.2ms | Allocations: 4049)
+  Rendered layout layouts/application.html.erb (Duration: 107.2ms | Allocations: 6786)
+Completed 200 OK in 133ms (Views: 118.9ms | ActiveRecord: 0.0ms | Allocations: 7596)
+
+
+  [1m[36mNews Load (8.5ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (16.4ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (15.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.656812"], ["updated_at", "2023-03-25 18:53:20.656812"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 18:53:20.693912"], ["updated_at", "2023-03-25 18:53:20.693912"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.730194"], ["updated_at", "2023-03-25 18:53:20.730194"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.765230"], ["updated_at", "2023-03-25 18:53:20.765230"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.799875"], ["updated_at", "2023-03-25 18:53:20.799875"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.835779"], ["updated_at", "2023-03-25 18:53:20.835779"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.872568"], ["updated_at", "2023-03-25 18:53:20.872568"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.910323"], ["updated_at", "2023-03-25 18:53:20.910323"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 18:53:20.950907"], ["updated_at", "2023-03-25 18:53:20.950907"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.988529"], ["updated_at", "2023-03-25 18:53:20.988529"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+Started GET "/news" for 127.0.0.1 at 2023-03-25 19:54:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (4.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (4.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (5.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (4.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (5.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (5.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (5.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (5.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (5.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (5.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 20.5ms | Allocations: 642)
+  Rendered _footer.html.erb (Duration: 23.3ms | Allocations: 129)
+  Rendered news/index.html.erb within layouts/application (Duration: 3622.9ms | Allocations: 32606)
+  Rendered layout layouts/application.html.erb (Duration: 4613.3ms | Allocations: 47750)
+Completed 200 OK in 5073ms (Views: 4677.5ms | ActiveRecord: 74.4ms | Allocations: 77949)
+
+
+  [1m[36mNews Load (5.2ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (15.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:14.979095"], ["updated_at", "2023-03-25 18:58:14.979095"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 18:58:15.016578"], ["updated_at", "2023-03-25 18:58:15.016578"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:15.055091"], ["updated_at", "2023-03-25 18:58:15.055091"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.092948"], ["updated_at", "2023-03-25 18:58:15.092948"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.130176"], ["updated_at", "2023-03-25 18:58:15.130176"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.165634"], ["updated_at", "2023-03-25 18:58:15.165634"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:15.200046"], ["updated_at", "2023-03-25 18:58:15.200046"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (17.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.237650"], ["updated_at", "2023-03-25 18:58:15.237650"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (14.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 18:58:15.283971"], ["updated_at", "2023-03-25 18:58:15.283971"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.347357"], ["updated_at", "2023-03-25 18:58:15.347357"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+Started GET "/news" for 127.0.0.1 at 2023-03-25 19:58:39 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (4.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (3.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (4.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (4.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (4.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (4.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (3.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 232.1ms | Allocations: 2876)
+  Rendered layout layouts/application.html.erb (Duration: 423.2ms | Allocations: 5347)
+Completed 200 OK in 554ms (Views: 426.4ms | ActiveRecord: 39.8ms | Allocations: 10500)
+
+
+  [1m[36mNews Load (8.2ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (24.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (20.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.595723"], ["updated_at", "2023-03-25 19:01:50.595723"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (25.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 19:01:50.655388"], ["updated_at", "2023-03-25 19:01:50.655388"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.710927"], ["updated_at", "2023-03-25 19:01:50.710927"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.752370"], ["updated_at", "2023-03-25 19:01:50.752370"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (14.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.794442"], ["updated_at", "2023-03-25 19:01:50.794442"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.837964"], ["updated_at", "2023-03-25 19:01:50.837964"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (18.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.879087"], ["updated_at", "2023-03-25 19:01:50.879087"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.923730"], ["updated_at", "2023-03-25 19:01:50.923730"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 19:01:50.961376"], ["updated_at", "2023-03-25 19:01:50.961376"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (20.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.995630"], ["updated_at", "2023-03-25 19:01:50.995630"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Load (4.4ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (8.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (8.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "BTS’ Jimin Sells Over 1 Million Copies Of ‘Face’ Solo Album Worldwide For Record-Breaking 24 Hours In Korea"], ["descrizione", "On its first day available, Jimin’s debut solo album 'FACE' sold 1,021,532 physical copies worldwide in its first day available on March 24, according to South Korea’s real-time album sales website Hanteo Chart."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/jeffbenjamin/2023/03/26/bts-jimin-sells-over-1-million-copies-of-face-solo-album-worldwide-for-record-breaking-24-hours-in-korea/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f77844cf85ecf6f580d4c/0x0.jpg?width=960&precrop=2000%2C1125%2Cx0%2Cy89"], ["created_at", "2023-03-26 09:57:33.614752"], ["updated_at", "2023-03-26 09:57:33.614752"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Today’s Wordle #645 Hints, Clues And Solution For Sunday, March 26th"], ["descrizione", "How to solve today's Wordle."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/26/todays-wordle-645-hints-clues-and-solution-for-sunday-march-26th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61edcce353de3d57134cef6b/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.644634"], ["updated_at", "2023-03-26 09:57:33.644634"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Michael Forrest’s Clutch Free Throws Propel Florida Atlantic To First Men’s Basketball Final Four"], ["descrizione", "Florida Atlantic defeated Kansas State, 79-76, in Saturday night's East Region men's basketball final to advance to the Final Four next weekend in Houston."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/timcasey/2023/03/26/michael-forrests-clutch-free-throws-propel-florida-atlantic-to-first-mens-basketball-final-four/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fc0392d2c8c327a580d4c/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.674563"], ["updated_at", "2023-03-26 09:57:33.674563"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "The Ukrainian Army Needs More Heavy Vehicles. Until It Gets Them, Creative Tactics Must Suffice."], ["descrizione", "Middling equipment and advanced methods could define the Ukrainians’ operations if and when they shift from defense to offense in the coming weeks."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/davidaxe/2023/03/25/the-ukrainian-army-needs-more-heavy-vehicles-until-it-gets-them-creative-tactics-must-suffice/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fbca96b12af859deb4786/0x0.jpg?width=960&precrop=1960%2C1102%2Cx40%2Cy226"], ["created_at", "2023-03-26 09:57:33.703399"], ["updated_at", "2023-03-26 09:57:33.703399"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Texas Is On The Cusp Of Trouble"], ["descrizione", "For years, Texas has been the picture of mass prosperity."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/briandomitrovic/2023/03/25/texas-is-on-the-cusp-of-trouble/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fa5c7af1ae870dde2d103/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.733400"], ["updated_at", "2023-03-26 09:57:33.733400"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "US explores additional bank support favoring First Republic's benefit: Report"], ["descrizione", "Despite banking laws stating that remedies should not be aimed at benefiting a specific bank, this change could be structured “in a way to ensure” First Republic benefits, according to unnamed sources."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-contemplates-expanding-emergency-lending-facility-for-banks-report"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOGJmOTY5NGItZmNiMC00NTU4LWE3ZGEtMzFkYzI0NDAzZGY5LmpwZw==.jpg"], ["created_at", "2023-03-26 09:57:33.762493"], ["updated_at", "2023-03-26 09:57:33.762493"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (7.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "Microsoft Plans To Use AI To Solve A Huge Pain Point For Doctors"], ["descrizione", "Clinical documentation is one of the most cumbersome aspects of healthcare delivery."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/saibala/2023/03/25/microsoft-plans-to-use-ai-to-solve-a-huge-pain-point-for-doctors/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f96ad5984a6dfc1580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.791824"], ["updated_at", "2023-03-26 09:57:33.791824"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "The 2023 Louisiana Derby Results: Kingsbarns Wins, Disarm Places, And Jace’s Road Shows"], ["descrizione", "Todd Pletcher-trained Kingsbarns took the Louisiana Derby and with it the hundred points to gain an invitation to the Kentucky Derby. The mystery is why the much heavier-favored Instant Coffee placed sixth, out of the money and out of the points. Her [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-louisiana-derby-results-kingsbarns-wins-disarm-places-and-jaces-road-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7d367397136612e2d104/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.819772"], ["updated_at", "2023-03-26 09:57:33.819772"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "The 2023 ‘Jeff Ruby Steaks’ Results: Two Phil’s Takes The Win, Major Dude Places, Funtastic Again Shows"], ["descrizione", "The good news for Pletcher-trained favorite Major Dude is that he probably earned an invite to the Derby. The bad news is that he placed five and a quarter lengths behind a rip-snorting Two Phil's, who definitely earned a berth in Derby. Here's the b [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-jeff-ruby-steaks-results-two-phils-takes-the-win-major-dude-places-funtastic-again-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ad577c807be34e2d104/0x0.jpg?width=960&precrop=3000%2C1689%2Cx0%2Cy80"], ["created_at", "2023-03-26 09:57:33.850480"], ["updated_at", "2023-03-26 09:57:33.850480"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "Germany Shows Long-Lost Qualities In 2-0 Win Over Peru"], ["descrizione", "It might have been just a friendly against Peru, but Germany won a game thanks to two goals scored by a proper no.9 without conceding."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/manuelveth/2023/03/25/germany-shows-long-lost-qualities-in-2-0-win-over-peru/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ccb8596f2d6098a9f03/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.877655"], ["updated_at", "2023-03-26 09:57:33.877655"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mNews Load (4.0ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (13.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "BTS’ Jimin Sells Over 1 Million Copies Of ‘Face’ Solo Album Worldwide For Record-Breaking 24 Hours In Korea"], ["descrizione", "On its first day available, Jimin’s debut solo album 'FACE' sold 1,021,532 physical copies worldwide in its first day available on March 24, according to South Korea’s real-time album sales website Hanteo Chart."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/jeffbenjamin/2023/03/26/bts-jimin-sells-over-1-million-copies-of-face-solo-album-worldwide-for-record-breaking-24-hours-in-korea/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f77844cf85ecf6f580d4c/0x0.jpg?width=960&precrop=2000%2C1125%2Cx0%2Cy89"], ["created_at", "2023-03-26 10:22:21.776671"], ["updated_at", "2023-03-26 10:22:21.776671"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Tim Draper recommends founders hold ’at least’ two payrolls ‘worth of cash’ in crypto"], ["descrizione", "American venture capital investor Tim Draper warned business founders to prepare for “more and more” bank failures if the government continues to “print money and whipsaw interest rates.“"], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/businesses-should-hold-two-payrolls-worth-of-cash-in-crypto-tim-draper"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOTI2YzE3ZWItMzlkNi00NmJlLTg0NzYtMTI4YzVjMmFmOWU1LmpwZw==.jpg"], ["created_at", "2023-03-26 10:22:21.809411"], ["updated_at", "2023-03-26 10:22:21.809411"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Today’s Wordle #645 Hints, Clues And Solution For Sunday, March 26th"], ["descrizione", "How to solve today's Wordle."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/26/todays-wordle-645-hints-clues-and-solution-for-sunday-march-26th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61edcce353de3d57134cef6b/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.842534"], ["updated_at", "2023-03-26 10:22:21.842534"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "Michael Forrest’s Clutch Free Throws Propel Florida Atlantic To First Men’s Basketball Final Four"], ["descrizione", "Florida Atlantic defeated Kansas State, 79-76, in Saturday night's East Region men's basketball final to advance to the Final Four next weekend in Houston."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/timcasey/2023/03/26/michael-forrests-clutch-free-throws-propel-florida-atlantic-to-first-mens-basketball-final-four/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fc0392d2c8c327a580d4c/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.874900"], ["updated_at", "2023-03-26 10:22:21.874900"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "The Ukrainian Army Needs More Heavy Vehicles. Until It Gets Them, Creative Tactics Must Suffice."], ["descrizione", "Middling equipment and advanced methods could define the Ukrainians’ operations if and when they shift from defense to offense in the coming weeks."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/davidaxe/2023/03/25/the-ukrainian-army-needs-more-heavy-vehicles-until-it-gets-them-creative-tactics-must-suffice/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fbca96b12af859deb4786/0x0.jpg?width=960&precrop=1960%2C1102%2Cx40%2Cy226"], ["created_at", "2023-03-26 10:22:21.909399"], ["updated_at", "2023-03-26 10:22:21.909399"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Texas Is On The Cusp Of Trouble"], ["descrizione", "For years, Texas has been the picture of mass prosperity."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/briandomitrovic/2023/03/25/texas-is-on-the-cusp-of-trouble/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fa5c7af1ae870dde2d103/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.946602"], ["updated_at", "2023-03-26 10:22:21.946602"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "US explores additional bank support favoring First Republic's benefit: Report"], ["descrizione", "Despite banking laws stating that remedies should not be aimed at benefiting a specific bank, this change could be structured “in a way to ensure” First Republic benefits, according to unnamed sources."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-contemplates-expanding-emergency-lending-facility-for-banks-report"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOGJmOTY5NGItZmNiMC00NTU4LWE3ZGEtMzFkYzI0NDAzZGY5LmpwZw==.jpg"], ["created_at", "2023-03-26 10:22:21.988993"], ["updated_at", "2023-03-26 10:22:21.988993"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.6ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Microsoft Plans To Use AI To Solve A Huge Pain Point For Doctors"], ["descrizione", "Clinical documentation is one of the most cumbersome aspects of healthcare delivery."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/saibala/2023/03/25/microsoft-plans-to-use-ai-to-solve-a-huge-pain-point-for-doctors/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f96ad5984a6dfc1580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:22.022563"], ["updated_at", "2023-03-26 10:22:22.022563"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "The 2023 Louisiana Derby Results: Kingsbarns Wins, Disarm Places, And Jace’s Road Shows"], ["descrizione", "Todd Pletcher-trained Kingsbarns took the Louisiana Derby and with it the hundred points to gain an invitation to the Kentucky Derby. The mystery is why the much heavier-favored Instant Coffee placed sixth, out of the money and out of the points. Her [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-louisiana-derby-results-kingsbarns-wins-disarm-places-and-jaces-road-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7d367397136612e2d104/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:22.061225"], ["updated_at", "2023-03-26 10:22:22.061225"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (30.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "The 2023 ‘Jeff Ruby Steaks’ Results: Two Phil’s Takes The Win, Major Dude Places, Funtastic Again Shows"], ["descrizione", "The good news for Pletcher-trained favorite Major Dude is that he probably earned an invite to the Derby. The bad news is that he placed five and a quarter lengths behind a rip-snorting Two Phil's, who definitely earned a berth in Derby. Here's the b [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-jeff-ruby-steaks-results-two-phils-takes-the-win-major-dude-places-funtastic-again-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ad577c807be34e2d104/0x0.jpg?width=960&precrop=3000%2C1689%2Cx0%2Cy80"], ["created_at", "2023-03-26 10:22:22.111080"], ["updated_at", "2023-03-26 10:22:22.111080"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (30.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+>>>>>>> 563f2bfac4ea4186c8fa255ffc1b361b31474c4e
