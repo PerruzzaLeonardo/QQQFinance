@@ -12,7 +12,7 @@ class News < ApplicationRecord
         http.verify_mode = OpenSSL::SSL::VERIFY_NONE
         
         request = Net::HTTP::Get.new(url)
-        request["X-RapidAPI-Key"] = '077744100emsh424c27eb08db68fp1e9c55jsna3e887dea294'
+        request["X-RapidAPI-Key"] = Rails.application.credentials.API_KEY.NEWS
         request["X-RapidAPI-Host"] = 'newsdata2.p.rapidapi.com'
         
         response = http.request(request)
