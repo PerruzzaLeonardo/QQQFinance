@@ -1,5 +1,10 @@
 
   <%=render "/header"%>
+  <style>
+   textarea {
+  resize: none!important;
+  }
+  </style>
   <div class="row pt-2">
     <div class="col-5">
       <% if flash[:alert] %>
@@ -38,8 +43,6 @@
     else
       @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
     end %>
-
     <textarea rows=8 cols=50 name="Commento" readonly><%=@commento%></textarea>
   </div>
 </div>
- <%=  render "/footer"%>

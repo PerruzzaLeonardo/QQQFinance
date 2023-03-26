@@ -2,9 +2,11 @@
 <%= render @user %>
 <div class="row">
     <div class="col-md-6">
-        <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
-        <h2>Se ritieni il messaggio offensivo:
-        <a type="button" class="btn btn-danger" data-bs-toggle="modal" href="/contacts">Segnala Utente</a>
+        <%if @user.pubblico=="si"%>
+            <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
+            <h2>Se ritieni il messaggio offensivo:
+            <a type="button" class="btn btn-danger" data-bs-toggle="modal" href="/contacts">Segnala Utente</a>
+        <%end%>
     </div>
     <div class="col-md-4 offset-md-1 ">
     <%if @user.pubblico=="si"%>
@@ -45,4 +47,4 @@
         }
     });
 </script>
- <%=  render "/footer"%>
+
