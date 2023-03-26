@@ -10,8 +10,8 @@
 
 <% flash.each do |type, msg| %>
   <div class="alert alert-danger" role="alert">
-  <h4 class="alert-heading">Impossibile accedere al wallet!</h4>
-    <p><%= msg %>   Se non possiedi già un account,<a href="/users/sign_up" class="alert-link">Registrati</a>.</p>
+  	<p><h4 class="alert-heading"><%= flash[:alert ] %></h4></p>
+    <p>  Se non possiedi un account,<a href="/users/sign_up" class="alert-link">Registrati</a>.</p>
   </div>
 <% end %>
 

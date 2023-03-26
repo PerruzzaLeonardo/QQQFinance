@@ -11,6 +11,11 @@
     <%= render "/header"%>
     <div class="container">
 
+    <%if flash[:notice]%>
+        <div class="alert alert-success text-center">
+          <%= flash[:notice ] %>
+        </div>
+    <% end %>
     <div class="position-relative">
       <p class="text-center">QQQFinance</p>
     </div>
@@ -37,8 +42,8 @@
 
     </div>
     <div class="d-grid gap-4 d-md-flex justify-content-md-center">
-      <a href="../screener" class="btn btn-primary" role="button" data-bs-toggle="button">Screener</a>
-        <a href="../wallet" class="btn btn-primary" role="button" data-bs-toggle="button">Wallet</a>
+      <a href="../screener" class="btn btn-primary">Screener</a>
+        <a href="../wallet" class="btn btn-primary">Wallet</a>
  
     </div>
     <div class="position-relative m-4 d-grid gap-2 d-md-flex justify-content-md-center">

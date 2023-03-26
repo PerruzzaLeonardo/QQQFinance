@@ -11,9 +11,15 @@
 	<h1 fw-bold>
 	<% if @user != nil%>
 		<% if @user.errors.any? %>
-			<% @user.errors.full_messages.each do |message|%>
-				<h3><%= message %> </h3>
-			<%end%>
+			<div class="alert alert-danger col-5 m-2">
+				<ul class="list-group list-group-flush"> 
+					<% @user.errors.full_messages.each do |message|%>
+						<li class="list-group-item list-group-item-danger">
+							<h5><%= message %></h5>
+						</li>
+					<%end%>
+				</ul>
+			</div>
 		<%end%>
 	<%end%>
 	</h1>

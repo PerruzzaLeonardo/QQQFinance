@@ -6,7 +6,7 @@ class WalletsController < ApplicationController
   def index
     @az=Azione.all
     if !user_signed_in?
-      redirect_to '/users/sign_in',notice: 'Per accedere alla pagina del Wallet, è prima necessario autenticarsi col proprio account' 
+      redirect_to '/users/sign_in', alert: 'Impossibile accedere al wallet' 
     else
       @curr_user=current_user.username
       @posizioni = Wallet.where(user:@curr_user)
