@@ -33647,3 +33647,695 @@ Processing by Users::PasswordsController#edit as HTML
 Completed 200 OK in 133ms (Views: 118.9ms | ActiveRecord: 0.0ms | Allocations: 7596)
 
 
+  [1m[36mNews Load (8.5ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (16.4ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (22.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (15.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.656812"], ["updated_at", "2023-03-25 18:53:20.656812"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 18:53:20.693912"], ["updated_at", "2023-03-25 18:53:20.693912"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.730194"], ["updated_at", "2023-03-25 18:53:20.730194"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.765230"], ["updated_at", "2023-03-25 18:53:20.765230"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.799875"], ["updated_at", "2023-03-25 18:53:20.799875"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.835779"], ["updated_at", "2023-03-25 18:53:20.835779"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 18:53:20.872568"], ["updated_at", "2023-03-25 18:53:20.872568"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.910323"], ["updated_at", "2023-03-25 18:53:20.910323"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 18:53:20.950907"], ["updated_at", "2023-03-25 18:53:20.950907"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:53:20.988529"], ["updated_at", "2023-03-25 18:53:20.988529"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+Started GET "/news" for 127.0.0.1 at 2023-03-25 19:54:35 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (4.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (4.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (5.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (4.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (5.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (5.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (5.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (5.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (5.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (5.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 20.5ms | Allocations: 642)
+  Rendered _footer.html.erb (Duration: 23.3ms | Allocations: 129)
+  Rendered news/index.html.erb within layouts/application (Duration: 3622.9ms | Allocations: 32606)
+  Rendered layout layouts/application.html.erb (Duration: 4613.3ms | Allocations: 47750)
+Completed 200 OK in 5073ms (Views: 4677.5ms | ActiveRecord: 74.4ms | Allocations: 77949)
+
+
+  [1m[36mNews Load (5.2ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (17.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (15.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:14.979095"], ["updated_at", "2023-03-25 18:58:14.979095"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 18:58:15.016578"], ["updated_at", "2023-03-25 18:58:15.016578"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:15.055091"], ["updated_at", "2023-03-25 18:58:15.055091"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.092948"], ["updated_at", "2023-03-25 18:58:15.092948"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.130176"], ["updated_at", "2023-03-25 18:58:15.130176"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.165634"], ["updated_at", "2023-03-25 18:58:15.165634"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 18:58:15.200046"], ["updated_at", "2023-03-25 18:58:15.200046"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (17.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.237650"], ["updated_at", "2023-03-25 18:58:15.237650"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (20.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (14.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 18:58:15.283971"], ["updated_at", "2023-03-25 18:58:15.283971"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 18:58:15.347357"], ["updated_at", "2023-03-25 18:58:15.347357"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (20.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+Started GET "/news" for 127.0.0.1 at 2023-03-25 19:58:39 +0100
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (4.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (3.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (4.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (3.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (4.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (4.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (4.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (3.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 106)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 232.1ms | Allocations: 2876)
+  Rendered layout layouts/application.html.erb (Duration: 423.2ms | Allocations: 5347)
+Completed 200 OK in 554ms (Views: 426.4ms | ActiveRecord: 39.8ms | Allocations: 10500)
+
+
+  [1m[36mNews Load (8.2ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (24.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (20.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (18.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (19.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (24.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (17.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (25.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "What is fiscal policy, and why does it matter?"], ["descrizione", "Fiscal policy shapes economies through government spending, taxation and borrowing."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/what-is-fiscal-policy-and-why-does-it-matter"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzA0NDU2YjQtYTQ5YS00NTRjLWFkNWQtNzk0YWJlNTc2NzdjLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.595723"], ["updated_at", "2023-03-25 19:01:50.595723"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (25.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Intel co-founder Gordon Moore has passed away - Engadget"], ["descrizione", "Intel co-founder Gordon Moore has passed away  EngadgetGordon E. Moore, Intel Co-Founder Behind Moore’s Law, Dies at 94  The New York TimesIntel co-founder Gordon Moore, author of 'Moore's Law' that helped drive computer revolution, dies at 94  CNNGo [...]"], ["autore", "google"], ["url", "https://news.google.com/rss/articles/CBMiVWh0dHBzOi8vd3d3LmVuZ2FkZ2V0LmNvbS9pbnRlbC1jby1mb3VuZGVyLWdvcmRvbi1tb29yZS1oYXMtcGFzc2VkLWF3YXktMDczMTQ1NjQ3Lmh0bWzSAVlodHRwczovL3d3dy5lbmdhZGdldC5jb20vYW1wL2ludGVsLWNvLWZvdW5kZXItZ29yZG9uLW1vb3JlLWhhcy1wYXNzZWQtYXdheS0wNzMxNDU2NDcuaHRtbA?oc=5"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-25 19:01:50.655388"], ["updated_at", "2023-03-25 19:01:50.655388"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "NFT investor accidentally burns $135K CryptoPunk trying to borrow money"], ["descrizione", "While going through the unfamiliar process of wrapping NFTs, Riley accidentally sent the asset to a burn address, permanently deleting the NFT from circulation."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/nft-investor-accidentally-burns-135k-cryptopunk-trying-to-borrow-money"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvMGRkZDExZWMtYmViNS00MjVhLWIwMjQtMjQyMTFmZmYzNWQxLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.710927"], ["updated_at", "2023-03-25 19:01:50.710927"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (18.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "India’s Lucrative Cricket Women’s Premier League Headed For Spectacular Finish Amid Sell-Out Crowd"], ["descrizione", "About 50,000 fans are expected to witness history for the first-ever Women's Premier League final to cap a momentous tournament."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/tristanlavalette/2023/03/25/indias-lucrative-cricket-womens-premier-league-headed-for-spectacular-finish-amid-sell-out-crowd/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e80e080e57591be8a9f01/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.752370"], ["updated_at", "2023-03-25 19:01:50.752370"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (14.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Video Game Writer Chris Avellone’s Accusers Issue Public Statement Retracting Accusations Of Sexual Assault"], ["descrizione", "Video game writer Chris Avellone has reached a confidential settlement with two women who accused him of sexual assault. The accusers have issued a public statement retracting all claims of sexual assault."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/25/video-game-writer-chris-avellones-accusers-issue-public-statement-retracting-accusations-of-sexual-assault/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e8e99bcc461207e4ff606/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.794442"], ["updated_at", "2023-03-25 19:01:50.794442"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Credit Suisse Shock Makes China’s 5% GDP Target Harder"], ["descrizione", "Headwinds from the West are making Beijing’s 5% gross domestic product target look less and less attainable."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/williampesek/2023/03/24/credit-suisse-shock-makes-chinas-5-gdp-target-harder/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641d2e0e99555b10a8580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.837964"], ["updated_at", "2023-03-25 19:01:50.837964"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (18.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "'US has left a vacuum that other countries are eager to fill': Coinbase"], ["descrizione", "While the U.S. government opts for “regulation by enforcement,” other countries are fostering “vibrant” crypto ecosystems due to progressive regulation, argues Coinbase’s Daniel Seifert."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-has-left-a-vacuum-that-other-countries-are-eager-to-fill-coinbase"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvNjlhZmM1YTMtMmQ1MC00YjlkLWExZGQtZWRhMmIyZDMwOTVmLmpwZw==.jpg"], ["created_at", "2023-03-25 19:01:50.879087"], ["updated_at", "2023-03-25 19:01:50.879087"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (23.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (13.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Today’s Wordle #644 Hints, Clues And Solution For Saturday, March 25th"], ["descrizione", "How to solve today's Wordle with helpful hints and clues."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/24/todays-wordle-644-hints-clues-and-solution-for-saturday-march-25th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61ecc0349f2c7d8e24ccad24/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.923730"], ["updated_at", "2023-03-25 19:01:50.923730"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "Binion’s removes ‘No Color Policy’ sign. But what does it really mean?"], ["descrizione", "Binion’s “no color” policy is meant to discourage bikers from displaying club apparel, insignias there."], ["autore", "reviewjournal"], ["url", "https://www.reviewjournal.com/business/casinos-gaming/binions-removes-no-color-policy-sign-but-what-does-it-really-mean-2750462/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-25 19:01:50.961376"], ["updated_at", "2023-03-25 19:01:50.961376"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (20.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "WWE SmackDown Results: Winners And Grades On March 24, 2023"], ["descrizione", "WWE SmackDown results as Cody Rhodes faces off with Paul Heyman."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/alfredkonuwa/2023/03/24/wwe-smackdown-results-winners-and-grades-on-march-24-2023/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641e395d562e65f211eb477c/0x0.jpg?width=960"], ["created_at", "2023-03-25 19:01:50.995630"], ["updated_at", "2023-03-25 19:01:50.995630"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (26.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Load (4.4ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (12.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (8.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (8.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "BTS’ Jimin Sells Over 1 Million Copies Of ‘Face’ Solo Album Worldwide For Record-Breaking 24 Hours In Korea"], ["descrizione", "On its first day available, Jimin’s debut solo album 'FACE' sold 1,021,532 physical copies worldwide in its first day available on March 24, according to South Korea’s real-time album sales website Hanteo Chart."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/jeffbenjamin/2023/03/26/bts-jimin-sells-over-1-million-copies-of-face-solo-album-worldwide-for-record-breaking-24-hours-in-korea/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f77844cf85ecf6f580d4c/0x0.jpg?width=960&precrop=2000%2C1125%2Cx0%2Cy89"], ["created_at", "2023-03-26 09:57:33.614752"], ["updated_at", "2023-03-26 09:57:33.614752"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Today’s Wordle #645 Hints, Clues And Solution For Sunday, March 26th"], ["descrizione", "How to solve today's Wordle."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/26/todays-wordle-645-hints-clues-and-solution-for-sunday-march-26th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61edcce353de3d57134cef6b/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.644634"], ["updated_at", "2023-03-26 09:57:33.644634"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Michael Forrest’s Clutch Free Throws Propel Florida Atlantic To First Men’s Basketball Final Four"], ["descrizione", "Florida Atlantic defeated Kansas State, 79-76, in Saturday night's East Region men's basketball final to advance to the Final Four next weekend in Houston."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/timcasey/2023/03/26/michael-forrests-clutch-free-throws-propel-florida-atlantic-to-first-mens-basketball-final-four/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fc0392d2c8c327a580d4c/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.674563"], ["updated_at", "2023-03-26 09:57:33.674563"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "The Ukrainian Army Needs More Heavy Vehicles. Until It Gets Them, Creative Tactics Must Suffice."], ["descrizione", "Middling equipment and advanced methods could define the Ukrainians’ operations if and when they shift from defense to offense in the coming weeks."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/davidaxe/2023/03/25/the-ukrainian-army-needs-more-heavy-vehicles-until-it-gets-them-creative-tactics-must-suffice/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fbca96b12af859deb4786/0x0.jpg?width=960&precrop=1960%2C1102%2Cx40%2Cy226"], ["created_at", "2023-03-26 09:57:33.703399"], ["updated_at", "2023-03-26 09:57:33.703399"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "Texas Is On The Cusp Of Trouble"], ["descrizione", "For years, Texas has been the picture of mass prosperity."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/briandomitrovic/2023/03/25/texas-is-on-the-cusp-of-trouble/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fa5c7af1ae870dde2d103/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.733400"], ["updated_at", "2023-03-26 09:57:33.733400"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "US explores additional bank support favoring First Republic's benefit: Report"], ["descrizione", "Despite banking laws stating that remedies should not be aimed at benefiting a specific bank, this change could be structured “in a way to ensure” First Republic benefits, according to unnamed sources."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-contemplates-expanding-emergency-lending-facility-for-banks-report"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOGJmOTY5NGItZmNiMC00NTU4LWE3ZGEtMzFkYzI0NDAzZGY5LmpwZw==.jpg"], ["created_at", "2023-03-26 09:57:33.762493"], ["updated_at", "2023-03-26 09:57:33.762493"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (7.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "Microsoft Plans To Use AI To Solve A Huge Pain Point For Doctors"], ["descrizione", "Clinical documentation is one of the most cumbersome aspects of healthcare delivery."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/saibala/2023/03/25/microsoft-plans-to-use-ai-to-solve-a-huge-pain-point-for-doctors/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f96ad5984a6dfc1580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.791824"], ["updated_at", "2023-03-26 09:57:33.791824"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (10.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "The 2023 Louisiana Derby Results: Kingsbarns Wins, Disarm Places, And Jace’s Road Shows"], ["descrizione", "Todd Pletcher-trained Kingsbarns took the Louisiana Derby and with it the hundred points to gain an invitation to the Kentucky Derby. The mystery is why the much heavier-favored Instant Coffee placed sixth, out of the money and out of the points. Her [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-louisiana-derby-results-kingsbarns-wins-disarm-places-and-jaces-road-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7d367397136612e2d104/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.819772"], ["updated_at", "2023-03-26 09:57:33.819772"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "The 2023 ‘Jeff Ruby Steaks’ Results: Two Phil’s Takes The Win, Major Dude Places, Funtastic Again Shows"], ["descrizione", "The good news for Pletcher-trained favorite Major Dude is that he probably earned an invite to the Derby. The bad news is that he placed five and a quarter lengths behind a rip-snorting Two Phil's, who definitely earned a berth in Derby. Here's the b [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-jeff-ruby-steaks-results-two-phils-takes-the-win-major-dude-places-funtastic-again-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ad577c807be34e2d104/0x0.jpg?width=960&precrop=3000%2C1689%2Cx0%2Cy80"], ["created_at", "2023-03-26 09:57:33.850480"], ["updated_at", "2023-03-26 09:57:33.850480"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (11.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (8.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "Germany Shows Long-Lost Qualities In 2-0 Win Over Peru"], ["descrizione", "It might have been just a friendly against Peru, but Germany won a game thanks to two goals scored by a proper no.9 without conceding."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/manuelveth/2023/03/25/germany-shows-long-lost-qualities-in-2-0-win-over-peru/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ccb8596f2d6098a9f03/0x0.jpg?width=960"], ["created_at", "2023-03-26 09:57:33.877655"], ["updated_at", "2023-03-26 09:57:33.877655"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (12.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mNews Load (4.0ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (11.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (13.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (10.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mNews Destroy (9.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:22:in `get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "BTS’ Jimin Sells Over 1 Million Copies Of ‘Face’ Solo Album Worldwide For Record-Breaking 24 Hours In Korea"], ["descrizione", "On its first day available, Jimin’s debut solo album 'FACE' sold 1,021,532 physical copies worldwide in its first day available on March 24, according to South Korea’s real-time album sales website Hanteo Chart."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/jeffbenjamin/2023/03/26/bts-jimin-sells-over-1-million-copies-of-face-solo-album-worldwide-for-record-breaking-24-hours-in-korea/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f77844cf85ecf6f580d4c/0x0.jpg?width=960&precrop=2000%2C1125%2Cx0%2Cy89"], ["created_at", "2023-03-26 10:22:21.776671"], ["updated_at", "2023-03-26 10:22:21.776671"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Tim Draper recommends founders hold ’at least’ two payrolls ‘worth of cash’ in crypto"], ["descrizione", "American venture capital investor Tim Draper warned business founders to prepare for “more and more” bank failures if the government continues to “print money and whipsaw interest rates.“"], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/businesses-should-hold-two-payrolls-worth-of-cash-in-crypto-tim-draper"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOTI2YzE3ZWItMzlkNi00NmJlLTg0NzYtMTI4YzVjMmFmOWU1LmpwZw==.jpg"], ["created_at", "2023-03-26 10:22:21.809411"], ["updated_at", "2023-03-26 10:22:21.809411"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Today’s Wordle #645 Hints, Clues And Solution For Sunday, March 26th"], ["descrizione", "How to solve today's Wordle."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/erikkain/2023/03/26/todays-wordle-645-hints-clues-and-solution-for-sunday-march-26th/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/61edcce353de3d57134cef6b/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.842534"], ["updated_at", "2023-03-26 10:22:21.842534"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "Michael Forrest’s Clutch Free Throws Propel Florida Atlantic To First Men’s Basketball Final Four"], ["descrizione", "Florida Atlantic defeated Kansas State, 79-76, in Saturday night's East Region men's basketball final to advance to the Final Four next weekend in Houston."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/timcasey/2023/03/26/michael-forrests-clutch-free-throws-propel-florida-atlantic-to-first-mens-basketball-final-four/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fc0392d2c8c327a580d4c/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.874900"], ["updated_at", "2023-03-26 10:22:21.874900"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (11.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "The Ukrainian Army Needs More Heavy Vehicles. Until It Gets Them, Creative Tactics Must Suffice."], ["descrizione", "Middling equipment and advanced methods could define the Ukrainians’ operations if and when they shift from defense to offense in the coming weeks."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/davidaxe/2023/03/25/the-ukrainian-army-needs-more-heavy-vehicles-until-it-gets-them-creative-tactics-must-suffice/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fbca96b12af859deb4786/0x0.jpg?width=960&precrop=1960%2C1102%2Cx40%2Cy226"], ["created_at", "2023-03-26 10:22:21.909399"], ["updated_at", "2023-03-26 10:22:21.909399"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (16.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (15.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Texas Is On The Cusp Of Trouble"], ["descrizione", "For years, Texas has been the picture of mass prosperity."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/briandomitrovic/2023/03/25/texas-is-on-the-cusp-of-trouble/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641fa5c7af1ae870dde2d103/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:21.946602"], ["updated_at", "2023-03-26 10:22:21.946602"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (9.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "US explores additional bank support favoring First Republic's benefit: Report"], ["descrizione", "Despite banking laws stating that remedies should not be aimed at benefiting a specific bank, this change could be structured “in a way to ensure” First Republic benefits, according to unnamed sources."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/us-contemplates-expanding-emergency-lending-facility-for-banks-report"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOGJmOTY5NGItZmNiMC00NTU4LWE3ZGEtMzFkYzI0NDAzZGY5LmpwZw==.jpg"], ["created_at", "2023-03-26 10:22:21.988993"], ["updated_at", "2023-03-26 10:22:21.988993"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (12.6ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Microsoft Plans To Use AI To Solve A Huge Pain Point For Doctors"], ["descrizione", "Clinical documentation is one of the most cumbersome aspects of healthcare delivery."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/saibala/2023/03/25/microsoft-plans-to-use-ai-to-solve-a-huge-pain-point-for-doctors/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f96ad5984a6dfc1580d4a/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:22.022563"], ["updated_at", "2023-03-26 10:22:22.022563"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (17.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (18.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "The 2023 Louisiana Derby Results: Kingsbarns Wins, Disarm Places, And Jace’s Road Shows"], ["descrizione", "Todd Pletcher-trained Kingsbarns took the Louisiana Derby and with it the hundred points to gain an invitation to the Kentucky Derby. The mystery is why the much heavier-favored Instant Coffee placed sixth, out of the money and out of the points. Her [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-louisiana-derby-results-kingsbarns-wins-disarm-places-and-jaces-road-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7d367397136612e2d104/0x0.jpg?width=960"], ["created_at", "2023-03-26 10:22:22.061225"], ["updated_at", "2023-03-26 10:22:22.061225"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mNews Create (30.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "The 2023 ‘Jeff Ruby Steaks’ Results: Two Phil’s Takes The Win, Major Dude Places, Funtastic Again Shows"], ["descrizione", "The good news for Pletcher-trained favorite Major Dude is that he probably earned an invite to the Derby. The bad news is that he placed five and a quarter lengths behind a rip-snorting Two Phil's, who definitely earned a berth in Derby. Here's the b [...]"], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/guymartin/2023/03/25/the-2023-jeff-ruby-steaks-results-two-phils-takes-the-win-major-dude-places-funtastic-again-shows/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f7ad577c807be34e2d104/0x0.jpg?width=960&precrop=3000%2C1689%2Cx0%2Cy80"], ["created_at", "2023-03-26 10:22:22.111080"], ["updated_at", "2023-03-26 10:22:22.111080"]]
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mTRANSACTION (30.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/news.rb:53:in `block in get_news'
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/models/azione.rb:15:in `aggiorna_azioni'
+  [1m[36mAzione Load (5.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m

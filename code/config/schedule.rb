@@ -16,8 +16,12 @@
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
 # end
-set :output, 'log/development.log'
-every 15.minute do
+set :output, 'log/whenever.log'
+every 1.hour, at: 00 do
     rake "news:fetch"
+end
+
+every 1.week, at: '8:00 am' do
+    rake "azioni:update"
 end
 # Learn more: http://github.com/javan/whenever
