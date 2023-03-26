@@ -32699,3 +32699,143 @@ Processing by Users::PasswordsController#new as HTML
 Completed 200 OK in 29ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 6390)
 
 
+Started GET "/" for 127.0.0.1 at 2023-03-24 22:52:57 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (5.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 14.4ms | Allocations: 631)
+  Rendered _footer.html.erb (Duration: 6.7ms | Allocations: 132)
+  Rendered index/index.html.erb within layouts/application (Duration: 53.2ms | Allocations: 2252)
+  Rendered layout layouts/application.html.erb (Duration: 575.5ms | Allocations: 47695)
+Completed 200 OK in 879ms (Views: 618.2ms | ActiveRecord: 12.9ms | Allocations: 99533)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-24 22:53:00 +0100
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 40.6ms | Allocations: 3620)
+  Rendered layout layouts/application.html.erb (Duration: 47.3ms | Allocations: 6522)
+Completed 200 OK in 65ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 8396)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-24 22:53:03 +0100
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"marcot@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "marcot@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/11
+Completed 303 See Other in 377ms (ActiveRecord: 0.3ms | Allocations: 8842)
+
+
+Started GET "/users/11" for 127.0.0.1 at 2023-03-24 22:53:04 +0100
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "marcot"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 26ms (ActiveRecord: 1.1ms | Allocations: 4513)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-24 22:53:04 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered users/index.html.erb within layouts/application (Duration: 27.0ms | Allocations: 1638)
+  Rendered layout layouts/application.html.erb (Duration: 33.7ms | Allocations: 4295)
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 0.2ms | Allocations: 6272)
+
+
+Started GET "/users/11/edit" for 127.0.0.1 at 2023-03-24 22:53:07 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 132.6ms | Allocations: 9188)
+  Rendered users/edit.html.erb within layouts/application (Duration: 136.7ms | Allocations: 9702)
+  Rendered layout layouts/application.html.erb (Duration: 142.2ms | Allocations: 12275)
+Completed 200 OK in 150ms (Views: 143.0ms | ActiveRecord: 0.3ms | Allocations: 14196)
+
+
+Started PATCH "/users/11" for 127.0.0.1 at 2023-03-24 22:53:14 +0100
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"marco", "cognome"=>"totaro", "email"=>"marcot@gmail.com", "username"=>"marcot", "pubblico"=>"si", "commento"=>"", "immagine"=>"profilo1"}, "commit"=>"Salva modifiche", "id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "marcot"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "marcot@gmail.com"], ["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-24 21:53:14.372761"], ["immagine", "profilo1"], ["id", 11]]
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:62:in `block in update'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 30ms (ActiveRecord: 11.4ms | Allocations: 6456)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-24 22:53:14 +0100
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3413)
+Completed 200 OK in 14ms (Views: 9.9ms | ActiveRecord: 0.2ms | Allocations: 4652)
+
+
+Started GET "/users/11/edit" for 127.0.0.1 at 2023-03-24 22:53:49 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.1ms | Allocations: 432)
+  Rendered users/_form.html.erb (Duration: 51.1ms | Allocations: 7056)
+  Rendered users/edit.html.erb within layouts/application (Duration: 57.4ms | Allocations: 8093)
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 10907)
+Completed 200 OK in 79ms (Views: 71.4ms | ActiveRecord: 0.3ms | Allocations: 13384)
+
+
+Started GET "/users/11/edit" for 127.0.0.1 at 2023-03-24 22:54:13 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.1ms | Allocations: 432)
+  Rendered users/_form.html.erb (Duration: 57.6ms | Allocations: 7041)
+  Rendered users/edit.html.erb within layouts/application (Duration: 65.2ms | Allocations: 8078)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 10892)
+Completed 200 OK in 88ms (Views: 80.1ms | ActiveRecord: 0.4ms | Allocations: 13553)
+
+
