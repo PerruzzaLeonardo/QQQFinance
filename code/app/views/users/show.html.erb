@@ -1,18 +1,23 @@
  <%=render "/header"%>
 <%= render @user %>
+  <style>
+   textarea {
+  resize: none!important;
+  }
+  </style>
 <div class="row">
-    <div class="col-md-6">
-        <%if @user.pubblico=="si"%>
+    
+    <%if @user.pubblico=="si"%>
+       <div class="col-md-6">
             <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
             <h2>Se ritieni il messaggio offensivo:
             <a type="button" class="btn btn-danger" data-bs-toggle="modal" href="/contacts">Segnala Utente</a>
-        <%end%>
     </div>
-    <div class="col-md-4 offset-md-1 ">
-    <%if @user.pubblico=="si"%>
-        <canvas id="myChart"></canvas>     
+    <div class="col-md-4 offset-md-1">
+        <canvas id="myChart"></canvas>   
     <%else%>
-        <h1>Il wallet di questo utente è privato</h1>
+    <br>
+        <h2 class="text-center">Il wallet di questo utente è privato</h1>
     <%end%>
     </div>
 </div>

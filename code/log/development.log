@@ -40993,3 +40993,731 @@ Processing by IndexController#index as TURBO_STREAM
 Completed 200 OK in 709ms (Views: 542.7ms | ActiveRecord: 33.5ms | Allocations: 7024)
 
 
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-27 13:17:18 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 16.5ms | Allocations: 596)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 428.0ms | Allocations: 50246)
+  Rendered comment/_index.html.erb (Duration: 538.7ms | Allocations: 74463)
+  Rendered _footer.html.erb (Duration: 0.5ms | Allocations: 128)
+  Rendered azione/show.html.erb within layouts/application (Duration: 571.9ms | Allocations: 76585)
+  Rendered layout layouts/application.html.erb (Duration: 619.4ms | Allocations: 91628)
+Completed 200 OK in 745ms (Views: 632.8ms | ActiveRecord: 13.3ms | Allocations: 122859)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 13:17:30 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.4ms | Allocations: 3452)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 6099)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 0.0ms | Allocations: 7714)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 13:17:40 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Completed 401 Unauthorized in 622ms (ActiveRecord: 0.2ms | Allocations: 2669)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 33)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1106)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3656)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms | Allocations: 4233)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 13:17:56 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://localhost:3000/users/8
+Completed 303 See Other in 679ms (ActiveRecord: 0.1ms | Allocations: 3234)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-27 13:17:56 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://localhost:3000/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "MSFT"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "ODFL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+Completed 302 Found in 61ms (ActiveRecord: 2.1ms | Allocations: 18809)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 13:17:56 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered users/index.html.erb within layouts/application (Duration: 16.3ms | Allocations: 1301)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 3771)
+Completed 200 OK in 41ms (Views: 26.5ms | ActiveRecord: 0.1ms | Allocations: 5483)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:18:43 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered users/_user.html.erb (Duration: 3.4ms | Allocations: 836)
+  Rendered users/show.html.erb within layouts/application (Duration: 30.7ms | Allocations: 5043)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 7453)
+Completed 200 OK in 67ms (Views: 43.4ms | ActiveRecord: 0.4ms | Allocations: 10566)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:20:09 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 424)
+  Rendered users/_user.html.erb (Duration: 1.3ms | Allocations: 850)
+  Rendered users/show.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1889)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4549)
+Completed 200 OK in 38ms (Views: 17.2ms | ActiveRecord: 0.5ms | Allocations: 8328)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:20:52 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 3.7ms | Allocations: 424)
+  Rendered users/_user.html.erb (Duration: 1.4ms | Allocations: 852)
+  Rendered users/show.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1889)
+  Rendered layout layouts/application.html.erb (Duration: 29.5ms | Allocations: 4560)
+Completed 200 OK in 57ms (Views: 42.6ms | ActiveRecord: 0.5ms | Allocations: 8347)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:21:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 6.0ms | Allocations: 424)
+  Rendered users/_user.html.erb (Duration: 1.7ms | Allocations: 850)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 4553)
+Completed 200 OK in 58ms (Views: 34.8ms | ActiveRecord: 0.4ms | Allocations: 8313)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:21:12 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mWallet Load (23.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 424)
+  Rendered users/_user.html.erb (Duration: 5.7ms | Allocations: 850)
+  Rendered users/show.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1889)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 4552)
+Completed 200 OK in 85ms (Views: 34.8ms | ActiveRecord: 23.5ms | Allocations: 8328)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-27 13:21:40 +0200
+Processing by AzioneController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 10.0ms | Allocations: 1142)
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 31.2ms | Allocations: 3840)
+  Rendered comment/_new.html.erb (Duration: 42.1ms | Allocations: 7441)
+  Rendered comment/_index.html.erb (Duration: 88.5ms | Allocations: 12528)
+  Rendered _footer.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered azione/show.html.erb within layouts/application (Duration: 104.3ms | Allocations: 14826)
+  Rendered layout layouts/application.html.erb (Duration: 119.2ms | Allocations: 17469)
+Completed 200 OK in 126ms (Views: 124.0ms | ActiveRecord: 0.5ms | Allocations: 19111)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-27 13:21:52 +0200
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 37ms (ActiveRecord: 0.1ms | Allocations: 2596)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:21:52 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1058)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 3709)
+Completed 200 OK in 60ms (Views: 47.0ms | ActiveRecord: 1.1ms | Allocations: 7621)
+
+
+Started POST "/index/cerca" for 127.0.0.1 at 2023-03-27 13:21:59 +0200
+Processing by IndexController#cerca as TURBO_STREAM
+  Parameters: {"ricerca"=>"AAPL(azione)", "authenticity_token"=>"[FILTERED]"}
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:22:in `cerca'
+Redirected to http://localhost:3000/azione/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 1013)
+
+
+Started GET "/azione/1" for 127.0.0.1 at 2023-03-27 13:21:59 +0200
+Processing by AzioneController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/azione_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering azione/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 91)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."azione_id" = ?[0m  [["azione_id", 1]]
+  ↳ app/views/comment/_index.html.erb:1
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/comment/_show.html.erb:5
+  Rendered comment/_show.html.erb (Duration: 16.7ms | Allocations: 3215)
+  Rendered comment/_index.html.erb (Duration: 20.1ms | Allocations: 3994)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered azione/show.html.erb within layouts/application (Duration: 20.8ms | Allocations: 4364)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 6792)
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 0.7ms | Allocations: 7761)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:22:13 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (8.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered screener/_filtri.html.erb (Duration: 6.8ms | Allocations: 374)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 31.1ms | Allocations: 1509)
+  Rendered screener/_azioni.html.erb (Duration: 35.6ms | Allocations: 7188)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 96.3ms | Allocations: 10081)
+  Rendered layout layouts/application.html.erb (Duration: 101.5ms | Allocations: 12717)
+Completed 200 OK in 130ms (Views: 115.0ms | ActiveRecord: 8.9ms | Allocations: 15754)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:22:25 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3109)
+Completed 200 OK in 27ms (Views: 14.9ms | ActiveRecord: 0.8ms | Allocations: 6298)
+
+
+Started POST "/index/cerca" for 127.0.0.1 at 2023-03-27 13:22:45 +0200
+Processing by IndexController#cerca as TURBO_STREAM
+  Parameters: {"ricerca"=>"opoppopppoppppoppopopo", "authenticity_token"=>"[FILTERED]"}
+Redirected to 
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 1131)
+
+
+  
+ActionController::Redirecting::UnsafeRedirectError (Unsafe redirect to "http://localhost:3000index", pass allow_other_host: true to redirect anyway.):
+  
+app/controllers/index_controller.rb:31:in `cerca'
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:22:48 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 3.2ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 36.1ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 41.3ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 10971)
+Completed 200 OK in 67ms (Views: 55.7ms | ActiveRecord: 0.4ms | Allocations: 13439)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:22:49 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 7.9ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 31.3ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 40.8ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 10951)
+Completed 200 OK in 68ms (Views: 57.0ms | ActiveRecord: 0.5ms | Allocations: 13391)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:22:51 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3109)
+Completed 200 OK in 21ms (Views: 8.4ms | ActiveRecord: 0.6ms | Allocations: 6300)
+
+
+Started POST "/index/cerca" for 127.0.0.1 at 2023-03-27 13:23:07 +0200
+Processing by IndexController#cerca as TURBO_STREAM
+  Parameters: {"ricerca"=>"opoppoo", "authenticity_token"=>"[FILTERED]"}
+Redirected to 
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1106)
+
+
+  
+ActionController::Redirecting::UnsafeRedirectError (Unsafe redirect to "http://localhost:3000index", pass allow_other_host: true to redirect anyway.):
+  
+app/controllers/index_controller.rb:31:in `cerca'
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:23:15 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 2.0ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 24.4ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 42.3ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | Allocations: 10971)
+Completed 200 OK in 74ms (Views: 51.8ms | ActiveRecord: 0.8ms | Allocations: 13436)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:23:15 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 2.6ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 14.3ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 38.7ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 10951)
+Completed 200 OK in 63ms (Views: 57.9ms | ActiveRecord: 0.4ms | Allocations: 13397)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:23:18 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3109)
+Completed 200 OK in 30ms (Views: 20.8ms | ActiveRecord: 0.6ms | Allocations: 6296)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:24:30 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 2.4ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 33.2ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 43.5ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 46.3ms | Allocations: 10971)
+Completed 200 OK in 74ms (Views: 53.3ms | ActiveRecord: 0.3ms | Allocations: 13435)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 13:25:20 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.1ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 1.6ms | Allocations: 1293)
+  Rendered screener/_azioni.html.erb (Duration: 21.2ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 41.6ms | Allocations: 8390)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 10951)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.4ms | Allocations: 13403)
+
+
+Started GET "/screener?paesescelto=Australia&prezzomin=&prezzomax=&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-27 13:25:42 +0200
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Australia", "prezzomin"=>"", "prezzomax"=>"", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."paese" = ?[0m  [["paese", "Australia"]]
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 2.0ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2506)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5067)
+Completed 200 OK in 34ms (Views: 26.7ms | ActiveRecord: 0.8ms | Allocations: 6292)
+
+
+Started GET "/screener?paesescelto=Australia&prezzomin=&prezzomax=&marketcapmin=&marketcapmax=&settorescelto=Qualsiasi&volumemin=&volumemax=&ebitdamin=&ebitdamax=&roemin=&roemax=&roamin=&roamax=&pemin=&pemax=&psmin=&psmax=&pbmin=&pbmax=&dymin=&dymax=&demin=&demax=&opmmin=&opmmax=" for 127.0.0.1 at 2023-03-27 13:26:13 +0200
+Processing by ScreenerController#index as HTML
+  Parameters: {"paesescelto"=>"Australia", "prezzomin"=>"", "prezzomax"=>"", "marketcapmin"=>"", "marketcapmax"=>"", "settorescelto"=>"Qualsiasi", "volumemin"=>"", "volumemax"=>"", "ebitdamin"=>"", "ebitdamax"=>"", "roemin"=>"", "roemax"=>"", "roamin"=>"", "roamax"=>"", "pemin"=>"", "pemax"=>"", "psmin"=>"", "psmax"=>"", "pbmin"=>"", "pbmax"=>"", "dymin"=>"", "dymax"=>"", "demin"=>"", "demax"=>"", "opmmin"=>"", "opmmax"=>""}
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."paese" = ?[0m  [["paese", "Australia"]]
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.0ms | Allocations: 8)
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 2.6ms | Allocations: 2040)
+  Rendered screener/_azioni.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 10.0ms | Allocations: 2506)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5067)
+Completed 200 OK in 27ms (Views: 21.4ms | ActiveRecord: 0.6ms | Allocations: 6214)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-27 13:26:41 +0200
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (0.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (0.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 36.0ms | Allocations: 5524)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 8015)
+Completed 200 OK in 91ms (Views: 46.4ms | ActiveRecord: 1.9ms | Allocations: 29569)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-27 13:26:47 +0200
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 102)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 13.7ms | Allocations: 2918)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 5565)
+Completed 200 OK in 53ms (Views: 27.5ms | ActiveRecord: 0.2ms | Allocations: 14256)
+
+
+Started GET "/sfondoconctact.png" for 127.0.0.1 at 2023-03-27 13:26:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/sfondoconctact.png"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:27:01 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3129)
+Completed 200 OK in 19ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 6347)
+
+
+Started POST "/index/cerca" for 127.0.0.1 at 2023-03-27 13:27:06 +0200
+Processing by IndexController#cerca as TURBO_STREAM
+  Parameters: {"ricerca"=>"marior(utente)", "authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "marior"], ["LIMIT", 1]]
+  ↳ app/controllers/index_controller.rb:26:in `cerca'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 981)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-03-27 13:27:06 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "marior"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered users/_user.html.erb (Duration: 1.5ms | Allocations: 856)
+  Rendered users/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3927)
+Completed 200 OK in 27ms (Views: 20.2ms | ActiveRecord: 0.2ms | Allocations: 6395)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-03-27 13:27:29 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "marior"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 5.2ms | Allocations: 674)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.7ms | Allocations: 848)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3258)
+Completed 200 OK in 31ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 5179)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2023-03-27 13:27:36 +0200
+Processing by ContactsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/controllers/contacts_controller.rb:31:in `set_select_collections'
+  Rendering layout layouts/application.html.erb
+  Rendering contacts/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 91)
+  Rendered contacts/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1401)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 3958)
+Completed 200 OK in 48ms (Views: 34.9ms | ActiveRecord: 0.3ms | Allocations: 5071)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-03-27 13:27:44 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "marior"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.8ms | Allocations: 675)
+  Rendered users/show.html.erb within layouts/application (Duration: 5.9ms | Allocations: 849)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3274)
+Completed 200 OK in 34ms (Views: 22.9ms | ActiveRecord: 0.2ms | Allocations: 5178)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-03-27 13:29:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "marior"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 11.3ms | Allocations: 441)
+  Rendered users/_user.html.erb (Duration: 7.7ms | Allocations: 851)
+  Rendered users/show.html.erb within layouts/application (Duration: 21.8ms | Allocations: 1919)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 4583)
+Completed 200 OK in 55ms (Views: 46.4ms | ActiveRecord: 0.2ms | Allocations: 7218)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2023-03-27 13:30:57 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ilariaviola"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "AAPL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 441)
+  Rendered users/_user.html.erb (Duration: 26.8ms | Allocations: 850)
+  Rendered users/show.html.erb within layouts/application (Duration: 87.2ms | Allocations: 1916)
+  Rendered layout layouts/application.html.erb (Duration: 182.6ms | Allocations: 4576)
+Completed 200 OK in 226ms (Views: 198.9ms | ActiveRecord: 0.4ms | Allocations: 7777)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-27 13:31:01 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mWallet Load (0.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "MSFT"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "ODFL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 44)
+  Rendered users/_user.html.erb (Duration: 0.9ms | Allocations: 641)
+  Rendered users/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 818)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 3247)
+Completed 200 OK in 54ms (Views: 21.8ms | ActiveRecord: 0.6ms | Allocations: 6254)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 13:31:51 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (2.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 88)
+  Rendered _footer.html.erb (Duration: 6.6ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1202)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3833)
+Completed 200 OK in 48ms (Views: 30.6ms | ActiveRecord: 2.5ms | Allocations: 7553)
+
+
