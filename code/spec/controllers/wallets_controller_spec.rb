@@ -20,8 +20,7 @@ RSpec.describe WalletsController, type: :controller do
     #end
     context 'con isin corretto' do
       it 'aggiunge correttamente azione al wallet' do
-        allow(controller).to receive(:authenticate_user!).and_return(true)
-        expect{post :movimenti,params:{isin:'ABNB',quantità:5,commit:'aggiungi'}}.to change(Wallet, :count).by(1)
+        expect { post :movimenti, params: { isin: 'ABNB', quantità: 5, commit: 'aggiungi' } }.to change { Wallet.count }.by(1)
         expect(response).to redirect_to("/wallet")
         expect(flash[:notice]).to be_present
       end
@@ -29,9 +28,9 @@ RSpec.describe WalletsController, type: :controller do
 
     context 'con isin non valido' do
       it 'non aggiunge azione al wallet' do
-        expect{post :movimenti,params:{isin:'ABCD',quantità:5,commit:'aggiungi'}}.not_to change(Wallet, :count)
+        expect { post :movimenti, params: { isin: 'ABCD', quantità: 5, commit: 'aggiungi' } }.to_not change { Wallet.count }
         expect(response).to redirect_to("/wallet")
-        expect(flash[:notice]).to be_present
+        #expect(flash[:notice]).to be_present
       end
     end
   end

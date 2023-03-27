@@ -10212,3 +10212,1001 @@ Processing by WalletsController#index as HTML
   Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2247)
 Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 3138)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:24:07.726206"], ["updated_at", "2023-03-27 16:24:07.726206"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$Vhhy5oRW7yrImQCx6mkHQ.spX9VNZQkRKI0eslUMhadU/xxvSHG.q"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (25.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (2.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:24:07.809734"], ["updated_at", "2023-03-27 16:24:07.809734"]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 38]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 38]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:24:08.296212"], ["updated_at", "2023-03-27 16:24:08.296212"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$IK4l/rmvf86gLMhtQGZ97eZSIFkSN8IWsXixiLlGwI168jBTdTz9W"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (32.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:24:08.330194"], ["updated_at", "2023-03-27 16:24:08.330194"]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:24:08.376581"], ["updated_at", "2023-03-27 16:24:08.376581"]]
+  [1m[36mTRANSACTION (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 985)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 786)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 39]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 39]]
+  [1m[36mTRANSACTION (33.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:25:33.852206"], ["updated_at", "2023-03-27 16:25:33.852206"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$W3Q2wWFcsM.z3fHXDZQNJOmsCGSDMHHYVAZUgJa2cw0oGcomDMqfS"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:25:33.915275"], ["updated_at", "2023-03-27 16:25:33.915275"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 40]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 40]]
+  [1m[36mTRANSACTION (28.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:25:34.228254"], ["updated_at", "2023-03-27 16:25:34.228254"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$dsvuKYwLT/UT08.ZJH3fKuxxQGTKZydQIXZsgRwEuGgvvLaJE8ztq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:25:34.245030"], ["updated_at", "2023-03-27 16:25:34.245030"]]
+  [1m[36mTRANSACTION (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:25:34.299490"], ["updated_at", "2023-03-27 16:25:34.299490"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 999)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 800)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 41]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 41]]
+  [1m[36mTRANSACTION (17.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:30:02.801055"], ["updated_at", "2023-03-27 16:30:02.801055"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$jtzlKiQ0I6OSDSTKI3eRXeph/d2dgFy2BvUTEBMdRfaZfgjOhqX.a"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:30:02.845589"], ["updated_at", "2023-03-27 16:30:02.845589"]]
+  [1m[36mTRANSACTION (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 42]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 42]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:30:03.140650"], ["updated_at", "2023-03-27 16:30:03.140650"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$arvnvuTlmUi7oKv6Bvr5YOAthdGMwz6Dl51SL60HxCnh1MmmWs5Ee"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (11.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:30:03.156126"], ["updated_at", "2023-03-27 16:30:03.156126"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.4ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:30:03.192833"], ["updated_at", "2023-03-27 16:30:03.192833"]]
+  [1m[36mTRANSACTION (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1012)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 814)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 43]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 43]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:30:40.873169"], ["updated_at", "2023-03-27 16:30:40.873169"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$RnC8sGUs9njzc08XauV4.eQO/Od1CsyAGyAJzFysHJDs97xcC9eP2"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (32.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:30:40.931836"], ["updated_at", "2023-03-27 16:30:40.931836"]]
+  [1m[36mTRANSACTION (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 20ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 44]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 44]]
+  [1m[36mTRANSACTION (15.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:30:41.258922"], ["updated_at", "2023-03-27 16:30:41.258922"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$LgLxfyQs69B8i/3zc0N4YOdE7HM47FLMl9ME0zUSemgl02gU2dXYi"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:30:41.275409"], ["updated_at", "2023-03-27 16:30:41.275409"]]
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:30:41.310675"], ["updated_at", "2023-03-27 16:30:41.310675"]]
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 1027)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 828)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 45]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 45]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:31:40.912241"], ["updated_at", "2023-03-27 16:31:40.912241"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$/z7La6Uw/ASsNMsrcFL/3Oh28RNVItLFnkqxaD19YtGNijifJ3vvK"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (19.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:31:40.971905"], ["updated_at", "2023-03-27 16:31:40.971905"]]
+  [1m[36mTRANSACTION (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 11ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 46]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 46]]
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:31:41.235614"], ["updated_at", "2023-03-27 16:31:41.235614"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$i8Gso9LM8OB8ZnNLgnOfUOXm99kBjSB8bMYSDc02LTQadalJLMSCO"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:31:41.270014"], ["updated_at", "2023-03-27 16:31:41.270014"]]
+  [1m[36mTRANSACTION (18.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:31:41.309676"], ["updated_at", "2023-03-27 16:31:41.309676"]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1039)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 842)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 47]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 47]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:31:56.751779"], ["updated_at", "2023-03-27 16:31:56.751779"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$8BwkbzzISn9CB6zhvmIPhOd.hYJWpMQcQ7U9Pge9ickZ.kskcDo7i"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (13.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:31:56.793010"], ["updated_at", "2023-03-27 16:31:56.793010"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 48]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 48]]
+  [1m[36mTRANSACTION (19.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:31:57.079754"], ["updated_at", "2023-03-27 16:31:57.079754"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$sgpMNSRbAyHbKNSF.cGZ5ebXf3X88LrYB.ji9GfNRprg/VmvSnwf."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (15.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:31:57.097363"], ["updated_at", "2023-03-27 16:31:57.097363"]]
+  [1m[36mTRANSACTION (22.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:31:57.164329"], ["updated_at", "2023-03-27 16:31:57.164329"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1054)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 856)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 49]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 49]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:32:11.379265"], ["updated_at", "2023-03-27 16:32:11.379265"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$o02283mEQXKeWYv/6A5Y5edYZ4Lemkb2Ue0H2SEP7wcjsGiS.PkKe"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (44.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:32:11.451554"], ["updated_at", "2023-03-27 16:32:11.451554"]]
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 50]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 50]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:32:11.731187"], ["updated_at", "2023-03-27 16:32:11.731187"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$GGni1OnT8uhebe8vL9gXGe66zZwwPNolA8n4vOPd7rd3HSCDQppze"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (24.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:32:11.757359"], ["updated_at", "2023-03-27 16:32:11.757359"]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:32:11.818821"], ["updated_at", "2023-03-27 16:32:11.818821"]]
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (1.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 3ms (ActiveRecord: 1.9ms | Allocations: 1068)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 870)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 51]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 51]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:32:51.056556"], ["updated_at", "2023-03-27 16:32:51.056556"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$AAaVoI0e1aSiN05sPhcca.KkDuZovmwp2163pCm0.SLYFp6objB9G"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (18.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:32:51.097558"], ["updated_at", "2023-03-27 16:32:51.097558"]]
+  [1m[36mTRANSACTION (36.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 52]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 52]]
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:32:51.356156"], ["updated_at", "2023-03-27 16:32:51.356156"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$hmyhseqa2sU6GDTONUNbiuCum6nL1SN0CFQ72c8TR2JSO/GsFcti."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:32:51.374876"], ["updated_at", "2023-03-27 16:32:51.374876"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:32:51.409487"], ["updated_at", "2023-03-27 16:32:51.409487"]]
+  [1m[36mTRANSACTION (47.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1082)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 884)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 53]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 53]]
+  [1m[36mTRANSACTION (29.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:33:15.987168"], ["updated_at", "2023-03-27 16:33:15.987168"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$GKaJ9YMg2dU6GJReds2dp.CYz5LBSEfMTzosi58hzUaJ2ikW5yJSq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (32.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:33:16.037406"], ["updated_at", "2023-03-27 16:33:16.037406"]]
+  [1m[36mTRANSACTION (16.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 16ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 54]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 54]]
+  [1m[36mTRANSACTION (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:33:16.387063"], ["updated_at", "2023-03-27 16:33:16.387063"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$rwVN1MAjc45uWdEE0c4s0eWR63RsyR/5B5QH0tSKqzxg0nI2L3.WK"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (24.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:33:16.413037"], ["updated_at", "2023-03-27 16:33:16.413037"]]
+  [1m[36mTRANSACTION (19.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:33:16.470460"], ["updated_at", "2023-03-27 16:33:16.470460"]]
+  [1m[36mTRANSACTION (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1096)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 898)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 55]]
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 55]]
+  [1m[36mTRANSACTION (20.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:37:35.126465"], ["updated_at", "2023-03-27 16:37:35.126465"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$hWaS40VzM.jW9PZPlx4u..oqqzK1KXsY6DU64PhMtf4uQmT5dLfbC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:37:35.168734"], ["updated_at", "2023-03-27 16:37:35.168734"]]
+  [1m[36mTRANSACTION (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 56]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 56]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:37:35.317658"], ["updated_at", "2023-03-27 16:37:35.317658"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$sJNtA3aM.uTSARdpI5po5uPG3WH9ZEpZRSpWcVxo3U7OmbmFk5w4m"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:37:35.331847"], ["updated_at", "2023-03-27 16:37:35.331847"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:37:35.362742"], ["updated_at", "2023-03-27 16:37:35.362742"]]
+  [1m[36mTRANSACTION (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 33ms (ActiveRecord: 0.3ms | Allocations: 3709)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 912)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 57]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 57]]
+  [1m[36mTRANSACTION (23.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:39:37.184988"], ["updated_at", "2023-03-27 16:39:37.184988"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$3GDP1TJmxk/Do/nTLcXsFOGpolVEYZ1caA9mfnLOXz.AV2yI9utHm"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (16.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:39:37.230540"], ["updated_at", "2023-03-27 16:39:37.230540"]]
+  [1m[36mTRANSACTION (13.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 58]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 58]]
+  [1m[36mTRANSACTION (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:39:37.375089"], ["updated_at", "2023-03-27 16:39:37.375089"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$/NrsYDxcVSmGgvPOY0pxu.ev/fVQKr/WGCIEdb6xRcTH7PekKK9NC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:39:37.390753"], ["updated_at", "2023-03-27 16:39:37.390753"]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:39:37.429698"], ["updated_at", "2023-03-27 16:39:37.429698"]]
+  [1m[36mTRANSACTION (35.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 21ms (ActiveRecord: 0.3ms | Allocations: 3723)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 926)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 59]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 59]]
+  [1m[36mTRANSACTION (16.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:41:01.305922"], ["updated_at", "2023-03-27 16:41:01.305922"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$ibhO5JRgJUskRTSMpLAUsumu0m3XVrYN1txR4x0FJvpSdmEKPu6wC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (47.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:41:01.381333"], ["updated_at", "2023-03-27 16:41:01.381333"]]
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 60]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 60]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:41:01.551867"], ["updated_at", "2023-03-27 16:41:01.551867"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$rkzzel86usXHf.BuoL8MlOW.dfCGe/RMAmjy.y9IUIjwRecT5oknG"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:41:01.572051"], ["updated_at", "2023-03-27 16:41:01.572051"]]
+  [1m[36mTRANSACTION (9.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:41:01.617873"], ["updated_at", "2023-03-27 16:41:01.617873"]]
+  [1m[36mTRANSACTION (36.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms | Allocations: 3737)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 940)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 61]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 61]]
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:41:07.786044"], ["updated_at", "2023-03-27 16:41:07.786044"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$EBmztDynyy/d9OZLkdnrBues3RkZ7I7aPfwGa4elhvWrbZihuzZGG"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (18.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:41:07.822493"], ["updated_at", "2023-03-27 16:41:07.822493"]]
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 62]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 62]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:41:08.117225"], ["updated_at", "2023-03-27 16:41:08.117225"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$2FfbGQz./.GXouLUvnkSyO04zBY2gTaPUHRCnyd61mad8c4FfjK7i"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (21.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:41:08.140052"], ["updated_at", "2023-03-27 16:41:08.140052"]]
+  [1m[36mTRANSACTION (21.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:41:08.186183"], ["updated_at", "2023-03-27 16:41:08.186183"]]
+  [1m[36mTRANSACTION (22.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 1152)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 954)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 63]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 63]]
+  [1m[36mTRANSACTION (13.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:42:57.643923"], ["updated_at", "2023-03-27 16:42:57.643923"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$W6t7Wa4xriAh8h/8nUvGmOIDSn0R8YLRRSWOEnog0zelH/wYdtb1W"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (28.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:42:57.708122"], ["updated_at", "2023-03-27 16:42:57.708122"]]
+  [1m[36mTRANSACTION (12.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 64]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 64]]
+  [1m[36mTRANSACTION (39.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:42:57.999103"], ["updated_at", "2023-03-27 16:42:57.999103"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$L/UUJFVI546r9sqsekbmuu2EWGuYPc.SyhsjzlB5F5uoGBXlUVxIq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (13.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:42:58.014245"], ["updated_at", "2023-03-27 16:42:58.014245"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:42:58.046619"], ["updated_at", "2023-03-27 16:42:58.046619"]]
+  [1m[36mTRANSACTION (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1166)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 968)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 65]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 65]]
+  [1m[36mTRANSACTION (11.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:43:33.495199"], ["updated_at", "2023-03-27 16:43:33.495199"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$z.S1g9X0LSVCs0IywnqLSuwR86ZNQNJQ7ZttXWDYaepj11TlyF1Xq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:43:33.534978"], ["updated_at", "2023-03-27 16:43:33.534978"]]
+  [1m[36mTRANSACTION (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 66]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 66]]
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:43:33.865371"], ["updated_at", "2023-03-27 16:43:33.865371"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$oG5.hsMGHNwm9Ju.7CErf.jiuIozDJSC3H58CoCdX9G85B.ihN2Tq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (15.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:43:33.883347"], ["updated_at", "2023-03-27 16:43:33.883347"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:43:33.946212"], ["updated_at", "2023-03-27 16:43:33.946212"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1180)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 982)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 67]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 67]]
+  [1m[36mTRANSACTION (12.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:48:12.311739"], ["updated_at", "2023-03-27 16:48:12.311739"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$Er4XYmNlBBFdOw7Lf4XYOueiTyQICAD.iiXasEk4VVvE8Uc520Xk."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (12.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:48:12.340920"], ["updated_at", "2023-03-27 16:48:12.340920"]]
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 68]]
+  [1m[36mUser Destroy (11.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 68]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:48:12.491720"], ["updated_at", "2023-03-27 16:48:12.491720"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$L1B1Oxfiyu3Iokbp3ZXjGuqQy9MiGHVci9z8.n3Hnb1y1qD7GLGs2"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (21.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:48:12.514177"], ["updated_at", "2023-03-27 16:48:12.514177"]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:48:12.549530"], ["updated_at", "2023-03-27 16:48:12.549530"]]
+  [1m[36mTRANSACTION (23.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms | Allocations: 3793)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 996)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 69]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 69]]
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:56:29.371964"], ["updated_at", "2023-03-27 16:56:29.371964"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$zvGm7FzC.BeztfizRb2.6u.Qj.if8vgCB5N/6JZ78uqhXR3G8Kila"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:56:29.412193"], ["updated_at", "2023-03-27 16:56:29.412193"]]
+  [1m[36mTRANSACTION (21.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? LIMIT ?[0m  [["isin", "AAPL"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ACCprova"], ["LIMIT", 1]]
+Processing by IndexController#cerca as HTML
+  Parameters: {"ricerca"=>"ACCprova"}
+Redirected to http://test.host/..
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms | Allocations: 2808)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 70]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 70]]
+  [1m[36mTRANSACTION (25.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec"], ["cognome", "Rspec"], ["username", "RspecAccount"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 16:56:29.692075"], ["updated_at", "2023-03-27 16:56:29.692075"], ["email", "rspecmail@mail.com"], ["encrypted_password", "$2a$04$0PQJ6pLGbIewuk59KyhWweChZZp0QlM11jQGeYC3wVMkF6UXn1JHC"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (30.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "ACCprova"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-27 16:56:29.724278"], ["updated_at", "2023-03-27 16:56:29.724278"]]
+  [1m[36mTRANSACTION (20.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAzione Create (0.2ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-27 16:56:29.777129"], ["updated_at", "2023-03-27 16:56:29.777129"]]
+  [1m[36mTRANSACTION (23.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABNB", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 1208)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1010)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 71]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 71]]
+  [1m[36mTRANSACTION (18.4ms)[0m  [1m[36mcommit transaction[0m
