@@ -6,7 +6,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:google_oauth2,:facebook]
   
-    validates :nome,length: { minimum: 2 }
     validates :nome, presence: true 
     validates :username,:email, presence: true,uniqueness: {case_sensitive: true}
 
@@ -18,7 +17,7 @@ class User < ApplicationRecord
         user.password = Devise.friendly_token[0,20]
         user.nome=auth.info.name
         user.cognome=auth.info.given_name
-        user.username=auth.info.name
+        user.username=auth.info.name+Devise.frindly_token[0,3]
         user.pubblico="no"
 
       end
@@ -33,7 +32,7 @@ class User < ApplicationRecord
             infoUser=auth.info.name.split(" ")
             user.nome=infoUser[0]
             user.cognome=infoUser[1]
-            user.username=auth.info.name
+            user.username=auth.info.name+Devise.friendly_token[0,3]
             user.pubblico="no"
           end 
         
