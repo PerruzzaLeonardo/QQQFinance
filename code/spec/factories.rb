@@ -1,10 +1,10 @@
 FactoryBot.define do
     factory :user do
-      nome {'Rspec'}
-      cognome {'Rspec'}
-      username{'RspecAccount'}
+      nome {'Rspec121'}
+      cognome {'Rspec1'}
+      username{'RspecAccount51'}
       pubblico{'si'}
-      email { "rspecmail@mail.com" }
+      email { "rspecmail511@mail.com" }
       password { "rspecpassword" }
     end
 
@@ -17,7 +17,7 @@ FactoryBot.define do
     end
 
     factory :wallet do
-      user {'ACCprova'}
+      user {'Rspec121'}
       azione{'MSFT'}
       quantità{5}
     end

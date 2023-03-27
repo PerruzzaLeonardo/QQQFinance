@@ -8,6 +8,7 @@ class User < ApplicationRecord
   
     validates :nome, presence: true 
     validates :username,:email, presence: true,uniqueness: {case_sensitive: true}
+    validates :pubblico, presence: true
 
  
      
