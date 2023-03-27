@@ -28,7 +28,8 @@ class IndexController < ApplicationController
             redirect_to "/users/"+id
         else
             #segnala errore
-            redirect_to "index"
+            flash[:inesistente] = "Non esiste una azione con l'ISIN immesso oppure un utente con tale username"
+            redirect_to "/.."
         end
     end
 

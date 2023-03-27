@@ -16,6 +16,11 @@
           <%= flash[:notice ] %>
         </div>
     <% end %>
+    <% if flash[:inesistente]%>
+      <div class="alert alert-danger text-center">
+        <%= flash[:inesistente] %>
+      </div>
+    <% end %>
     <div class="position-relative">
       <p class="text-center">QQQFinance</p>
     </div>
