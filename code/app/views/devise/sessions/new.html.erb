@@ -6,6 +6,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+<%=render "/header"%>
+
+<% if flash[:notice] %>
+	<div class="alert alert-success alert-dismissable">
+	    <%= flash[:notice] %>
+    </div>
+<% end %>
+
 <a href="/" class="link-dark"><p class="fs-1 fw-bold px-5 mt-5" style="letter-spacing: 3px;">QQQFinance</p></a>
 
 <% flash.each do |type, msg| %>

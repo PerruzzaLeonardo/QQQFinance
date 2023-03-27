@@ -33,8 +33,12 @@ class Azione < ApplicationRecord
             response = http.request(request)
             
             res=JSON.parse(response.read_body)
-
-            @prezzo=res["financialData"]["currentPrice"]["raw"].round(2) #prezzo è di tipo float quando lo inserisco
+            if res == nil || res["financialData"].nil? || res["financialData"]["currentPrice"].nil? || res["financialData"]["currentPrice"]["raw"].nil?
+                next
+            else
+                @prezzo=res["financialData"]["currentPrice"]["raw"].round(2) #prezzo è di tipo float quando lo inserisco    
+            end
+            
 
 
             #controllo vecchio prezzo per capire se dover mandare la mail

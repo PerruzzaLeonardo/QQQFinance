@@ -39297,3 +39297,1699 @@ Processing by IndexController#index as HTML
 Completed 200 OK in 19ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 6281)
 
 
+Started GET "/news" for 127.0.0.1 at 2023-03-27 01:59:50 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (10.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (10.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (8.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (44.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (9.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (9.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (13.2ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (10.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (8.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (10.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (10.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 82.3ms | Allocations: 596)
+  Rendered _footer.html.erb (Duration: 69.9ms | Allocations: 128)
+  Rendered news/index.html.erb within layouts/application (Duration: 7759.7ms | Allocations: 31246)
+  Rendered layout layouts/application.html.erb (Duration: 9981.7ms | Allocations: 46325)
+Completed 200 OK in 11212ms (Views: 10123.2ms | ActiveRecord: 184.0ms | Allocations: 75333)
+
+
+Started GET "/news" for 127.0.0.1 at 2023-03-27 02:00:15 +0200
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (9.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (11.4ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (10.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (9.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (9.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (10.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (9.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (8.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (9.1ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (8.8ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.7ms | Allocations: 87)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered news/index.html.erb within layouts/application (Duration: 334.0ms | Allocations: 1882)
+  Rendered layout layouts/application.html.erb (Duration: 708.4ms | Allocations: 4327)
+Completed 200 OK in 1015ms (Views: 713.8ms | ActiveRecord: 97.0ms | Allocations: 9314)
+
+
+  [1m[36mNews Load (9.8ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (23.6ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  [1m[36mTRANSACTION (38.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (27.4ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (35.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (22.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (30.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (21.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (28.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (36.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (33.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (26.7ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (26.0ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (32.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (26.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (34.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (27.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (22.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (27.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (28.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "White House ‘very in favor’ of bill thought to target TikTok"], ["descrizione", "Platform has drawn close congressional scrutiny because the data of users could be available to the government of ChinaOne of the authors of a Senate bill that would enable the federal commerce department to ban technologies with links to foreign gov [...]"], ["autore", "theguardian"], ["url", "https://www.theguardian.com/us-news/2023/mar/26/white-house-restrict-act-bill-tiktok"], ["urlimg", "https://i.guim.co.uk/img/media/3295c2318d2749d922058e6fa5a7c7168ecd0915/0_360_5394_3236/master/5394.jpg?width=460&quality=85&auto=format&fit=max&s=03afacd1a7bb65100b9b9c60be242a1c"], ["created_at", "2023-03-27 00:05:24.792526"], ["updated_at", "2023-03-27 00:05:24.792526"]]
+  [1m[36mTRANSACTION (38.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (25.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "Elon Musk memo suggests Twitter worth less than half of what he paid for it"], ["descrizione", "Calculation based on leaked offer to staff that implies firm valued at $2obn compared with $44bn he bought it forTwitter is worth less than half of what Elon Musk paid for it six months ago having lost more than $20bn (£16.4bn) in value, according to [...]"], ["autore", "theguardian"], ["url", "https://www.theguardian.com/technology/2023/mar/26/elon-musk-twitter-value-leaked-memo-less-than-half-paid"], ["urlimg", "https://i.guim.co.uk/img/media/8f1ed710bd894086525d30cf5ac7f47aca4dbf39/850_88_3132_1879/master/3132.jpg?width=460&quality=85&auto=format&fit=max&s=f122338e4a7f32330cc4f55946d7bbe3"], ["created_at", "2023-03-27 00:05:24.875332"], ["updated_at", "2023-03-27 00:05:24.875332"]]
+  [1m[36mTRANSACTION (36.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (28.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Passing on Senate Run, Ro Khanna Endorses 'Progressive Leader' Barbara Lee"], ["descrizione", "Congressman Ro Khanna announced on CNN Sunday that he will not run for U.S. Senate and is endorsing fellow California Democrat Rep. Barbara Lee in the closely watched 2024 race for retiring Sen. Dianne Feinstein's seat.\"I have concluded that despite  [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/news/khanna-endorses-lee-senate-california"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-27 00:05:24.949836"], ["updated_at", "2023-03-27 00:05:24.949836"]]
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (27.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "AUKUS Nuclear Submarines: Accelerating the Sleepwalking to War With China"], ["descrizione", "The March 13 Biden-Albanese-Sunak summit in San Diego to demonstrate alliance solidarity and to sign the multi-billion AUKUS (Australia, United Kingdom, US) nuclear submarine deal accelerated the pace of the U.S. and China sleepwalking toward catastr [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/aukus-nuclear-deal-china"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-27 00:05:25.022326"], ["updated_at", "2023-03-27 00:05:25.022326"]]
+  [1m[36mTRANSACTION (39.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (26.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "The Deadly Results of Economic Inequality"], ["descrizione", "If you grew up in America, then you almost definitely have heard some variation of the refrain: “America is the greatest country in the world.”It’s an idea that’s so commonplace that it’s more or less taken for granted. We boast of inventions like th [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/deadly-impacts-of-economic-inequality"], ["urlimg", "fotonews3.jpg"], ["created_at", "2023-03-27 00:05:25.101411"], ["updated_at", "2023-03-27 00:05:25.101411"]]
+  [1m[36mTRANSACTION (37.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (27.9ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "Wind Turbines Repurposed — FUD Dispatched!"], ["descrizione", "One of the enduring pieces of FUD misinformation that circulates in the miasma of the internet is that wind turbines (and other materials that are used for renewable energy generation) will end up in the landfill and destroy the Earth — much worse th [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/03/26/wind-turbines-repurposed-fud-dispatched/"], ["urlimg", "fotonews4.jpg"], ["created_at", "2023-03-27 00:05:25.178432"], ["updated_at", "2023-03-27 00:05:25.178432"]]
+  [1m[36mTRANSACTION (34.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (23.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "The Call for a Livable, Fossil-Free Future Grows Louder"], ["descrizione", "The IPCC’s 6th Assessment Synthesis Report released this week summarizes what we already knew: that the climate crisis, whose visibility has grown more pronounced over every season, is unequivocally happening.Its root cause? Humanity’s addiction to f [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/just-transition-community-renewable-energy"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-27 00:05:25.250222"], ["updated_at", "2023-03-27 00:05:25.250222"]]
+  [1m[36mTRANSACTION (32.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (30.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Porsche’s Next Cayenne Will Be An EV, Built In Bratislava"], ["descrizione", "Like most other luxury and performance manufacturers, Porsche was a little late to the electric party. As we know, Tesla beat it to the punch by more than a decade, and even beat it to mass EV production. Porsche has been producing electric vehicles  [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/03/26/porsches-next-cayenne-will-be-an-ev-built-in-bratislava/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-27 00:05:25.318705"], ["updated_at", "2023-03-27 00:05:25.318705"]]
+  [1m[36mTRANSACTION (31.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (28.1ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "BTS’ Jimin Sells Over 1 Million Copies Of ‘Face’ Solo Album Worldwide For Record-Breaking 24 Hours In Korea"], ["descrizione", "On its first day available, Jimin’s debut solo album 'FACE' sold 1,021,532 physical copies worldwide in its first day available on March 24, according to South Korea’s real-time album sales website Hanteo Chart."], ["autore", "forbes"], ["url", "https://www.forbes.com/sites/jeffbenjamin/2023/03/26/bts-jimin-sells-over-1-million-copies-of-face-solo-album-worldwide-for-record-breaking-24-hours-in-korea/"], ["urlimg", "https://imageio.forbes.com/specials-images/imageserve/641f77844cf85ecf6f580d4c/0x0.jpg?width=960&precrop=2000%2C1125%2Cx0%2Cy89"], ["created_at", "2023-03-27 00:05:25.393920"], ["updated_at", "2023-03-27 00:05:25.393920"]]
+  [1m[36mTRANSACTION (35.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (24.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "Tim Draper recommends founders hold ’at least’ two payrolls ‘worth of cash’ in crypto"], ["descrizione", "American venture capital investor Tim Draper warned business founders to prepare for “more and more” bank failures if the government continues to “print money and whipsaw interest rates.“"], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/businesses-should-hold-two-payrolls-worth-of-cash-in-crypto-tim-draper"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvOTI2YzE3ZWItMzlkNi00NmJlLTg0NzYtMTI4YzVjMmFmOWU1LmpwZw==.jpg"], ["created_at", "2023-03-27 00:05:25.467176"], ["updated_at", "2023-03-27 00:05:25.467176"]]
+  [1m[36mTRANSACTION (32.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAzione Load (12.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (7.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (9.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (9.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (8.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (9.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (7.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (9.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (7.8ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (8.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mNews Load (10.4ms)[0m  [1m[34mSELECT "news".* FROM "news"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (20.2ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 0]]
+  [1m[36mTRANSACTION (34.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (22.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (30.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (23.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (30.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (25.3ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (31.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (32.5ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (29.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (22.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (28.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (24.9ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (27.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (22.4ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 7]]
+  [1m[36mTRANSACTION (30.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (23.8ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 8]]
+  [1m[36mTRANSACTION (30.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Destroy (24.1ms)[0m  [1m[31mDELETE FROM "news" WHERE "news"."id" = ?[0m  [["id", 9]]
+  [1m[36mTRANSACTION (26.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (20.8ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 0], ["titolo", "Community-driven crypto projects still thriving despite headwinds"], ["descrizione", "Community engagement has always been a key aspect of crypto, and it's proving its value during bear markets."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/community-driven-crypto-projects-still-thriving-despite-headwinds"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvN2U1MzliZjYtZjM0MS00ODI3LWIwNTQtODg1MTA2NGE0MDFjLmpwZw==.jpg"], ["created_at", "2023-03-27 00:37:58.307380"], ["updated_at", "2023-03-27 00:37:58.307380"]]
+  [1m[36mTRANSACTION (28.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (27.6ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["titolo", "White House ‘very in favor’ of bill thought to target TikTok"], ["descrizione", "Platform has drawn close congressional scrutiny because the data of users could be available to the government of ChinaOne of the authors of a Senate bill that would enable the federal commerce department to ban technologies with links to foreign gov [...]"], ["autore", "theguardian"], ["url", "https://www.theguardian.com/us-news/2023/mar/26/white-house-restrict-act-bill-tiktok"], ["urlimg", "https://i.guim.co.uk/img/media/3295c2318d2749d922058e6fa5a7c7168ecd0915/0_360_5394_3236/master/5394.jpg?width=460&quality=85&auto=format&fit=max&s=03afacd1a7bb65100b9b9c60be242a1c"], ["created_at", "2023-03-27 00:37:58.367442"], ["updated_at", "2023-03-27 00:37:58.367442"]]
+  [1m[36mTRANSACTION (35.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (24.7ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 2], ["titolo", "Elon Musk memo suggests Twitter worth less than half of what he paid for it"], ["descrizione", "Calculation based on leaked offer to staff that implies firm valued at $2obn compared with $44bn he bought it forTwitter is worth less than half of what Elon Musk paid for it six months ago having lost more than $20bn (£16.4bn) in value, according to [...]"], ["autore", "theguardian"], ["url", "https://www.theguardian.com/technology/2023/mar/26/elon-musk-twitter-value-leaked-memo-less-than-half-paid"], ["urlimg", "https://i.guim.co.uk/img/media/8f1ed710bd894086525d30cf5ac7f47aca4dbf39/850_88_3132_1879/master/3132.jpg?width=460&quality=85&auto=format&fit=max&s=f122338e4a7f32330cc4f55946d7bbe3"], ["created_at", "2023-03-27 00:37:58.442968"], ["updated_at", "2023-03-27 00:37:58.442968"]]
+  [1m[36mTRANSACTION (31.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (29.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["titolo", "Passing on Senate Run, Ro Khanna Endorses 'Progressive Leader' Barbara Lee"], ["descrizione", "Congressman Ro Khanna announced on CNN Sunday that he will not run for U.S. Senate and is endorsing fellow California Democrat Rep. Barbara Lee in the closely watched 2024 race for retiring Sen. Dianne Feinstein's seat.\"I have concluded that despite  [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/news/khanna-endorses-lee-senate-california"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-27 00:37:58.510138"], ["updated_at", "2023-03-27 00:37:58.510138"]]
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (25.5ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 4], ["titolo", "How does the economy work?"], ["descrizione", "The economy is a system of producing and exchanging goods and services in a society."], ["autore", "cointelegraph"], ["url", "https://cointelegraph.com/news/how-does-the-economy-work"], ["urlimg", "https://images.cointelegraph.com/images/840_aHR0cHM6Ly9zMy5jb2ludGVsZWdyYXBoLmNvbS91cGxvYWRzLzIwMjMtMDMvYzljMjVjMWUtMzkyOC00M2U0LWJhMzAtYzk3ZmU3Y2JkZmYzLmpwZw==.jpg"], ["created_at", "2023-03-27 00:37:58.584735"], ["updated_at", "2023-03-27 00:37:58.584735"]]
+  [1m[36mTRANSACTION (32.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (24.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["titolo", "AUKUS Nuclear Submarines: Accelerating the Sleepwalking to War With China"], ["descrizione", "The March 13 Biden-Albanese-Sunak summit in San Diego to demonstrate alliance solidarity and to sign the multi-billion AUKUS (Australia, United Kingdom, US) nuclear submarine deal accelerated the pace of the U.S. and China sleepwalking toward catastr [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/aukus-nuclear-deal-china"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-27 00:37:58.651301"], ["updated_at", "2023-03-27 00:37:58.651301"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (24.4ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 6], ["titolo", "The Deadly Results of Economic Inequality"], ["descrizione", "If you grew up in America, then you almost definitely have heard some variation of the refrain: “America is the greatest country in the world.”It’s an idea that’s so commonplace that it’s more or less taken for granted. We boast of inventions like th [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/deadly-impacts-of-economic-inequality"], ["urlimg", "fotonews3.jpg"], ["created_at", "2023-03-27 00:37:58.716509"], ["updated_at", "2023-03-27 00:37:58.716509"]]
+  [1m[36mTRANSACTION (34.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (30.3ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["titolo", "Wind Turbines Repurposed — FUD Dispatched!"], ["descrizione", "One of the enduring pieces of FUD misinformation that circulates in the miasma of the internet is that wind turbines (and other materials that are used for renewable energy generation) will end up in the landfill and destroy the Earth — much worse th [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/03/26/wind-turbines-repurposed-fud-dispatched/"], ["urlimg", "fotonews4.jpg"], ["created_at", "2023-03-27 00:37:58.784588"], ["updated_at", "2023-03-27 00:37:58.784588"]]
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (23.2ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 8], ["titolo", "The Call for a Livable, Fossil-Free Future Grows Louder"], ["descrizione", "The IPCC’s 6th Assessment Synthesis Report released this week summarizes what we already knew: that the climate crisis, whose visibility has grown more pronounced over every season, is unequivocally happening.Its root cause? Humanity’s addiction to f [...]"], ["autore", "commondreams"], ["url", "https://www.commondreams.org/opinion/just-transition-community-renewable-energy"], ["urlimg", "fotonews1.jpg"], ["created_at", "2023-03-27 00:37:58.855391"], ["updated_at", "2023-03-27 00:37:58.855391"]]
+  [1m[36mTRANSACTION (34.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mNews Create (23.0ms)[0m  [1m[32mINSERT INTO "news" ("id", "titolo", "descrizione", "autore", "url", "urlimg", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["titolo", "Porsche’s Next Cayenne Will Be An EV, Built In Bratislava"], ["descrizione", "Like most other luxury and performance manufacturers, Porsche was a little late to the electric party. As we know, Tesla beat it to the punch by more than a decade, and even beat it to mass EV production. Porsche has been producing electric vehicles  [...]"], ["autore", "cleantechnica"], ["url", "https://cleantechnica.com/2023/03/26/porsches-next-cayenne-will-be-an-ev-built-in-bratislava/"], ["urlimg", "fotonews2.jpg"], ["created_at", "2023-03-27 00:37:58.923576"], ["updated_at", "2023-03-27 00:37:58.923576"]]
+  [1m[36mTRANSACTION (33.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mAzione Load (11.7ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (8.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (13.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mAzione Load (14.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Started GET "/news" for 127.0.0.1 at 2023-03-27 02:53:49 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NewsController#index as HTML
+  [1m[36mNews Load (13.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:3:in `index'
+  [1m[36mNews Load (12.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:4:in `index'
+  [1m[36mNews Load (11.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:5:in `index'
+  [1m[36mNews Load (13.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:6:in `index'
+  [1m[36mNews Load (12.5ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:7:in `index'
+  [1m[36mNews Load (10.0ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:8:in `index'
+  [1m[36mNews Load (8.3ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:9:in `index'
+  [1m[36mNews Load (8.6ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:10:in `index'
+  [1m[36mNews Load (8.9ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:11:in `index'
+  [1m[36mNews Load (8.7ms)[0m  [1m[34mSELECT "news".* FROM "news" WHERE "news"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/news_controller.rb:12:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering news/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 47.4ms | Allocations: 596)
+  Rendered _footer.html.erb (Duration: 45.1ms | Allocations: 128)
+  Rendered news/index.html.erb within layouts/application (Duration: 7773.3ms | Allocations: 33587)
+  Rendered layout layouts/application.html.erb (Duration: 9837.9ms | Allocations: 48666)
+Completed 200 OK in 10812ms (Views: 9980.6ms | ActiveRecord: 159.5ms | Allocations: 77532)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 02:54:12 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (11.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 95)
+  Rendered _footer.html.erb (Duration: 0.2ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 76.5ms | Allocations: 1082)
+  Rendered layout layouts/application.html.erb (Duration: 574.6ms | Allocations: 3796)
+Completed 200 OK in 1333ms (Views: 604.5ms | ActiveRecord: 108.4ms | Allocations: 48840)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 02:54:16 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (11.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 551)
+  Rendered layout layouts/application.html.erb (Duration: 526.5ms | Allocations: 3112)
+Completed 200 OK in 705ms (Views: 534.7ms | ActiveRecord: 24.0ms | Allocations: 6377)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 02:54:35 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (9.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 99)
+  Rendered screener/_filtri.html.erb (Duration: 71.2ms | Allocations: 375)
+  [1m[36mCACHE Azione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 64.1ms | Allocations: 1517)
+  Rendered screener/_azioni.html.erb (Duration: 87.8ms | Allocations: 7283)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 444.8ms | Allocations: 10213)
+  Rendered layout layouts/application.html.erb (Duration: 968.9ms | Allocations: 12848)
+Completed 200 OK in 1179ms (Views: 996.5ms | ActiveRecord: 9.6ms | Allocations: 15945)
+
+
+Started GET "/screener" for 127.0.0.1 at 2023-03-27 02:55:15 +0200
+Processing by ScreenerController#index as HTML
+  [1m[36mAzione Load (10.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/screener_controller.rb:159:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering screener/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.4ms | Allocations: 89)
+  Rendered screener/_filtri.html.erb (Duration: 0.5ms | Allocations: 8)
+  [1m[36mCACHE Azione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/views/screener/_aggiungi.html.erb:9
+  Rendered screener/_aggiungi.html.erb (Duration: 14.1ms | Allocations: 1294)
+  Rendered screener/_azioni.html.erb (Duration: 40.5ms | Allocations: 6721)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered screener/index.html.erb within layouts/application (Duration: 73.5ms | Allocations: 8391)
+  Rendered layout layouts/application.html.erb (Duration: 643.8ms | Allocations: 10952)
+Completed 200 OK in 803ms (Views: 649.8ms | ActiveRecord: 11.0ms | Allocations: 13465)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 02:56:22 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 197.1ms | Allocations: 3236)
+  Rendered layout layouts/application.html.erb (Duration: 725.6ms | Allocations: 5862)
+Completed 200 OK in 948ms (Views: 771.7ms | ActiveRecord: 0.0ms | Allocations: 7512)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 02:58:23 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 52.4ms | Allocations: 463)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 235.3ms | Allocations: 2172)
+  Rendered layout layouts/application.html.erb (Duration: 842.9ms | Allocations: 5034)
+Completed 200 OK in 1095ms (Views: 933.5ms | ActiveRecord: 0.0ms | Allocations: 6655)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 02:59:03 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"qqqfinanceassi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "qqqfinanceassi@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/8
+Completed 303 See Other in 1362ms (ActiveRecord: 8.9ms | Allocations: 6257)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2023-03-27 02:59:07 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (13.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (11.6ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ACCprova"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+  [1m[36mAzione Load (10.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "MSFT"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+  [1m[36mAzione Load (12.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ?[0m  [["isin", "ODFL"]]
+  ↳ app/controllers/users_controller.rb:28:in `block in show'
+Completed 302 Found in 464ms (ActiveRecord: 105.2ms | Allocations: 18958)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 02:59:11 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 40)
+  Rendered users/index.html.erb within layouts/application (Duration: 372.6ms | Allocations: 1383)
+  Rendered layout layouts/application.html.erb (Duration: 786.7ms | Allocations: 3864)
+Completed 200 OK in 989ms (Views: 815.3ms | ActiveRecord: 9.7ms | Allocations: 5689)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-27 02:59:29 +0200
+Processing by Users::SessionsController#destroy as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 204ms (ActiveRecord: 10.0ms | Allocations: 2668)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 02:59:33 +0200
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-27 02:59:34 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (12.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 89)
+  Rendered _footer.html.erb (Duration: 42.1ms | Allocations: 139)
+  Rendered index/index.html.erb within layouts/application (Duration: 139.1ms | Allocations: 1307)
+  Rendered layout layouts/application.html.erb (Duration: 676.9ms | Allocations: 4019)
+Completed 200 OK in 979ms (Views: 733.3ms | ActiveRecord: 25.4ms | Allocations: 7835)
+
+
+Processing by Users::SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 8ms (ActiveRecord: 0.0ms | Allocations: 534)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 02:59:38 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (14.6ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 563)
+Started GET "/users/sign_out" for 127.0.0.1 at 2023-03-27 02:59:40 +0200
+  Rendered layout layouts/application.html.erb (Duration: 556.2ms | Allocations: 3488)
+Completed 200 OK in 738ms (Views: 563.9ms | ActiveRecord: 26.8ms | Allocations: 6747)
+
+
+Processing by Users::SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 303 See Other in 8ms (ActiveRecord: 0.0ms | Allocations: 526)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 02:59:44 +0200
+Processing by IndexController#index as HTML
+  [1m[36mAzione Load (11.5ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 83)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 561)
+  Rendered layout layouts/application.html.erb (Duration: 500.2ms | Allocations: 3144)
+Completed 200 OK in 665ms (Views: 506.4ms | ActiveRecord: 21.4ms | Allocations: 6379)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 02:59:52 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 227.1ms | Allocations: 4395)
+  Rendered layout layouts/application.html.erb (Duration: 652.2ms | Allocations: 7019)
+Completed 200 OK in 840ms (Views: 680.8ms | ActiveRecord: 0.0ms | Allocations: 8569)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:00:37 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (11.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (28.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-27 01:00:41.044140"], ["updated_at", "2023-03-27 01:00:41.044140"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$/VatgymShPLhQuRyK25aD.z87RogeIZQ3hK4tdD7M9tNloI0LvHs6"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (38.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 1388ms (ActiveRecord: 78.9ms | Allocations: 8955)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:00:42 +0200
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1102)
+  Rendered layout layouts/application.html.erb (Duration: 507.7ms | Allocations: 3660)
+Completed 200 OK in 652ms (Views: 513.1ms | ActiveRecord: 0.0ms | Allocations: 4375)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:01:08 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 460ms (ActiveRecord: 10.0ms | Allocations: 2074)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:01:12 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (12.3ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 188ms (ActiveRecord: 33.4ms | Allocations: 2410)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:01:16 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (9.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (18.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:01:19.021446"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (32.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered users/index.html.erb within layouts/application (Duration: 281.7ms | Allocations: 856)
+  Rendered layout layouts/application.html.erb (Duration: 754.6ms | Allocations: 3289)
+Completed 200 OK in 978ms (Views: 760.5ms | ActiveRecord: 68.7ms | Allocations: 7892)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:04:08 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 3059.1ms | Allocations: 10458)
+  Rendered users/edit.html.erb within layouts/application (Duration: 3191.9ms | Allocations: 10971)
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:04:14 +0200
+  Rendered layout layouts/application.html.erb (Duration: 3660.8ms | Allocations: 13727)
+Completed 200 OK in 3854ms (Views: 3665.7ms | ActiveRecord: 22.1ms | Allocations: 15416)
+
+
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 1159.7ms | Allocations: 5691)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1166.2ms | Allocations: 5926)
+  Rendered layout layouts/application.html.erb (Duration: 1664.9ms | Allocations: 8324)
+Completed 200 OK in 1812ms (Views: 1672.0ms | ActiveRecord: 18.5ms | Allocations: 9961)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:04:25 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (26.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (37.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 690ms (ActiveRecord: 88.6ms | Allocations: 11223)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:04:30 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (9.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (10.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 18.6ms | Allocations: 745)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 1221)
+  Rendered layout layouts/application.html.erb (Duration: 506.7ms | Allocations: 3786)
+Completed 200 OK in 661ms (Views: 501.3ms | ActiveRecord: 30.2ms | Allocations: 7036)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:04:43 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2481)
+  Rendered layout layouts/application.html.erb (Duration: 492.8ms | Allocations: 5037)
+Completed 200 OK in 606ms (Views: 497.6ms | ActiveRecord: 0.0ms | Allocations: 5739)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:06:37 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (9.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (24.5ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", nil], ["commento", nil], ["created_at", "2023-03-27 01:06:47.424758"], ["updated_at", "2023-03-27 01:06:47.424758"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$MhQ3MLC4/VXfTrRp4oqI/uWyJrT8AOSzITu3VBhHGf3fBbdVjhzQ."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (37.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/user/id
+Completed 302 Found in 669ms (ActiveRecord: 125.5ms | Allocations: 9873)
+
+
+Started GET "/user/id" for 127.0.0.1 at 2023-03-27 03:06:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/user/id"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:06:52 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2609)
+  Rendered layout layouts/application.html.erb (Duration: 1509.4ms | Allocations: 17457)
+Completed 200 OK in 1627ms (Views: 1516.5ms | ActiveRecord: 0.0ms | Allocations: 18611)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:07:08 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 90)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 1199)
+  Rendered layout layouts/application.html.erb (Duration: 418.5ms | Allocations: 3831)
+Completed 200 OK in 542ms (Views: 425.6ms | ActiveRecord: 0.0ms | Allocations: 5117)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:07:20 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 466ms (ActiveRecord: 8.0ms | Allocations: 2438)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:07:24 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (11.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 316ms (ActiveRecord: 52.2ms | Allocations: 3850)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:07:29 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (11.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (20.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:07:31.548100"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (37.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 210.9ms | Allocations: 909)
+  Rendered layout layouts/application.html.erb (Duration: 703.2ms | Allocations: 3377)
+Completed 200 OK in 993ms (Views: 714.2ms | ActiveRecord: 81.3ms | Allocations: 8398)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:07:58 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 39)
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:08:08 +0200
+  Rendered users/_form.html.erb (Duration: 1289.0ms | Allocations: 6329)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1295.7ms | Allocations: 6608)
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:08:09 +0200
+  Rendered layout layouts/application.html.erb (Duration: 2980.2ms | Allocations: 21657)
+Completed 200 OK in 3346ms (Views: 3008.5ms | ActiveRecord: 97.7ms | Allocations: 29341)
+
+
+Processing by UsersController#edit as HTML
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (11.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  [1m[36mUser Load (12.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering users/edit.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 39)
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 726.4ms | Allocations: 11153)
+  Rendered users/edit.html.erb within layouts/application (Duration: 735.0ms | Allocations: 11464)
+  Rendered users/_form.html.erb (Duration: 746.8ms | Allocations: 10984)
+  Rendered users/edit.html.erb within layouts/application (Duration: 754.0ms | Allocations: 11219)
+  Rendered layout layouts/application.html.erb (Duration: 1987.8ms | Allocations: 41128)
+Completed 200 OK in 2298ms (Views: 1997.1ms | ActiveRecord: 73.7ms | Allocations: 50367)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 2010.5ms | Allocations: 41658)
+Completed 200 OK in 2329ms (Views: 2020.7ms | ActiveRecord: 36.9ms | Allocations: 51147)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:08:34 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (25.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (37.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1239ms (ActiveRecord: 87.0ms | Allocations: 9405)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:08:38 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (15.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 22.0ms | Allocations: 768)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 1256)
+  Rendered layout layouts/application.html.erb (Duration: 544.3ms | Allocations: 3905)
+Completed 200 OK in 868ms (Views: 542.2ms | ActiveRecord: 78.7ms | Allocations: 14186)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:08:45 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2585)
+  Rendered layout layouts/application.html.erb (Duration: 557.3ms | Allocations: 5210)
+Completed 200 OK in 694ms (Views: 564.7ms | ActiveRecord: 0.0ms | Allocations: 6525)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:09:28 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 40.9ms | Allocations: 469)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 217.8ms | Allocations: 3886)
+  Rendered layout layouts/application.html.erb (Duration: 865.6ms | Allocations: 6737)
+Completed 200 OK in 1138ms (Views: 953.2ms | ActiveRecord: 0.0ms | Allocations: 8369)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:09:48 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"si"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (9.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (27.0ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-27 01:09:51.319771"], ["updated_at", "2023-03-27 01:09:51.319771"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$UNyrIHv9aVUrxYNQUGwVquCeSMMysZLLXOPp3JeoveYRWZQ9hzWSK"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (34.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users
+Completed 302 Found in 606ms (ActiveRecord: 72.1ms | Allocations: 5131)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:09:52 +0200
+Processing by UsersController#index as TURBO_STREAM
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms | Allocations: 1290)
+
+
+  
+NoMethodError (undefined method `immagine' for nil:NilClass):
+  
+app/controllers/users_controller.rb:7:in `index'
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:14:12 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 1881.0ms | Allocations: 17570)
+Completed 200 OK in 2161ms (Views: 1888.4ms | ActiveRecord: 66.7ms | Allocations: 23391)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:14:57 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"matteo", "cognome"=>"zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (12.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 25.0ms | Allocations: 4746)
+  Rendered layout layouts/application.html.erb (Duration: 566.4ms | Allocations: 7348)
+Completed 422 Unprocessable Entity in 1077ms (Views: 571.0ms | ActiveRecord: 15.9ms | Allocations: 12518)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:15:13 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 77)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 91.5ms | Allocations: 1742)
+  Rendered layout layouts/application.html.erb (Duration: 622.2ms | Allocations: 4366)
+Completed 200 OK in 828ms (Views: 658.5ms | ActiveRecord: 0.0ms | Allocations: 5922)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:15:27 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 515ms (ActiveRecord: 8.9ms | Allocations: 2691)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:15:31 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (9.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (10.8ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 281ms (ActiveRecord: 47.9ms | Allocations: 3917)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:15:35 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (11.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (23.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:15:37.705815"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (43.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 262.5ms | Allocations: 1387)
+  Rendered layout layouts/application.html.erb (Duration: 808.9ms | Allocations: 3855)
+Completed 200 OK in 1152ms (Views: 837.5ms | ActiveRecord: 91.1ms | Allocations: 9056)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:15:44 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (10.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 28)
+  Rendered users/_form.html.erb (Duration: 1194.6ms | Allocations: 6855)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1301.5ms | Allocations: 7359)
+  Rendered layout layouts/application.html.erb (Duration: 1797.7ms | Allocations: 9772)
+Completed 200 OK in 2046ms (Views: 1802.8ms | ActiveRecord: 18.8ms | Allocations: 11464)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:15:53 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (1.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (29.0ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (39.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1415ms (ActiveRecord: 89.9ms | Allocations: 9388)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:15:58 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (13.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 18.7ms | Allocations: 755)
+  Rendered _footer.html.erb (Duration: 47.7ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 161.9ms | Allocations: 1890)
+  Rendered layout layouts/application.html.erb (Duration: 606.8ms | Allocations: 4530)
+Completed 200 OK in 963ms (Views: 625.0ms | ActiveRecord: 73.9ms | Allocations: 14964)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:16:06 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.7ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2598)
+  Rendered layout layouts/application.html.erb (Duration: 483.8ms | Allocations: 5159)
+Completed 200 OK in 598ms (Views: 488.8ms | ActiveRecord: 0.0ms | Allocations: 5868)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:16:24 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (9.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (26.7ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-27 01:16:26.731812"], ["updated_at", "2023-03-27 01:16:26.731812"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$fD2Lrj2yBB99lFiZ3qMG6eRLN.GmrpiFBW55nAyMUvjBArFdFU8pm"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (32.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Completed 500 Internal Server Error in 534ms (ActiveRecord: 69.5ms | Allocations: 5513)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/users/registrations_controller.rb:23:in `block (2 levels) in create'
+app/controllers/users/registrations_controller.rb:21:in `create'
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:17:13 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 1627.9ms | Allocations: 17569)
+Completed 200 OK in 1905ms (Views: 1635.5ms | ActiveRecord: 66.7ms | Allocations: 23374)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:17:27 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.9ms | Allocations: 77)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1183)
+  Rendered layout layouts/application.html.erb (Duration: 591.4ms | Allocations: 3826)
+Completed 200 OK in 749ms (Views: 599.5ms | ActiveRecord: 0.0ms | Allocations: 5102)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:17:37 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 510ms (ActiveRecord: 12.1ms | Allocations: 2526)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:17:42 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (11.9ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 340ms (ActiveRecord: 58.3ms | Allocations: 3925)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:17:46 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (9.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (19.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:17:48.374069"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (35.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 205.5ms | Allocations: 912)
+  Rendered layout layouts/application.html.erb (Duration: 748.7ms | Allocations: 3380)
+Completed 200 OK in 993ms (Views: 755.7ms | ActiveRecord: 74.0ms | Allocations: 8839)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:17:53 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 28)
+  Rendered users/_form.html.erb (Duration: 993.8ms | Allocations: 5753)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1000.1ms | Allocations: 5995)
+  Rendered layout layouts/application.html.erb (Duration: 1522.2ms | Allocations: 8395)
+Completed 200 OK in 1668ms (Views: 1527.0ms | ActiveRecord: 19.2ms | Allocations: 10036)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:18:01 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (1.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (30.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (40.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1377ms (ActiveRecord: 94.9ms | Allocations: 9393)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:18:06 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (14.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 23.3ms | Allocations: 755)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 29.9ms | Allocations: 1243)
+  Rendered layout layouts/application.html.erb (Duration: 499.7ms | Allocations: 3874)
+Completed 200 OK in 802ms (Views: 499.5ms | ActiveRecord: 76.7ms | Allocations: 14165)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:18:29 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 2598)
+  Rendered layout layouts/application.html.erb (Duration: 507.9ms | Allocations: 5154)
+Completed 200 OK in 621ms (Views: 512.9ms | ActiveRecord: 0.0ms | Allocations: 5864)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:18:51 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (9.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (25.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-27 01:18:53.825829"], ["updated_at", "2023-03-27 01:18:53.825829"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$OqHfMF6PcYxfeKm6j0LOiOM8iDcxJJje/tEt5k1jhJ25Q4iwJynRa"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (37.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 575ms (ActiveRecord: 72.8ms | Allocations: 4674)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:18:55 +0200
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1102)
+  Rendered layout layouts/application.html.erb (Duration: 532.4ms | Allocations: 3665)
+Completed 200 OK in 652ms (Views: 537.6ms | ActiveRecord: 0.0ms | Allocations: 4386)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:22:51 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 50.6ms | Allocations: 462)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 253.3ms | Allocations: 2231)
+  Rendered layout layouts/application.html.erb (Duration: 729.4ms | Allocations: 5085)
+Completed 200 OK in 984ms (Views: 817.4ms | ActiveRecord: 0.0ms | Allocations: 6702)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:22:57 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 84.9ms | Allocations: 3428)
+  Rendered layout layouts/application.html.erb (Duration: 589.6ms | Allocations: 6062)
+Completed 200 OK in 793ms (Views: 618.4ms | ActiveRecord: 0.0ms | Allocations: 7459)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:23:11 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"p", "cognome"=>"p", "username"=>"p", "email"=>"pp@p", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (10.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pp@p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pp@p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4762)
+  Rendered layout layouts/application.html.erb (Duration: 481.8ms | Allocations: 7364)
+Completed 422 Unprocessable Entity in 973ms (Views: 486.4ms | ActiveRecord: 13.1ms | Allocations: 11899)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:23:28 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"ppp", "cognome"=>"ppp", "username"=>"ppp", "email"=>"pp@p", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (10.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pp@p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ppp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "pp@p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (29.6ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "ppp"], ["cognome", "ppp"], ["username", "ppp"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-27 01:23:31.087378"], ["updated_at", "2023-03-27 01:23:31.087378"], ["email", "pp@p"], ["encrypted_password", "$2a$12$xMEMh.BD/LhhCvwLMlRqDeZgiyLT6ttaL3TRTnGx9bgFTLf8vrEaG"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (36.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 602ms (ActiveRecord: 77.2ms | Allocations: 4607)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:23:32 +0200
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1157)
+  Rendered layout layouts/application.html.erb (Duration: 573.8ms | Allocations: 3712)
+Completed 200 OK in 723ms (Views: 579.8ms | ActiveRecord: 0.0ms | Allocations: 4470)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:24:02 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"pp@p", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "pp@p"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/14
+Completed 303 See Other in 574ms (ActiveRecord: 10.8ms | Allocations: 2329)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2023-03-27 03:24:06 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (8.2ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ppp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 167ms (ActiveRecord: 28.1ms | Allocations: 2409)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:24:10 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (10.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ppp"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "pp@p"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (22.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:24:12.581626"], ["immagine", "profilo"], ["id", 14]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (40.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 33)
+  Rendered users/index.html.erb within layouts/application (Duration: 265.9ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 755.8ms | Allocations: 3796)
+Completed 200 OK in 1061ms (Views: 780.8ms | ActiveRecord: 82.3ms | Allocations: 8839)
+
+
+Started GET "/users/14/edit" for 127.0.0.1 at 2023-03-27 03:24:22 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (11.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 1083.5ms | Allocations: 6833)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1191.7ms | Allocations: 7336)
+  Rendered layout layouts/application.html.erb (Duration: 1679.2ms | Allocations: 9733)
+Completed 200 OK in 1883ms (Views: 1684.1ms | ActiveRecord: 20.2ms | Allocations: 11430)
+
+
+Started DELETE "/users/14" for 127.0.0.1 at 2023-03-27 03:24:34 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (9.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (24.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (37.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 235ms (ActiveRecord: 80.5ms | Allocations: 3100)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:24:37 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (14.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 16.5ms | Allocations: 748)
+  Rendered _footer.html.erb (Duration: 45.6ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 155.1ms | Allocations: 1883)
+  Rendered layout layouts/application.html.erb (Duration: 617.3ms | Allocations: 4515)
+Completed 200 OK in 842ms (Views: 635.2ms | ActiveRecord: 35.6ms | Allocations: 8335)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:25:38 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 2762)
+  Rendered layout layouts/application.html.erb (Duration: 1589.3ms | Allocations: 17542)
+Completed 200 OK in 1811ms (Views: 1595.8ms | ActiveRecord: 54.5ms | Allocations: 23272)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:26:05 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"ppp", "cognome"=>"ppp", "username"=>"ppp", "email"=>"ppp@ppp", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (12.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ppp@ppp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "ppp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ppp@ppp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (27.8ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "ppp"], ["cognome", "ppp"], ["username", "ppp"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-27 01:26:08.359062"], ["updated_at", "2023-03-27 01:26:08.359062"], ["email", "ppp@ppp"], ["encrypted_password", "$2a$12$0TE3vBp1BO01XR8raHb15.kdzO0CwN2V93Lar30V0MIVMX6ateSHS"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (39.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 574ms (ActiveRecord: 81.3ms | Allocations: 5216)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:26:09 +0200
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.8ms | Allocations: 77)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1197)
+  Rendered layout layouts/application.html.erb (Duration: 595.2ms | Allocations: 3821)
+Completed 200 OK in 718ms (Views: 602.8ms | ActiveRecord: 0.0ms | Allocations: 5118)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:26:31 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"ppp@ppp", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (11.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ppp@ppp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/14
+Completed 303 See Other in 502ms (ActiveRecord: 11.3ms | Allocations: 2436)
+
+
+Started GET "/users/14" for 127.0.0.1 at 2023-03-27 03:26:36 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (14.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (11.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "ppp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 331ms (ActiveRecord: 58.7ms | Allocations: 3869)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:26:41 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (11.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "ppp"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "ppp@ppp"], ["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (23.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:26:44.271176"], ["immagine", "profilo"], ["id", 14]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (40.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered users/index.html.erb within layouts/application (Duration: 229.6ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 797.7ms | Allocations: 3407)
+Completed 200 OK in 1060ms (Views: 806.3ms | ActiveRecord: 84.2ms | Allocations: 8421)
+
+
+Started GET "/users/14/edit" for 127.0.0.1 at 2023-03-27 03:26:49 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (11.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.4ms | Allocations: 28)
+  Rendered users/_form.html.erb (Duration: 914.3ms | Allocations: 5752)
+  Rendered users/edit.html.erb within layouts/application (Duration: 921.9ms | Allocations: 5994)
+  Rendered layout layouts/application.html.erb (Duration: 1377.3ms | Allocations: 8390)
+Completed 200 OK in 1535ms (Views: 1382.0ms | ActiveRecord: 21.1ms | Allocations: 10052)
+
+
+Started DELETE "/users/14" for 127.0.0.1 at 2023-03-27 03:26:56 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 14]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (31.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 14]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (46.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 391ms (ActiveRecord: 104.0ms | Allocations: 6991)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:27:01 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (13.9ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (9.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 18.5ms | Allocations: 755)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 25.7ms | Allocations: 1245)
+  Rendered layout layouts/application.html.erb (Duration: 579.5ms | Allocations: 3876)
+Completed 200 OK in 882ms (Views: 578.5ms | ActiveRecord: 77.6ms | Allocations: 14181)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:27:43 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 44.6ms | Allocations: 462)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 151.2ms | Allocations: 3876)
+  Rendered layout layouts/application.html.erb (Duration: 722.0ms | Allocations: 6724)
+Completed 200 OK in 999ms (Views: 811.3ms | ActiveRecord: 0.0ms | Allocations: 8361)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:28:01 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (10.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 4634)
+  Rendered layout layouts/application.html.erb (Duration: 593.3ms | Allocations: 7236)
+Completed 422 Unprocessable Entity in 1125ms (Views: 598.3ms | ActiveRecord: 13.8ms | Allocations: 11806)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:28:12 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.6ms | Allocations: 70)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 138.6ms | Allocations: 1783)
+  Rendered layout layouts/application.html.erb (Duration: 601.6ms | Allocations: 4415)
+Completed 200 OK in 778ms (Views: 628.3ms | ActiveRecord: 0.0ms | Allocations: 5796)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:28:23 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 532ms (ActiveRecord: 8.6ms | Allocations: 2332)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:28:27 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (12.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (11.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 210ms (ActiveRecord: 34.6ms | Allocations: 2416)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:28:31 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (10.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (11.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (21.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:28:34.074068"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (42.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered users/index.html.erb within layouts/application (Duration: 281.4ms | Allocations: 1381)
+  Rendered layout layouts/application.html.erb (Duration: 789.4ms | Allocations: 3867)
+Completed 200 OK in 1134ms (Views: 814.3ms | ActiveRecord: 86.6ms | Allocations: 8960)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:28:39 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (12.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 1196.7ms | Allocations: 6849)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1312.9ms | Allocations: 7352)
+  Rendered layout layouts/application.html.erb (Duration: 1852.9ms | Allocations: 9749)
+Completed 200 OK in 2085ms (Views: 1858.1ms | ActiveRecord: 23.3ms | Allocations: 11441)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:29:41 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (8.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (26.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (37.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 234ms (ActiveRecord: 80.2ms | Allocations: 3093)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:29:45 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (10.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 16.5ms | Allocations: 748)
+  Rendered _footer.html.erb (Duration: 47.1ms | Allocations: 129)
+  Rendered index/index.html.erb within layouts/application (Duration: 155.3ms | Allocations: 1881)
+  Rendered layout layouts/application.html.erb (Duration: 604.4ms | Allocations: 4513)
+Completed 200 OK in 809ms (Views: 619.2ms | ActiveRecord: 32.0ms | Allocations: 8324)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-03-27 03:29:53 +0200
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2598)
+  Rendered layout layouts/application.html.erb (Duration: 461.1ms | Allocations: 5153)
+Completed 200 OK in 578ms (Views: 465.4ms | ActiveRecord: 0.0ms | Allocations: 5855)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-03-27 03:30:10 +0200
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"nome"=>"Matteo", "cognome"=>"Zamponi", "username"=>"mattzamp", "email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]", "pubblico"=>"no"}, "commit"=>"Crea profilo"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (10.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "mattzamp"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mCACHE User Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mUser Create (26.8ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Matteo"], ["cognome", "Zamponi"], ["username", "mattzamp"], ["pubblico", "no"], ["commento", nil], ["created_at", "2023-03-27 01:30:12.549694"], ["updated_at", "2023-03-27 01:30:12.549694"], ["email", "matteozamponi@matteo.com"], ["encrypted_password", "$2a$12$KORNd/8g96POQGzoTeyrLOxf3hhoNbcmxZq9/mmbLsN9//yf9.2ey"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+  [1m[36mTRANSACTION (36.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users/registrations_controller.rb:22:in `block in create'
+Redirected to http://127.0.0.1:3000/users/sign_in
+Completed 302 Found in 553ms (ActiveRecord: 74.1ms | Allocations: 4604)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:30:14 +0200
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.5ms | Allocations: 65)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1110)
+  Rendered layout layouts/application.html.erb (Duration: 572.0ms | Allocations: 3665)
+Completed 200 OK in 715ms (Views: 577.9ms | ActiveRecord: 0.0ms | Allocations: 4382)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-27 03:30:31 +0200
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"matteozamponi@matteo.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:14:in `create'
+Redirected to http://127.0.0.1:3000/users/13
+Completed 303 See Other in 499ms (ActiveRecord: 11.4ms | Allocations: 2060)
+
+
+Started GET "/users/13" for 127.0.0.1 at 2023-03-27 03:30:35 +0200
+Processing by UsersController#show as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15:in `show'
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+Redirected to http://127.0.0.1:3000/users
+  [1m[36mWallet Load (9.9ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "mattzamp"]]
+  ↳ app/controllers/users_controller.rb:25:in `show'
+Completed 302 Found in 163ms (ActiveRecord: 28.4ms | Allocations: 2405)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-03-27 03:30:39 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (9.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "mattzamp"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "matteozamponi@matteo.com"], ["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mUser Update (18.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-27 01:30:41.285699"], ["immagine", "profilo"], ["id", 13]]
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  [1m[36mTRANSACTION (32.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:9:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 28)
+  Rendered users/index.html.erb within layouts/application (Duration: 167.7ms | Allocations: 836)
+  Rendered layout layouts/application.html.erb (Duration: 563.0ms | Allocations: 3257)
+Completed 200 OK in 798ms (Views: 569.3ms | ActiveRecord: 69.7ms | Allocations: 7761)
+
+
+Started GET "/users/13/edit" for 127.0.0.1 at 2023-03-27 03:30:45 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:40:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.3ms | Allocations: 27)
+  Rendered users/_form.html.erb (Duration: 1015.4ms | Allocations: 5690)
+  Rendered users/edit.html.erb within layouts/application (Duration: 1021.4ms | Allocations: 5925)
+  Rendered layout layouts/application.html.erb (Duration: 1527.3ms | Allocations: 8321)
+Completed 200 OK in 1678ms (Views: 1533.5ms | ActiveRecord: 19.2ms | Allocations: 9956)
+
+
+Started DELETE "/users/13" for 127.0.0.1 at 2023-03-27 03:30:53 +0200
+Processing by UsersController#destroy as TURBO_STREAM
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (11.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:82:in `set_user'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mComment Load (11.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mUser Destroy (30.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 13]]
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+  [1m[36mTRANSACTION (44.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:72:in `destroy'
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 280ms (ActiveRecord: 97.6ms | Allocations: 3095)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-27 03:30:57 +0200
+Processing by IndexController#index as TURBO_STREAM
+  [1m[36mAzione Load (9.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  ↳ app/controllers/index_controller.rb:7:in `index'
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/index_controller.rb:11:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering index/index.html.erb within layouts/application
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/views/_header.html.erb:21
+  Rendered _header.html.erb (Duration: 19.7ms | Allocations: 743)
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 8)
+  Rendered index/index.html.erb within layouts/application (Duration: 26.8ms | Allocations: 1219)
+  Rendered layout layouts/application.html.erb (Duration: 549.7ms | Allocations: 3775)
+Completed 200 OK in 709ms (Views: 542.7ms | ActiveRecord: 33.5ms | Allocations: 7024)
+
+
