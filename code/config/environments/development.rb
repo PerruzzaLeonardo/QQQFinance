@@ -80,7 +80,7 @@ Rails.application.configure do
       :address              => 'smtp.gmail.com',
       :port                 => 587,
       :domain               => 'gmail.com',
-      :user_name            => 'qqqfinanceassi@gmail.com',
+      :user_name            =>  Rails.application.credentials.dig(:EMAIL),
       :password             =>  Rails.application.credentials.dig(:PASSWORD),
       :authentication       => 'plain',
       :enable_starttls_auto => true
