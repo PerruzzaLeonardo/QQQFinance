@@ -19892,3 +19892,516 @@ Completed 302 Found in 1ms (ActiveRecord: 0.2ms | Allocations: 1066)
   [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
   [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (7.8ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leo"], ["cognome", nil], ["username", "Leo"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:13:49.724162"], ["updated_at", "2023-03-28 15:13:49.724162"], ["email", "leo@gmail.com"], ["encrypted_password", "$2a$04$453VKvCyVSR53PEzMvBbJOVnrCB60Q3XOPDF4bsadSQiCmu0R9eoe"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-28 17:13:49 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 1.0ms | Allocations: 512)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 21.1ms | Allocations: 6317)
+  Rendered layout layouts/application.html.erb (Duration: 494.2ms | Allocations: 78687)
+Completed 200 OK in 516ms (Views: 499.3ms | ActiveRecord: 0.0ms | Allocations: 84784)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"leo@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/99
+Completed 303 See Other in 17ms (ActiveRecord: 0.1ms | Allocations: 2733)
+Started GET "/users/99" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "Leo"]]
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1999)
+Started GET "/users" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Leo"], ["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Update (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "immagine" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2023-03-28 15:13:50.541589"], ["immagine", "profilo"], ["id", 99]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered users/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 991)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2495)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.4ms | Allocations: 4873)
+Started GET "/users" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered users/index.html.erb within layouts/application (Duration: 12.7ms | Allocations: 461)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 1924)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 2604)
+Started GET "/users/99/edit" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/_form.html.erb (Duration: 30.9ms | Allocations: 5828)
+  Rendered users/edit.html.erb within layouts/application (Duration: 35.9ms | Allocations: 6274)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 7739)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.2ms | Allocations: 8573)
+Started PATCH "/users/99" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#update as HTML
+  Parameters: {"user"=>{"nome"=>"Leo", "cognome"=>"", "email"=>"leo@gmail.com", "pubblico"=>"si", "commento"=>"Il mio primo commento", "immagine"=>"profilo"}, "commit"=>"Salva modifiche", "id"=>"99"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "Leo"], ["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Update (0.1ms)[0m  [1m[33mUPDATE "users" SET "cognome" = ?, "commento" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["cognome", ""], ["commento", "Il mio primo commento"], ["updated_at", "2023-03-28 15:13:50.637488"], ["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/users
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1544)
+Started GET "/users" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 467)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1930)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.1ms | Allocations: 2629)
+Started GET "/users" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 462)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 1925)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms | Allocations: 2616)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "LuigiVerdiUsername"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "luigi"], ["cognome", "verdi"], ["username", "LuigiVerdiUsername"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:13:50.695446"], ["updated_at", "2023-03-28 15:13:50.695446"], ["email", "luigiverdi@mail.com"], ["encrypted_password", "$2a$04$334i./1L6v/n6AmoeC1/9O2im.F/cMarOt.aCxfWB7VEzY87RgmI."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", "profilo2"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.2ms | Allocations: 63)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1096)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2567)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 3088)
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"luigiverdi@mail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "luigiverdi@mail.com"], ["LIMIT", 1]]
+Redirected to http://www.example.com/users/99
+Completed 303 See Other in 3ms (ActiveRecord: 0.1ms | Allocations: 927)
+Started GET "/users/99" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+Redirected to http://www.example.com/users
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+Completed 302 Found in 15ms (ActiveRecord: 0.2ms | Allocations: 852)
+Started GET "/users" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered users/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 427)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 1890)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 2592)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 29)
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 3.2ms | Allocations: 125)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 21483)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 23029)
+Completed 200 OK in 47ms (Views: 27.6ms | ActiveRecord: 0.7ms | Allocations: 26775)
+Started POST "/wallet/movimenti" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"isin"=>"MSFT", "quantita"=>"23"}
+  [1m[36mAzione Load (0.4ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ? AND "wallets"."azione" = ? ORDER BY "wallets"."id" ASC LIMIT ?[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-28 15:13:50.910741"], ["updated_at", "2023-03-28 15:13:50.910741"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 26ms (ActiveRecord: 0.9ms | Allocations: 16151)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1498)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2963)
+Completed 200 OK in 10ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 4386)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:13:50.930923"], ["updated_at", "2023-03-28 15:13:50.930923"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "LuigiVerdiUsername"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-28 15:13:50.932201"], ["updated_at", "2023-03-28 15:13:50.932201"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/wallet" for 127.0.0.1 at 2023-03-28 17:13:50 +0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1661)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 3126)
+Completed 200 OK in 18ms (Views: 2.8ms | ActiveRecord: 0.3ms | Allocations: 4409)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-28 17:13:51 +0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mAzione Load (0.1ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  [1m[36mCACHE Azione Load (0.0ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones" WHERE "aziones"."isin" = ? ORDER BY "aziones"."id" ASC LIMIT ?[0m  [["isin", "MSFT"], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.0ms | Allocations: 18)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1661)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 3126)
+Completed 200 OK in 62ms (Views: 26.3ms | ActiveRecord: 0.5ms | Allocations: 4394)
+Started DELETE "/wallets/rimozione" for 127.0.0.1 at 2023-03-28 17:13:51 +0200
+Processing by WalletsController#rimozione as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Destroy (0.1ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = ?[0m  [["id", 74]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Destroy (0.0ms)[0m  [1m[31mDELETE FROM "wallets" WHERE "wallets"."id" = ?[0m  [["id", 75]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/wallet
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1203)
+Started GET "/wallet" for 127.0.0.1 at 2023-03-28 17:13:51 +0200
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "LuigiVerdiUsername"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Rendered _header.html.erb (Duration: 0.1ms | Allocations: 18)
+  [1m[36mAzione Load (0.2ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  Rendered _footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered wallets/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1080)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2559)
+Completed 200 OK in 18ms (Views: 7.7ms | ActiveRecord: 0.4ms | Allocations: 3462)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:23.919498"], ["updated_at", "2023-03-28 15:14:23.919498"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$nBWvKx435Epu03Rs0nHE0.e/mobu4Rmm/X.QInqcOTRsThAjrFo.i"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.2ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:23.945882"], ["updated_at", "2023-03-28 15:14:23.945882"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:23.990776"], ["updated_at", "2023-03-28 15:14:23.990776"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.1ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "RspecAccount51"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered wallets/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 423)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 560)
+Completed 200 OK in 26ms (Views: 13.4ms | ActiveRecord: 0.2ms | Allocations: 7143)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.196992"], ["updated_at", "2023-03-28 15:14:24.196992"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$24/1sbP2ERWMbdpiPtenaerf9NG2lwmjq8PUBREpYez0RaqbfkHty"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.3ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.199166"], ["updated_at", "2023-03-28 15:14:24.199166"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.214199"], ["updated_at", "2023-03-28 15:14:24.214199"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "RspecAccount51"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered wallets/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 205)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 334)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 1117)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.240910"], ["updated_at", "2023-03-28 15:14:24.240910"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$gmM9hbCZzUMJnjrRJFc6oOAxN7YbXOfR71hCZJ2OXpAeBqT9ofd4u"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.253028"], ["updated_at", "2023-03-28 15:14:24.253028"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.256366"], ["updated_at", "2023-03-28 15:14:24.256366"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by WalletsController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.0ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ?[0m  [["user", "RspecAccount51"]]
+  Rendering layout layouts/application.html.erb
+  Rendering wallets/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered wallets/index.html.erb within layouts/application (Duration: 7.2ms | Allocations: 205)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 334)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms | Allocations: 1112)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.281854"], ["updated_at", "2023-03-28 15:14:24.281854"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$UOMi3Zil4IWeuydXf.QHM.IzpT8gBZ3gy5h1ZvnDhprh1QVy1h/gu"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.283024"], ["updated_at", "2023-03-28 15:14:24.283024"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.284028"], ["updated_at", "2023-03-28 15:14:24.284028"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by WalletsController#create as HTML
+  Parameters: {"wallet"=>{"azione"=>"MSFT", "quantità"=>"1"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", nil], ["azione", "MSFT"], ["quantità", 1], ["created_at", "2023-03-28 15:14:24.295490"], ["updated_at", "2023-03-28 15:14:24.295490"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/wallets/75
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 895)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.314147"], ["updated_at", "2023-03-28 15:14:24.314147"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$44NA2QvebOkUKrMz6GhJsu35DgQgIniPSFDwVybYstxtP6XzedmhS"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.315565"], ["updated_at", "2023-03-28 15:14:24.315565"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.316612"], ["updated_at", "2023-03-28 15:14:24.316612"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by WalletsController#create as HTML
+  Parameters: {"wallet"=>{"azione"=>"MSFT", "quantità"=>"23", "user"=>"RspecAccount51"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "RspecAccount51"], ["azione", "MSFT"], ["quantità", 23], ["created_at", "2023-03-28 15:14:24.332987"], ["updated_at", "2023-03-28 15:14:24.332987"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/wallets/75
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms | Allocations: 694)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.367256"], ["updated_at", "2023-03-28 15:14:24.367256"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$rZRj6XHkI0D8CVN3KMR0Q.jhV5baa2IU61n3HNwxv3DNV8Bo0.WIq"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.369872"], ["updated_at", "2023-03-28 15:14:24.369872"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.3ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.371130"], ["updated_at", "2023-03-28 15:14:24.371130"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"MSFT", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 99], ["LIMIT", 1]]
+  [1m[36mWallet Load (0.4ms)[0m  [1m[34mSELECT "wallets".* FROM "wallets" WHERE "wallets"."user" = ? AND "wallets"."azione" = ? ORDER BY "wallets"."id" ASC LIMIT ?[0m  [["user", "RspecAccount51"], ["azione", "MSFT"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "RspecAccount51"], ["azione", "MSFT"], ["quantità", 0], ["created_at", "2023-03-28 15:14:24.430853"], ["updated_at", "2023-03-28 15:14:24.430853"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 21ms (ActiveRecord: 0.9ms | Allocations: 2298)
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "RspecAccount51"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rspecmail511@mail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Rspec121"], ["cognome", "Rspec1"], ["username", "RspecAccount51"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.456182"], ["updated_at", "2023-03-28 15:14:24.456182"], ["email", "rspecmail511@mail.com"], ["encrypted_password", "$2a$04$5N0P8GU.NEk22tcxNt1pA.z0GdaP./EmzwNs86AdZYRqiq6kaNNNu"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWallet Create (0.1ms)[0m  [1m[32mINSERT INTO "wallets" ("user", "azione", "quantità", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user", "Rspec121"], ["azione", "MSFT"], ["quantità", 5], ["created_at", "2023-03-28 15:14:24.463460"], ["updated_at", "2023-03-28 15:14:24.463460"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mAzione Create (0.1ms)[0m  [1m[32mINSERT INTO "aziones" ("nome", "isin", "settore", "paese", "marketcap", "prezzo", "volume", "pe", "ps", "pb", "divyield", "roe", "roa", "debteq", "opmargin", "ebitda", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Microsoft Corporation"], ["isin", "MSFT"], ["settore", "Technology"], ["paese", "United States"], ["marketcap", nil], ["prezzo", 100.0], ["volume", nil], ["pe", nil], ["ps", nil], ["pb", nil], ["divyield", nil], ["roe", nil], ["roa", nil], ["debteq", nil], ["opmargin", nil], ["ebitda", nil], ["created_at", "2023-03-28 15:14:24.464745"], ["updated_at", "2023-03-28 15:14:24.464745"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mWallet Count (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+Processing by WalletsController#movimenti as HTML
+  Parameters: {"commit"=>"aggiungi", "isin"=>"ABCD", "quantità"=>"5"}
+  [1m[36mAzione Load (0.3ms)[0m  [1m[34mSELECT "aziones".* FROM "aziones"[0m
+Redirected to http://test.host/wallet
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms | Allocations: 1066)
+  [1m[36mWallet Count (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "wallets"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mComment Load (0.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."user_id" = ?[0m  [["user_id", 99]]
+  [1m[36mUser Destroy (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 99]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leo"], ["cognome", nil], ["username", "Leo"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.508821"], ["updated_at", "2023-03-28 15:14:24.508821"], ["email", "leo@gmail.com"], ["encrypted_password", "$2a$04$PRmTphR8Uk6KLZikunpZWu6IAWlFRhwtovsvkyHpatX2h/nYQt1PO"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "paolo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "paolo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "paolo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "paolo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("nome", "cognome", "username", "pubblico", "commento", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "provider", "uid", "immagine") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["nome", "Leo"], ["cognome", nil], ["username", "Leo"], ["pubblico", "si"], ["commento", nil], ["created_at", "2023-03-28 15:14:24.536156"], ["updated_at", "2023-03-28 15:14:24.536156"], ["email", "leo@gmail.com"], ["encrypted_password", "$2a$04$KCymBIMi9h8KZJk2gpoGcuomuRBivt8OpCYz/ehq6DXCxXf18uA2y"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["provider", nil], ["uid", nil], ["immagine", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Paolo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Paolo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Leo"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "leo@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
