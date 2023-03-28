@@ -94,6 +94,11 @@
   background-size: cover;
 }
 
+.sfondo_2{
+  background-image: url('sfondoA.png');
+  background-size: cover;
+}
+
 .sfondo_contact {
   background-image: url('sfondoconctact.png');
   background-size: cover;

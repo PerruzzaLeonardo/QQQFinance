@@ -5,16 +5,21 @@
 <meta charset="utf-8">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="sfondo_2">
 	<%=render "/header"%>
-	<a href="/" class="link-dark"><p class="fs-1 fw-bold px-5 mt-5" style="letter-spacing: 3px;"> QQQFinance</a>
-	<br>
+	<br><br><br>
 	<h1 fw-bold>
 	<% if @user != nil%>
 		<% if @user.errors.any? %>
-			<% @user.errors.full_messages.each do |message|%>
-				<h3><%= message %> </h3>
-			<%end%>
+			<div class="alert alert-danger col-5 m-2">
+				<ul class="list-group list-group-flush"> 
+					<% @user.errors.full_messages.each do |message|%>
+						<li class="list-group-item list-group-item-danger">
+							<h5><%= message %></h5>
+						</li>
+					<%end%>
+				</ul>
+			</div>
 		<%end%>
 	<%end%>
 	</h1>
@@ -51,27 +56,27 @@
 						<button type="Reset" class="btn btn-danger btn-lg m-2">Reset</button>
 					</div>
 				</div>
+	<% end %> 
 				<div class="col"></div>
 				<div class="col">
 					<div class="d-flex" style="height: 500px;">
 						<div class="vr"></div>
 					</div>
 				</div>
-				<div class="col"></div>
-				<div class="col">
-					<br><br><br><br><br>
+				<div class="col text-center">
+					<br><br>
 					<p class="px-5 fs-2 fw-bold">oppure</p>
 					<br>
-
+					<%- if devise_mapping.omniauthable? %>
+  				<%- User.omniauth_providers.each do |provider| %>
+    			<%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(:user, provider), data: { turbo: false }, class: 'btn btn-primary btn-lg' %><br>
+	 			<% end %>
+			<%end%>	</div>
+				<div class="col">
 			</div>
 		</div>
 		<p class="fs-2 fw-bold px-5 text-center">Se hai già un account,vai al <a href="/users/sign_in">Login</a></p>
 		<br>
-	<% end %> 
-		<%- if devise_mapping.omniauthable? %>
-  				<%- User.omniauth_providers.each do |provider| %>
-    			<%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(:user, provider), data: { turbo: false }, class: 'btn btn-success btn-lg' %><br>
-	 			<% end %>
-		<%end%>	
+		
 </body>
 </html>

@@ -17,18 +17,27 @@
           <%= flash[:notice ] %>
         </div>
       <% end %>
-      <h1>IL MIO PROFILO</h1>
+      <h1 class="ms-1">IL MIO PROFILO</h1>
     </div>
     <div class="col-7">
       <%= link_to "Modifica profilo",edit_user_path(@user) %>
     </div>
   </div>  
 
-  <div class="row">
+  <div class="row ms-3">
     <div class="col-7">
       <div class="field form-group"> <h2>Nome: <%= @user.nome %> </div>
       <div class="field form-group"> <h2>Cognome: <%= @user.cognome %> </div>
       <div class="field form-group"> <h2>Email: <%= @user.email %> </div>
+      <br><br>
+
+          <%if (!@user.commento or @user.commento!="") #se non è vuoto
+      @commento=@user.commento
+    else
+      @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
+    end %>
+    <textarea rows=10 cols=70 name="Commento"readonly><%=@commento%></textarea>
+
     </div>
     <div class="col-5">
       <%= image_tag @user.immagine,class:"card-img-top img-fluid",alt:"Card image cap" %>
@@ -38,11 +47,6 @@
 
 <div class="row">
   <div class="container-fluid row m-2">
-    <%if (!@user.commento or @user.commento!="") #se non è vuoto
-      @commento=@user.commento
-    else
-      @commento="Aggiungi qui un commento sul tuo wallet. Questo messaggio verrà visualizzato agli utenti che visiteranno il tuo profilo."
-    end %>
-    <textarea rows=8 cols=50 name="Commento" readonly><%=@commento%></textarea>
+
   </div>
 </div>

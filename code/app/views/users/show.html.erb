@@ -5,21 +5,26 @@
   resize: none!important;
   }
   </style>
-<div class="row">
+<div class="row ms-2">
     
     <%if @user.pubblico=="si"%>
        <div class="col-md-6">
-            <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea>
+            <textarea class="form-control" rows=8 cols=50 placeholder="<%= @user.commento %>" disabled></textarea><br>
             <h2>Se ritieni il messaggio offensivo:
             <a type="button" class="btn btn-danger" data-bs-toggle="modal" href="/contacts">Segnala Utente</a>
     </div>
     <div class="col-md-4 offset-md-1">
-        <canvas id="myChart"></canvas>   
+      <%if @nome.length==0%>
+       <h2 class="text-center">Il wallet di questo utente è vuoto</h2>
+       <%else%>
+        <canvas id="myChart"></canvas>
+        <%end%>
     <%else%>
     <br>
         <h2 class="text-center">Il wallet di questo utente è privato</h1>
     <%end%>
     </div>
+    <%=render "/footer"%>
 </div>
 
 
@@ -46,7 +51,7 @@
             plugins: {
                 title: {
                     display: true,
-                    text: "Wallet"
+                    text: "Composizione wallet"
                 }
             }
         }

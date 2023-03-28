@@ -18,7 +18,7 @@ class User < ApplicationRecord
         user.password = Devise.friendly_token[0,20]
         user.nome=auth.info.name
         user.cognome=auth.info.given_name
-        user.username=auth.info.name+Devise.frindly_token[0,3]
+        user.username=auth.info.name+Devise.friendly_token[0,3]
         user.pubblico="no"
 
       end

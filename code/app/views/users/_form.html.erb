@@ -40,27 +40,31 @@
           <h2><%= form.text_field :email %>
         </div> 
       </div>
-    </div>
 
+      
+         <div class="row m-2 form-check form-switch">
+          <div class="col">
+          <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
+          <%= form.check_box :pubblico, {class:"form-check-input" },"si", "no" %> 
+          </div>
+         </div>
+
+         <div class="row m-2">
+           <div class="col">
+          <%= form.label :commento, style: "display: block" %>
+          <%= form.text_area :commento,size: "70x10" %> 
+           </div>
+          </div>
+    </div>
     <div class="col-5">
     <div class="modal-body" data-toggle="modal" data-target="#exampleModal">
       <%= image_tag @user.immagine,class:"card-img-top",alt:"Card image cap" %>
     </div>
       <div class="field form-group text-center"><h2>
-        <%= form.label :username, style: "display: block" %>
-        <%= form.text_field :username %> </div>
+        <%= form.label :username,@user.username ,style: "display: block" %>
       </div>
   </div>
   
-  <div class="row m-2 form-check form-switch">
-    <%= form.label :pubblico, "Vuoi rendere pubblico il tuo profilo?" %>
-    <%= form.check_box :pubblico, {class:"form-check-input" },"si", "no" %> </div>
- </div>
-
-  <div class="row m-2">
-    <%= form.label :commento, style: "display: block" %>
-    <%= form.text_area :commento,size: "50x8" %> </div>
- </div>
   <br>
   
   <!-- Modal -->
