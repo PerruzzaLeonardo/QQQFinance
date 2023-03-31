@@ -30,7 +30,7 @@ class IndexController < ApplicationController
                     x=1
                 end
             end
-            if x=1
+            if x==1
                 flash[:inesistente] = "Non esiste una azione con l'ISIN immesso"
                 redirect_to "/.."
             else
@@ -47,7 +47,7 @@ class IndexController < ApplicationController
                     x=1
                 end
             end
-            if x=1
+            if x==1
                 flash[:inesistente] = "Non esiste un utente con tale username"
                 redirect_to "/.."
             else
