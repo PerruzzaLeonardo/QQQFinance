@@ -15,9 +15,11 @@
     <p>
       <%= render "filtri" %>
     </p>
-    <p> 
+    <%if current_user%>
+    <p>
       <%= render "aggiungi" %>
     </p>
+    <%end%>
     <% if flash[:filtri] %>
       <div class="alert alert-success alert-dismissable">
         <%= flash[:filtri] %>
