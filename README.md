@@ -18,9 +18,9 @@ Infine, sono disponibili una pagina che presenta le ultime notizie sul mondo del
 ### Prerequisiti
 Per poter utilizzare l'app è necessario aver installato `ruby-3.0.0`, come indicato nel Gemfile.
 ### Installazione
-1.Clonare il seguente repository e installare tutte le gemme necessarie con `bundle install`
-2.Inizializzare il database con `rails db:migrate` e `rails db:seed`
-3.Lanciare il server tramite `rails server` dal terminale
+1. Clonare il seguente repository e installare tutte le gemme necessarie con `bundle install`
+2. Inizializzare il database con `rails db:migrate` e `rails db:seed`
+3. Lanciare il server tramite `rails server` dal terminale
 
 Fatto ciò, l'app è raggiungibile all'indirizzo URL `localhost:3000/`
 Il server può essere poi spento in qualsiasi momento digitando `Ctrl+C` sul terminale.
@@ -34,9 +34,9 @@ mentre per lanciare i test d'unità `rspec`
 rspec
 ```
 ## Api utilizzate
-*Yahoo! Finance API - aggiornamento azioni
-*NewsData API - aggiornamento notizie
-*Trading View API - grafici azioni
+* Yahoo! Finance API - aggiornamento azioni
+* NewsData API - aggiornamento notizie
+* Trading View API - grafici azioni
 ## Sviluppatori
 * [*Davide Buzzichini*](https://github.com/DBuzz20)
 * [*Leonardo Perruzza*](https://github.com/PerruzzaLeonardo)
