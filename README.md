@@ -16,23 +16,23 @@ E’ poi implementato un sistema di notifiche automatico, che, in caso un titolo
 Infine, sono disponibili una pagina che presenta le ultime notizie sul mondo della finanza, aggiornate con cadenza oraria, ed una pagina per contattare gli sviluppatori e/o segnalare utenti, che invia automaticamente una mail all'invio di una form.
 ## Lanciare l'app
 ### Prerequisiti
-Per poter utilizzare l'app è necessario aver installato '''ruby-3.0.0''', come indicato nel Gemfile.
+Per poter utilizzare l'app è necessario aver installato `ruby-3.0.0`, come indicato nel Gemfile.
 ### Installazione
-1.Clonare il seguente repository e installare tutte le gemme necessarie con '''bundle install'''
-2.Inizializzare il database con '''rails db:migrate''' e '''rails db:seed'''
-3.Lanciare il server tramite '''rails server''' dal terminale
+1.Clonare il seguente repository e installare tutte le gemme necessarie con `bundle install`
+2.Inizializzare il database con `rails db:migrate` e `rails db:seed`
+3.Lanciare il server tramite `rails server` dal terminale
 
-Fatto ciò, l'app è raggiungibile all'indirizzo URL '''localhost:3000/'''
-Il server può essere poi spento in qualsiasi momento digitando '''Ctrl+C''' sul terminale.
+Fatto ciò, l'app è raggiungibile all'indirizzo URL `localhost:3000/`
+Il server può essere poi spento in qualsiasi momento digitando `Ctrl+C` sul terminale.
 ## Lanciare i test
-Per lanciare i test di accettazione di '''cucumber''',usare
-'''
+Per lanciare i test di accettazione di `cucumber`,usare
+```
 bin/rake cucumber
-'''
-mentre per lanciare i test d'unità '''rspec'''
-'''
+```
+mentre per lanciare i test d'unità `rspec`
+```
 rspec
-'''
+```
 ## Api utilizzate
 *Yahoo! Finance API - aggiornamento azioni
 *NewsData API - aggiornamento notizie
