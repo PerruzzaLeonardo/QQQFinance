@@ -22,7 +22,8 @@ Per poter utilizzare l'app è necessario aver installato `ruby-3.0.0`, come indi
 2. Inizializzare il database con `rails db:migrate` e `rails db:seed`
 3. Lanciare il server tramite `rails server` dal terminale
 
-Fatto ciò, l'app è raggiungibile all'indirizzo URL `localhost:3000/`
+Fatto ciò, l'app è raggiungibile all'indirizzo URL `localhost:3000/`.
+
 Il server può essere poi spento in qualsiasi momento digitando `Ctrl+C` sul terminale.
 ## Lanciare i test
 Per lanciare i test di accettazione di `cucumber`,usare

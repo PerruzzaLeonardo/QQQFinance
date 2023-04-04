@@ -27,7 +27,7 @@ class Azione < ApplicationRecord
             http.verify_mode = OpenSSL::SSL::VERIFY_NONE
             
             request = Net::HTTP::Get.new(url)
-            request["X-RapidAPI-Key"] = Rails.application.credentials.API_KEY
+            request["X-RapidAPI-Key"] = Rails.application.credentials.dig(API_KEY)
             request["X-RapidAPI-Host"] = 'yh-finance.p.rapidapi.com'
             
             response = http.request(request)
